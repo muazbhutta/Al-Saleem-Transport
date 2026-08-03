@@ -11,7 +11,7 @@ export const site = {
   licenseNo: '35/00008116',
   unifiedNationalNo: '7053391731',
   email: 'info@alsaleemtransport.com',
-  // Digits only, international format, no "+" — used to build wa.me and tel: links.
+  // Digits only, international format, no "+" - used to build wa.me and tel: links.
   phoneRaw: '966500689196',
   phoneDisplay: '+966 50 068 9196',
   coverage: ['Makkah', 'Madinah', 'Jeddah', 'Taif'] as const,

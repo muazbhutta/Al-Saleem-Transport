@@ -26,7 +26,7 @@ export default async function Fleet() {
           <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-card ring-1 ring-navy-100/60">
             <Image
               src="/images/fleet-vehicles.jpg"
-              alt="Al-Saleem Transport fleet — sedan, SUV and Hiace van for Ziyarat and airport transfers in Saudi Arabia"
+              alt="Al-Saleem Transport fleet - sedan, SUV and Hiace van for Ziyarat and airport transfers in Saudi Arabia"
               fill
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 1100px"
@@ -41,7 +41,7 @@ export default async function Fleet() {
           {items.map((item, i) => (
             <Reveal key={item.key} delay={i * 0.05}>
               <div className="card flex h-full flex-col items-center gap-4 text-center">
-                {/* Vehicle photo slot — drop /public/images/fleet-{key}.jpg and
+                {/* Vehicle photo slot - drop /public/images/fleet-{key}.jpg and
                     swap this icon block for <Image>. See README. */}
                 <div className="flex h-28 w-full items-center justify-center rounded-2xl bg-gradient-to-br from-navy-50 to-cream-300">
                   <item.icon className="h-14 w-14 text-navy-400" aria-hidden />

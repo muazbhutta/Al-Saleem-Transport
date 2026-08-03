@@ -100,6 +100,21 @@
   }
 }
 
+/* --- Mobile: center-align page text. Form controls keep their natural start
+   alignment so inputs stay readable, and list markers move inline so bullets
+   sit with the centered text. --- */
+@media (max-width: 639.98px) {
+  main {
+    text-align: center;
+  }
+  main :is(input, textarea, select) {
+    text-align: start;
+  }
+  main :is(ul, ol) {
+    list-style-position: inside;
+  }
+}
+
 /* --- Print styles: the Ziyarat guide prints/saves-to-PDF cleanly. --- */
 @media print {
   /* Force backgrounds & ink to print so verse/hadith/table styling survives. */

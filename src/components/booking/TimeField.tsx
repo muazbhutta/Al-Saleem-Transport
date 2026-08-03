@@ -6,7 +6,7 @@ import { Clock } from 'lucide-react';
 const pad = (n: number) => String(n).padStart(2, '0');
 
 /**
- * Theme-matched time picker — replaces the browser's un-stylable native
+ * Theme-matched time picker - replaces the browser's un-stylable native
  * <input type="time"> popup. Three columns (hour / minute / AM-PM) in the
  * emerald + gold palette. Emits a 24h "HH:MM" string so the booking message
  * format is unchanged.
@@ -86,7 +86,7 @@ export default function TimeField({
           className="absolute z-30 mt-2 w-full min-w-[16rem] rounded-2xl border border-navy-100 bg-white p-2 shadow-card"
         >
           <div className="flex gap-1" dir="ltr">
-            {/* Hours 1–12 */}
+            {/* Hours 1-12 */}
             <div className={colCls}>
               {Array.from({ length: 12 }, (_, i) => i + 1).map((h) => (
                 <button
@@ -99,7 +99,7 @@ export default function TimeField({
                 </button>
               ))}
             </div>
-            {/* Minutes 00–59 */}
+            {/* Minutes 00-59 */}
             <div className={colCls}>
               {Array.from({ length: 60 }, (_, i) => i).map((m) => (
                 <button

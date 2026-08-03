@@ -55,7 +55,7 @@ export default function Header({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* Main bar — never wraps: nav collapses to a drawer below xl. */}
+      {/* Main bar - never wraps: nav collapses to a drawer below xl. */}
       <div className="container flex flex-nowrap items-center justify-between gap-3 py-3">
         <Logo priority compactOnMobile className="shrink-0" />
 
@@ -80,19 +80,20 @@ export default function Header({ locale }: { locale: string }) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
-          {/* Language switcher — compact (globe only) on mobile, full label on sm+ */}
+          {/* Language switcher - compact (globe only) on mobile, full label on sm+ */}
           <div className="sm:hidden">
             <LanguageSwitcher compact />
           </div>
           <div className="hidden sm:block">
             <LanguageSwitcher />
           </div>
-          {/* Book Now — visible in the bar on every screen (incl. mobile) */}
+          {/* Book Now - in the bar on desktop (xl+); on smaller screens it moves
+              into the hamburger drawer below. */}
           <a
             href={bookHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-whatsapp inline-flex whitespace-nowrap px-3 py-2 text-sm sm:px-4 sm:py-2.5"
+            className="btn-whatsapp hidden whitespace-nowrap px-3 py-2 text-sm sm:px-4 sm:py-2.5 xl:inline-flex"
           >
             <MessageCircle className="h-4 w-4" aria-hidden />
             {t('pickDrop')}
@@ -122,8 +123,16 @@ export default function Header({ locale }: { locale: string }) {
                 {t(item.key)}
               </Link>
             ))}
-            <div className="mt-3 border-t border-navy-100 pt-4">
-              {/* Language + Book Now now live in the header bar; keep quick-call here */}
+            <div className="mt-3 flex flex-col gap-2 border-t border-navy-100 pt-4">
+              {/* Book Now (WhatsApp) + quick-call live inside the drawer on mobile/tablet. */}
+              <a
+                href={bookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp w-full"
+              >
+                <MessageCircle className="h-4 w-4" aria-hidden /> {t('pickDrop')}
+              </a>
               <a href={telLink} className="btn-outline w-full" dir="ltr">
                 <Phone className="h-4 w-4" /> {site.phoneDisplay}
               </a>

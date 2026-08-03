@@ -90,14 +90,14 @@ export default async function AboutPage({ params }: { params: { locale: string }
         </div>
       </section>
 
-      {/* Fleet showcase — 16:9 keeps all three vehicles visible on mobile */}
+      {/* Fleet showcase - 16:9 keeps all three vehicles visible on mobile */}
       <section className="bg-cream pb-4">
         <div className="container">
           <Reveal>
             <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-card ring-1 ring-navy-100/60">
               <Image
                 src="/images/fleet-vehicles.jpg"
-                alt="Al-Saleem Transport fleet — sedan, SUV and Hiace van for Ziyarat and airport transfers in Saudi Arabia"
+                alt="Al-Saleem Transport fleet - sedan, SUV and Hiace van for Ziyarat and airport transfers in Saudi Arabia"
                 fill
                 loading="lazy"
                 sizes="(max-width: 1024px) 100vw, 1100px"

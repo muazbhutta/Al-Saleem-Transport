@@ -46,7 +46,7 @@ function blockHtml(b: GuideBlock, L: GuideDocLabels): string {
         b.arabic ? `<p class="ar" dir="rtl" lang="ar">${esc(b.arabic)}</p>` : ''
       }${
         b.translation ? `<p class="tr"><em>${esc(L.translation)}:</em> ${esc(b.translation)}</p>` : ''
-      }${b.reference ? `<p class="ref">— ${esc(b.reference)}</p>` : ''}</figure>`;
+      }${b.reference ? `<p class="ref">- ${esc(b.reference)}</p>` : ''}</figure>`;
     case 'hadith':
       return `<figure class="hadith"><div class="tag">${esc(b.badge || L.hadith)}</div>${
         b.arabic ? `<p class="ar" dir="rtl" lang="ar">${esc(b.arabic)}</p>` : ''
@@ -138,7 +138,7 @@ export function buildGuideHtml(guide: Guide, o: GuideDocOpts): string {
 
   return `<!doctype html><html lang="${esc(o.locale)}" dir="${o.dir}"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>${esc(
     o.title,
-  )} — ${esc(o.siteName)}</title><style>${CSS}</style></head><body>
+  )} - ${esc(o.siteName)}</title><style>${CSS}</style></head><body>
   <div class="cover">
     <div class="brand">${esc(o.siteName)}</div>
     <h1>${esc(o.title)}</h1>

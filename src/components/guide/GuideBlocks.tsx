@@ -92,7 +92,7 @@ export function Block({ block, labels }: { block: GuideBlock; labels: Labels }) 
               )}
             </>
           )}
-          {block.reference && <p className="mt-3 text-sm text-gold-light">— {block.reference}</p>}
+          {block.reference && <p className="mt-3 text-sm text-gold-light">- {block.reference}</p>}
         </figure>
       );
 

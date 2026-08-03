@@ -125,7 +125,7 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
             <div className="no-print mb-8 flex gap-3 rounded-2xl border border-gold/40 bg-gold/5 p-4 text-sm text-navy-600">
               <Info className="h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
               <p>
-                {tc('chooseLanguage')} — {t('availableIn')}. {t('contentPending')}
+                {tc('chooseLanguage')} - {t('availableIn')}. {t('contentPending')}
               </p>
             </div>
           )}

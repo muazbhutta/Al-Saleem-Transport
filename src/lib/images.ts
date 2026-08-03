@@ -1,4 +1,4 @@
-// Low-quality image placeholders (LQIP) for next/image blur — zero layout shift.
+// Low-quality image placeholders (LQIP) for next/image blur - zero layout shift.
 // Auto-generated from the source photos; safe to regenerate.
 
 export const airportBlur =

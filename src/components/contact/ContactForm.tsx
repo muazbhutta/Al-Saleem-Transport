@@ -29,7 +29,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="card flex flex-col gap-4">
+    <form onSubmit={submit} className="card flex h-full flex-col gap-4">
       <h2 className="text-xl">{t('formTitle')}</h2>
       <p className="text-sm text-navy-500">{t('formSubtitle')}</p>
       <div>

@@ -49,7 +49,7 @@ export default async function PageHeader({
             className="object-cover"
             style={{ objectPosition: imagePosition }}
           />
-          {/* Vertical scrim only — the FULL WIDTH of the photo stays visible;
+          {/* Vertical scrim only - the FULL WIDTH of the photo stays visible;
               just the bottom darkens so the title/CTA stay readable. */}
           <div
             className="absolute inset-0 bg-gradient-to-t from-navy-900/92 via-navy-900/35 to-navy-900/12"

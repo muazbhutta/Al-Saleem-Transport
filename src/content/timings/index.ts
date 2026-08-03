@@ -2,7 +2,7 @@
  * Ziyarat places & indicative visiting timings for the home-page scroller.
  *
  * Locale-keyed with an English fallback (same pattern as the guide), so a new
- * language is added by dropping a block in here — no message-file changes and
+ * language is added by dropping a block in here - no message-file changes and
  * nothing ever renders a missing-key error. Timings are indicative and should
  * be confirmed locally, especially during the Hajj season.
  */
@@ -26,7 +26,7 @@ const en: TimingContent = {
   eyebrow: 'Plan your visits',
   title: 'Ziyarat Places & Timings',
   subtitle:
-    'Indicative visiting times for the blessed sites. Always confirm locally — timings can change, especially during the Hajj season.',
+    'Indicative visiting times for the blessed sites. Always confirm locally - timings can change, especially during the Hajj season.',
   items: [
     { place: 'Masjid al-Haram', city: 'Makkah', note: 'Open 24 hours, every day', icon: 'haram' },
     { place: 'Masjid an-Nabawi', city: 'Madinah', note: 'Open 24 hours · Rawdah by Nusuk permit', icon: 'nabawi' },
@@ -45,7 +45,7 @@ const ar: TimingContent = {
   eyebrow: 'خطّط لزياراتك',
   title: 'أماكن الزيارات وأوقاتها',
   subtitle:
-    'أوقات إرشادية لزيارة المواقع المباركة. تأكّد دائمًا محليًا — فقد تتغيّر الأوقات، خاصة في موسم الحج.',
+    'أوقات إرشادية لزيارة المواقع المباركة. تأكّد دائمًا محليًا - فقد تتغيّر الأوقات، خاصة في موسم الحج.',
   items: [
     { place: 'المسجد الحرام', city: 'مكة', note: 'مفتوح ٢٤ ساعة، كل يوم', icon: 'haram' },
     { place: 'المسجد النبوي', city: 'المدينة', note: 'مفتوح ٢٤ ساعة · الروضة بتصريح نسك', icon: 'nabawi' },
@@ -64,7 +64,7 @@ const ur: TimingContent = {
   eyebrow: 'اپنی زیارات کی منصوبہ بندی کریں',
   title: 'زیارت کے مقامات اور اوقات',
   subtitle:
-    'مبارک مقامات کی زیارت کے تخمینی اوقات۔ ہمیشہ مقامی طور پر تصدیق کریں — خاص طور پر حج کے موسم میں اوقات بدل سکتے ہیں۔',
+    'مبارک مقامات کی زیارت کے تخمینی اوقات۔ ہمیشہ مقامی طور پر تصدیق کریں - خاص طور پر حج کے موسم میں اوقات بدل سکتے ہیں۔',
   items: [
     { place: 'مسجد الحرام', city: 'مکہ', note: '۲۴ گھنٹے کھلا، ہر دن', icon: 'haram' },
     { place: 'مسجد نبوی', city: 'مدینہ', note: '۲۴ گھنٹے کھلا · ریاض الجنہ نسک اجازت سے', icon: 'nabawi' },

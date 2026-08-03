@@ -21,7 +21,7 @@ export default async function Hero() {
 
   return (
     <section className="relative flex min-h-[620px] items-center overflow-hidden bg-navy-900 text-cream-100 lg:min-h-[86vh]">
-      {/* Background photo (optimized, priority LCP, blur LQIP — no layout shift) */}
+      {/* Background photo (optimized, priority LCP, blur LQIP - no layout shift) */}
       <Image
         src="/images/makkah-skyline.jpg"
         alt="Makkah skyline with the Clock Tower (Abraj Al-Bait) illuminated at dusk"
@@ -30,10 +30,10 @@ export default async function Hero() {
         sizes="100vw"
         placeholder="blur"
         blurDataURL={makkahSkylineBlur}
-        className="object-cover object-[center_42%]"
+        className="object-cover object-[62%_38%] sm:object-[center_42%]"
       />
 
-      {/* Readability overlays — emerald-tinted, darker toward the bottom */}
+      {/* Readability overlays - emerald-tinted, darker toward the bottom */}
       <div className="absolute inset-0 bg-navy-900/50" aria-hidden />
       <div
         className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/55 to-navy-900/30"

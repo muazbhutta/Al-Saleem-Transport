@@ -6,7 +6,7 @@ import { masjidBlur } from '@/lib/images';
 import Reveal from '@/components/ui/Reveal';
 
 /**
- * Ziyarat Guide teaser band — Masjid an-Nabawi at sunset as the background,
+ * Ziyarat Guide teaser band - Masjid an-Nabawi at sunset as the background,
  * with a dark gradient overlay so the text stays readable. The image sits in a
  * defined aspect-ratio band (taller on mobile, wide on desktop) with the focal
  * point on the green dome, so nothing is distorted or cut off. Lazy-loaded.

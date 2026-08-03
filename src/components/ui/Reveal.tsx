@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 /**
- * Lightweight entrance animation — pure CSS, zero JavaScript.
+ * Lightweight entrance animation - pure CSS, zero JavaScript.
  *
  * Renders as a Server Component (no 'use client', no Framer Motion), so it
  * ships no runtime cost. Uses a GPU-friendly transform/opacity keyframe and

@@ -4,7 +4,7 @@
  * Content is authored per locale as data (not hard-coded JSX) so a new
  * language is added by dropping in one file: `src/content/ziyarat/<locale>.ts`.
  *
- * IMPORTANT — religious accuracy:
+ * IMPORTANT - religious accuracy:
  * Qur'anic verses and ahadith must be verified against authentic sources
  * before publication. Every `verse` / `hadith` block carries its source; keep
  * the Arabic text verbatim and preserve citations when editing or translating.

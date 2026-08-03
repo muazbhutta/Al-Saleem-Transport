@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { MessageCircle, Mail, User, Phone, MapPin, Calendar, Clock, Users } from 'lucide-react';
-import { site, whatsappLink, mailLink } from '@/lib/site';
+import { MessageCircle, User, Phone, MapPin, Calendar, Clock, Users } from 'lucide-react';
+import { site, whatsappLink } from '@/lib/site';
 import TimeField from './TimeField';
 
 type Form = {
@@ -41,7 +41,7 @@ export default function BookingForm() {
     setForm((f) => ({ ...f, [key]: value }));
   }
 
-  /** Build a readable, pre-filled message body used by both WhatsApp and email. */
+  /** Build a readable, pre-filled message body for the WhatsApp chat. */
   function buildMessage() {
     const serviceLabel = t(`serviceOptions.${form.service}`);
     const vehicleLabel = t(`vehicleOptions.${form.vehicle}`);
@@ -76,18 +76,6 @@ export default function BookingForm() {
     }
     setError(false);
     window.open(whatsappLink(buildMessage()), '_blank', 'noopener,noreferrer');
-  }
-
-  function submitEmail() {
-    if (!isValid()) {
-      setError(true);
-      return;
-    }
-    setError(false);
-    const url = `${mailLink}?subject=${encodeURIComponent(t('emailSubject'))}&body=${encodeURIComponent(
-      buildMessage(),
-    )}`;
-    window.location.href = url;
   }
 
   const fieldClass =
@@ -274,14 +262,6 @@ export default function BookingForm() {
         <button type="submit" className="btn-whatsapp w-full text-base">
           <MessageCircle className="h-5 w-5" aria-hidden />
           {t('submit')}
-        </button>
-        <button
-          type="button"
-          onClick={submitEmail}
-          className="btn-outline w-full"
-        >
-          <Mail className="h-4 w-4" aria-hidden />
-          {t('submitEmail')}
         </button>
         <p className="text-center text-xs text-navy-400">{t('requiredHint')}</p>
       </div>

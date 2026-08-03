@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# Al-Saleem Transport — Website
+# Al-Saleem Transport - Website
 
 Production-ready, multilingual, SEO-first website for **Al-Saleem Integrated
-Transport Company** (شركة السليم المتكامل للنقل البري) — Ziyarat, airport and
+Transport Company** (شركة السليم المتكامل للنقل البري) - Ziyarat, airport and
 hotel pick & drop transport across Makkah, Madinah, Jeddah and Taif.
 
 Built with **Next.js 14 (App Router) · TypeScript · Tailwind CSS · next-intl ·
@@ -18,11 +17,11 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 — you'll be redirected to your best-match locale
+Open http://localhost:3000 - you'll be redirected to your best-match locale
 (e.g. `/en`).
 
 ```bash
-npm run build   # production build (SSG) — generates 95 static pages
+npm run build   # production build (SSG) - generates 95 static pages
 npm start       # serve the production build
 npm run lint    # eslint
 ```
@@ -89,7 +88,7 @@ Business facts (phone, license, email, coverage, geo) live in one place:
 
 ## Add a new language
 
-Two steps — no code changes needed:
+Two steps - no code changes needed:
 
 1. **Register it** in [`src/lib/site.ts`](src/lib/site.ts) → `languages[]`:
 
@@ -98,10 +97,10 @@ Two steps — no code changes needed:
    ```
 
 2. **Add the translation file** `src/messages/ps.json` (copy `en.json` and
-   translate the values — keep the keys identical).
+   translate the values - keep the keys identical).
 
 That's it: routing, the language switcher, hreflang, the sitemap and metadata
-all pick it up automatically. (Optionally add a native guide file — see below.)
+all pick it up automatically. (Optionally add a native guide file - see below.)
 
 ---
 
@@ -124,7 +123,7 @@ and **tables**.
 > ⚠️ Qur'anic verses and ahadith are shipped as `pending: true` placeholders on
 > purpose. Replace them with the **verified** Arabic text, translation and
 > source, and have the complete guide **reviewed by a qualified scholar** before
-> publishing. Arabic Qur'an text stays Arabic in every language version — only
+> publishing. Arabic Qur'an text stays Arabic in every language version - only
 > the surrounding translation/explanation changes.
 
 Example verse block once verified:
@@ -182,6 +181,3 @@ export raster OG images, see [`public/images/README.md`](public/images/README.md
 ---
 
 _"Serving the Ummah with Excellence."_
-=======
-# Al-Saleem-Transport
->>>>>>> f3a2abb750349c3e38cba932f4d6586047cc74a8

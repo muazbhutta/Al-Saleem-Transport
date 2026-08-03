@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/schema';
-import { site, telLink, mailLink, whatsappLink } from '@/lib/site';
+import { site, telLink, mailLink } from '@/lib/site';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
@@ -28,10 +28,6 @@ export default async function ContactPage({ params }: { params: { locale: string
   const tn = await getTranslations('nav');
   const tc = await getTranslations('common');
 
-  const waHref = whatsappLink(
-    'Assalamu alaikum Al-Saleem Transport, I have a question.',
-  );
-
   const cards = [
     { icon: Phone, title: t('phoneTitle'), value: site.phoneDisplay, href: telLink, ltr: true },
     { icon: Mail, title: t('emailTitle'), value: site.email, href: mailLink, ltr: true },
@@ -55,10 +51,10 @@ export default async function ContactPage({ params }: { params: { locale: string
       />
 
       <section className="section bg-cream">
-        <div className="container grid gap-8 lg:grid-cols-2">
-          {/* Contact details */}
-          <div className="flex flex-col gap-5">
-            <div className="grid gap-4 sm:grid-cols-2">
+        <div className="container">
+          <div className="grid items-stretch gap-8 lg:grid-cols-2">
+            {/* Contact details */}
+            <div className="grid gap-4 sm:auto-rows-fr sm:grid-cols-2">
               {cards.map((c) => {
                 const inner = (
                   <>
@@ -74,36 +70,31 @@ export default async function ContactPage({ params }: { params: { locale: string
                   </>
                 );
                 return c.href ? (
-                  <a key={c.title} href={c.href} className="card transition hover:ring-gold/50">
+                  <a key={c.title} href={c.href} className="card h-full transition hover:ring-gold/50">
                     {inner}
                   </a>
                 ) : (
-                  <div key={c.title} className="card">
+                  <div key={c.title} className="card h-full">
                     {inner}
                   </div>
                 );
               })}
             </div>
 
-            <a href={waHref} target="_blank" rel="noopener noreferrer" className="btn-whatsapp w-full text-base">
-              <MessageCircle className="h-5 w-5" aria-hidden />
-              {tc('chatWhatsapp')}
-            </a>
-
-            {/* Map: static, privacy-friendly embed of the service region. */}
-            <div className="overflow-hidden rounded-2xl shadow-soft ring-1 ring-navy-100">
-              <iframe
-                title="Service area map — Makkah, Madinah, Jeddah, Taif"
-                src="https://www.google.com/maps?q=Makkah%2C%20Saudi%20Arabia&z=6&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-64 w-full border-0"
-              />
-            </div>
+            {/* Message form */}
+            <ContactForm />
           </div>
 
-          {/* Message form */}
-          <ContactForm />
+          {/* Map: full-width location embed below both boxes. */}
+          <div className="mt-8 overflow-hidden rounded-2xl shadow-soft ring-1 ring-navy-100">
+            <iframe
+              title="Al-Saleem Transport location - Google Maps"
+              src="https://www.google.com/maps?q=21.4466920,39.8542180&z=15&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-80 w-full border-0 md:h-[28rem]"
+            />
+          </div>
         </div>
       </section>
     </>

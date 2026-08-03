@@ -1,7 +1,7 @@
 import type { Guide } from './types';
 
 /**
- * English Ziyarat guide — "Complete Guide to Sacred Places".
+ * English Ziyarat guide - "Complete Guide to Sacred Places".
  *
  * Content transcribed from the client-provided source, with Qur'anic verses
  * kept verbatim in Arabic and every hadith/verse citation preserved. Please
@@ -10,23 +10,23 @@ import type { Guide } from './types';
 const guide: Guide = {
   title: 'Complete Guide to Sacred Places',
   intro:
-    'Makkah · Taif · Madinah · Badr — a companion for your journey through the sacred places, in the light of the Qur’an, authentic Hadith and reliable narrations.',
+    'Makkah · Taif · Madinah · Badr - a companion for your journey through the sacred places, in the light of the Qur’an, authentic Hadith and reliable narrations.',
   chapters: [
-    // ── CHAPTER 1 — MAKKAH ──────────────────────────────
+    // ── CHAPTER 1 - MAKKAH ──────────────────────────────
     {
       id: 'makkah',
-      title: 'Chapter 1 · Makkah Mukarramah — Introduction',
+      title: 'Chapter 1 · Makkah Mukarramah - Introduction',
       intro:
         'Makkah Mukarramah is the holiest city in Islam. This is the place where the Ka’bah is located, which Allah Almighty has made the center of worship for all of humanity. Makkah is not merely a city, but rather a complete system of monotheism, peace, and guidance.',
       blocks: [
-        { type: 'h3', id: 'kabah', text: '1.1 Ka’bah — The First House of Worship' },
+        { type: 'h3', id: 'kabah', text: '1.1 Ka’bah - The First House of Worship' },
         {
           type: 'verse',
           arabic:
             'إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا وَهُدًى لِلْعَالَمِينَ ۝ فِيهِ آيَاتٌ بَيِّنَاتٌ مَقَامُ إِبْرَاهِيمَ وَمَنْ دَخَلَهُ كَانَ آمِنًا',
           translation:
-            '“Indeed, the first House established for mankind was that at Bakkah (Makkah) — blessed and a guidance for the worlds. In it are clear signs: the standing place of Ibrahim. And whoever enters it shall be safe.”',
-          reference: 'Surah Aal-e-Imran (3:96–97)',
+            '“Indeed, the first House established for mankind was that at Bakkah (Makkah) - blessed and a guidance for the worlds. In it are clear signs: the standing place of Ibrahim. And whoever enters it shall be safe.”',
+          reference: 'Surah Aal-e-Imran (3:96-97)',
         },
         {
           type: 'list',
@@ -43,7 +43,7 @@ const guide: Guide = {
           arabic: 'لَا أُقْسِمُ بِهَذَا الْبَلَدِ ۝ وَأَنتَ حِلٌّ بِهَذَا الْبَلَدِ',
           translation:
             '“I swear by this city (Makkah), and you (O Prophet ﷺ!) are free in this city.”',
-          reference: 'Surah Al-Balad (90:1–2)',
+          reference: 'Surah Al-Balad (90:1-2)',
         },
         { type: 'h3', id: 'prayer-ibrahim', text: '1.3 The Prayer of Ibrahim (AS) for Makkah' },
         {
@@ -73,7 +73,7 @@ const guide: Guide = {
       ],
     },
 
-    // ── CHAPTER 2 — UMRAH ───────────────────────────────
+    // ── CHAPTER 2 - UMRAH ───────────────────────────────
     {
       id: 'umrah',
       title: 'Chapter 2 · Umrah',
@@ -97,7 +97,7 @@ const guide: Guide = {
           items: [
             { title: 'Ihram', text: 'Intention and garment at the Miqat' },
             { title: 'Tawaf', text: '7 circuits around the Ka’bah' },
-            { title: 'Sa’i', text: '7 trips between Safa–Marwah' },
+            { title: 'Sa’i', text: '7 trips between Safa-Marwah' },
             { title: 'Halaq / Qasr', text: 'Shaving or cutting of hair' },
           ],
         },
@@ -131,7 +131,7 @@ const guide: Guide = {
             '2 Rak‘at prayer (near Maqam-e-Ibrahim)',
           ],
         },
-        { type: 'h4', text: 'Sa’i (Safa–Marwah)' },
+        { type: 'h4', text: 'Sa’i (Safa-Marwah)' },
         {
           type: 'verse',
           arabic: 'إِنَّ الصَّفَا وَالْمَرْوَةَ مِن شَعَائِرِ اللَّهِ',
@@ -140,7 +140,7 @@ const guide: Guide = {
         {
           type: 'list',
           items: [
-            'Start at Safa, end at Marwah — 7 trips',
+            'Start at Safa, end at Marwah - 7 trips',
             'Between the green lights: Men walk briskly, Women at normal pace',
           ],
         },
@@ -157,7 +157,7 @@ const guide: Guide = {
       ],
     },
 
-    // ── CHAPTER 3 — HAJJ ────────────────────────────────
+    // ── CHAPTER 3 - HAJJ ────────────────────────────────
     {
       id: 'hajj',
       title: 'Chapter 3 · Hajj',
@@ -167,7 +167,7 @@ const guide: Guide = {
           type: 'verse',
           arabic: 'وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا',
           translation:
-            '“And upon humanity is a duty to Allah to perform Hajj at this House — for whoever is able to find a way there.”',
+            '“And upon humanity is a duty to Allah to perform Hajj at this House - for whoever is able to find a way there.”',
           reference: 'Surah Aal-e-Imran (3:97)',
         },
         {
@@ -183,15 +183,15 @@ const guide: Guide = {
           type: 'steps',
           items: [
             { title: 'Ihram', text: 'Intention and garment' },
-            { title: 'Wuquf-e-Arafah', text: '9 Dhul Hijjah — Obligatory pillar' },
+            { title: 'Wuquf-e-Arafah', text: '9 Dhul Hijjah - Obligatory pillar' },
             { title: 'Tawaf-e-Ifadah', text: 'Obligatory Tawaf' },
-            { title: 'Sa’i', text: 'Safa–Marwah' },
+            { title: 'Sa’i', text: 'Safa-Marwah' },
           ],
         },
         { type: 'h3', id: 'method-hajj', text: '3.5 The Correct Method of Hajj (Step by Step)' },
         {
           type: 'infocard',
-          title: '8 Dhul Hijjah (Day of Tarwiyah) — Mina',
+          title: '8 Dhul Hijjah (Day of Tarwiyah) - Mina',
           blocks: [
             {
               type: 'list',
@@ -201,16 +201,16 @@ const guide: Guide = {
         },
         {
           type: 'infocard',
-          title: '9 Dhul Hijjah (Day of Arafah) — Wuquf-e-Arafah',
+          title: '9 Dhul Hijjah (Day of Arafah) - Wuquf-e-Arafah',
           blocks: [
             { type: 'note', variant: 'warning', text: 'Hajj is invalid without Arafah!' },
             {
               type: 'list',
               items: [
-                'Staying in Arafah from Zuhr to Maghrib — this is the greatest pillar of Hajj',
+                'Staying in Arafah from Zuhr to Maghrib - this is the greatest pillar of Hajj',
                 'Supplication, seeking forgiveness, glorification',
-                'Then proceed to Muzdalifah — combine Maghrib and Isha prayers',
-                'Spend the night in Muzdalifah (night of 9–10 Dhul Hijjah)',
+                'Then proceed to Muzdalifah - combine Maghrib and Isha prayers',
+                'Spend the night in Muzdalifah (night of 9-10 Dhul Hijjah)',
                 'Collect 70 pebbles',
               ],
             },
@@ -218,13 +218,13 @@ const guide: Guide = {
         },
         {
           type: 'infocard',
-          title: '10 Dhul Hijjah (Day of Sacrifice) — 4 Acts',
+          title: '10 Dhul Hijjah (Day of Sacrifice) - 4 Acts',
           blocks: [
             {
               type: 'list',
               ordered: true,
               items: [
-                'Rami — Only Jamrat al-Aqabah (large pillar) — 7 stones',
+                'Rami - Only Jamrat al-Aqabah (large pillar) - 7 stones',
                 'Sacrifice',
                 'Shaving or cutting of hair',
                 'Tawaf-e-Ifadah + Sa’i',
@@ -234,7 +234,7 @@ const guide: Guide = {
         },
         {
           type: 'infocard',
-          title: '11–13 Dhul Hijjah (Days of Tashreeq) — Rami',
+          title: '11-13 Dhul Hijjah (Days of Tashreeq) - Rami',
           blocks: [
             { type: 'p', text: 'Stoning all three Jamarat, each day:' },
             {
@@ -255,12 +255,12 @@ const guide: Guide = {
       ],
     },
 
-    // ── CHAPTER 4 — HAJJ DETAILS ────────────────────────
+    // ── CHAPTER 4 - HAJJ DETAILS ────────────────────────
     {
       id: 'hajj-details',
       title: 'Chapter 4 · Hajj Details and Sacred Sites',
       blocks: [
-        { type: 'h3', id: 'masjid-nimra', text: '4.1 Masjid Nimra — Introduction' },
+        { type: 'h3', id: 'masjid-nimra', text: '4.1 Masjid Nimra - Introduction' },
         {
           type: 'p',
           text:
@@ -270,15 +270,15 @@ const guide: Guide = {
           type: 'note',
           variant: 'warning',
           text:
-            'Important: Masjid Nimra is only open on 9 Dhul Hijjah (Day of Arafah) — it remains closed throughout the year. Only on this day are the Adhan, sermon, and combined Zuhr + Asr prayers offered.',
+            'Important: Masjid Nimra is only open on 9 Dhul Hijjah (Day of Arafah) - it remains closed throughout the year. Only on this day are the Adhan, sermon, and combined Zuhr + Asr prayers offered.',
         },
-        { type: 'h3', id: 'jabal-rehmat', text: '4.2 Jabal-e-Rehmat — Introduction' },
+        { type: 'h3', id: 'jabal-rehmat', text: '4.2 Jabal-e-Rehmat - Introduction' },
         {
           type: 'p',
           text:
             'Jabal-e-Rehmat is a small hill located in the middle of Arafat, also known as the “Mount of Mercy.” This is the place where Prophet Adam (AS) and Hawwa (AS) first met after their descent to earth.',
         },
-        { type: 'h3', id: 'muzdalifah', text: '4.3 Muzdalifah — Introduction' },
+        { type: 'h3', id: 'muzdalifah', text: '4.3 Muzdalifah - Introduction' },
         {
           type: 'p',
           text:
@@ -288,18 +288,18 @@ const guide: Guide = {
           type: 'list',
           items: [
             'After Arafat, combine Maghrib and Isha prayers in Muzdalifah',
-            'The night of 9–10 Dhul Hijjah (Night of Muzdalifah) — spend the night in worship',
+            'The night of 9-10 Dhul Hijjah (Night of Muzdalifah) - spend the night in worship',
             'Remaining until Fajr is obligatory',
             'Collect 70 pebbles for the stoning ritual',
           ],
         },
-        { type: 'h3', id: 'wadi-muhassir', text: '4.4 Wadi-e-Muhassir — Introduction' },
+        { type: 'h3', id: 'wadi-muhassir', text: '4.4 Wadi-e-Muhassir - Introduction' },
         {
           type: 'p',
           text:
-            'Wadi-e-Muhassir is a valley located between Muzdalifah and Mina — it is a reminder of the event of the People of the Elephant, where Allah sent punishment through flocks of birds (Ababeel). This is a place of great lesson and reflection.',
+            'Wadi-e-Muhassir is a valley located between Muzdalifah and Mina - it is a reminder of the event of the People of the Elephant, where Allah sent punishment through flocks of birds (Ababeel). This is a place of great lesson and reflection.',
         },
-        { type: 'h3', id: 'mina', text: '4.5 Mina — Introduction' },
+        { type: 'h3', id: 'mina', text: '4.5 Mina - Introduction' },
         {
           type: 'p',
           text:
@@ -311,11 +311,11 @@ const guide: Guide = {
           text:
             'Masjid al-Khaif is one of the oldest and most sacred mosques in Mina. It is also called “Masjid of the Prophets” because 70 or 100 Prophets prayed here.',
         },
-        { type: 'h3', id: 'jamarat', text: '4.8 Jamarat — Introduction' },
+        { type: 'h3', id: 'jamarat', text: '4.8 Jamarat - Introduction' },
         {
           type: 'p',
           text:
-            'The Jamarat are three locations in Mina where pilgrims throw stones at the pillars representing Satan — a commemoration of the practice of Prophet Ibrahim (AS).',
+            'The Jamarat are three locations in Mina where pilgrims throw stones at the pillars representing Satan - a commemoration of the practice of Prophet Ibrahim (AS).',
         },
         {
           type: 'table',
@@ -326,7 +326,7 @@ const guide: Guide = {
             ['Jamrat al-Aqabah', 'The largest pillar'],
           ],
         },
-        { type: 'h3', id: 'masjid-bayah', text: '4.9 Masjid al-Bay‘ah (Aqabah) — Introduction' },
+        { type: 'h3', id: 'masjid-bayah', text: '4.9 Masjid al-Bay‘ah (Aqabah) - Introduction' },
         {
           type: 'p',
           text:
@@ -335,15 +335,15 @@ const guide: Guide = {
       ],
     },
 
-    // ── CHAPTER 5 — GRAVEYARDS & MOSQUES ────────────────
+    // ── CHAPTER 5 - GRAVEYARDS & MOSQUES ────────────────
     {
       id: 'graves-mosques',
-      title: 'Chapter 5 · Graveyards and Mosques — Sacred Sites',
+      title: 'Chapter 5 · Graveyards and Mosques - Sacred Sites',
       blocks: [
         {
           type: 'hadith',
-          badge: 'Hadith — Visiting Graves',
-          text: '“I had forbidden you from visiting graves, but now visit them.” — Prophet ﷺ',
+          badge: 'Hadith - Visiting Graves',
+          text: '“I had forbidden you from visiting graves, but now visit them.” - Prophet ﷺ',
           source: 'Sahih Muslim, 977',
         },
         { type: 'h3', id: 'jannat-mualla', text: '5.1 Jannat-ul-Mu‘alla' },
@@ -356,37 +356,37 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Here a group of Jinn listened to the recitation of the Prophet ﷺ and embraced Islam, pledging to protect him — this mosque was built in memory of that event.',
+            'Here a group of Jinn listened to the recitation of the Prophet ﷺ and embraced Islam, pledging to protect him - this mosque was built in memory of that event.',
         },
         { type: 'h3', id: 'masjid-shajar', text: '5.3 Masjid Shajar' },
         {
           type: 'p',
           text:
-            'Here a tree recognized the Prophet ﷺ, bowed in greeting, and bore witness to his Prophethood — this mosque was built at the site of that miraculous event.',
+            'Here a tree recognized the Prophet ﷺ, bowed in greeting, and bore witness to his Prophethood - this mosque was built at the site of that miraculous event.',
         },
         { type: 'h3', id: 'masjid-fath', text: '5.4 Masjid al-Fath (Masjid al-Rayah)' },
         {
           type: 'p',
           text:
-            'Located on Jabal al-Fath — the flag of Islam was raised here during the Conquest of Makkah.',
+            'Located on Jabal al-Fath - the flag of Islam was raised here during the Conquest of Makkah.',
         },
         { type: 'h3', id: 'masjid-hijaba', text: '5.5 Masjid al-Hijaba' },
         {
           type: 'p',
           text:
-            'This mosque takes its name from “Hijabah” — the responsibility of opening, closing, and guarding the Ka’bah. On the day of the Conquest of Makkah, the Prophet ﷺ said: “From today, the custodianship (key-keeping) of the Ka’bah will remain with you; it shall remain in your hands until the Day of Judgment.”',
+            'This mosque takes its name from “Hijabah” - the responsibility of opening, closing, and guarding the Ka’bah. On the day of the Conquest of Makkah, the Prophet ﷺ said: “From today, the custodianship (key-keeping) of the Ka’bah will remain with you; it shall remain in your hands until the Day of Judgment.”',
         },
-        { type: 'h3', id: 'masjid-mawlid', text: '5.6 Birthplace of the Prophet ﷺ — Masjid al-Mawlid' },
+        { type: 'h3', id: 'masjid-mawlid', text: '5.6 Birthplace of the Prophet ﷺ - Masjid al-Mawlid' },
         {
           type: 'p',
           text:
-            'The Prophet ﷺ was born in the house of Banu Hashim in Makkah Mukarramah. Birth: 12 Rabi‘ al-Awwal, Year of the Elephant — approximately 570 CE.',
+            'The Prophet ﷺ was born in the house of Banu Hashim in Makkah Mukarramah. Birth: 12 Rabi‘ al-Awwal, Year of the Elephant - approximately 570 CE.',
         },
         { type: 'h3', id: 'qasr-saqf', text: '5.7 Qasr-e-Saqf (قَصْرُ السَّقِيفِ)' },
         {
           type: 'p',
           text:
-            'An ancient historical site in Makkah Mukarramah — associated with the old houses of Banu Hashim. “Saqf” means roof or shelter.',
+            'An ancient historical site in Makkah Mukarramah - associated with the old houses of Banu Hashim. “Saqf” means roof or shelter.',
         },
         { type: 'h3', id: 'maqbarat-adl', text: '5.8 Maqbarat al-‘Adl' },
         {
@@ -398,15 +398,15 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Located near the Al-Ji‘ranah road in Makkah — martyrs from various battles are buried here.',
+            'Located near the Al-Ji‘ranah road in Makkah - martyrs from various battles are buried here.',
         },
-        { type: 'h3', id: 'wad-ul-banat', text: '5.10 Wa’d ul-Banat — Burying Daughters Alive' },
+        { type: 'h3', id: 'wad-ul-banat', text: '5.10 Wa’d ul-Banat - Burying Daughters Alive' },
         {
           type: 'verse',
           arabic: 'وَإِذَا الْمَوْءُودَةُ سُئِلَتْ ۝ بِأَيِّ ذَنبٍ قُتِلَتْ',
           translation:
             '“And when the girl who was buried alive is asked: for what sin was she killed?”',
-          reference: 'Surah At-Takwir (81:8–9)',
+          reference: 'Surah At-Takwir (81:8-9)',
         },
         {
           type: 'p',
@@ -417,19 +417,19 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'The nearest Miqat to Makkah — Ihram for Umrah is donned here by those already residing within Makkah.',
+            'The nearest Miqat to Makkah - Ihram for Umrah is donned here by those already residing within Makkah.',
         },
         { type: 'h3', id: 'masjid-jiranah', text: '5.12 Masjid al-Ji‘ranah' },
         {
           type: 'p',
           text:
-            'An important Miqat of Makkah — the most well-known Miqat after Masjid Tan‘eem.',
+            'An important Miqat of Makkah - the most well-known Miqat after Masjid Tan‘eem.',
         },
         { type: 'h3', id: 'masjid-hudaibiyah', text: '5.13 Masjid Sulh-e-Hudaibiyah' },
         {
           type: 'p',
           text:
-            'The site of the Treaty of Hudaibiyah between the Prophet ﷺ and the Quraysh in 6 AH — this is also where the Bay‘at-ur-Ridwan (Pledge of Satisfaction) took place.',
+            'The site of the Treaty of Hudaibiyah between the Prophet ﷺ and the Quraysh in 6 AH - this is also where the Bay‘at-ur-Ridwan (Pledge of Satisfaction) took place.',
         },
         {
           type: 'verse',
@@ -441,13 +441,13 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Here the first revelation descended — Surah Al-‘Alaq (96:1–5). Islam began at this very place.',
+            'Here the first revelation descended - Surah Al-‘Alaq (96:1-5). Islam began at this very place.',
         },
         { type: 'h3', id: 'jabal-thawr', text: '5.15 Jabal-e-Thawr + Cave of Thawr' },
         {
           type: 'p',
           text:
-            'During the Migration (Hijra), the Prophet ﷺ and Abu Bakr Siddiq (RA) spent three nights here. Under Allah’s special protection — the miraculous events of the spider’s web and the dove’s eggs.',
+            'During the Migration (Hijra), the Prophet ﷺ and Abu Bakr Siddiq (RA) spent three nights here. Under Allah’s special protection - the miraculous events of the spider’s web and the dove’s eggs.',
         },
         {
           type: 'verse',
@@ -458,44 +458,44 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'A historic mountain of Makkah — during the Conquest of Makkah, the Prophet ﷺ chose a path near it to enter the city.',
+            'A historic mountain of Makkah - during the Conquest of Makkah, the Prophet ﷺ chose a path near it to enter the city.',
         },
         { type: 'h3', id: 'kiswah-museum', text: '5.17 Kiswah Museum' },
         {
           type: 'p',
           text:
-            'A magnificent museum dedicated to the Kiswah (the black silk covering of the Ka’bah). Each year on 9 Dhul Hijjah, the old Kiswah is removed and a new one is draped — adorned with Quranic verses embroidered in gold and silver threads.',
+            'A magnificent museum dedicated to the Kiswah (the black silk covering of the Ka’bah). Each year on 9 Dhul Hijjah, the old Kiswah is removed and a new one is draped - adorned with Quranic verses embroidered in gold and silver threads.',
         },
         { type: 'h3', id: 'zubaida-aqueduct', text: '5.18 Zubaida’s Aqueduct' },
         {
           type: 'p',
           text:
-            'Sayyida Zubaida bint Ja‘far (wife of Abbasid Caliph Harun al-Rashid) personally funded the construction of a magnificent water channel from the mountains of Taif to Makkah — for the service of Hajj pilgrims. The largest public welfare project of her era.',
+            'Sayyida Zubaida bint Ja‘far (wife of Abbasid Caliph Harun al-Rashid) personally funded the construction of a magnificent water channel from the mountains of Taif to Makkah - for the service of Hajj pilgrims. The largest public welfare project of her era.',
         },
       ],
     },
 
-    // ── CHAPTER 6 — TAIF ────────────────────────────────
+    // ── CHAPTER 6 - TAIF ────────────────────────────────
     {
       id: 'taif',
-      title: 'Chapter 6 · Taif — Sacred Sites',
+      title: 'Chapter 6 · Taif - Sacred Sites',
       blocks: [
         { type: 'h3', id: 'taif-intro', text: '6.1 Introduction to Taif' },
         {
           type: 'p',
           text:
-            'Taif is a famous and historic city of Saudi Arabia — located east of Makkah in the Sarawat Mountains. In the tenth year of Prophethood, the Prophet ﷺ traveled to Taif. The people of Taif pelted him with stones — yet the Prophet ﷺ did not curse them, but instead prayed for mercy upon them.',
+            'Taif is a famous and historic city of Saudi Arabia - located east of Makkah in the Sarawat Mountains. In the tenth year of Prophethood, the Prophet ﷺ traveled to Taif. The people of Taif pelted him with stones - yet the Prophet ﷺ did not curse them, but instead prayed for mercy upon them.',
         },
         {
           type: 'callout',
           text:
-            '“Taif is the city where stones were thrown, but prayers rose in response — and where pain was given, yet from it a new era of mercy began.”',
+            '“Taif is the city where stones were thrown, but prayers rose in response - and where pain was given, yet from it a new era of mercy began.”',
         },
-        { type: 'h3', id: 'ibn-abbas', text: '6.2 Hazrat Abdullah bin Abbas RA — Introduction' },
+        { type: 'h3', id: 'ibn-abbas', text: '6.2 Hazrat Abdullah bin Abbas RA - Introduction' },
         {
           type: 'p',
           text:
-            'The cousin of the Prophet ﷺ — famously known in Islam as “Tarjuman-ul-Qur’an” (Interpreter of the Quran). He passed away in Taif in 68 AH and was buried there — a tomb and mosque were later built at the site.',
+            'The cousin of the Prophet ﷺ - famously known in Islam as “Tarjuman-ul-Qur’an” (Interpreter of the Quran). He passed away in Taif in 68 AH and was buried there - a tomb and mosque were later built at the site.',
         },
         {
           type: 'hadith',
@@ -524,66 +524,66 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Where Addas RA (a servant) offered grapes to the Prophet ﷺ and, upon hearing “Bismillah,” embraced Islam — a delicate yet deeply impactful moment in the history of Islamic da‘wah.',
+            'Where Addas RA (a servant) offered grapes to the Prophet ﷺ and, upon hearing “Bismillah,” embraced Islam - a delicate yet deeply impactful moment in the history of Islamic da‘wah.',
         },
         { type: 'h3', id: 'masjid-ali-taif', text: '6.5 Masjid-e-Ali RA (Taif)' },
         {
           type: 'p',
-          text: 'Located near the Old City of Taif — attributed to Hazrat Ali bin Abi Talib RA.',
+          text: 'Located near the Old City of Taif - attributed to Hazrat Ali bin Abi Talib RA.',
         },
         { type: 'h3', id: 'masjid-rasool-taif', text: '6.6 Masjid-e-Rasool ﷺ' },
         {
           type: 'p',
-          text: 'Located near the Old City — a site associated with the Prophet’s ﷺ journey to Taif.',
+          text: 'Located near the Old City - a site associated with the Prophet’s ﷺ journey to Taif.',
         },
         { type: 'h3', id: 'masjid-wadi-rahmah', text: '6.7 Masjid Wadi-e-Rahmah' },
         {
           type: 'p',
           text:
-            'Located in the famous Wadi-e-Rahmah of Taif — the place where Allah’s mercy brought solace to the Prophet ﷺ.',
+            'Located in the famous Wadi-e-Rahmah of Taif - the place where Allah’s mercy brought solace to the Prophet ﷺ.',
         },
         { type: 'h3', id: 'qarn-manazil', text: '6.8 Masjid Qarn al-Manazil (Miqat of Najd)' },
         {
           type: 'p',
           text:
-            'Located near Taif — the designated Miqat for the people of Najd (the boundary for donning Ihram for Hajj or Umrah).',
+            'Located near Taif - the designated Miqat for the people of Najd (the boundary for donning Ihram for Hajj or Umrah).',
         },
         { type: 'h3', id: 'al-shafa', text: '6.9 Al-Shafa' },
         {
           type: 'p',
           text:
-            'Al-Shafa is the highest and most famous highland area of Taif — part of the Sarawat Mountains. Renowned for its pleasant climate and natural beauty.',
+            'Al-Shafa is the highest and most famous highland area of Taif - part of the Sarawat Mountains. Renowned for its pleasant climate and natural beauty.',
         },
         { type: 'h3', id: 'souq-okaz', text: '6.10 Souq Okaz' },
         {
           type: 'p',
           text:
-            'The ancient and famous marketplace of the Arab world — a center for trade, literature, poetry, and legal arbitration.',
+            'The ancient and famous marketplace of the Arab world - a center for trade, literature, poetry, and legal arbitration.',
         },
         { type: 'h3', id: 'bab-al-raye', text: '6.11 Bab Al-Raye (باب الريع)' },
         {
           type: 'p',
-          text: 'The famous city gate of ancient Taif — once part of the Taif City Wall.',
+          text: 'The famous city gate of ancient Taif - once part of the Taif City Wall.',
         },
         { type: 'h3', id: 'taif-rose', text: '6.12 Taif Rose Gardens (ورد الطائف)' },
         {
           type: 'p',
           text:
-            'Ward Taif (Taif Rose) — a world-famous variety of rose. Cultivated around Shafa and Hada — grown for centuries for its use in perfume and fragrance.',
+            'Ward Taif (Taif Rose) - a world-famous variety of rose. Cultivated around Shafa and Hada - grown for centuries for its use in perfume and fragrance.',
         },
       ],
     },
 
-    // ── CHAPTER 7 — MADINAH ─────────────────────────────
+    // ── CHAPTER 7 - MADINAH ─────────────────────────────
     {
       id: 'madinah',
-      title: 'Chapter 7 · Madinah Munawwarah — Sacred Sites',
+      title: 'Chapter 7 · Madinah Munawwarah - Sacred Sites',
       blocks: [
         { type: 'h3', id: 'madinah-intro', text: '7.1 Madinah Munawwarah' },
         {
           type: 'p',
           text:
-            'The second holiest city of Islam — here the Prophet ﷺ laid the foundation of Islamic society. Its old name was Yathrib; after the Migration it was called “Madinah an-Nabi ﷺ” (City of the Prophet).',
+            'The second holiest city of Islam - here the Prophet ﷺ laid the foundation of Islamic society. Its old name was Yathrib; after the Migration it was called “Madinah an-Nabi ﷺ” (City of the Prophet).',
         },
         {
           type: 'hadith',
@@ -596,14 +596,14 @@ const guide: Guide = {
         {
           type: 'hadith',
           text:
-            '“Between my house (chamber) and my pulpit is one of the gardens of Paradise, and my pulpit will be at my Hauz (Pool).” — Prophet ﷺ',
+            '“Between my house (chamber) and my pulpit is one of the gardens of Paradise, and my pulpit will be at my Hauz (Pool).” - Prophet ﷺ',
           source: 'Sahih Muslim, 1391',
         },
         { type: 'h3', id: 'jannat-baqi', text: '7.3 Jannat-ul-Baqi' },
         {
           type: 'p',
           text:
-            'The sacred cemetery right next to Masjid an-Nabawi — buried here are:',
+            'The sacred cemetery right next to Masjid an-Nabawi - buried here are:',
         },
         {
           type: 'infocard',
@@ -626,7 +626,7 @@ const guide: Guide = {
             {
               type: 'note',
               text:
-                'Hazrat Khadijah RA — buried in Makkah (Jannat-ul-Mu‘alla) | Hazrat Maymunah RA — buried in Sarif (near Makkah)',
+                'Hazrat Khadijah RA - buried in Makkah (Jannat-ul-Mu‘alla) | Hazrat Maymunah RA - buried in Sarif (near Makkah)',
             },
           ],
         },
@@ -667,41 +667,41 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Located near Masjid an-Nabawi — the Prophet ﷺ offered Eid prayers and Istisqa (prayer for rain) here. Due to the gathering of clouds for rain, it was named “Ghamāmah” (meaning: cloud).',
+            'Located near Masjid an-Nabawi - the Prophet ﷺ offered Eid prayers and Istisqa (prayer for rain) here. Due to the gathering of clouds for rain, it was named “Ghamāmah” (meaning: cloud).',
         },
         { type: 'h3', id: 'masjid-abubakr', text: '7.5 Masjid Abu Bakr RA' },
         {
           type: 'p',
           text:
-            'Located near Masjid al-Ghamāmah — after the Prophet ﷺ, Hazrat Abu Bakr RA led the Eid prayers here.',
+            'Located near Masjid al-Ghamāmah - after the Prophet ﷺ, Hazrat Abu Bakr RA led the Eid prayers here.',
         },
         { type: 'h3', id: 'masjid-bilal', text: '7.6 Masjid Bilal RA' },
         {
           type: 'p',
           text:
-            'Associated with Hazrat Bilal bin Rabah RA, the first Mu’azzin (caller to prayer) of Islam — after the passing of the Prophet ﷺ, the act of giving the Adhan became deeply painful for him.',
+            'Associated with Hazrat Bilal bin Rabah RA, the first Mu’azzin (caller to prayer) of Islam - after the passing of the Prophet ﷺ, the act of giving the Adhan became deeply painful for him.',
         },
         { type: 'h3', id: 'masjid-ali-madinah', text: '7.7 Masjid Ali RA (Madinah)' },
         {
           type: 'p',
           text:
-            'Associated with Hazrat Ali bin Abi Talib RA — the cousin of the Prophet ﷺ, his son-in-law, and the Fourth Rightly-Guided Caliph.',
+            'Associated with Hazrat Ali bin Abi Talib RA - the cousin of the Prophet ﷺ, his son-in-law, and the Fourth Rightly-Guided Caliph.',
         },
         { type: 'h3', id: 'masjid-jumah', text: '7.8 Masjid-e-Jum‘ah' },
         {
           type: 'p',
           text:
-            'After the Migration, the Prophet ﷺ offered the first Friday (Jum‘ah) prayer here — on his way from Quba to Madinah.',
+            'After the Migration, the Prophet ﷺ offered the first Friday (Jum‘ah) prayer here - on his way from Quba to Madinah.',
         },
         { type: 'h3', id: 'masjid-quba', text: '7.9 Masjid-e-Quba' },
         {
           type: 'p',
           text:
-            'The first mosque of Islam — after the Migration, the Prophet ﷺ laid the foundation of this mosque first.',
+            'The first mosque of Islam - after the Migration, the Prophet ﷺ laid the foundation of this mosque first.',
         },
         {
           type: 'hadith',
-          badge: 'Hadith — Virtue',
+          badge: 'Hadith - Virtue',
           text:
             '“Whoever performs ablution at home and then comes to Masjid-e-Quba and offers prayer there, shall receive the reward equivalent to Umrah.”',
           source: 'Sunan Ibn Majah, 1412',
@@ -716,36 +716,36 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Hazrat Usman bin Affan RA purchased this well and dedicated it as a charitable endowment (waqf) for the sake of Allah — the greatest act of ongoing charity (Sadaqa Jariyah) in Islamic history.',
+            'Hazrat Usman bin Affan RA purchased this well and dedicated it as a charitable endowment (waqf) for the sake of Allah - the greatest act of ongoing charity (Sadaqa Jariyah) in Islamic history.',
         },
         { type: 'h3', id: 'bir-ghars', text: '7.12 Bir-e-Ghars' },
         {
           type: 'p',
           text:
-            'The Prophet’s ﷺ favourite water source — he left a bequest that after his passing, his ritual bath (ghusl) should be performed using water from Bir-e-Ghars.',
+            'The Prophet’s ﷺ favourite water source - he left a bequest that after his passing, his ritual bath (ghusl) should be performed using water from Bir-e-Ghars.',
         },
         { type: 'h3', id: 'bustan-mustaqbal', text: '7.13 Bustan al-Mustaqbal' },
         {
           type: 'p',
           text:
-            'A modern public park of Madinah — family-friendly environment with children’s play areas and walking tracks. Not a religious site, but rather the city’s modern recreational park.',
+            'A modern public park of Madinah - family-friendly environment with children’s play areas and walking tracks. Not a religious site, but rather the city’s modern recreational park.',
         },
         { type: 'h3', id: 'masjid-qiblatain', text: '7.14 Masjid-e-Qiblatain' },
         {
           type: 'p',
           text:
-            'The place where the Qibla (direction of prayer) was changed during the prayer itself — from Bait-ul-Maqdis to the Ka’bah. “Qiblatain” means: two Qiblas.',
+            'The place where the Qibla (direction of prayer) was changed during the prayer itself - from Bait-ul-Maqdis to the Ka’bah. “Qiblatain” means: two Qiblas.',
         },
         {
           type: 'note',
           text:
-            'Inside are two mihrabs — the old and the new Qibla. Approximately 5 km from Masjid an-Nabawi ﷺ.',
+            'Inside are two mihrabs - the old and the new Qibla. Approximately 5 km from Masjid an-Nabawi ﷺ.',
         },
         { type: 'h3', id: 'jabal-khandaq', text: '7.15 Jabal-e-Khandaq + The Seven Mosques' },
         {
           type: 'p',
           text:
-            'The Battle of the Trench (Ahzab) — in 5 AH, an enemy force of over 10,000 faced 3,000 Muslims — on the advice of Salman al-Farsi RA, a trench was dug. Allah aided the Muslims through a windstorm and angels.',
+            'The Battle of the Trench (Ahzab) - in 5 AH, an enemy force of over 10,000 faced 3,000 Muslims - on the advice of Salman al-Farsi RA, a trench was dug. Allah aided the Muslims through a windstorm and angels.',
         },
         {
           type: 'infocard',
@@ -769,27 +769,27 @@ const guide: Guide = {
         { type: 'h3', id: 'jabal-uhud', text: '7.17 Jabal-e-Uhud / Battle of Uhud' },
         {
           type: 'hadith',
-          text: '“Uhud is a mountain that loves us and we love it.” — Prophet ﷺ',
+          text: '“Uhud is a mountain that loves us and we love it.” - Prophet ﷺ',
           source: 'Sahih Muslim, 1393',
         },
         {
           type: 'p',
           text:
-            '3 AH — 3,000 troops under Abu Sufyan vs 700 Muslims. When the archers abandoned their positions, the enemy attacked from behind — the tide of the battle turned. The Prophet ﷺ was wounded but offered no curse, only prayed: “O Allah! Guide my people.”',
+            '3 AH - 3,000 troops under Abu Sufyan vs 700 Muslims. When the archers abandoned their positions, the enemy attacked from behind - the tide of the battle turned. The Prophet ﷺ was wounded but offered no curse, only prayed: “O Allah! Guide my people.”',
         },
         { type: 'h3', id: 'martyrs-uhud', text: '7.20 Cemetery of the Martyrs of Uhud' },
         {
           type: 'p',
-          text: '70 Companions RA were martyred in the Battle of Uhud — they are buried here.',
+          text: '70 Companions RA were martyred in the Battle of Uhud - they are buried here.',
         },
         {
           type: 'infocard',
-          title: 'Master of the Martyrs — Hazrat Hamza bin Abdul-Muttalib RA',
+          title: 'Master of the Martyrs - Hazrat Hamza bin Abdul-Muttalib RA',
           blocks: [
             {
               type: 'p',
               text:
-                'The uncle of the Prophet ﷺ — the greatest martyr of this battle — the title “Sayyid-ush-Shuhada” (Master of the Martyrs) was bestowed upon him by the Prophet ﷺ.',
+                'The uncle of the Prophet ﷺ - the greatest martyr of this battle - the title “Sayyid-ush-Shuhada” (Master of the Martyrs) was bestowed upon him by the Prophet ﷺ.',
             },
           ],
         },
@@ -808,35 +808,35 @@ const guide: Guide = {
             ['8', 'Aamir bin Bukair', 'Muhajireen'],
             ['9', 'Rafi‘ bin Mu‘alla', 'Muhajireen'],
             ['10', 'Abu Huzayfah bin Utbah', 'Muhajireen'],
-            ['11', 'Sa‘d bin Rabi‘', 'Ansar — Bani Aws'],
-            ['12', 'Anas bin Nadr', 'Ansar — Bani Aws'],
-            ['13', 'Hanzala bin Abi ‘Aamir (Ghasil-ul-Malaika)', 'Ansar — Bani Aws'],
-            ['14', 'Abdullah bin Amr bin Haram', 'Ansar — Bani Aws'],
-            ['15', 'Harith bin Atik', 'Ansar — Bani Aws'],
-            ['16', 'Rifa‘ah bin Waqsh', 'Ansar — Bani Aws'],
-            ['17', 'Malik bin Sinan', 'Ansar — Bani Aws'],
-            ['18', 'Ziyad bin Sakan', 'Ansar — Bani Aws'],
-            ['19', 'Yazid bin Sakan', 'Ansar — Bani Aws'],
-            ['20', 'Amr bin Mu‘adh', 'Ansar — Bani Aws'],
-            ['21', 'Harith bin Suhaib', 'Ansar — Bani Aws'],
-            ['22', 'Sahl bin Qais', 'Ansar — Bani Aws'],
-            ['23', 'Thabit bin Waqsh', 'Ansar — Bani Aws'],
-            ['24', 'Nu‘man bin Malik', 'Ansar — Bani Aws'],
-            ['25', 'Qais bin Rabi‘', 'Ansar — Bani Aws'],
-            ['26', 'Mas‘ud bin Aws', 'Ansar — Bani Aws'],
-            ['27', 'Abdullah bin Sahl', 'Ansar — Bani Khazraj'],
-            ['28', 'Ubaid bin Ta‘labah', 'Ansar — Bani Khazraj'],
-            ['29', 'Abdullah bin Jabir', 'Ansar — Bani Khazraj'],
-            ['30', 'Rafi‘ bin Malik', 'Ansar — Bani Khazraj'],
-            ['31', 'Hubab bin Munzir', 'Ansar — Bani Khazraj'],
-            ['32', 'Harith bin ‘Adi', 'Ansar — Bani Khazraj'],
-            ['33', 'Abdullah bin Qais', 'Ansar — Bani Khazraj'],
-            ['34', 'Amir bin Ziyad', 'Ansar — Bani Khazraj'],
-            ['35', 'Habbab bin Qais', 'Ansar — Bani Khazraj'],
-            ['36', 'Jabir bin Atiq', 'Ansar — Bani Khazraj'],
-            ['37', 'Qais bin Malik', 'Ansar — Bani Khazraj'],
-            ['38', 'Amr bin Zaid', 'Ansar — Bani Khazraj'],
-            ['39', 'Salim bin Umair', 'Ansar — Bani Khazraj'],
+            ['11', 'Sa‘d bin Rabi‘', 'Ansar - Bani Aws'],
+            ['12', 'Anas bin Nadr', 'Ansar - Bani Aws'],
+            ['13', 'Hanzala bin Abi ‘Aamir (Ghasil-ul-Malaika)', 'Ansar - Bani Aws'],
+            ['14', 'Abdullah bin Amr bin Haram', 'Ansar - Bani Aws'],
+            ['15', 'Harith bin Atik', 'Ansar - Bani Aws'],
+            ['16', 'Rifa‘ah bin Waqsh', 'Ansar - Bani Aws'],
+            ['17', 'Malik bin Sinan', 'Ansar - Bani Aws'],
+            ['18', 'Ziyad bin Sakan', 'Ansar - Bani Aws'],
+            ['19', 'Yazid bin Sakan', 'Ansar - Bani Aws'],
+            ['20', 'Amr bin Mu‘adh', 'Ansar - Bani Aws'],
+            ['21', 'Harith bin Suhaib', 'Ansar - Bani Aws'],
+            ['22', 'Sahl bin Qais', 'Ansar - Bani Aws'],
+            ['23', 'Thabit bin Waqsh', 'Ansar - Bani Aws'],
+            ['24', 'Nu‘man bin Malik', 'Ansar - Bani Aws'],
+            ['25', 'Qais bin Rabi‘', 'Ansar - Bani Aws'],
+            ['26', 'Mas‘ud bin Aws', 'Ansar - Bani Aws'],
+            ['27', 'Abdullah bin Sahl', 'Ansar - Bani Khazraj'],
+            ['28', 'Ubaid bin Ta‘labah', 'Ansar - Bani Khazraj'],
+            ['29', 'Abdullah bin Jabir', 'Ansar - Bani Khazraj'],
+            ['30', 'Rafi‘ bin Malik', 'Ansar - Bani Khazraj'],
+            ['31', 'Hubab bin Munzir', 'Ansar - Bani Khazraj'],
+            ['32', 'Harith bin ‘Adi', 'Ansar - Bani Khazraj'],
+            ['33', 'Abdullah bin Qais', 'Ansar - Bani Khazraj'],
+            ['34', 'Amir bin Ziyad', 'Ansar - Bani Khazraj'],
+            ['35', 'Habbab bin Qais', 'Ansar - Bani Khazraj'],
+            ['36', 'Jabir bin Atiq', 'Ansar - Bani Khazraj'],
+            ['37', 'Qais bin Malik', 'Ansar - Bani Khazraj'],
+            ['38', 'Amr bin Zaid', 'Ansar - Bani Khazraj'],
+            ['39', 'Salim bin Umair', 'Ansar - Bani Khazraj'],
             ['40', 'Abdullah bin Atiq', 'Riwayati'],
             ['41', 'Thabit bin Dakhsh', 'Riwayati'],
             ['42', 'Harith bin Qais', 'Riwayati'],
@@ -852,44 +852,44 @@ const guide: Guide = {
         {
           type: 'note',
           text:
-            'There is no scholarly consensus on all 70 names — different narrations vary — but all of them are the great martyrs of Islam.',
+            'There is no scholarly consensus on all 70 names - different narrations vary - but all of them are the great martyrs of Islam.',
         },
         { type: 'h3', id: 'cave-uhud', text: '7.18 Cave of Uhud + 7.19 Masjid al-Fasih' },
         {
           type: 'p',
           text:
-            'After the Battle of Uhud, the Prophet ﷺ rested in the small cave (Ghar-e-Uhud) on Jabal-e-Uhud — while the Companions RA stood guard. Masjid al-Fasih is below this cave — built later — marking the spot where the Prophet ﷺ offered prayer.',
+            'After the Battle of Uhud, the Prophet ﷺ rested in the small cave (Ghar-e-Uhud) on Jabal-e-Uhud - while the Companions RA stood guard. Masjid al-Fasih is below this cave - built later - marking the spot where the Prophet ﷺ offered prayer.',
         },
         { type: 'h3', id: 'house-fatima', text: '7.21 House of Hazrat Fatima RA' },
         {
           type: 'p',
           text:
-            'On the eastern side of Masjid-e-Nabawi ﷺ — now incorporated into the expansion of Masjid-e-Nabawi. A very small and simple home — here Imam Hasan RA and Imam Husayn RA were raised.',
+            'On the eastern side of Masjid-e-Nabawi ﷺ - now incorporated into the expansion of Masjid-e-Nabawi. A very small and simple home - here Imam Hasan RA and Imam Husayn RA were raised.',
         },
       ],
     },
 
-    // ── CHAPTER 8 — BADR ────────────────────────────────
+    // ── CHAPTER 8 - BADR ────────────────────────────────
     {
       id: 'badr',
-      title: 'Chapter 8 · Badr — Sacred Sites',
+      title: 'Chapter 8 · Badr - Sacred Sites',
       blocks: [
         { type: 'h3', id: 'battle-badr', text: '8.1 The Battle of Badr' },
         {
           type: 'p',
           text:
-            '17 Ramadan, 2 AH — Islam’s first and decisive battle. Approximately 130 km south-west of Madinah. Muslims: 313 (2 horses, 70 camels) vs Quraysh: 1,000.',
+            '17 Ramadan, 2 AH - Islam’s first and decisive battle. Approximately 130 km south-west of Madinah. Muslims: 313 (2 horses, 70 camels) vs Quraysh: 1,000.',
         },
         {
           type: 'callout',
           text:
-            'The goal was the caravan, not battle — but the Quraysh imposed war. Allah sent 1,000 angels for aid — 70 disbelievers were killed, 70 taken captive, and 14 Muslims were martyred.',
+            'The goal was the caravan, not battle - but the Quraysh imposed war. Allah sent 1,000 angels for aid - 70 disbelievers were killed, 70 taken captive, and 14 Muslims were martyred.',
         },
         { type: 'h3', id: 'masjid-areesh', text: '8.2 Masjid al-Areesh' },
         {
           type: 'p',
           text:
-            'Located near the battlefield of Badr — where the Prophet ﷺ prayed with such intensity on the day of Badr that his cloak slipped from his shoulders — Hazrat Abu Bakr RA comforted him: “O Messenger of Allah ﷺ, Allah will fulfil His promise.”',
+            'Located near the battlefield of Badr - where the Prophet ﷺ prayed with such intensity on the day of Badr that his cloak slipped from his shoulders - Hazrat Abu Bakr RA comforted him: “O Messenger of Allah ﷺ, Allah will fulfil His promise.”',
         },
         { type: 'h3', id: 'descent-angels', text: '8.3 Descent of Angels (Divine Aid)' },
         {
@@ -903,7 +903,7 @@ const guide: Guide = {
         { type: 'h3', id: 'martyrs-badr', text: '8.4 Cemetery of the Martyrs of Badr' },
         {
           type: 'p',
-          text: 'Located near the battlefield of Badr — 14 Companions RA are buried here.',
+          text: 'Located near the battlefield of Badr - 14 Companions RA are buried here.',
         },
         {
           type: 'table',
@@ -912,24 +912,24 @@ const guide: Guide = {
           rows: [
             ['1', 'Umair bin Abi Waqqas RA', 'Muhajireen'],
             ['2', 'Safwan bin Al-Bayda RA', 'Muhajireen'],
-            ['3', 'Rafi‘ bin Al-Mu‘alla RA', 'Ansar — Bani Khazraj'],
-            ['4', 'Sa‘d bin Khaythama RA', 'Ansar — Bani Aws'],
-            ['5', 'Mubashshir bin Abdul Munzir RA', 'Ansar — Bani Aws'],
-            ['6', 'Harith bin ‘Ateek RA', 'Ansar — Bani Aws'],
-            ['7', 'Mu‘az bin Afra RA', 'Ansar — Bani Aws'],
-            ['8', 'Yazid bin Al-Harith RA', 'Ansar — Bani Khazraj'],
-            ['9', 'Suhayl bin Al-Bayda RA', 'Ansar — Bani Khazraj'],
-            ['10', '‘Auf bin Afra RA', 'Ansar — Bani Khazraj'],
-            ['11', 'Mu‘awwiz bin Afra RA', 'Ansar — Bani Khazraj'],
-            ['12', 'Harith bin Suraqa RA', 'Ansar — Bani Khazraj'],
-            ['13', 'Harith bin ‘Auf RA', 'Ansar — Bani Khazraj'],
+            ['3', 'Rafi‘ bin Al-Mu‘alla RA', 'Ansar - Bani Khazraj'],
+            ['4', 'Sa‘d bin Khaythama RA', 'Ansar - Bani Aws'],
+            ['5', 'Mubashshir bin Abdul Munzir RA', 'Ansar - Bani Aws'],
+            ['6', 'Harith bin ‘Ateek RA', 'Ansar - Bani Aws'],
+            ['7', 'Mu‘az bin Afra RA', 'Ansar - Bani Aws'],
+            ['8', 'Yazid bin Al-Harith RA', 'Ansar - Bani Khazraj'],
+            ['9', 'Suhayl bin Al-Bayda RA', 'Ansar - Bani Khazraj'],
+            ['10', '‘Auf bin Afra RA', 'Ansar - Bani Khazraj'],
+            ['11', 'Mu‘awwiz bin Afra RA', 'Ansar - Bani Khazraj'],
+            ['12', 'Harith bin Suraqa RA', 'Ansar - Bani Khazraj'],
+            ['13', 'Harith bin ‘Auf RA', 'Ansar - Bani Khazraj'],
             ['14', 'Dhakwan bin Abd Qais RA', 'Ansar'],
           ],
         },
       ],
     },
 
-    // ── APPENDIX — WIVES & CHILDREN ─────────────────────
+    // ── APPENDIX - WIVES & CHILDREN ─────────────────────
     {
       id: 'family',
       title: 'Appendix · Wives and Children of the Prophet ﷺ',
@@ -937,7 +937,7 @@ const guide: Guide = {
         {
           type: 'h3',
           id: 'wives',
-          text: 'Wives of the Prophet ﷺ (Mothers of the Believers) — 11 Wives',
+          text: 'Wives of the Prophet ﷺ (Mothers of the Believers) - 11 Wives',
         },
         {
           type: 'note',
@@ -994,7 +994,7 @@ const guide: Guide = {
             },
           ],
         },
-        { type: 'h3', id: 'children', text: 'Children of the Prophet ﷺ — Total 7' },
+        { type: 'h3', id: 'children', text: 'Children of the Prophet ﷺ - Total 7' },
         {
           type: 'table',
           columns: ['#', 'Name', 'Mother', 'Passing'],
@@ -1004,7 +1004,7 @@ const guide: Guide = {
             ['3', 'Hazrat Zainab RA', 'Hazrat Khadijah RA', 'At the age of 31'],
             ['4', 'Hazrat Ruqayyah RA', 'Hazrat Khadijah RA', 'At the age of 22'],
             ['5', 'Hazrat Umm Kulthum RA', 'Hazrat Khadijah RA', 'At the age of 29'],
-            ['6', 'Hazrat Fatimah RA', 'Hazrat Khadijah RA', 'Age 29 — 6 months after the Prophet’s ﷺ passing'],
+            ['6', 'Hazrat Fatimah RA', 'Hazrat Khadijah RA', 'Age 29 - 6 months after the Prophet’s ﷺ passing'],
             ['7', 'Hazrat Ibrahim RA', 'Maria al-Qibtiyya RA', 'At 18 months of age'],
           ],
         },
@@ -1066,7 +1066,7 @@ const guide: Guide = {
         {
           type: 'p',
           text:
-            'Our effort has been that this journey be not merely a tour of places, but a journey of faith, reflection, and conviction — where at every step, the teachings of the Prophet ﷺ, the sacrifices of the Companions RA, and the spirit of Islam are felt.',
+            'Our effort has been that this journey be not merely a tour of places, but a journey of faith, reflection, and conviction - where at every step, the teachings of the Prophet ﷺ, the sacrifices of the Companions RA, and the spirit of Islam are felt.',
         },
         {
           type: 'callout',
