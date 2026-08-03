@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "home": {
+      "title": "Al-Saleem Transport | Ziyarat, Airport aur Hotel Pick & Drop Saudi Arabia",
+      "description": "Makkah, Madinah, Jeddah aur Taif mein licensed pick & drop service. Airport transfer, Ziyarat tour, Umrah/Hajj taxi. AC gaariyan, bharosemand drivers, 24/7. WhatsApp par book karein."
+    },
+    "pickDrop": {
+      "title": "Pick & Drop Book Karein | Airport & Ziyarat Transfer | Al-Saleem Transport",
+      "description": "Saudi Arabia mein qaabil-e-aitmaad pick & drop book karein — Jeddah & Madinah airport transfer, hotel transfer, Umrah taxi aur Ziyarat tour. Fixed kiraya, foran WhatsApp booking."
+    },
+    "ziyaratGuide": {
+      "title": "Mukammal Ziyarat Guide | Makkah, Madinah, Taif & Badr | Al-Saleem Transport",
+      "description": "Ek mukammal multilingual Ziyarat guide jo Makkah, Umrah & Hajj ke marahil, muqaddas maqamat, Taif, Madinah aur Badr ka ihata karti hai. Apni zaban mein parhein ya PDF download karein."
+    },
+    "about": {
+      "title": "Hamare Bare Mein | Licensed Ziyarat Transport Saudi Arabia | Al-Saleem",
+      "description": "Al-Saleem Integrated Transport Company — ek licensed Saudi transport operator (35/00008116) jo Makkah, Madinah, Jeddah aur Taif mein zaireen ki behtareen khidmat karta hai."
+    },
+    "contact": {
+      "title": "Rabta Karein | Al-Saleem Transport | Makkah · Madinah · Jeddah · Taif",
+      "description": "Airport transfer, Ziyarat tour aur pick & drop ke liye +966 50 068 9196 par call ya WhatsApp karein. 24/7 support, tez jawab."
+    },
+    "faq": {
+      "title": "FAQ | Booking, Qeemat & Coverage | Al-Saleem Transport",
+      "description": "Qeemat, booking, coverage, gaariyon ki iqsam, Ziyarat ke auqaat aur cancellation ke jawabat Saudi Arabia mein pick & drop aur Ziyarat transport ke liye."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Al-Saleem Transport",
+      "description": "Al-Saleem Transport aapki maloomat kaise jama, istemaal aur mehfooz karti hai."
+    },
+    "terms": {
+      "title": "Terms of Service | Al-Saleem Transport",
+      "description": "Woh sharait jo Al-Saleem Transport ki services aur website ke istemaal par laagu hoti hain."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "pickDrop": "Abhi Book Karein",
+    "ziyaratGuide": "Ziyarat Guide",
+    "about": "Hamare Bare Mein",
+    "faq": "Sawalat",
+    "contact": "Rabta",
+    "privacy": "Privacy Policy",
+    "terms": "Sharait"
+  },
+  "common": {
+    "bookNow": "WhatsApp par Abhi Book Karein",
+    "callNow": "Abhi Call Karein",
+    "whatsapp": "WhatsApp",
+    "licensed": "Licensed",
+    "licenseNo": "License No.",
+    "unifiedNo": "Muttahida Qaumi No.",
+    "getQuote": "Muft Quote Hasil Karein",
+    "chatWhatsapp": "WhatsApp par Baat Karein",
+    "skipToContent": "Content par jayen",
+    "openMenu": "Menu kholein",
+    "closeMenu": "Menu band karein",
+    "language": "Zaban",
+    "chooseLanguage": "Apni zaban muntakhib karein",
+    "downloadPdf": "PDF Download",
+    "print": "Print / PDF Mehfooz Karein",
+    "onThisPage": "Is safhe par",
+    "coverageShort": "Makkah · Madinah · Jeddah · Taif",
+    "support247": "24/7 Support",
+    "backToTop": "Upar jayen",
+    "home": "Home"
+  },
+  "hero": {
+    "badge": "Licensed Transport Operator · 35/00008116",
+    "title": "Poore Saudi Arabia mein Qaabil-e-Aitmaad Ziyarat aur Airport Transport",
+    "subtitle": "Aapke muqaddas safar ke liye aaraam-deh AC gaariyan, professional drivers aur fixed, shaffaf kiraya — airport transfer, hotel pick & drop, aur Makkah, Madinah, Jeddah o Taif mein mukammal Ziyarat tour.",
+    "ctaPrimary": "WhatsApp par Abhi Book Karein",
+    "ctaSecondary": "Services Dekhein",
+    "stat1Value": "24/7",
+    "stat1Label": "Support o Booking",
+    "stat2Value": "4 Sheher",
+    "stat2Label": "Makkah · Madinah · Jeddah · Taif",
+    "stat3Value": "Waqt par",
+    "stat3Label": "Pick-up ki Zamanat"
+  },
+  "trust": {
+    "eyebrow": "Zaireen Hum Par Kyun Bharosa Karte Hain",
+    "title": "Aisi Service Jis Par Aap Bharosa Kar Sakein",
+    "subtitle": "Aapke safar ki har baat pursukoon, mehfooz aur qaabil-e-aitmaad banai gayi hai — booking ke lamhe se pahunchne ke lamhe tak.",
+    "items": {
+      "licensed": { "title": "Government Licensed", "desc": "Mukammal licensed Saudi transport operator — License No. 35/00008116." },
+      "drivers": { "title": "Professional Drivers", "desc": "Bharosemand, tajurbekaar aur mohazzab drivers jo raste aur muqaddas maqamat ko jante hain." },
+      "vehicles": { "title": "Saaf AC Gaariyan", "desc": "Jadeed, achhi tarah dekhbhaal shuda, air-conditioned gaariyan, bilkul saaf." },
+      "onTime": { "title": "Waqt ki Zamanat", "desc": "Bar-waqt pick-up taake aapki flight, hotel check-in ya namaz na chhoote." },
+      "pricing": { "title": "Fixed Shaffaf Qeemat", "desc": "Safar se pehle tay-shuda kiraya — koi meter nahi, koi hairat nahi, koi chhupi fees nahi." },
+      "support": { "title": "24/7 Support", "desc": "Din ya raat kisi bhi waqt WhatsApp par haqeeqi shakhs se rabta karein." }
+    }
+  },
+  "services": {
+    "eyebrow": "Hamari Services",
+    "title": "Aapke Muqaddas Safar ke Liye Mukammal Transport",
+    "subtitle": "Airport se Haram tak, muqaddas shehron ke darmiyan, aur har jagah — raste ki fikr hum par chhod dein taake aap ibadat par tawajjuh dein.",
+    "learnMore": "Ye Book Karein",
+    "items": {
+      "airport": { "title": "Airport Transfer", "desc": "Jeddah aur Madinah airport par aasaan pick-up o drop, meet-and-greet aur flight tracking ke saath." },
+      "hotel": { "title": "Hotel Transfer", "desc": "Aapke hotel aur Haram ke darmiyan, ya muqaddas shehron ke hotelon ke darmiyan door-to-door transfer." },
+      "ziyarat": { "title": "Ziyarat Tour", "desc": "Makkah, Madinah aur Taif ke mubarak maqamat ki rehnumai ke saath aaraam-deh, bina jaldi Ziyarat." },
+      "umrah": { "title": "Umrah o Hajj Transport", "desc": "Aapke Umrah ya Hajj safar ke liye makhsoos transport, aapke manasik aur schedule ke mutabiq." },
+      "intercity": { "title": "Bain-ul-Shehri Safar", "desc": "Baraah-e-raast sheher-to-sheher safar — Jeddah, Makkah, Madinah aur Taif — aaraam aur tahaffuz ke saath." },
+      "custom": { "title": "Custom Trip", "desc": "Hamein apna mansooba batayein aur hum aapke group ke liye munasib gaari aur rasta tayyar karenge." }
+    }
+  },
+  "fleet": {
+    "eyebrow": "Hamara Fleet",
+    "title": "Aaraam-deh, Achhi Dekhbhaal Wali Gaariyan",
+    "subtitle": "Apne group ke mutabiq gaari muntakhib karein — har ek saaf, air-conditioned aur baqaida service shuda hai.",
+    "capacityLabel": "Gunjaish",
+    "items": {
+      "sedan": { "name": "Sedan", "capacity": "1–3 musafir", "desc": "Afrad, joron aur halke saman wale chhote khandanon ke liye misali." },
+      "suv": { "name": "SUV", "capacity": "1–5 musafir", "desc": "Zyada saman ke saath safar karne wale khandanon ke liye izafi jagah aur aaraam." },
+      "van": { "name": "Van (Hiace)", "capacity": "6–11 musafir", "desc": "Bare khandanon aur Ziyarat tour ke groups ke liye kushada transport." },
+      "bus": { "name": "Coaster / Bus", "capacity": "12+ musafir", "desc": "Bare khandanon, wufood aur Umrah groups ke liye group transport." }
+    }
+  },
+  "coverage": {
+    "eyebrow": "Coverage",
+    "title": "Muqaddas Shehron Aur Us Se Aage Khidmat",
+    "subtitle": "Hum mamlikat ke maghribi khitte aur darkhwast par poore Saudi Arabia mein kaam karte hain.",
+    "items": {
+      "makkah": { "name": "Makkah", "desc": "Haram, hotelon aur tamam muqaddas maqamat se aur tak transfer." },
+      "madinah": { "name": "Madinah", "desc": "Airport, Masjid an-Nabawi aur mubarak maqamat ki Ziyarat." },
+      "jeddah": { "name": "Jeddah", "desc": "King Abdulaziz International Airport transfer aur shehri safar." },
+      "taif": { "name": "Taif", "desc": "Thandi paharri Ziyarat trip aur bain-ul-shehri transfer." }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Aara",
+    "title": "Dunya Bhar ke Zaireen ka Aitmaad",
+    "subtitle": "Un mehmanon ke pyare alfaz jinki khidmat ka humein sharaf hasil hua.",
+    "items": [
+      { "name": "Abdullah R.", "location": "United Kingdom", "text": "Jeddah airport se seedha Makkah ke hotel tak — saaf gaari, meherban driver, aur waqt par. Hamare Umrah ki shuruaat pursukoon bana di." },
+      { "name": "Fatima S.", "location": "Indonesia", "text": "Madinah ka Ziyarat tour khoobsurti se munazzam tha. Driver saabir tha aur hamein har maqam par waqt lene diya. Bohat sifarish karti hoon." },
+      { "name": "Bilal K.", "location": "Pakistan", "text": "WhatsApp par tay-shuda fixed qeemat, bilkul waade ke mutabiq. Koi bhaav-taav nahi, koi hairat nahi. Poore khandan ke liye ek hafta istemaal kiya." }
+    ]
+  },
+  "faqTeaser": {
+    "eyebrow": "Sawalat?",
+    "title": "Har Woh Cheez Jo Aap Ko Jaanni Chahiye",
+    "subtitle": "Booking, qeemat, coverage aur mazeed — waazeh jawabat.",
+    "cta": "Tamam Sawalat Parhein"
+  },
+  "ctaBanner": {
+    "title": "Apni Sawari Book Karne Ke Liye Tayyar Hain?",
+    "subtitle": "WhatsApp par hamein apna pick-up, drop-off, tareekh aur musafir bhejein — hum minton mein aapka kiraya tasdeeq karenge.",
+    "cta": "WhatsApp par Abhi Book Karein",
+    "orCall": "ya hamein call karein"
+  },
+  "booking": {
+    "hero": {
+      "premiumService": "Premium Transport Service",
+      "forHajjUmrah": "Hajj o Umrah ke liye",
+      "safeReliable": "Mehfooz o Qaabil-e-Aitmaad",
+      "professionalDrivers": "Professional Drivers",
+      "onTimeService": "Waqt par Service",
+      "scrollToForm": "Form par jayen"
+    },
+    "eyebrow": "Pick & Drop",
+    "title": "Apna Pick & Drop Book Karein",
+    "subtitle": "Neeche apne safar ki tafseelat bharein. Bhejne par, hum pehle se bhari WhatsApp chat kholte hain taake aap ek tap mein bhej sakein — koi login ya account nahi.",
+    "sectionContact": "Aapki Tafseelat",
+    "sectionTrip": "Safar ki Tafseelat",
+    "name": "Poora Naam",
+    "namePlaceholder": "misaal: Ahmed Khan",
+    "phone": "Phone / WhatsApp",
+    "phonePlaceholder": "misaal: +44 7700 900000",
+    "pickup": "Pick-up Maqam",
+    "pickupPlaceholder": "misaal: Jeddah Airport, Terminal 1",
+    "dropoff": "Drop-off Maqam",
+    "dropoffPlaceholder": "misaal: Makkah, Ajyad hotel",
+    "date": "Tareekh",
+    "time": "Waqt",
+    "passengers": "Musafir",
+    "vehicle": "Gaari ki Qisam",
+    "vehicleOptions": {
+      "any": "Mere liye tajweez karein",
+      "sedan": "Sedan (1–3)",
+      "suv": "SUV (1–5)",
+      "van": "Van / Hiace (6–11)",
+      "bus": "Coaster / Bus (12+)"
+    },
+    "service": "Service ki Qisam",
+    "serviceOptions": {
+      "airport": "Airport Transfer",
+      "hotel": "Hotel Transfer",
+      "ziyarat": "Ziyarat Tour",
+      "umrah": "Umrah / Hajj Transport",
+      "intercity": "Bain-ul-Shehri Safar",
+      "custom": "Custom Trip"
+    },
+    "notes": "Izafi Notes",
+    "notesPlaceholder": "Flight number, saman, bachchon ki seat, kuch aur…",
+    "submit": "WhatsApp par Booking Bhejein",
+    "submitEmail": "Ya Email se Bhejein",
+    "requiredHint": "* wale khane lazmi hain.",
+    "errorRequired": "Barah-e-karam lazmi khane pur karein.",
+    "waIntro": "Assalamu alaikum, main Al-Saleem Transport ke saath sawari book karna chahta hoon.",
+    "labelName": "Naam",
+    "labelPhone": "Phone",
+    "labelService": "Service",
+    "labelVehicle": "Gaari",
+    "labelPickup": "Pick-up",
+    "labelDropoff": "Drop-off",
+    "labelDate": "Tareekh",
+    "labelTime": "Waqt",
+    "labelPassengers": "Musafir",
+    "labelNotes": "Notes",
+    "emailSubject": "Nayi Booking ki Darkhwast — Al-Saleem Transport"
+  },
+  "about": {
+    "eyebrow": "Hamare Bare Mein",
+    "title": "Ummat ki Behtareen Khidmat",
+    "lead": "Al-Saleem Integrated Transport Company ek licensed Saudi transport operator hai jo muqaddas shehron mein zaireen ko aaraam, tahaffuz aur izzat ke saath le jaane ke liye waqf hai.",
+    "story": [
+      "Haramain aane wala har mehman zindagi ke ek safar par hota hai. Hum ne Al-Saleem Transport ek saada yaqeen ke saath shuru ki: ke airport, hotel aur muqaddas maqamat ke darmiyan rasta is safar ka sab se aasaan hissa hona chahiye — kabhi fikr ka baais nahi.",
+      "Aaj hamare bharosemand drivers aur achhi dekhbhaal wali gaariyan Makkah, Madinah, Jeddah aur Taif mein mehmanon ki khidmat karti hain, ek airport pick-up se le kar mukammal Ziyarat tour tak. Humein waqt ki paband, shaffaf kirayon aur us dekhbhaal par fakhr hai jo hum apne khandanon ke liye chahte hain."
+    ],
+    "missionTitle": "Hamara Mission",
+    "mission": "Har zaair ko ek pursukoon, mehfooz aur ba-izzat safar dena — taake transport sochne ki ek kam cheez ho, aur ibadat markaz rahe.",
+    "valuesTitle": "Hamari Aqdaar",
+    "values": {
+      "trust": { "title": "Bharosa", "desc": "Shaffaf, tay-shuda qeemat ke saath licensed operator aur koi hairat nahi." },
+      "care": { "title": "Dekhbhaal", "desc": "Hum har mehman ko Bait-ullah ke muazziz zaair ki tarah dekhte hain." },
+      "excellence": { "title": "Miyaar", "desc": "Saaf gaariyan, bar-waqt service aur har tafseel par tawajjuh." },
+      "faith": { "title": "Ehtiram", "desc": "Aise drivers jo aapke safar ki hurmat ko samajhte aur uska ehtiram karte hain." }
+    },
+    "licenseTitle": "License o Registration",
+    "licenseIntro": "Al-Saleem Integrated Transport Company mamlikat Saudi Arabia ke zawabit ke tehat mukammal licensed hai.",
+    "licenseLabel": "Transport License No.",
+    "unifiedLabel": "Muttahida Qaumi Number",
+    "coverageLabel": "Service ka Ilaqa"
+  },
+  "contact": {
+    "eyebrow": "Rabta",
+    "title": "Hum Se Rabta Karein",
+    "subtitle": "Hum chaubees ghante dastyaab hain. Tez tareen jawab ke liye WhatsApp par rabta karein, ya neeche tafseelat bhejein.",
+    "phoneTitle": "Call / WhatsApp",
+    "emailTitle": "Email",
+    "areaTitle": "Service ka Ilaqa",
+    "areaValue": "Makkah, Madinah, Jeddah o Taif — Mamlikat Saudi Arabia",
+    "hoursTitle": "Auqaat-e-Kaar",
+    "hoursValue": "24 ghante khula — har din",
+    "formTitle": "Hamein Paighaam Bhejein",
+    "formSubtitle": "Hamein batayein aap ko kya chahiye aur hum jald jawab denge.",
+    "message": "Aapka Paighaam",
+    "messagePlaceholder": "Hum aapke safar mein kaise madad kar sakte hain?",
+    "send": "WhatsApp par Bhejein",
+    "waIntro": "Assalamu alaikum, mera Al-Saleem Transport ke liye ek sawal hai."
+  },
+  "faqPage": {
+    "eyebrow": "Sawalat",
+    "title": "Aksar Poochhe Jane Wale Sawalat",
+    "subtitle": "Booking, qeemat, coverage aur aapke Ziyarat safar ke bare mein waazeh jawabat.",
+    "items": [
+      { "q": "Main sawari kaise book karoon?", "a": "Tez tareen tareeqa WhatsApp hai. Hamare Abhi Book Karein safhe par booking form istemaal karein ya apne pick-up, drop-off, tareekh, waqt aur musafiron ki tadaad ke saath baraah-e-raast +966 50 068 9196 par paighaam dein. Hum minton mein aapka kiraya aur gaari tasdeeq karte hain." },
+      { "q": "Qeemat kitni hai?", "a": "Hum safar se pehle tay-shuda fixed, shaffaf kiraya istemaal karte hain — koi meter ya chhupi fees nahi. Qeemat raste, gaari ki qisam aur musafiron ki tadaad par munhasir hai. Durust qeemat ke liye WhatsApp par apne safar ki tafseelat bhejein." },
+      { "q": "Aap kin ilaqon ka ihata karte hain?", "a": "Hum Makkah, Madinah, Jeddah aur Taif ki khidmat karte hain, bashumool airport aur hotel transfer, aur darkhwast par poore Saudi Arabia mein safar karte hain." },
+      { "q": "Aapke paas kis qisam ki gaariyan hain?", "a": "Sedan (1–3 musafir), SUV (1–5), van jaise Toyota Hiace (6–11) aur coaster/bus (12+). Tamam gaariyan saaf, air-conditioned aur achhi dekhbhaal wali hain. Apne group ka size aur saman batayein, hum munasib gaari tajweez karenge." },
+      { "q": "Kya aap Jeddah aur Madinah se airport pick-up dete hain?", "a": "Ji haan. Hum Jeddah (King Abdulaziz International) aur Madinah airport se meet-and-greet transfer seedhe aapke Makkah ya Madinah ke hotel tak faraham karte hain, flight tracking ke saath taake aapke utarne par hum maujood hon." },
+      { "q": "Kya aap mukammal Ziyarat tour tarteeb de sakte hain?", "a": "Bilkul. Hum Makkah, Madinah aur Taif ke mubarak maqamat ke rehnumai-shuda Ziyarat tour aaraam-deh raftar se tarteeb dete hain, aise driver ke saath jo maqamat ko jaanta hai aur namaz o ghor-o-fikr ke liye aapke waqt ka ehtiram karta hai." },
+      { "q": "Kya aapke drivers professional aur licensed hain?", "a": "Ji haan. Hamare drivers bharosemand, tajurbekaar aur mohazzab hain, aur hum mukammal licensed Saudi transport company (License No. 35/00008116) ke tor par kaam karte hain." },
+      { "q": "Main adaigi kaise karoon?", "a": "Adaigi ke intezamaat booking ke waqt aapke saath WhatsApp par tay kiye jate hain. Hum sab kuch shaffaf aur pehle se tay-shuda rakhte hain." },
+      { "q": "Aapki cancellation policy kya hai?", "a": "Mansoobe badalte hain, khaas tor par Umrah aur Hajj ke douran. Barah-e-karam jitna jald mumkin ho WhatsApp par batayein aur hum kisi bhi tabdeeli ya cancellation ko adjust karne ki poori koshish karenge." },
+      { "q": "Kya support waqai 24/7 dastyaab hai?", "a": "Ji haan. Flights aur manasik har waqt hote hain, lehaza aap din ya raat kisi bhi waqt WhatsApp par haqeeqi shakhs se rabta kar sakte hain." }
+    ]
+  },
+  "guide": {
+    "eyebrow": "Khususi Guide",
+    "title": "Mukammal Ziyarat Guide",
+    "subtitle": "Muqaddas maqamat ke liye ek bharpoor, baadab guide — Makkah, Umrah o Hajj ke marahil, mubarak maqamat, Taif, Madinah aur Badr — har zaban mein dastyaab, muft parhne aur download ke liye.",
+    "intro": "Chahe ye aapki pehli Ziyarat ho ya daswin, ye guide aap ko muqaddas maqamat aur unki tareekh se roshnaas karati hai taake aapki Ziyarat baamani aur baailm ho. Shuru karne ke liye neeche apni zaban muntakhib karein.",
+    "chooseLanguage": "Apni zaban mein parhein",
+    "startReading": "Guide Parhein",
+    "availableIn": "Tamam supported zabanon mein dastyaab",
+    "download": "PDF Download",
+    "print": "Print / PDF Mehfooz Karein",
+    "onThisPage": "Is safhe par",
+    "chaptersTitle": "Kya shamil hai",
+    "chapters": {
+      "makkah": { "title": "Makkah", "desc": "Muqaddas sheher, Ka'bah aur Masjid al-Haram ka taaruf." },
+      "umrah": { "title": "Umrah, Marhala War", "desc": "Umrah ke manasik waazeh tor par, tarteeb se." },
+      "hajj": { "title": "Hajj, Marhala War", "desc": "Hajj ki roz-ba-roz rehnumai." },
+      "sacredSites": { "title": "Makkah ke Muqaddas Maqamat", "desc": "Ziyarat ke liye mubarak aur tareekhi maqamat." },
+      "taif": { "title": "Taif", "desc": "Paharri sheher aur Nabi ﷺ ki zindagi mein uska maqam." },
+      "madinah": { "title": "Madinah", "desc": "Nabi ﷺ ka sheher, Masjid an-Nabawi aur uski Ziyarat." },
+      "badr": { "title": "Badr", "desc": "Pehli barri jang ka maqam aur uske shuhada." },
+      "family": { "title": "Nabi ﷺ ka Khandan", "desc": "Nabi ﷺ ki azwaj o aulad ke bare mein zameema." }
+    },
+    "verseLabel": "Qur'an",
+    "hadithLabel": "Hadith",
+    "sourceLabel": "Maakhaz",
+    "translationLabel": "Tarjuma",
+    "noteTitle": "Content ke bare mein note",
+    "contentPending": "Is baab ka mukammal matn — bashumool Qurani ayaat, ahadith aur unke maakhaz — tasdeeq aur janch ke baad yahan shaya kiya jayega. Hum har lafz ki durustagi ka bohat khayal rakhte hain. Barah-e-karam jald dobara aayein, ya agar aap content ki janch mein madad karna chahein to rabta karein.",
+    "verifyNote": "Tamam Qurani ayaat aur ahadith ishaat se pehle mustanad maakhaz se tasdeeq ki jati hain."
+  },
+  "footer": {
+    "tagline": "Ummat ki Behtareen Khidmat",
+    "about": "Makkah, Madinah, Jeddah aur Taif mein licensed pick & drop o Ziyarat transport — aaraam-deh AC gaariyan, professional drivers aur fixed, shaffaf kiraya.",
+    "quickLinks": "Fori Roabit",
+    "servicesTitle": "Services",
+    "contactTitle": "Rabta",
+    "rights": "Jumla haqooq mehfooz hain.",
+    "licensedLine": "Licensed Saudi transport operator",
+    "hours": "24/7 Khula"
+  },
+  "legal": {
+    "lastUpdated": "Aakhri tabdeeli",
+    "updatedDate": "July 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "Ye Privacy Policy wazahat karti hai ke Al-Saleem Integrated Transport Company (\"hum\") aapki website istemaal ya services book karne par maloomat kaise sambhalti hai.",
+      "sections": [
+        { "heading": "Hum kaun si maloomat jama karte hain", "body": "Jab aap sawari book karte hain to hum aapki faraham karda tafseelat jama karte hain — jaise aapka naam, phone number, pick-up o drop-off maqamat, safar ki tareekh aur koi notes. Agar aap WhatsApp ya email par rabta karte hain to hamein un paighaamaat ki maloomat mosool hoti hai." },
+        { "heading": "Hum aapki maloomat kaise istemaal karte hain", "body": "Hum aapki tafseelat sirf aapke transport ko tarteeb dene, tasdeeq karne aur faraham karne, aapki booking ke bare mein rabta karne, aur apni service behtar banane ke liye istemaal karte hain. Hum aapki zaati maloomat farokht nahi karte." },
+        { "heading": "WhatsApp aur paighaam rasani", "body": "Booking aam tor par WhatsApp par mukammal hoti hai. Aapke bheje paighaamaat WhatsApp ki apni privacy policy ke bhi taabey hain. Hum aapke paighaam ki tafseelat sirf aapki booking ki khidmat ke liye istemaal karte hain." },
+        { "heading": "Cookies", "body": "Hamari website aapki muntakhib zaban yaad rakhne ke liye ek maamooli cookie istemaal karti hai. Hum ise deegar websites par aap ko track karne ke liye istemaal nahi karte." },
+        { "heading": "Data ki bardashti", "body": "Hum booking tafseelat sirf itni muddat rakhte hain jitni khidmat faraham karne aur qanooni ya hisaabi taqaze poore karne ke liye zaroori ho, uske baad woh hata di jati hain." },
+        { "heading": "Aapke huqooq", "body": "Aap hum se poochh sakte hain ke hamare paas aapke bare mein kya maloomat hai aur ise durust ya hazf karne ki darkhwast kar sakte hain. Neeche di gayi tafseelat par rabta karein." },
+        { "heading": "Rabta", "body": "Kisi bhi privacy sawal ke liye, WhatsApp +966 50 068 9196 ya email info@alsaleemtransport.com par rabta karein." }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "Ye sharait Al-Saleem Integrated Transport Company ki website aur services ke istemaal par laagu hoti hain. Hamare saath booking kar ke aap in sharait se muttafiq hote hain.",
+      "sections": [
+        { "heading": "Hamari services", "body": "Hum licensed passenger transport faraham karte hain — airport transfer, hotel transfer, Ziyarat tour, Umrah o Hajj transport aur bain-ul-shehri safar — Makkah, Madinah, Jeddah, Taif aur poore Saudi Arabia mein." },
+        { "heading": "Booking aur kiraya", "body": "Kiraye fixed hain aur safar se pehle aapke saath tay kiye jate hain. Booking us waqt tasdeeq hoti hai jab hum aapki darkhwast ki tauseeq karein. Barah-e-karam durust pick-up tafseelat, waqt aur musafiron ki tadaad faraham karein taake hum behtar khidmat kar sakein." },
+        { "heading": "Cancellation aur tabdeeli", "body": "Agar aap ko booking tabdeel ya cancel karni ho to barah-e-karam jald az jald WhatsApp par batayein. Hum hamesha tabdeeliyon ko adjust karne ki koshish karenge, khaas tor par Umrah aur Hajj ke douran." },
+        { "heading": "Aapki zimmedariyan", "body": "Barah-e-karam tay-shuda waqt aur maqam par tayyar rahein, driver ki maaqool hifaazati hidayat par amal karein, aur gaari o driver ke saath ehtiram se pesh aayein." },
+        { "heading": "Zimmedari", "body": "Hum mehfooz, bar-waqt transport faraham karne ka bohat khayal rakhte hain, magar hum apne qaboo se bahar halaat jaise traffic, mausam, sadkon ki bandish ya urooj ke mausamon mein hujoom ki wajah se takheer ke zimmedar nahi." },
+        { "heading": "Qaabil-e-itlaaq qanoon", "body": "Ye sharait mamlikat Saudi Arabia ke qawaneen ke taabey hain." },
+        { "heading": "Rabta", "body": "In sharait ke bare mein sawalat? WhatsApp +966 50 068 9196 ya email info@alsaleemtransport.com par rabta karein." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1A1E"/>
+      <stop offset="0.6" stop-color="#26262B"/>
+      <stop offset="1" stop-color="#3E2A1E"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.18" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#C98A5E" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#C98A5E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <text x="90" y="250" fill="#CBAA79" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="600" letter-spacing="3">FLAGSHIP GUIDE</text>
+  <text x="90" y="345" fill="#F4F2EF" font-family="Poppins, Arial, sans-serif" font-size="76" font-weight="700">The Complete</text>
+  <text x="90" y="425" fill="#F4F2EF" font-family="Poppins, Arial, sans-serif" font-size="76" font-weight="700">Ziyarat Guide</text>
+  <text x="90" y="490" fill="#A9A9B0" font-family="Poppins, Arial, sans-serif" font-size="30">Makkah · Umrah · Hajj · Madinah · Taif · Badr</text>
+  <text x="90" y="545" fill="#7C7C85" font-family="Poppins, Arial, sans-serif" font-size="26">Al-Saleem Transport — read &amp; download in every language</text>
+</svg>

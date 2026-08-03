@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "home": {
+      "title": "Al-Saleem Transport | Ziyarat, Airport & Hotel Pick & Drop in Saudi Arabia",
+      "description": "Licensed pick & drop transport across Makkah, Madinah, Jeddah & Taif. Airport transfers, Ziyarat tours, Umrah & Hajj taxi. AC vehicles, vetted drivers, 24/7. Book on WhatsApp."
+    },
+    "pickDrop": {
+      "title": "Book Pick & Drop | Airport & Ziyarat Transfers | Al-Saleem Transport",
+      "description": "Book reliable pick & drop in Saudi Arabia — Jeddah & Madinah airport transfers, hotel transfers, Umrah taxi and Ziyarat tours. Fixed fares, instant WhatsApp booking."
+    },
+    "ziyaratGuide": {
+      "title": "Complete Ziyarat Guide | Makkah, Madinah, Taif & Badr | Al-Saleem Transport",
+      "description": "A complete multilingual Ziyarat guide covering Makkah, Umrah & Hajj steps, the sacred sites, Taif, Madinah and Badr. Read online in your language or download the PDF."
+    },
+    "about": {
+      "title": "About Us | Licensed Ziyarat Transport in Saudi Arabia | Al-Saleem Transport",
+      "description": "Al-Saleem Integrated Transport Company — a licensed Saudi transport operator (35/00008116) serving pilgrims across Makkah, Madinah, Jeddah and Taif with excellence."
+    },
+    "contact": {
+      "title": "Contact Us | Al-Saleem Transport | Makkah · Madinah · Jeddah · Taif",
+      "description": "Call or WhatsApp +966 50 068 9196 for airport transfers, Ziyarat tours and pick & drop across Saudi Arabia. 24/7 support, fast response."
+    },
+    "faq": {
+      "title": "FAQ | Booking, Pricing & Coverage | Al-Saleem Transport",
+      "description": "Answers about pricing, booking, coverage, vehicle types, Ziyarat timing and cancellation for pick & drop and Ziyarat transport in Saudi Arabia."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Al-Saleem Transport",
+      "description": "How Al-Saleem Transport collects, uses and protects your information."
+    },
+    "terms": {
+      "title": "Terms of Service | Al-Saleem Transport",
+      "description": "The terms that govern the use of Al-Saleem Transport services and website."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "pickDrop": "Book Now",
+    "ziyaratGuide": "Ziyarat Guide",
+    "about": "About Us",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms"
+  },
+  "common": {
+    "bookNow": "Book Now on WhatsApp",
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "licensed": "Licensed",
+    "licenseNo": "License No.",
+    "unifiedNo": "Unified National No.",
+    "getQuote": "Get a Free Quote",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "chooseLanguage": "Choose your language",
+    "downloadPdf": "Download PDF",
+    "print": "Print / Save as PDF",
+    "onThisPage": "On this page",
+    "coverageShort": "Makkah · Madinah · Jeddah · Taif",
+    "support247": "24/7 Support",
+    "backToTop": "Back to top",
+    "home": "Home"
+  },
+  "hero": {
+    "badge": "Licensed Transport Operator · 35/00008116",
+    "title": "Reliable Ziyarat & Airport Transport Across Saudi Arabia",
+    "subtitle": "Comfortable AC vehicles, professional drivers and fixed, transparent fares for your sacred journey — airport transfers, hotel pick & drop, and full Ziyarat tours in Makkah, Madinah, Jeddah and Taif.",
+    "ctaPrimary": "Book Now on WhatsApp",
+    "ctaSecondary": "Explore Services",
+    "stat1Value": "24/7",
+    "stat1Label": "Support & Booking",
+    "stat2Value": "4 Cities",
+    "stat2Label": "Makkah · Madinah · Jeddah · Taif",
+    "stat3Value": "On-time",
+    "stat3Label": "Pick-up Guarantee"
+  },
+  "trust": {
+    "eyebrow": "Why Pilgrims Trust Us",
+    "title": "A Service You Can Rely On",
+    "subtitle": "Everything about your ride is designed to be calm, safe and dependable — from the moment you book to the moment you arrive.",
+    "items": {
+      "licensed": {
+        "title": "Government Licensed",
+        "desc": "Fully licensed Saudi transport operator — License No. 35/00008116."
+      },
+      "drivers": {
+        "title": "Professional Drivers",
+        "desc": "Vetted, experienced and courteous drivers who know the routes and the holy sites."
+      },
+      "vehicles": {
+        "title": "Clean AC Vehicles",
+        "desc": "Modern, well-maintained, air-conditioned cars, SUVs and vans kept spotless."
+      },
+      "onTime": {
+        "title": "On-time Guarantee",
+        "desc": "Punctual pick-ups so you never miss a flight, a hotel check-in or a prayer."
+      },
+      "pricing": {
+        "title": "Fixed Transparent Pricing",
+        "desc": "Agreed fares before you travel — no meters, no surprises, no hidden fees."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "desc": "Reach a real person on WhatsApp any hour of the day or night."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Complete Transport for Your Sacred Journey",
+    "subtitle": "From the airport to the Haram, between the holy cities, and everywhere in between — we take care of the road so you can focus on your worship.",
+    "learnMore": "Book this",
+    "items": {
+      "airport": {
+        "title": "Airport Transfer",
+        "desc": "Smooth pick-up and drop-off at Jeddah (KAIA) and Madinah airports, with meet-and-greet and flight tracking."
+      },
+      "hotel": {
+        "title": "Hotel Transfer",
+        "desc": "Door-to-door transfers between your hotel and the Haram, or between hotels across the holy cities."
+      },
+      "ziyarat": {
+        "title": "Ziyarat Tours",
+        "desc": "Guided visits to the blessed sites of Makkah, Madinah and Taif at a comfortable, unhurried pace."
+      },
+      "umrah": {
+        "title": "Umrah & Hajj Transport",
+        "desc": "Dedicated transport for your Umrah or Hajj journey, coordinated around your rituals and schedule."
+      },
+      "intercity": {
+        "title": "Intercity Rides",
+        "desc": "Direct city-to-city travel — Jeddah, Makkah, Madinah and Taif — in comfort and safety."
+      },
+      "custom": {
+        "title": "Custom Trips",
+        "desc": "Tell us your plan and we will arrange the ideal vehicle and route for your group."
+      }
+    }
+  },
+  "fleet": {
+    "eyebrow": "Our Fleet",
+    "title": "Comfortable, Well-Maintained Vehicles",
+    "subtitle": "Choose the vehicle that fits your group — every one is clean, air-conditioned and regularly serviced.",
+    "capacityLabel": "Capacity",
+    "items": {
+      "sedan": {
+        "name": "Sedan",
+        "capacity": "1–3 passengers",
+        "desc": "Ideal for individuals, couples and small families with light luggage."
+      },
+      "suv": {
+        "name": "SUV",
+        "capacity": "1–5 passengers",
+        "desc": "Extra space and comfort for families travelling with more luggage."
+      },
+      "van": {
+        "name": "Van (Hiace)",
+        "capacity": "6–11 passengers",
+        "desc": "Roomy transport for larger families and groups on Ziyarat tours."
+      },
+      "bus": {
+        "name": "Coaster / Bus",
+        "capacity": "12+ passengers",
+        "desc": "Group transport for extended families, delegations and Umrah groups."
+      }
+    }
+  },
+  "coverage": {
+    "eyebrow": "Coverage",
+    "title": "Serving the Holy Cities & Beyond",
+    "subtitle": "We operate across the western region of the Kingdom and the entire Kingdom of Saudi Arabia on request.",
+    "items": {
+      "makkah": {
+        "name": "Makkah",
+        "desc": "Transfers to and from the Haram, hotels and all sacred sites."
+      },
+      "madinah": {
+        "name": "Madinah",
+        "desc": "Airport, Masjid an-Nabawi and Ziyarat of the blessed sites."
+      },
+      "jeddah": {
+        "name": "Jeddah",
+        "desc": "King Abdulaziz International Airport transfers and city rides."
+      },
+      "taif": {
+        "name": "Taif",
+        "desc": "Cool mountain Ziyarat trips and intercity transfers."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Trusted by Pilgrims Worldwide",
+    "subtitle": "The kind words of guests we have had the honour to serve.",
+    "items": [
+      {
+        "name": "Abdullah R.",
+        "location": "United Kingdom",
+        "text": "From Jeddah airport straight to our hotel in Makkah — clean car, kind driver, and on time. It made the start of our Umrah stress-free."
+      },
+      {
+        "name": "Fatima S.",
+        "location": "Indonesia",
+        "text": "The Ziyarat tour of Madinah was beautifully organised. The driver was patient and let us take our time at every site. Highly recommended."
+      },
+      {
+        "name": "Bilal K.",
+        "location": "Pakistan",
+        "text": "Fixed price agreed on WhatsApp, exactly as promised. No haggling, no surprises. We used them for the whole family for a week."
+      }
+    ]
+  },
+  "faqTeaser": {
+    "eyebrow": "Questions?",
+    "title": "Everything You Need to Know",
+    "subtitle": "Booking, pricing, coverage and more — answered clearly.",
+    "cta": "Read all FAQs"
+  },
+  "ctaBanner": {
+    "title": "Ready to Book Your Ride?",
+    "subtitle": "Message us on WhatsApp with your pick-up, drop-off, date and passengers — we will confirm your fare in minutes.",
+    "cta": "Book Now on WhatsApp",
+    "orCall": "or call us at"
+  },
+  "booking": {
+    "hero": {
+      "premiumService": "Premium Transport Service",
+      "forHajjUmrah": "For Hajj & Umrah",
+      "safeReliable": "Safe & Reliable",
+      "professionalDrivers": "Professional Drivers",
+      "onTimeService": "On-Time Service",
+      "scrollToForm": "Scroll to form"
+    },
+    "eyebrow": "Pick & Drop",
+    "title": "Book Your Pick & Drop",
+    "subtitle": "Fill in your trip details below. When you submit, we open a pre-filled WhatsApp chat so you can send it in one tap — no login, no account needed.",
+    "sectionContact": "Your Details",
+    "sectionTrip": "Trip Details",
+    "name": "Full Name",
+    "namePlaceholder": "e.g. Ahmed Khan",
+    "phone": "Phone / WhatsApp",
+    "phonePlaceholder": "e.g. +44 7700 900000",
+    "pickup": "Pick-up Location",
+    "pickupPlaceholder": "e.g. Jeddah Airport, Terminal 1",
+    "dropoff": "Drop-off Location",
+    "dropoffPlaceholder": "e.g. Makkah, Ajyad hotel",
+    "date": "Date",
+    "time": "Time",
+    "passengers": "Passengers",
+    "vehicle": "Vehicle Type",
+    "vehicleOptions": {
+      "any": "Recommend for me",
+      "sedan": "Sedan (1–3)",
+      "suv": "SUV (1–5)",
+      "van": "Van / Hiace (6–11)",
+      "bus": "Coaster / Bus (12+)"
+    },
+    "service": "Service Type",
+    "serviceOptions": {
+      "airport": "Airport Transfer",
+      "hotel": "Hotel Transfer",
+      "ziyarat": "Ziyarat Tour",
+      "umrah": "Umrah / Hajj Transport",
+      "intercity": "Intercity Ride",
+      "custom": "Custom Trip"
+    },
+    "notes": "Additional Notes",
+    "notesPlaceholder": "Flight number, luggage, child seats, anything else…",
+    "submit": "Send Booking on WhatsApp",
+    "submitEmail": "Or send by email",
+    "requiredHint": "Fields marked * are required.",
+    "errorRequired": "Please fill in the required fields.",
+    "waIntro": "Assalamu alaikum, I'd like to book a ride with Al-Saleem Transport.",
+    "labelName": "Name",
+    "labelPhone": "Phone",
+    "labelService": "Service",
+    "labelVehicle": "Vehicle",
+    "labelPickup": "Pick-up",
+    "labelDropoff": "Drop-off",
+    "labelDate": "Date",
+    "labelTime": "Time",
+    "labelPassengers": "Passengers",
+    "labelNotes": "Notes",
+    "emailSubject": "New booking request — Al-Saleem Transport"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Serving the Ummah with Excellence",
+    "lead": "Al-Saleem Integrated Transport Company is a licensed Saudi transport operator dedicated to carrying pilgrims and visitors in comfort, safety and dignity across the holy cities.",
+    "story": [
+      "Every guest who comes to the Haramain is on a journey of a lifetime. We started Al-Saleem Transport with a simple conviction: that the road between the airport, the hotel and the sacred sites should be the easiest part of that journey — never a worry.",
+      "Today our vetted drivers and well-maintained vehicles serve guests across Makkah, Madinah, Jeddah and Taif, from a single airport pick-up to complete Ziyarat tours. We take pride in punctuality, transparent fares and the kind of care we would want for our own families."
+    ],
+    "missionTitle": "Our Mission",
+    "mission": "To give every pilgrim a calm, safe and dignified journey — so that transport is one less thing to think about, and worship can remain the focus.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "trust": { "title": "Trust", "desc": "A licensed operator with transparent, agreed pricing and no surprises." },
+      "care": { "title": "Care", "desc": "We treat every guest as an honoured visitor to the House of Allah." },
+      "excellence": { "title": "Excellence", "desc": "Clean vehicles, punctual service and attention to every detail." },
+      "faith": { "title": "Respect", "desc": "Drivers who understand and respect the sanctity of your journey." }
+    },
+    "licenseTitle": "License & Registration",
+    "licenseIntro": "Al-Saleem Integrated Transport Company operates fully licensed under the regulations of the Kingdom of Saudi Arabia.",
+    "licenseLabel": "Transport License No.",
+    "unifiedLabel": "Unified National Number",
+    "coverageLabel": "Service Area"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Get in Touch",
+    "subtitle": "We are available around the clock. Message us on WhatsApp for the fastest response, or send us the details below.",
+    "phoneTitle": "Call / WhatsApp",
+    "emailTitle": "Email",
+    "areaTitle": "Service Area",
+    "areaValue": "Makkah, Madinah, Jeddah & Taif — Kingdom of Saudi Arabia",
+    "hoursTitle": "Working Hours",
+    "hoursValue": "Open 24 hours — every day",
+    "formTitle": "Send us a message",
+    "formSubtitle": "Tell us what you need and we will get back to you quickly.",
+    "message": "Your Message",
+    "messagePlaceholder": "How can we help with your journey?",
+    "send": "Send on WhatsApp",
+    "waIntro": "Assalamu alaikum, I have a question for Al-Saleem Transport."
+  },
+  "faqPage": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear answers about booking, pricing, coverage and your Ziyarat journey.",
+    "items": [
+      {
+        "q": "How do I book a ride?",
+        "a": "The fastest way is WhatsApp. Use the booking form on our Book Now page or message +966 50 068 9196 directly with your pick-up, drop-off, date, time and number of passengers. We confirm your fare and vehicle within minutes."
+      },
+      {
+        "q": "How much does it cost?",
+        "a": "We use fixed, transparent fares agreed before your trip — no meters and no hidden fees. The price depends on the route, vehicle type and number of passengers. Send us your trip details on WhatsApp for an exact quote."
+      },
+      {
+        "q": "Which areas do you cover?",
+        "a": "We serve Makkah, Madinah, Jeddah and Taif, including airport and hotel transfers, and travel across the wider Kingdom of Saudi Arabia on request."
+      },
+      {
+        "q": "What types of vehicles do you have?",
+        "a": "Sedans (1–3 passengers), SUVs (1–5), vans such as the Toyota Hiace (6–11) and coasters/buses (12+). All vehicles are clean, air-conditioned and well-maintained. Let us know your group size and luggage and we will recommend the right one."
+      },
+      {
+        "q": "Do you offer airport pick-up from Jeddah and Madinah?",
+        "a": "Yes. We provide meet-and-greet airport transfers from Jeddah (King Abdulaziz International) and Madinah airports directly to your hotel in Makkah or Madinah, with flight tracking so we are there when you land."
+      },
+      {
+        "q": "Can you arrange a full Ziyarat tour?",
+        "a": "Absolutely. We arrange guided Ziyarat tours of the blessed sites in Makkah, Madinah and Taif at an unhurried pace, with a driver who knows the sites and respects your time for prayer and reflection."
+      },
+      {
+        "q": "Are your drivers professional and licensed?",
+        "a": "Yes. Our drivers are vetted, experienced and courteous, and we operate as a fully licensed Saudi transport company (License No. 35/00008116)."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "Payment arrangements are confirmed with you on WhatsApp when you book. We keep everything transparent and agreed in advance."
+      },
+      {
+        "q": "What is your cancellation policy?",
+        "a": "Plans change, especially during Umrah and Hajj. Please let us know as early as you can on WhatsApp and we will do our best to accommodate any change or cancellation."
+      },
+      {
+        "q": "Is support really available 24/7?",
+        "a": "Yes. Flights and rituals happen at all hours, so you can reach a real person on WhatsApp at any time of the day or night."
+      }
+    ]
+  },
+  "guide": {
+    "eyebrow": "Flagship Guide",
+    "title": "The Complete Ziyarat Guide",
+    "subtitle": "A rich, respectful guide to the sacred sites — Makkah, the steps of Umrah and Hajj, the blessed sites, Taif, Madinah and Badr — available in every language, free to read and download.",
+    "intro": "Whether this is your first visit or your tenth, this guide walks you through the holy places and their history so your Ziyarat is meaningful and informed. Choose your language below to begin.",
+    "chooseLanguage": "Read in your language",
+    "startReading": "Read the guide",
+    "availableIn": "Available in all supported languages",
+    "download": "Download PDF",
+    "print": "Print / Save as PDF",
+    "onThisPage": "On this page",
+    "chaptersTitle": "What's inside",
+    "chapters": {
+      "makkah": { "title": "Makkah", "desc": "An introduction to the holy city, the Ka'bah and the Sacred Mosque." },
+      "umrah": { "title": "Umrah, Step by Step", "desc": "The rites of Umrah explained clearly, in order." },
+      "hajj": { "title": "Hajj, Step by Step", "desc": "A day-by-day walkthrough of the pilgrimage." },
+      "sacredSites": { "title": "Sacred Sites of Makkah", "desc": "The blessed places and historic sites to visit." },
+      "taif": { "title": "Taif", "desc": "The mountain city and its place in the Prophet's ﷺ life." },
+      "madinah": { "title": "Madinah", "desc": "The Prophet's ﷺ city, Masjid an-Nabawi and its Ziyarat." },
+      "badr": { "title": "Badr", "desc": "The site of the first great battle and its martyrs." },
+      "family": { "title": "The Prophet's ﷺ Family", "desc": "An appendix on the wives and children of the Prophet ﷺ." }
+    },
+    "verseLabel": "Qur'an",
+    "hadithLabel": "Hadith",
+    "sourceLabel": "Source",
+    "translationLabel": "Translation",
+    "noteTitle": "A note on content",
+    "contentPending": "The full text of this chapter — including Qur'anic verses, ahadith and their sources — will be published here once reviewed and verified for authenticity. We take great care to ensure every word is accurate. Please check back soon, or contact us if you would like to help review the content.",
+    "verifyNote": "All Qur'anic verses and ahadith are verified against authentic sources before publication."
+  },
+  "footer": {
+    "tagline": "Serving the Ummah with Excellence",
+    "about": "Licensed pick & drop and Ziyarat transport across Makkah, Madinah, Jeddah and Taif — comfortable AC vehicles, professional drivers and fixed, transparent fares.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "licensedLine": "Licensed Saudi transport operator",
+    "hours": "Open 24/7"
+  },
+  "legal": {
+    "lastUpdated": "Last updated",
+    "updatedDate": "July 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "intro": "This Privacy Policy explains how Al-Saleem Integrated Transport Company (\"we\", \"us\") handles information when you use our website or book our services.",
+      "sections": [
+        { "heading": "Information we collect", "body": "When you book a ride we collect the details you provide — such as your name, phone number, pick-up and drop-off locations, travel date and any notes. If you contact us via WhatsApp or email, we receive the information in those messages." },
+        { "heading": "How we use your information", "body": "We use your details only to arrange, confirm and provide your transport, to communicate with you about your booking, and to improve our service. We do not sell your personal information." },
+        { "heading": "WhatsApp and messaging", "body": "Bookings are typically completed over WhatsApp. Messages you send are also subject to WhatsApp's own privacy policy. We use the details in your message solely to serve your booking." },
+        { "heading": "Cookies", "body": "Our website uses a minimal cookie to remember your chosen language. We do not use it to track you across other websites." },
+        { "heading": "Data retention", "body": "We keep booking details only for as long as needed to provide the service and meet legal or accounting requirements, after which they are removed." },
+        { "heading": "Your rights", "body": "You may ask us what information we hold about you and request that it be corrected or deleted. Contact us using the details below." },
+        { "heading": "Contact", "body": "For any privacy question, contact us on WhatsApp at +966 50 068 9196 or by email at info@alsaleemtransport.com." }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "intro": "These Terms govern your use of the Al-Saleem Integrated Transport Company website and services. By booking with us you agree to these Terms.",
+      "sections": [
+        { "heading": "Our services", "body": "We provide licensed passenger transport — airport transfers, hotel transfers, Ziyarat tours, Umrah and Hajj transport and intercity rides — across Makkah, Madinah, Jeddah, Taif and the wider Kingdom of Saudi Arabia." },
+        { "heading": "Bookings and fares", "body": "Fares are fixed and agreed with you before travel. A booking is confirmed when we acknowledge your request. Please provide accurate pick-up details, timing and passenger numbers so we can serve you well." },
+        { "heading": "Cancellations and changes", "body": "If you need to change or cancel a booking, please tell us as early as possible on WhatsApp. We will always try to accommodate changes, especially during Umrah and Hajj." },
+        { "heading": "Your responsibilities", "body": "Please be ready at the agreed pick-up time and place, follow the driver's reasonable safety instructions, and treat the vehicle and driver with respect." },
+        { "heading": "Liability", "body": "We take great care to provide safe, punctual transport, but we are not responsible for delays caused by circumstances beyond our control such as traffic, weather, road closures or crowd conditions during peak seasons." },
+        { "heading": "Governing law", "body": "These Terms are governed by the laws of the Kingdom of Saudi Arabia." },
+        { "heading": "Contact", "body": "Questions about these Terms? Contact us on WhatsApp at +966 50 068 9196 or by email at info@alsaleemtransport.com." }
+      ]
+    }
+  }
+}

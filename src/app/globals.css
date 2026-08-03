@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Poppins', system-ui, sans-serif;
+    --font-arabic: 'Noto Naskh Arabic', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-navy-800 antialiased;
+    font-feature-settings: 'kern', 'liga';
+  }
+
+  /* Arabic / Urdu / Persian get the naskh face and a taller line-height so
+     diacritics and Quran verses render cleanly. */
+  [dir='rtl'] body,
+  [lang='ar'],
+  [lang='ur'],
+  [lang='fa'] {
+    font-family: var(--font-arabic);
+    line-height: 1.9;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold text-navy tracking-tight;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-navy-900;
+  }
+
+  /* Visible keyboard focus for accessibility (WCAG AA). */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply container mx-auto;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3
+      text-sm font-semibold transition-all duration-200 focus-visible:ring-2
+      focus-visible:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-maroon text-cream-100 shadow-soft hover:bg-maroon-600
+      hover:shadow-card hover:-translate-y-0.5;
+  }
+
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe5a]
+      hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply btn border border-navy-200 bg-transparent text-navy hover:bg-navy-50;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-navy-900 shadow-soft hover:bg-gold-dark hover:-translate-y-0.5;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-soft ring-1 ring-navy-100/60
+      transition-shadow hover:shadow-card;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-teal/10 px-4 py-1.5
+      text-xs font-semibold uppercase tracking-wider text-teal-dark;
+  }
+
+  .prose-guide {
+    @apply max-w-none leading-relaxed text-navy-700;
+  }
+
+  /* Functional-but-hidden scrollbar for horizontal scrollers. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* --- Print styles: the Ziyarat guide prints/saves-to-PDF cleanly. --- */
+@media print {
+  /* Force backgrounds & ink to print so verse/hadith/table styling survives. */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+  /* Trim the tall dark page-header band to a compact title strip in print. */
+  .page-header {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+  .card {
+    break-inside: avoid;
+  }
+  h2,
+  h3,
+  h4,
+  figure,
+  table,
+  ol,
+  ul {
+    break-inside: avoid;
+  }
+  a[href]::after {
+    content: '';
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
