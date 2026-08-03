@@ -296,6 +296,7 @@
     "translationLabel": "Çeviri",
     "noteTitle": "İçerik hakkında not",
     "contentPending": "Bu bölümün tam metni — Kur'an ayetleri, hadisler ve kaynakları dâhil — doğruluğu incelenip teyit edildikten sonra burada yayımlanacaktır. Her kelimenin doğruluğuna büyük özen gösteriyoruz. Lütfen kısa süre sonra tekrar bakın veya içeriği incelemeye yardımcı olmak isterseniz bize ulaşın.",
+    "machineNotice": "Bu çeviri, âlim incelemesini bekleyen makine destekli bir taslaktır. Arapça Kur’an ayetleri ve hadisler değiştirilmeden korunmuştur; bazı isimler henüz yerelleştirilmemiş olabilir.",
     "verifyNote": "Tüm Kur'an ayetleri ve hadisler yayımlanmadan önce güvenilir kaynaklarla teyit edilir."
   },
   "footer": {

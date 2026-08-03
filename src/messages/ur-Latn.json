@@ -296,6 +296,7 @@
     "translationLabel": "Tarjuma",
     "noteTitle": "Content ke bare mein note",
     "contentPending": "Is baab ka mukammal matn — bashumool Qurani ayaat, ahadith aur unke maakhaz — tasdeeq aur janch ke baad yahan shaya kiya jayega. Hum har lafz ki durustagi ka bohat khayal rakhte hain. Barah-e-karam jald dobara aayein, ya agar aap content ki janch mein madad karna chahein to rabta karein.",
+    "machineNotice": "Ye tarjuma machine ki madad se tayyar karda draft hai, ilmi nazar-sani ke muntazir. Arabi ayaat o ahadith bighair tabdeeli ke hain; baaz naam abhi local zaban mein muntaqil nahi hue.",
     "verifyNote": "Tamam Qurani ayaat aur ahadith ishaat se pehle mustanad maakhaz se tasdeeq ki jati hain."
   },
   "footer": {

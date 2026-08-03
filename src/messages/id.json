@@ -296,6 +296,7 @@
     "translationLabel": "Terjemahan",
     "noteTitle": "Catatan tentang konten",
     "contentPending": "Teks lengkap bab ini — termasuk ayat Al-Qur'an, hadis, dan sumbernya — akan diterbitkan di sini setelah ditinjau dan diverifikasi keasliannya. Kami sangat menjaga ketepatan setiap kata. Silakan periksa kembali segera, atau hubungi kami jika Anda ingin membantu meninjau kontennya.",
+    "machineNotice": "Terjemahan ini adalah draf berbantuan mesin, menunggu tinjauan ulama. Ayat Al-Qur’an dan hadis berbahasa Arab tetap tidak diubah; beberapa nama mungkin belum dilokalkan.",
     "verifyNote": "Semua ayat Al-Qur'an dan hadis diverifikasi terhadap sumber otentik sebelum diterbitkan."
   },
   "footer": {

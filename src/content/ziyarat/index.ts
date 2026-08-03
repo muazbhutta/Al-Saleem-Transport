@@ -1,6 +1,7 @@
 import type { Guide } from './types';
 import en from './en';
 import ur from './ur';
+import fr from './fr';
 
 /**
  * Per-locale guide content. Add a language by creating
@@ -12,10 +13,11 @@ import ur from './ur';
 const guides: Partial<Record<string, Guide>> = {
   en,
   ur,
+  fr,
 };
 
 /** Locales whose guide is a machine-assisted draft awaiting scholar review. */
-const machineDrafts = new Set<string>(['ur']);
+const machineDrafts = new Set<string>(['ur', 'fr']);
 
 export function getGuide(locale: string): Guide {
   return guides[locale] ?? en;

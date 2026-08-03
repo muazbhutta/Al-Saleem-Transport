@@ -296,6 +296,7 @@
     "translationLabel": "Traduction",
     "noteTitle": "Note sur le contenu",
     "contentPending": "Le texte complet de ce chapitre — y compris les versets coraniques, les hadiths et leurs sources — sera publié ici après vérification et validation de son authenticité. Nous veillons scrupuleusement à l'exactitude de chaque mot. Revenez bientôt, ou contactez-nous si vous souhaitez aider à réviser le contenu.",
+    "machineNotice": "Cette traduction est un brouillon assisté par machine, en attente de révision savante. Les versets du Coran et les hadiths en arabe restent inchangés ; certains noms ne sont pas encore localisés.",
     "verifyNote": "Tous les versets coraniques et hadiths sont vérifiés à partir de sources authentiques avant publication."
   },
   "footer": {

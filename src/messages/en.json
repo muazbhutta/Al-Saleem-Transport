@@ -402,6 +402,7 @@
     "translationLabel": "Translation",
     "noteTitle": "A note on content",
     "contentPending": "The full text of this chapter — including Qur'anic verses, ahadith and their sources — will be published here once reviewed and verified for authenticity. We take great care to ensure every word is accurate. Please check back soon, or contact us if you would like to help review the content.",
+    "machineNotice": "This translation is a machine-assisted draft, pending scholar review. The Arabic Qur’an verses and ahadith are kept unchanged; some names may not yet be localised.",
     "verifyNote": "All Qur'anic verses and ahadith are verified against authentic sources before publication."
   },
   "footer": {

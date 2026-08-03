@@ -113,6 +113,14 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
             <GuideToolbar guide={guide} meta={docMeta} downloadLabel={t('download')} />
           </div>
 
+          {/* Machine-assisted draft notice (shown for machine-translated locales) */}
+          {isMachineDraft(locale) && (
+            <div className="no-print mb-8 flex gap-3 rounded-2xl border border-gold/50 bg-gold/10 p-4 text-sm text-navy-700">
+              <Info className="h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
+              <p>{t('machineNotice')}</p>
+            </div>
+          )}
+
           {!native && (
             <div className="no-print mb-8 flex gap-3 rounded-2xl border border-gold/40 bg-gold/5 p-4 text-sm text-navy-600">
               <Info className="h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
