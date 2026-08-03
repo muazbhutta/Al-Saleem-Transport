@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Al-Saleem Transport — Website
 
 Production-ready, multilingual, SEO-first website for **Al-Saleem Integrated
@@ -181,3 +182,6 @@ export raster OG images, see [`public/images/README.md`](public/images/README.md
 ---
 
 _"Serving the Ummah with Excellence."_
+=======
+# Al-Saleem-Transport
+>>>>>>> f3a2abb750349c3e38cba932f4d6586047cc74a8
