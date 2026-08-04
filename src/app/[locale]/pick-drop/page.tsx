@@ -83,11 +83,14 @@ export default async function PickDropPage({ params }: { params: { locale: strin
             <div className="card flex flex-col gap-3">
               <ul className="flex flex-col gap-3">
                 {perks.map((p) => (
-                  <li key={p.text} className="flex items-center gap-3 text-sm text-navy-700 max-sm:justify-center">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-teal/10 text-teal-dark">
+                  <li
+                    key={p.text}
+                    className="flex items-center gap-3 text-sm text-navy-700 max-sm:relative max-sm:min-h-[2.25rem] max-sm:justify-center max-sm:gap-0"
+                  >
+                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-teal/10 text-teal-dark max-sm:absolute max-sm:left-0 max-sm:top-1/2 max-sm:-translate-y-1/2">
                       <p.icon className="h-5 w-5" aria-hidden />
                     </span>
-                    {p.text}
+                    <span className="max-sm:text-center">{p.text}</span>
                   </li>
                 ))}
               </ul>

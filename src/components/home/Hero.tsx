@@ -99,12 +99,12 @@ export default async function Hero() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="flex items-center gap-4 rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur-md max-sm:justify-center"
+                className="flex items-center gap-4 rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 backdrop-blur-md"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/20 text-gold-light">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gold/20 text-gold-light">
                   <s.icon className="h-6 w-6" aria-hidden />
                 </span>
-                <div>
+                <div className="max-sm:flex-1 max-sm:text-center">
                   <dt className="text-xl font-bold text-cream-100">{s.value}</dt>
                   <dd className="text-sm text-cream-100/75">{s.label}</dd>
                 </div>
