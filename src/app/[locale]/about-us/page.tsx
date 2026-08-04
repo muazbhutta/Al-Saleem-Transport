@@ -68,7 +68,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
 
           <Reveal delay={0.1}>
             <div className="card flex flex-col gap-4 bg-navy text-cream-100">
-              <BadgeCheck className="h-8 w-8 text-gold" aria-hidden />
+              <BadgeCheck className="h-8 w-8 text-gold max-sm:mx-auto" aria-hidden />
               <h2 className="text-xl text-cream-100">{t('licenseTitle')}</h2>
               <p className="text-sm text-cream-100/80">{t('licenseIntro')}</p>
               <dl className="mt-2 flex flex-col gap-3 text-sm">

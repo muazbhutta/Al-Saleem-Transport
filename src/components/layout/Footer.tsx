@@ -18,7 +18,7 @@ export default async function Footer({ locale }: { locale: string }) {
     <footer className="no-print mt-auto bg-navy text-cream-100/80">
       <div className="container grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 max-sm:items-center max-sm:text-center">
           <Logo variant="light" />
           <p className="max-w-xs text-sm leading-relaxed">{t('about')}</p>
           <div className="mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-white/5 px-3 py-2 text-xs ring-1 ring-gold/30">
@@ -33,7 +33,7 @@ export default async function Footer({ locale }: { locale: string }) {
         </div>
 
         {/* Quick links */}
-        <nav aria-label="Footer quick links" className="flex flex-col gap-3">
+        <nav aria-label="Footer quick links" className="flex flex-col gap-3 max-sm:items-center max-sm:text-center">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-cream-100">
             {t('quickLinks')}
           </h3>
@@ -45,7 +45,7 @@ export default async function Footer({ locale }: { locale: string }) {
         </nav>
 
         {/* Services */}
-        <nav aria-label="Footer services" className="flex flex-col gap-3">
+        <nav aria-label="Footer services" className="flex flex-col gap-3 max-sm:items-center max-sm:text-center">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-cream-100">
             {t('servicesTitle')}
           </h3>
@@ -57,7 +57,7 @@ export default async function Footer({ locale }: { locale: string }) {
         </nav>
 
         {/* Contact */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 max-sm:items-center max-sm:text-center">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-cream-100">
             {t('contactTitle')}
           </h3>
@@ -77,7 +77,7 @@ export default async function Footer({ locale }: { locale: string }) {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container flex flex-col items-center justify-between gap-3 py-5 text-xs text-cream-100/60 sm:flex-row">
+        <div className="container flex flex-col items-center justify-between gap-3 py-5 text-xs text-cream-100/60 max-sm:text-center sm:flex-row">
           <p>
             © {year} {site.nameEn}. {t('rights')}
           </p>

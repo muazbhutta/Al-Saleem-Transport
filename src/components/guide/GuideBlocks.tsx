@@ -17,7 +17,10 @@ export function Block({ block, labels }: { block: GuideBlock; labels: Labels }) 
 
     case 'h3':
       return (
-        <h3 id={block.id} className="scroll-mt-28 border-s-4 border-gold ps-3 text-xl text-navy">
+        <h3
+          id={block.id}
+          className="scroll-mt-28 border-s-4 border-gold ps-3 text-xl text-navy max-sm:border-s-0 max-sm:ps-0"
+        >
           {block.text}
         </h3>
       );
@@ -127,7 +130,7 @@ export function Block({ block, labels }: { block: GuideBlock; labels: Labels }) 
       return (
         <ol className="flex flex-col gap-4">
           {block.items.map((item, i) => (
-            <li key={i} className="flex gap-4">
+            <li key={i} className="flex gap-4 max-sm:flex-col max-sm:items-center">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-maroon text-sm font-bold text-cream-100">
                 {i + 1}
               </span>
@@ -142,18 +145,18 @@ export function Block({ block, labels }: { block: GuideBlock; labels: Labels }) 
 
     case 'table':
       return (
-        <figure className="overflow-x-auto">
+        <figure className="overflow-x-auto no-scrollbar">
           {block.caption && (
             <figcaption className="mb-2 flex items-center gap-2 text-sm font-medium text-navy-500">
               <ListOrdered className="h-4 w-4 text-teal-dark" aria-hidden />
               {block.caption}
             </figcaption>
           )}
-          <table className="w-full min-w-[28rem] border-collapse overflow-hidden rounded-xl text-sm shadow-soft">
+          <table className="w-full min-w-[28rem] border-collapse overflow-hidden rounded-xl text-sm shadow-soft max-sm:min-w-0 max-sm:text-xs">
             <thead>
               <tr className="bg-navy text-cream-100">
                 {block.columns.map((col) => (
-                  <th key={col} className="px-4 py-3 text-start font-semibold">
+                  <th key={col} className="px-4 py-3 text-start font-semibold max-sm:px-2 max-sm:py-2 max-sm:text-center">
                     {col}
                   </th>
                 ))}
@@ -163,7 +166,7 @@ export function Block({ block, labels }: { block: GuideBlock; labels: Labels }) 
               {block.rows.map((row, ri) => (
                 <tr key={ri} className={ri % 2 ? 'bg-cream-300/50' : 'bg-white'}>
                   {row.map((cell, ci) => (
-                    <td key={ci} className="border-t border-navy-100 px-4 py-3 text-navy-700">
+                    <td key={ci} className="border-t border-navy-100 px-4 py-3 text-navy-700 max-sm:px-2 max-sm:py-2">
                       {cell}
                     </td>
                   ))}

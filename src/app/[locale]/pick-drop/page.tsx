@@ -83,7 +83,7 @@ export default async function PickDropPage({ params }: { params: { locale: strin
             <div className="card flex flex-col gap-3">
               <ul className="flex flex-col gap-3">
                 {perks.map((p) => (
-                  <li key={p.text} className="flex items-center gap-3 text-sm text-navy-700">
+                  <li key={p.text} className="flex items-center gap-3 text-sm text-navy-700 max-sm:justify-center">
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-teal/10 text-teal-dark">
                       <p.icon className="h-5 w-5" aria-hidden />
                     </span>
@@ -91,7 +91,7 @@ export default async function PickDropPage({ params }: { params: { locale: strin
                   </li>
                 ))}
               </ul>
-              <div className="mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-navy px-3 py-1.5 text-xs text-cream-100">
+              <div className="mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-navy px-3 py-1.5 text-xs text-cream-100 max-sm:mx-auto">
                 <ShieldCheck className="h-4 w-4 text-gold" aria-hidden />
                 {tc('licenseNo')} {site.licenseNo}
               </div>

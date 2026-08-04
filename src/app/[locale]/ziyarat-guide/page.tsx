@@ -1,9 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Info } from 'lucide-react';
 import { buildMetadata } from '@/lib/seo';
-import { guideCoverBlur, masjidBlur } from '@/lib/images';
+import { guideCoverBlur, masjidBlur, makkahSkylineBlur } from '@/lib/images';
 import { articleSchema, breadcrumbSchema } from '@/lib/schema';
 import { site, getDir } from '@/lib/site';
 import JsonLd from '@/components/seo/JsonLd';
@@ -12,6 +14,25 @@ import TableOfContents from '@/components/guide/TableOfContents';
 import GuideToolbar from '@/components/guide/GuideToolbar';
 import { Block } from '@/components/guide/GuideBlocks';
 import { getGuide, hasNativeGuide, isMachineDraft } from '@/content/ziyarat';
+
+/**
+ * Optional hero photo per chapter. Rendered only when the file actually exists
+ * under /public, so a not-yet-added image simply shows no banner (never a
+ * broken image). Drop new photos in `public/images/` to enable them.
+ */
+const CHAPTER_IMAGES: Record<string, { src: string; className: string; blur?: string }> = {
+  makkah: { src: '/images/makkah-skyline.jpg', className: 'object-cover object-[center_20%]', blur: makkahSkylineBlur },
+  taif: { src: '/images/taif.jpg', className: 'object-cover object-center' },
+  madinah: { src: '/images/masjid-nabawi.jpg', className: 'object-cover object-[center_38%]', blur: masjidBlur },
+  badr: { src: '/images/badr.jpg', className: 'object-cover object-center' },
+};
+
+function chapterImage(id: string) {
+  const cfg = CHAPTER_IMAGES[id];
+  if (!cfg) return null;
+  const abs = path.join(process.cwd(), 'public', cfg.src.replace(/^\//, ''));
+  return fs.existsSync(abs) ? cfg : null;
+}
 
 export async function generateMetadata({
   params,
@@ -139,20 +160,23 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
             <article className="prose-guide flex min-w-0 flex-col gap-14">
               {guide.chapters.map((chapter) => (
                 <section key={chapter.id} id={chapter.id} className="scroll-mt-28">
-                  {chapter.id === 'madinah' && (
-                    <div className="relative mb-6 aspect-[16/7] w-full overflow-hidden rounded-2xl shadow-soft">
-                      <Image
-                        src="/images/masjid-nabawi.jpg"
-                        alt="Masjid an-Nabawi green dome at sunset in Madinah, Saudi Arabia"
-                        fill
-                        loading="lazy"
-                        sizes="(max-width: 1024px) 100vw, 760px"
-                        placeholder="blur"
-                        blurDataURL={masjidBlur}
-                        className="object-cover object-[center_38%]"
-                      />
-                    </div>
-                  )}
+                  {(() => {
+                    const img = chapterImage(chapter.id);
+                    return img ? (
+                      <div className="relative mb-6 aspect-[16/7] w-full overflow-hidden rounded-2xl shadow-soft">
+                        <Image
+                          src={img.src}
+                          alt={chapter.title}
+                          fill
+                          loading="lazy"
+                          sizes="(max-width: 1024px) 100vw, 760px"
+                          placeholder={img.blur ? 'blur' : 'empty'}
+                          blurDataURL={img.blur}
+                          className={img.className}
+                        />
+                      </div>
+                    ) : null;
+                  })()}
                   <h2 className="text-2xl text-navy sm:text-3xl">{chapter.title}</h2>
                   {chapter.intro && (
                     <p className="mt-3 text-lg leading-relaxed text-navy-500">{chapter.intro}</p>

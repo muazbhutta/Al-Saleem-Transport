@@ -25,7 +25,7 @@ export default async function Services() {
             <Reveal key={item.key} delay={i * 0.05}>
               <Link
                 href="/pick-drop"
-                className="card group flex h-full flex-col gap-4 hover:ring-gold/50"
+                className="card group flex h-full flex-col gap-4 hover:ring-gold/50 max-sm:items-center"
               >
                 <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-navy to-navy-800 text-gold-light transition-transform group-hover:scale-105">
                   <item.icon className="h-7 w-7" aria-hidden />

@@ -35,7 +35,7 @@ export default async function GuideTeaser() {
               aria-hidden
             />
 
-            <div className="flex min-h-[22rem] flex-col justify-end gap-4 p-7 text-cream-100 sm:min-h-[24rem] sm:p-10 lg:min-h-[26rem]">
+            <div className="flex min-h-[22rem] flex-col justify-end gap-4 p-7 text-cream-100 max-sm:items-center max-sm:text-center sm:min-h-[24rem] sm:p-10 lg:min-h-[26rem]">
               <span className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-light ring-1 ring-gold/40 backdrop-blur">
                 <BookOpen className="h-4 w-4" aria-hidden />
                 {t('eyebrow')}

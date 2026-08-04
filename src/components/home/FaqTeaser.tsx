@@ -11,7 +11,7 @@ export default async function FaqTeaser() {
   return (
     <section className="section bg-white">
       <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-16">
-        <Reveal className="flex flex-col gap-4 lg:sticky lg:top-28 lg:self-start">
+        <Reveal className="flex flex-col gap-4 max-sm:items-center lg:sticky lg:top-28 lg:self-start">
           <span className="eyebrow w-fit">{tt('eyebrow')}</span>
           <h2 className="text-3xl sm:text-4xl">{tt('title')}</h2>
           <p className="text-navy-500">{tt('subtitle')}</p>

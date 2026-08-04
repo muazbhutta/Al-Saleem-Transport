@@ -40,7 +40,7 @@ export default function ZiyaratTimings({ content }: { content: TimingContent }) 
     <section className="section bg-cream">
       <div className="container flex flex-col gap-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <div className="flex max-w-2xl flex-col gap-3">
+          <div className="flex max-w-2xl flex-col gap-3 max-sm:items-center max-sm:text-center">
             <span className="eyebrow w-fit">{content.eyebrow}</span>
             <h2 className="text-3xl sm:text-4xl">{content.title}</h2>
             <p className="text-navy-500">{content.subtitle}</p>

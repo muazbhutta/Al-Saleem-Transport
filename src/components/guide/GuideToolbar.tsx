@@ -56,7 +56,7 @@ export default function GuideToolbar({
   }
 
   return (
-    <div className="no-print flex flex-wrap gap-3">
+    <div className="no-print flex flex-wrap gap-3 max-sm:justify-center">
       <button type="button" onClick={handleDownload} className="btn-gold">
         <Download className="h-4 w-4" aria-hidden />
         {downloadLabel}

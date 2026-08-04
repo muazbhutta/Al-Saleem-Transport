@@ -25,7 +25,7 @@ export default async function Coverage() {
                   }}
                 />
                 <div className="relative">
-                  <MapPin className="h-7 w-7 text-gold" aria-hidden />
+                  <MapPin className="h-7 w-7 text-gold max-sm:mx-auto" aria-hidden />
                   <h3 className="mt-4 text-xl text-cream-100">{t(`items.${city}.name`)}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-cream-100/75">
                     {t(`items.${city}.desc`)}

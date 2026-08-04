@@ -57,7 +57,7 @@ export default function Header({ locale }: { locale: string }) {
 
       {/* Main bar - never wraps: nav collapses to a drawer below xl. */}
       <div className="container flex flex-nowrap items-center justify-between gap-3 py-3">
-        <Logo priority compactOnMobile className="shrink-0" />
+        <Logo priority className="shrink-0" />
 
         {/* Desktop nav (xl+) */}
         <nav aria-label="Primary" className="hidden min-w-0 items-center gap-0.5 xl:flex">

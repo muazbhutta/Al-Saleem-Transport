@@ -17,7 +17,7 @@ export default async function Testimonials() {
         <div className="grid gap-5 md:grid-cols-3">
           {items.map((item, i) => (
             <Reveal key={i} delay={i * 0.07}>
-              <figure className="card flex h-full flex-col gap-4">
+              <figure className="card flex h-full flex-col gap-4 max-sm:items-center">
                 <Quote className="h-8 w-8 text-gold/70 rtl:scale-x-[-1]" aria-hidden />
                 <blockquote className="flex-1 text-navy-700">
                   <p className="leading-relaxed">{item.text}</p>
