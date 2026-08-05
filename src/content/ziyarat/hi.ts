@@ -784,7 +784,7 @@ const guide: Guide = {
             },
           ],
         },
-        uhudMartyrsTable(['#', 'नाम', 'समूह'], 'शहीदान-ए-उहुद'),
+        uhudMartyrsTable(['#', 'नाम', 'समूह'], 'शहीदान-ए-उहुद', 'hi'),
         {
           type: 'note',
           text:
@@ -841,7 +841,7 @@ const guide: Guide = {
           type: 'p',
           text: 'मैदान-ए-बद्र के क़रीब स्थित - यहाँ 14 सहाबा रज़ि॰ दफ़्न हैं।',
         },
-        badrMartyrsTable(['#', 'नाम', 'समूह'], 'शहीदान-ए-बद्र'),
+        badrMartyrsTable(['#', 'नाम', 'समूह'], 'शहीदान-ए-बद्र', 'hi'),
       ],
     },
 

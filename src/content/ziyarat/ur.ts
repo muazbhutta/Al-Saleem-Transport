@@ -784,7 +784,7 @@ const guide: Guide = {
             },
           ],
         },
-        uhudMartyrsTable(['#', 'نام', 'گروہ'], 'شہدائے احد'),
+        uhudMartyrsTable(['#', 'نام', 'گروہ'], 'شہدائے احد', 'ur'),
         {
           type: 'note',
           text:
@@ -841,7 +841,7 @@ const guide: Guide = {
           type: 'p',
           text: 'میدانِ بدر کے قریب واقع - یہاں 14 صحابہ رضی اللہ عنہم مدفون ہیں۔',
         },
-        badrMartyrsTable(['#', 'نام', 'گروہ'], 'شہدائے بدر'),
+        badrMartyrsTable(['#', 'نام', 'گروہ'], 'شہدائے بدر', 'ur'),
       ],
     },
 

@@ -784,7 +784,7 @@ const guide: Guide = {
             },
           ],
         },
-        uhudMartyrsTable(['#', 'নাম', 'দল'], 'উহুদের শহীদগণ'),
+        uhudMartyrsTable(['#', 'নাম', 'দল'], 'উহুদের শহীদগণ', 'bn'),
         {
           type: 'note',
           text:
@@ -841,7 +841,7 @@ const guide: Guide = {
           type: 'p',
           text: 'বদরের যুদ্ধক্ষেত্রের কাছে অবস্থিত - এখানে ১৪ জন সাহাবা রা. সমাহিত।',
         },
-        badrMartyrsTable(['#', 'নাম', 'দল'], 'বদরের শহীদগণ'),
+        badrMartyrsTable(['#', 'নাম', 'দল'], 'বদরের শহীদগণ', 'bn'),
       ],
     },
 

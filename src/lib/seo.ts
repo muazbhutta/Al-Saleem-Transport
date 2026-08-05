@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { siteUrl, site, languages, defaultLocale } from './site';
+import { siteKeywords } from './keywords';
 
 /**
  * Build per-page, per-locale metadata with correct canonical + hreflang
@@ -17,12 +18,15 @@ export function buildMetadata({
   title,
   description,
   image = '/og/og-default.svg',
+  keywords = siteKeywords,
 }: {
   locale: string;
   path: string;
   title: string;
   description: string;
   image?: string;
+  /** Extra page keywords are merged with the site-wide set. */
+  keywords?: string[];
 }): Metadata {
   const cleanPath = path === '/' ? '' : path;
   const canonical = `${siteUrl}/${locale}${cleanPath}`;
@@ -37,6 +41,7 @@ export function buildMetadata({
   return {
     title,
     description,
+    keywords: Array.from(new Set([...keywords, ...siteKeywords])),
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical,

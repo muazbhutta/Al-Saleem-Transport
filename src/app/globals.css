@@ -11,11 +11,42 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* Reserve the scrollbar gutter so content never shifts when it appears. */
+    scrollbar-gutter: stable;
+    /* Slim, themed scrollbar (Firefox). */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 162, 75, 0.55) transparent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   body {
     @apply bg-cream text-navy-800 antialiased;
     font-feature-settings: 'kern', 'liga';
+    /* Guard against any stray horizontal scroll without breaking sticky. */
+    overflow-x: clip;
+  }
+
+  /* Slim, refined scrollbar (WebKit / Chromium / Safari). */
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(201, 162, 75, 0.5);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 75, 0.85);
   }
 
   /* Arabic / Urdu / Persian get the naskh face and a taller line-height so

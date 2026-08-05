@@ -1,4 +1,5 @@
 import { site, siteUrl, defaultLocale } from './site';
+import { knownPlaces } from './keywords';
 
 /**
  * JSON-LD structured data builders. Keeping them in one place makes it easy
@@ -6,6 +7,28 @@ import { site, siteUrl, defaultLocale } from './site';
  */
 
 const phoneE164 = `+${site.phoneRaw}`;
+
+/** Every transport service offered — powers the schema offer catalog. */
+const serviceCatalog = [
+  'Ziyarat tour transport',
+  'Airport transfer (Jeddah & Madinah)',
+  'Hotel pick & drop',
+  'Umrah transport',
+  'Hajj transport',
+  'Intercity transfer (Makkah, Madinah, Jeddah, Taif, Badr)',
+  'Shopping, market & perfume-souq transfers',
+  'Restaurant & family day-trip transfers',
+  'Custom private car with driver',
+];
+
+/** Cities, region and country the company serves. */
+const areasServed = [
+  ...site.coverage.map((c) => ({ '@type': 'City', name: c })),
+  { '@type': 'City', name: 'Badr' },
+  { '@type': 'AdministrativeArea', name: 'Makkah Province' },
+  { '@type': 'AdministrativeArea', name: 'Madinah Province' },
+  { '@type': 'Country', name: 'Saudi Arabia' },
+];
 
 export function organizationSchema() {
   return {
@@ -24,10 +47,29 @@ export function organizationSchema() {
     telephone: phoneE164,
     email: site.email,
     priceRange: '$$',
-    areaServed: site.coverage.map((c) => ({
-      '@type': 'City',
-      name: c,
+    areaServed: areasServed,
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: site.geo.lat,
+        longitude: site.geo.lng,
+      },
+      geoRadius: 450000,
+    },
+    knowsAbout: knownPlaces,
+    makesOffer: serviceCatalog.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: s, serviceType: s },
     })),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Al-Saleem Transport services',
+      itemListElement: serviceCatalog.map((s) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: s },
+      })),
+    },
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'SA',
