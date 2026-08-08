@@ -8,7 +8,6 @@ import { getDir, siteUrl, site } from '@/lib/site';
 import { siteKeywords } from '@/lib/keywords';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import ChatWidgetLazy from '@/components/chat/ChatWidgetLazy';
 import JsonLd from '@/components/seo/JsonLd';
 import { organizationSchema } from '@/lib/schema';
@@ -79,7 +78,6 @@ export default async function LocaleLayout({
           <Header locale={locale} />
           <main className="flex-1">{children}</main>
           <Footer locale={locale} />
-          <WhatsAppButton />
           <ChatWidgetLazy />
         </NextIntlClientProvider>
       </body>

@@ -21,7 +21,34 @@ type Msg = { role: 'user' | 'model'; text: string };
 
 const wa = 'Please reach us on WhatsApp +966 50 068 9196.';
 
+// Lightweight in-memory sliding-window rate limit per client IP. Best-effort
+// only: on serverless it is per-instance (a KV store would be needed for strict
+// global limits), but it blunts obvious abuse without extra dependencies.
+const RATE_LIMIT = 15; // requests
+const RATE_WINDOW_MS = 60_000; // per minute
+const hits = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  // Opportunistic cleanup so the map can't grow unbounded.
+  if (hits.size > 5000) {
+    for (const [k, v] of hits) if (v.every((t) => now - t >= RATE_WINDOW_MS)) hits.delete(k);
+  }
+  return recent.length > RATE_LIMIT;
+}
+
 export async function POST(req: Request) {
+  const ip = (req.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || 'unknown';
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: `You're sending messages too quickly. Please wait a moment, or ${wa}` },
+      { status: 429 },
+    );
+  }
+
   const key = process.env.GEMINI_API_KEY;
   if (!key) {
     return NextResponse.json(
