@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Al-Saleem Transport — OG template</title>
+
+<!-- Poppins is the site's UI/display font (see src/app/[locale]/layout.tsx). -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  /*
+   * Open Graph share card — exactly 1200x630.
+   * Rendered to /public/og/og-default.jpg by `npm run gen:og`.
+   *
+   * Colours are the design-system tokens from tailwind.config.ts:
+   *   navy.800 #0B2E27  gold #C9A24B  gold.light #E0C078  cream #FAF7F0
+   *
+   * Nothing here may drop below 20px — the card has to survive being shown
+   * as a small thumbnail in a WhatsApp chat list.
+   */
+  :root {
+    --green: #0B2E27;
+    --green-deep: #071E19;
+    --gold: #C9A24B;
+    --gold-light: #E0C078;
+    --cream: #FAF7F0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+
+  .card {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 630px;
+    background: var(--green);
+  }
+
+  /* ---------------------------------------------------------------- LEFT */
+
+  .panel {
+    position: relative;
+    flex: 0 0 55%;              /* 660px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertically centred stack */
+    align-items: flex-start;
+    padding: 64px 60px;
+    background: var(--green);
+    z-index: 2;
+  }
+
+  /* Islamic geometric weave — interlocking 8-point khatam stars, 6% opacity. */
+  .panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C9A24B' stroke-width='1.4'%3E%3Crect x='22' y='22' width='36' height='36'/%3E%3Crect x='22' y='22' width='36' height='36' transform='rotate(45 40 40)'/%3E%3Crect x='-18' y='-18' width='36' height='36'/%3E%3Crect x='-18' y='-18' width='36' height='36' transform='rotate(45 0 0)'/%3E%3Crect x='62' y='-18' width='36' height='36'/%3E%3Crect x='62' y='-18' width='36' height='36' transform='rotate(45 80 0)'/%3E%3Crect x='-18' y='62' width='36' height='36'/%3E%3Crect x='-18' y='62' width='36' height='36' transform='rotate(45 0 80)'/%3E%3Crect x='62' y='62' width='36' height='36'/%3E%3Crect x='62' y='62' width='36' height='36' transform='rotate(45 80 80)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 80px 80px;
+  }
+
+  .panel > * { position: relative; z-index: 1; }
+
+  /* Thin gold rule down the right edge of the green panel. */
+  .panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(201, 162, 75, 0) 0%,
+      var(--gold) 18%,
+      var(--gold) 82%,
+      rgba(201, 162, 75, 0) 100%
+    );
+    z-index: 3;
+  }
+
+  /*
+   * The logo PNG is dark charcoal calligraphy — invisible on deep green — so
+   * it is used as an alpha mask and filled with the brand gold gradient.
+   */
+  .logo {
+    height: 70px;
+    width: 48px;               /* 432x640 source, kept in proportion */
+    margin-bottom: 34px;
+    background: linear-gradient(150deg, var(--gold-light) 0%, var(--gold) 55%, #A9863A 100%);
+    -webkit-mask-image: url('../public/images/logo.png');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('../public/images/logo.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  .name {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: 1px;
+    color: var(--cream);
+  }
+
+  .divider {
+    width: 80px;
+    height: 3px;
+    margin: 26px 0;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  .services {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--gold);
+  }
+
+  .cities {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: rgba(250, 247, 240, 0.8);
+  }
+
+  .badge {
+    margin-top: 40px;
+    padding: 11px 26px;
+    border: 2px solid var(--gold);
+    border-radius: 999px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  /* --------------------------------------------------------------- RIGHT */
+
+  .photo {
+    position: relative;
+    flex: 0 0 45%;              /* 540px */
+    overflow: hidden;
+    background: var(--green-deep);
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Hold the driver and the van body in frame as the sides crop away. */
+    object-position: 54% center;
+  }
+
+  /* Soft fade so the photo melts into the green panel instead of butting it. */
+  .photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        var(--green) 0%,
+        rgba(11, 46, 39, 0.92) 12%,
+        rgba(11, 46, 39, 0.55) 26%,
+        rgba(11, 46, 39, 0.16) 40%,
+        rgba(11, 46, 39, 0) 54%
+      ),
+      /* a whisper of green in the corners keeps the card feeling like one object */
+      linear-gradient(180deg, rgba(7, 30, 25, 0.28) 0%, rgba(7, 30, 25, 0) 22%, rgba(7, 30, 25, 0) 78%, rgba(7, 30, 25, 0.3) 100%);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="panel">
+      <div class="logo" role="img" aria-label="Al-Saleem Transport logo"></div>
+      <div class="name">AL-SALEEM<br />TRANSPORT</div>
+      <div class="divider"></div>
+      <div class="services">Ziyarat · Airport · Hotel Pick &amp; Drop</div>
+      <div class="cities">Makkah · Madinah · Jeddah · Taif</div>
+      <div class="badge">Licensed · 35/00008116</div>
+    </div>
+
+    <div class="photo">
+      <img src="../public/images/airport-madinah.jpg" alt="" />
+    </div>
+  </div>
+</body>
+</html>

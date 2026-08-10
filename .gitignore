@@ -31,5 +31,9 @@ next-env.d.ts
 # vercel
 .vercel
 
+# `npm run gen:og` output — regenerable, and not the asset the site serves
+# (og-default.jpg is the shipped card).
+/public/og/og-generated.jpg
+
 # Claude Code local config
 .claude/

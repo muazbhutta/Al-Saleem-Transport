@@ -46,6 +46,8 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     image: '/og/og-ziyarat.jpg',
+    imageAlt:
+      'The Complete Ziyarat Guide by Al-Saleem Transport — covering Makkah, Umrah, Hajj, Madinah, Taif and Badr, readable and downloadable in every language',
   });
 }
 

@@ -11,6 +11,8 @@ import { siteUrl, site, languages, defaultLocale } from './site';
  * @param description fully-localized meta description
  * @param image optional OG image path (defaults to the site OG image). Must be
  *              a raster — WhatsApp, Facebook and X do not render SVG previews.
+ * @param imageAlt describes what is actually in `image`; override it whenever
+ *              `image` is overridden, so the alt text stays truthful.
  */
 export function buildMetadata({
   locale,
@@ -18,12 +20,14 @@ export function buildMetadata({
   title,
   description,
   image = '/og/og-default.jpg',
+  imageAlt = 'Al-Saleem Transport — a driver beside a branded Toyota van holding a Welcome sign at Madinah airport, with the services Ziyarat, airport and hotel pick & drop across Makkah, Madinah, Jeddah and Taif',
 }: {
   locale: string;
   path: string;
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
 }): Metadata {
   const cleanPath = path === '/' ? '' : path;
   const canonical = `${siteUrl}/${locale}${cleanPath}`;
@@ -55,14 +59,21 @@ export function buildMetadata({
       url: canonical,
       locale,
       images: [
-        { url: imageUrl, secureUrl: imageUrl, type: 'image/jpeg', width: 1200, height: 630, alt: title },
+        {
+          url: imageUrl,
+          secureUrl: imageUrl,
+          type: 'image/jpeg',
+          width: 1200,
+          height: 630,
+          alt: imageAlt,
+        },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [imageUrl],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: imageAlt }],
     },
     robots: { index: true, follow: true },
   };
