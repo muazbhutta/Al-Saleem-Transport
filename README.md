@@ -192,9 +192,24 @@ cp .env.example .env.local
 ```
 
 ```env
-# .env.local — used for canonical URLs, sitemap, hreflang, Open Graph
-NEXT_PUBLIC_SITE_URL=https://alsaleemtransport.com
+# .env.local — optional override for canonical URLs, sitemap, hreflang, OG, JSON-LD
+NEXT_PUBLIC_SITE_URL=
 ```
+
+`NEXT_PUBLIC_SITE_URL` is an **override, not a requirement**. When it is unset,
+[`src/lib/site.ts`](src/lib/site.ts) resolves the base URL in this order:
+
+| # | Condition | Base URL |
+|---|---|---|
+| 1 | `NEXT_PUBLIC_SITE_URL` is set | that value (trailing slash stripped) |
+| 2 | `VERCEL_ENV === 'production'` | `https://www.alsaleemtransport.com` |
+| 3 | `VERCEL_URL` is set (preview builds) | `https://$VERCEL_URL` |
+| 4 | otherwise (local dev) | `http://localhost:3000` |
+
+So production can never emit `localhost`, and preview deployments get their own
+absolute host. `VERCEL_URL` is the per-deployment `*.vercel.app` host and never
+the custom domain, which is why production is a hard-coded default rather than
+derived from it.
 
 ### 3. Run
 
@@ -238,9 +253,10 @@ Routing, the language switcher, hreflang, the sitemap and metadata all pick it u
 
 ## ✅ Pre-launch checklist
 
-- [ ] `NEXT_PUBLIC_SITE_URL` set to the live domain
+- [ ] `www.alsaleemtransport.com` added in Vercel, with the apex domain redirecting to it (the production default is the **www** host — a mismatch splits canonical signals)
 - [ ] Verified Ziyarat guide content added + **scholar-reviewed**; verse/hadith placeholders replaced
-- [ ] Raster OG images (1200×630) exported; PWA PNG icons added
+- [x] Raster OG images (1200×630) exported — `public/og/og-default.jpg`, `og-ziyarat.jpg`
+- [ ] PWA PNG icons added (`manifest.ts` still points at `/icon.svg`, `/icon-192.png`, `/icon-512.png`, none of which exist in `public/`)
 - [ ] Guide PDFs generated for each language
 - [ ] WhatsApp CTA + `tel:` link tested on a real phone
 - [ ] Google Rich Results Test passed on the JSON-LD

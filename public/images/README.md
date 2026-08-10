@@ -44,10 +44,15 @@ so images are served as AVIF/WebP and lazy-loaded.
 
 ## Open Graph images
 
-`public/og/og-default.svg` and `og-ziyarat.svg` are branded placeholders.
-For best social-sharing support (Facebook does not render SVG), export each to
-a **1200×630 JPG/PNG** and update the references in `src/lib/seo.ts`,
-`src/lib/schema.ts` and `src/app/[locale]/ziyarat-guide/page.tsx`.
+`public/og/og-default.jpg` and `og-ziyarat.jpg` are branded **1200×630 JPGs** on
+the emerald + gold design system. They must stay raster — WhatsApp, Facebook and
+X do not render SVG previews.
+
+They are referenced from `src/lib/seo.ts` (default OG/Twitter image),
+`src/lib/schema.ts` (JSON-LD `image`) and
+`src/app/[locale]/ziyarat-guide/page.tsx`. `buildMetadata` emits them as
+absolute URLs built from `siteUrl`, since scrapers will not follow a relative
+`og:image`. If you replace them, keep the same filenames and dimensions.
 
 ## Favicon / PWA icons
 

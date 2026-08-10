@@ -40,7 +40,7 @@ export function organizationSchema() {
     alternateName: site.nameAr,
     url: siteUrl,
     logo: `${siteUrl}/images/logo.png`,
-    image: `${siteUrl}/og/og-default.svg`,
+    image: `${siteUrl}/og/og-default.jpg`,
     description:
       'Licensed Ziyarat, airport and hotel pick & drop transport across Makkah, Madinah, Jeddah and Taif in Saudi Arabia.',
     slogan: site.taglineEn,
@@ -176,6 +176,6 @@ export function articleSchema({
     mainEntityOfPage: `${siteUrl}/${locale}${path}`,
     author: { '@id': `${siteUrl}/#organization` },
     publisher: { '@id': `${siteUrl}/#organization` },
-    image: `${siteUrl}/og/og-ziyarat.svg`,
+    image: `${siteUrl}/og/og-ziyarat.jpg`,
   };
 }

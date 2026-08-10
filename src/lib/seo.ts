@@ -10,14 +10,15 @@ import { siteKeywords } from './keywords';
  * @param path   locale-agnostic path, e.g. '/pick-drop' ('' or '/' for home)
  * @param title  fully-localized page title
  * @param description fully-localized meta description
- * @param image optional OG image path (defaults to the site OG image)
+ * @param image optional OG image path (defaults to the site OG image). Must be
+ *              a raster — WhatsApp, Facebook and X do not render SVG previews.
  */
 export function buildMetadata({
   locale,
   path,
   title,
   description,
-  image = '/og/og-default.svg',
+  image = '/og/og-default.jpg',
   keywords = siteKeywords,
 }: {
   locale: string;
@@ -38,6 +39,10 @@ export function buildMetadata({
   }
   languageAlternates['x-default'] = `${siteUrl}/${defaultLocale}${cleanPath}`;
 
+  // Emit the image as an absolute URL rather than leaning on metadataBase —
+  // scrapers like WhatsApp will not follow a relative og:image.
+  const imageUrl = /^https?:\/\//.test(image) ? image : `${siteUrl}${image}`;
+
   return {
     title,
     description,
@@ -54,13 +59,15 @@ export function buildMetadata({
       description,
       url: canonical,
       locale,
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
+      images: [
+        { url: imageUrl, secureUrl: imageUrl, type: 'image/jpeg', width: 1200, height: 630, alt: title },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [image],
+      images: [imageUrl],
     },
     robots: { index: true, follow: true },
   };

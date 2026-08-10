@@ -25,9 +25,34 @@ export const site = {
   },
 } as const;
 
-/** Base URL used for canonical tags, sitemap, hreflang and Open Graph. */
+/** Live production domain. The hard default so a missing env var can never
+ *  leak localhost into canonical tags, hreflang, Open Graph or JSON-LD. */
+export const productionUrl = 'https://www.alsaleemtransport.com';
+
+// Treat an env var that is set-but-empty (a common Vercel slip) as unset, so it
+// falls through the chain below instead of resolving to ''.
+const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || undefined;
+const vercelUrl = process.env.VERCEL_URL?.trim() || undefined;
+
+/**
+ * Base URL used for canonical tags, sitemap, hreflang, Open Graph and JSON-LD.
+ *
+ * Resolution order:
+ *   1. NEXT_PUBLIC_SITE_URL — explicit override, always wins.
+ *   2. The production domain, whenever Vercel reports a production deployment.
+ *      VERCEL_URL is the per-deployment host (`*.vercel.app`) and never the
+ *      custom domain, so it must not win in production.
+ *   3. VERCEL_URL — gives preview/branch deployments their own absolute host.
+ *   4. localhost — local development only.
+ *
+ * VERCEL_ENV / VERCEL_URL are server-only vars: they are not inlined into the
+ * client bundle, so this value is only trustworthy on the server (metadata,
+ * sitemap, robots, JSON-LD). Don't read `siteUrl` from a client component.
+ */
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  envSiteUrl ??
+  (process.env.VERCEL_ENV === 'production' ? productionUrl : undefined) ??
+  (vercelUrl ? `https://${vercelUrl}` : 'http://localhost:3000')
 ).replace(/\/$/, '');
 
 export type LanguageDef = {

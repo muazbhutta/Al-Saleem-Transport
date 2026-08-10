@@ -45,7 +45,7 @@ export async function generateMetadata({
     path: '/ziyarat-guide',
     title: t('title'),
     description: t('description'),
-    image: '/og/og-ziyarat.svg',
+    image: '/og/og-ziyarat.jpg',
   });
 }
 
