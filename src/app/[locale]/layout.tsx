@@ -5,7 +5,6 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Poppins, Noto_Naskh_Arabic } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { getDir, siteUrl, site } from '@/lib/site';
-import { siteKeywords } from '@/lib/keywords';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ChatWidgetLazy from '@/components/chat/ChatWidgetLazy';
@@ -39,7 +38,6 @@ export const metadata: Metadata = {
   authors: [{ name: site.nameEn }],
   creator: site.nameEn,
   publisher: site.nameEn,
-  keywords: siteKeywords,
   category: 'Travel & Transport',
   // Favicon (app/icon.svg) and web manifest (app/manifest.ts) are wired up
   // automatically by Next.js file-based metadata.

@@ -4,12 +4,15 @@
  * These are RELEVANT, transport-framed keywords — every entry describes a
  * service this company provides or a destination it drives customers to
  * (airports, hotels, Ziyarat sites, masjids, malls/markets/perfume souqs and
- * restaurants across Saudi Arabia). We deliberately avoid stuffing unrelated
- * product/brand terms: search engines ignore the legacy meta-keywords tag and
- * penalise irrelevant keyword stuffing, so relevance is what actually ranks.
+ * restaurants across Saudi Arabia).
  *
- * Used for the (minor) `keywords` meta and, more importantly, to feed the
- * `knowsAbout` / offer-catalog structured data in `schema.ts`.
+ * NOTE: the `<meta name="keywords">` tag is no longer emitted. Google ignores
+ * it outright, and shipping ~120 terms on every page read as keyword stuffing.
+ * `knownPlaces` below still feeds the `knowsAbout` structured data in
+ * `schema.ts`, which search engines DO consume.
+ *
+ * The keyword sets themselves are kept as a content/SEO reference — the terms
+ * worth ranking for belong in real page copy, titles and descriptions.
  */
 
 /** Core services + brand terms. */
