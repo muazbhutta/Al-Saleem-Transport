@@ -41,11 +41,14 @@ function isRateLimited(ip: string): boolean {
 }
 
 export async function POST(req: Request) {
+  // Handled, user-facing states (rate-limited, not configured, upstream busy)
+  // return HTTP 200 with an `error` message. The chat widget shows the message,
+  // and the browser doesn't log a red console error for an expected condition.
   const ip = (req.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || 'unknown';
   if (isRateLimited(ip)) {
     return NextResponse.json(
       { error: `You're sending messages too quickly. Please wait a moment, or ${wa}` },
-      { status: 429 },
+      { status: 200 },
     );
   }
 
@@ -53,7 +56,7 @@ export async function POST(req: Request) {
   if (!key) {
     return NextResponse.json(
       { error: `The assistant is not configured yet. ${wa}` },
-      { status: 503 },
+      { status: 200 },
     );
   }
 
@@ -104,7 +107,7 @@ export async function POST(req: Request) {
     if (!res.ok) {
       return NextResponse.json(
         { error: `The assistant is busy right now. Please try again in a moment, or ${wa}` },
-        { status: 502 },
+        { status: 200 },
       );
     }
 
@@ -117,7 +120,7 @@ export async function POST(req: Request) {
     if (!reply) {
       return NextResponse.json(
         { error: `Sorry, I couldn't answer that. ${wa}` },
-        { status: 502 },
+        { status: 200 },
       );
     }
 
@@ -125,7 +128,7 @@ export async function POST(req: Request) {
   } catch {
     return NextResponse.json(
       { error: `Network error reaching the assistant. Please try again, or ${wa}` },
-      { status: 502 },
+      { status: 200 },
     );
   }
 }
