@@ -229,18 +229,29 @@ Google Ads conversions are wired to every contact entry point — WhatsApp links
 `tel:` links, the email link, both WhatsApp forms and the chat widget's booking
 handoff. All of them route through one helper, [`src/lib/gtag.ts`](src/lib/gtag.ts).
 
-Two public env vars drive it (neither is a secret — both ship in the page source):
+Two constants drive it, **hardcoded — no env vars required**:
 
-| Variable | Where it comes from |
+| Constant | Where it comes from |
 |---|---|
-| `NEXT_PUBLIC_GADS_ID` | Google Ads → Admin → Data sources → **Google tag** (`AW-…`) |
-| `NEXT_PUBLIC_GADS_CONTACT_LABEL` | Google Ads → Goals → Conversions → **Contact** → Tag setup → event snippet (`AW-…/…`) |
+| `GADS_ID` | Google Ads → Admin → Data sources → **Google tag** (`AW-…`) |
+| `CONTACT_LABEL` | Google Ads → Goals → Conversions → **Contact** → Tag setup → event snippet (`AW-…/…`) |
 
-The base `gtag.js` tag is rendered in the root layout **only when
-`NEXT_PUBLIC_GADS_ID` is set**, using `next/script` with
-`strategy="afterInteractive"` so it stays off the critical rendering path.
-Leaving the vars blank makes the whole system a silent no-op — that is why local
-dev and preview deployments do not report conversions.
+Both are public values that ship in the page source of any site running gtag,
+so there is nothing to protect by hiding them. They were briefly read from
+`NEXT_PUBLIC_*` env vars, which turned out to be a footgun: those are inlined at
+**build time**, so an unset var — or one added in Vercel without redeploying —
+rendered no tag at all, with no error to notice.
+
+The base `gtag.js` tag is rendered unconditionally in the root layout
+([`src/app/[locale]/layout.tsx`](src/app/[locale]/layout.tsx), the only layout in
+the app — it renders `<html>`/`<body>` and wraps all 11 locales), using
+`next/script` with `strategy="afterInteractive"` so it stays off the critical
+rendering path.
+
+> ⚠️ Because the tag always renders, **local dev and preview deployments report
+> real conversions** into the live Google Ads account. Recorded conversions
+> cannot be removed and they feed Smart Bidding. To exclude your own traffic, add
+> an IP exclusion in Google Ads rather than reintroducing a build-time gate.
 
 Clicks are tracked by [`ContactLink`](src/components/analytics/ContactLink.tsx), a
 thin client wrapper around `<a>`. It only adds a side effect: `href`, `target`
@@ -248,8 +259,8 @@ and `rel` pass through untouched, so `wa.me` links still open in a new tab.
 Google's stock `gtag_report_conversion()` helper is deliberately **not** used —
 it sets `window.location`, which breaks `target="_blank"` and fights the router.
 
-> ⚠️ `NEXT_PUBLIC_*` values are inlined at **build time**. Changing them in
-> Vercel has no effect until you **redeploy** — restarting is not enough.
+To change the tag ID or conversion action, edit the two constants in
+[`src/lib/gtag.ts`](src/lib/gtag.ts) and redeploy.
 
 ### ➕ Add a new language (no code changes)
 

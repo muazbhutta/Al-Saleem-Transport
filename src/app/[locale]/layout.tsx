@@ -82,28 +82,27 @@ export default async function LocaleLayout({
         </NextIntlClientProvider>
 
         {/*
-          Google Ads base tag. Rendered only when NEXT_PUBLIC_GADS_ID is set, so
-          local dev and preview deployments never report conversions. This is the
-          root layout for all 11 locales, so one copy covers the whole site.
+          Google Ads base tag — always rendered, no conditional. GADS_ID is a
+          hardcoded public constant, so there is no env var that can silently
+          switch the tag off at build time.
+
+          This file is the root layout: it renders <html>/<body> and wraps all
+          11 locales, so this single copy covers every page on the site.
 
           afterInteractive (not beforeInteractive) keeps the tag off the critical
           rendering path — page speed is this site's top priority.
         */}
-        {GADS_ID ? (
-          <>
-            <Script
-              id="google-ads-tag"
-              src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-ads-init" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || [];
+        <Script
+          id="google-ads-tag"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GADS_ID}');`}
-            </Script>
-          </>
-        ) : null}
+        </Script>
       </body>
     </html>
   );

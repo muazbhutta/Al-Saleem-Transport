@@ -5,24 +5,29 @@
  * is the root layout for all 11 locales. This module is the only place that
  * fires conversion events.
  *
- * Everything here is defensive by design. If the env vars are unset (local dev,
- * preview deployments) or gtag.js has not finished loading, every call becomes
- * a silent no-op. Analytics must never throw, and must never delay or block a
- * contact click — the click is the thing that actually earns money.
+ * Everything here is defensive by design. If gtag.js has not finished loading,
+ * or an ad blocker removed it, every call becomes a silent no-op. Analytics must
+ * never throw, and must never delay or block a contact click — the click is the
+ * thing that actually earns money.
  */
 
 /**
- * Google tag ID, e.g. `AW-18381091753`.
+ * Google tag ID.
  * Google Ads → Admin → Data sources → Google tag.
+ *
+ * Hardcoded on purpose. These values are public — they ship in the page source
+ * of every deployed site that uses gtag — so there is nothing to protect by
+ * putting them in env vars. Reading them from process.env only created a way
+ * for the tag to silently disappear: NEXT_PUBLIC_* is inlined at build time, so
+ * a missing var (or a var added without redeploying) rendered no tag at all.
  */
-export const GADS_ID = process.env.NEXT_PUBLIC_GADS_ID ?? '';
+export const GADS_ID = 'AW-18381091753';
 
 /**
- * Send-to label for the "Contact" (Click) conversion action, in the form
- * `AW-XXXXXXXXX/YYYYYYYYYYYYYYYY`.
+ * Send-to label for the "Contact" (Click) conversion action.
  * Google Ads → Goals → Conversions → Contact → Tag setup → event snippet.
  */
-export const CONTACT_LABEL = process.env.NEXT_PUBLIC_GADS_CONTACT_LABEL ?? '';
+export const CONTACT_LABEL = 'AW-18381091753/Vn2fCIb4uOAcEKnn5LxE';
 
 /** Which entry point the visitor used. Reported as `event_label`. */
 export type ContactMethod = 'whatsapp' | 'call' | 'chat' | 'email';
@@ -53,12 +58,12 @@ declare global {
 /**
  * Report a Google Ads "Contact" conversion.
  *
- * Safe to call unconditionally: it returns immediately when tracking is not
- * configured or gtag.js is not present. Never awaits, never navigates — the
- * caller's own click behaviour (including `target="_blank"`) is untouched.
+ * Safe to call unconditionally: it returns immediately when gtag.js is not
+ * present. Never awaits, never navigates — the caller's own click behaviour
+ * (including `target="_blank"`) is untouched.
  */
 export function trackContact(method: ContactMethod): void {
-  if (typeof window === 'undefined' || !CONTACT_LABEL) return;
+  if (typeof window === 'undefined') return;
 
   try {
     window.gtag?.('event', 'conversion', {
