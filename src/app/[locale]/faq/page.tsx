@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { whatsappLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import Reveal from '@/components/ui/Reveal';
@@ -68,14 +69,15 @@ export default async function FaqPage({ params }: { params: { locale: string } }
           <Reveal>
             <div className="mt-6 rounded-2xl bg-navy px-6 py-8 text-center text-cream-100">
               <h2 className="text-xl text-cream-100">{tcta('title')}</h2>
-              <a
+              <ContactLink
+                method="whatsapp"
                 href={waHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp mt-4"
               >
                 {tcta('cta')}
-              </a>
+              </ContactLink>
             </div>
           </Reveal>
         </div>

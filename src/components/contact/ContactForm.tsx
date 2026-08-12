@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { MessageCircle } from 'lucide-react';
 import { whatsappLink } from '@/lib/site';
+import { trackContact } from '@/lib/gtag';
 
 /** Simple contact form that opens a pre-filled WhatsApp chat. */
 export default function ContactForm() {
@@ -25,6 +26,7 @@ export default function ContactForm() {
     ]
       .filter(Boolean)
       .join('\n');
+    trackContact('whatsapp');
     window.open(whatsappLink(body), '_blank', 'noopener,noreferrer');
   }
 

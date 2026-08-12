@@ -223,6 +223,34 @@ npm run dev      # → http://localhost:3000 (redirects to your best-match local
 npm run build && npm start
 ```
 
+### 📈 Conversion tracking
+
+Google Ads conversions are wired to every contact entry point — WhatsApp links,
+`tel:` links, the email link, both WhatsApp forms and the chat widget's booking
+handoff. All of them route through one helper, [`src/lib/gtag.ts`](src/lib/gtag.ts).
+
+Two public env vars drive it (neither is a secret — both ship in the page source):
+
+| Variable | Where it comes from |
+|---|---|
+| `NEXT_PUBLIC_GADS_ID` | Google Ads → Admin → Data sources → **Google tag** (`AW-…`) |
+| `NEXT_PUBLIC_GADS_CONTACT_LABEL` | Google Ads → Goals → Conversions → **Contact** → Tag setup → event snippet (`AW-…/…`) |
+
+The base `gtag.js` tag is rendered in the root layout **only when
+`NEXT_PUBLIC_GADS_ID` is set**, using `next/script` with
+`strategy="afterInteractive"` so it stays off the critical rendering path.
+Leaving the vars blank makes the whole system a silent no-op — that is why local
+dev and preview deployments do not report conversions.
+
+Clicks are tracked by [`ContactLink`](src/components/analytics/ContactLink.tsx), a
+thin client wrapper around `<a>`. It only adds a side effect: `href`, `target`
+and `rel` pass through untouched, so `wa.me` links still open in a new tab.
+Google's stock `gtag_report_conversion()` helper is deliberately **not** used —
+it sets `window.location`, which breaks `target="_blank"` and fights the router.
+
+> ⚠️ `NEXT_PUBLIC_*` values are inlined at **build time**. Changing them in
+> Vercel has no effect until you **redeploy** — restarting is not enough.
+
 ### ➕ Add a new language (no code changes)
 
 1. Register it in [`src/lib/site.ts`](src/lib/site.ts) → `languages[]`:

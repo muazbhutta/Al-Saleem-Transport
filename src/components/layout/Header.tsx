@@ -6,6 +6,7 @@ import { Menu, X, Phone, ShieldCheck, MessageCircle } from 'lucide-react';
 import { Link, usePathname } from '@/i18n/routing';
 import { mainNav } from '@/lib/nav';
 import { site, telLink, whatsappLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 import Logo from './Logo';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -47,10 +48,15 @@ export default function Header({ locale }: { locale: string }) {
           </span>
           <span className="inline-flex items-center gap-4">
             <span className="hidden lg:inline">{tc('coverageShort')}</span>
-            <a href={telLink} className="inline-flex items-center gap-1.5 hover:text-gold" dir="ltr">
+            <ContactLink
+              method="call"
+              href={telLink}
+              className="inline-flex items-center gap-1.5 hover:text-gold"
+              dir="ltr"
+            >
               <Phone className="h-3.5 w-3.5" aria-hidden />
               {site.phoneDisplay}
-            </a>
+            </ContactLink>
           </span>
         </div>
       </div>
@@ -89,7 +95,8 @@ export default function Header({ locale }: { locale: string }) {
           </div>
           {/* Book Now - in the bar on desktop (xl+); on smaller screens it moves
               into the hamburger drawer below. */}
-          <a
+          <ContactLink
+            method="whatsapp"
             href={bookHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -97,7 +104,7 @@ export default function Header({ locale }: { locale: string }) {
           >
             <MessageCircle className="h-4 w-4" aria-hidden />
             {t('pickDrop')}
-          </a>
+          </ContactLink>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -125,17 +132,18 @@ export default function Header({ locale }: { locale: string }) {
             ))}
             <div className="mt-3 flex flex-col gap-2 border-t border-navy-100 pt-4">
               {/* Book Now (WhatsApp) + quick-call live inside the drawer on mobile/tablet. */}
-              <a
+              <ContactLink
+                method="whatsapp"
                 href={bookHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp w-full"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden /> {t('pickDrop')}
-              </a>
-              <a href={telLink} className="btn-outline w-full" dir="ltr">
+              </ContactLink>
+              <ContactLink method="call" href={telLink} className="btn-outline w-full" dir="ltr">
                 <Phone className="h-4 w-4" /> {site.phoneDisplay}
-              </a>
+              </ContactLink>
             </div>
           </nav>
         </div>

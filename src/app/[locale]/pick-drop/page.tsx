@@ -4,6 +4,7 @@ import { Phone, MessageCircle, ShieldCheck, Clock, BadgeDollarSign } from 'lucid
 import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema, serviceSchema } from '@/lib/schema';
 import { site, telLink, whatsappLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import BookingForm from '@/components/booking/BookingForm';
@@ -69,14 +70,20 @@ export default async function PickDropPage({ params }: { params: { locale: strin
           <aside className="flex flex-col gap-6 lg:sticky lg:top-28 lg:self-start">
             <div className="card flex flex-col gap-4">
               <h2 className="text-lg">{tc('chatWhatsapp')}</h2>
-              <a href={bookHref} target="_blank" rel="noopener noreferrer" className="btn-whatsapp w-full">
+              <ContactLink
+                method="whatsapp"
+                href={bookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp w-full"
+              >
                 <MessageCircle className="h-5 w-5" aria-hidden />
                 {tc('bookNow')}
-              </a>
-              <a href={telLink} className="btn-outline w-full" dir="ltr">
+              </ContactLink>
+              <ContactLink method="call" href={telLink} className="btn-outline w-full" dir="ltr">
                 <Phone className="h-4 w-4" aria-hidden />
                 {site.phoneDisplay}
-              </a>
+              </ContactLink>
               <p className="text-sm text-navy-500">{tc('support247')}</p>
             </div>
 

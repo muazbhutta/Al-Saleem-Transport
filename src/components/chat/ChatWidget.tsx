@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { MessageSquare, X, Send, Phone } from 'lucide-react';
 import { whatsappLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 
 type Msg = { role: 'user' | 'model'; text: string };
 
@@ -283,7 +284,10 @@ export default function ChatWidget() {
 
             {/* Structured booking handoff — appears once the assistant emits <BOOKING>. */}
             {booking && (
-              <a
+              /* The booking intent is only "completed" when the visitor acts on
+                 the handoff — not when the model emits the <BOOKING> block. */
+              <ContactLink
+                method="chat"
                 href={bookingHref}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -291,11 +295,12 @@ export default function ChatWidget() {
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 {L.confirmBooking}
-              </a>
+              </ContactLink>
             )}
 
             {/* Always-available WhatsApp path */}
-            <a
+            <ContactLink
+              method="whatsapp"
               href={waHref}
               target="_blank"
               rel="noopener noreferrer"
@@ -303,7 +308,7 @@ export default function ChatWidget() {
             >
               <Phone className="h-4 w-4" aria-hidden />
               {tc('chatWhatsapp')}
-            </a>
+            </ContactLink>
 
             {/* Composer */}
             <form

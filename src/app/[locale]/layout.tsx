@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { Poppins, Noto_Naskh_Arabic } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { getDir, siteUrl, site } from '@/lib/site';
+import { GADS_ID } from '@/lib/gtag';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ChatWidgetLazy from '@/components/chat/ChatWidgetLazy';
@@ -78,6 +80,30 @@ export default async function LocaleLayout({
           <Footer locale={locale} />
           <ChatWidgetLazy />
         </NextIntlClientProvider>
+
+        {/*
+          Google Ads base tag. Rendered only when NEXT_PUBLIC_GADS_ID is set, so
+          local dev and preview deployments never report conversions. This is the
+          root layout for all 11 locales, so one copy covers the whole site.
+
+          afterInteractive (not beforeInteractive) keeps the tag off the critical
+          rendering path — page speed is this site's top priority.
+        */}
+        {GADS_ID ? (
+          <>
+            <Script
+              id="google-ads-tag"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GADS_ID}');`}
+            </Script>
+          </>
+        ) : null}
       </body>
     </html>
   );

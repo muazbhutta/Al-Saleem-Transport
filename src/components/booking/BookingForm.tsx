@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { MessageCircle, User, Phone, MapPin, Calendar, Clock, Users } from 'lucide-react';
 import { site, whatsappLink } from '@/lib/site';
+import { trackContact } from '@/lib/gtag';
 import TimeField from './TimeField';
 
 type Form = {
@@ -75,6 +76,7 @@ export default function BookingForm() {
       return;
     }
     setError(false);
+    trackContact('whatsapp');
     window.open(whatsappLink(buildMessage()), '_blank', 'noopener,noreferrer');
   }
 

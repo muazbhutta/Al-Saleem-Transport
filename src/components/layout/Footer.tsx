@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { mainNav, footerLegal } from '@/lib/nav';
 import { site, telLink, mailLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 import Logo from './Logo';
 
 export default async function Footer({ locale }: { locale: string }) {
@@ -61,12 +62,21 @@ export default async function Footer({ locale }: { locale: string }) {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-cream-100">
             {t('contactTitle')}
           </h3>
-          <a href={telLink} className="inline-flex items-center gap-2 text-sm hover:text-gold" dir="ltr">
+          <ContactLink
+            method="call"
+            href={telLink}
+            className="inline-flex items-center gap-2 text-sm hover:text-gold"
+            dir="ltr"
+          >
             <Phone className="h-4 w-4 text-gold" aria-hidden /> {site.phoneDisplay}
-          </a>
-          <a href={mailLink} className="inline-flex items-center gap-2 text-sm hover:text-gold">
+          </ContactLink>
+          <ContactLink
+            method="email"
+            href={mailLink}
+            className="inline-flex items-center gap-2 text-sm hover:text-gold"
+          >
             <Mail className="h-4 w-4 text-gold" aria-hidden /> {site.email}
-          </a>
+          </ContactLink>
           <p className="inline-flex items-center gap-2 text-sm">
             <MapPin className="h-4 w-4 text-gold" aria-hidden /> {tc('coverageShort')}
           </p>

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, type LucideIcon } from 'lucide-react';
 import { buildMetadata } from '@/lib/seo';
 import { breadcrumbSchema } from '@/lib/schema';
 import { site, telLink, mailLink } from '@/lib/site';
+import type { ContactMethod } from '@/lib/gtag';
+import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
@@ -28,11 +30,20 @@ export default async function ContactPage({ params }: { params: { locale: string
   const tn = await getTranslations('nav');
   const tc = await getTranslations('common');
 
-  const cards = [
-    { icon: Phone, title: t('phoneTitle'), value: site.phoneDisplay, href: telLink, ltr: true },
-    { icon: Mail, title: t('emailTitle'), value: site.email, href: mailLink, ltr: true },
-    { icon: MapPin, title: t('areaTitle'), value: t('areaValue'), href: undefined, ltr: false },
-    { icon: Clock, title: t('hoursTitle'), value: t('hoursValue'), href: undefined, ltr: false },
+  // `method` marks the cards that are real contact actions; the other two are
+  // informational and stay plain <div>s.
+  const cards: {
+    icon: LucideIcon;
+    title: string;
+    value: string;
+    href?: string;
+    method?: ContactMethod;
+    ltr: boolean;
+  }[] = [
+    { icon: Phone, title: t('phoneTitle'), value: site.phoneDisplay, href: telLink, method: 'call', ltr: true },
+    { icon: Mail, title: t('emailTitle'), value: site.email, href: mailLink, method: 'email', ltr: true },
+    { icon: MapPin, title: t('areaTitle'), value: t('areaValue'), ltr: false },
+    { icon: Clock, title: t('hoursTitle'), value: t('hoursValue'), ltr: false },
   ];
 
   return (
@@ -69,10 +80,15 @@ export default async function ContactPage({ params }: { params: { locale: string
                     </p>
                   </>
                 );
-                return c.href ? (
-                  <a key={c.title} href={c.href} className="card h-full transition hover:ring-gold/50">
+                return c.href && c.method ? (
+                  <ContactLink
+                    key={c.title}
+                    method={c.method}
+                    href={c.href}
+                    className="card h-full transition hover:ring-gold/50"
+                  >
                     {inner}
-                  </a>
+                  </ContactLink>
                 ) : (
                   <div key={c.title} className="card h-full">
                     {inner}

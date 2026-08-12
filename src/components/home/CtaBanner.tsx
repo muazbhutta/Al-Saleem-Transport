@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Phone } from 'lucide-react';
 import { whatsappLink, site, telLink } from '@/lib/site';
+import ContactLink from '@/components/analytics/ContactLink';
 import Reveal from '@/components/ui/Reveal';
 
 export default async function CtaBanner() {
@@ -26,13 +27,24 @@ export default async function CtaBanner() {
               <h2 className="text-3xl text-cream-100 sm:text-4xl">{t('title')}</h2>
               <p className="text-cream-100/85">{t('subtitle')}</p>
               <div className="flex flex-col items-center gap-3 sm:flex-row">
-                <a href={href} target="_blank" rel="noopener noreferrer" className="btn-whatsapp text-base">
+                <ContactLink
+                  method="whatsapp"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp text-base"
+                >
                   {t('cta')}
-                </a>
-                <a href={telLink} className="inline-flex items-center gap-2 text-sm font-medium text-cream-100 hover:text-gold-light" dir="ltr">
+                </ContactLink>
+                <ContactLink
+                  method="call"
+                  href={telLink}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-cream-100 hover:text-gold-light"
+                  dir="ltr"
+                >
                   <Phone className="h-4 w-4" aria-hidden />
                   {t('orCall')} {site.phoneDisplay}
-                </a>
+                </ContactLink>
               </div>
             </div>
           </div>

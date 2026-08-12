@@ -4,6 +4,7 @@ import { ShieldCheck, ArrowRight, Clock, MapPin, Star } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { whatsappLink } from '@/lib/site';
 import { makkahSkylineBlur } from '@/lib/images';
+import ContactLink from '@/components/analytics/ContactLink';
 import Reveal from '@/components/ui/Reveal';
 
 export default async function Hero() {
@@ -70,9 +71,15 @@ export default async function Hero() {
 
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href={bookHref} target="_blank" rel="noopener noreferrer" className="btn-whatsapp text-base">
+              <ContactLink
+                method="whatsapp"
+                href={bookHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp text-base"
+              >
                 {t('ctaPrimary')}
-              </a>
+              </ContactLink>
               <Link href="/pick-drop" className="btn-gold text-base">
                 {t('ctaSecondary')}
                 <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden />
