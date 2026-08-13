@@ -338,5 +338,39 @@
         { "heading": "Rabta", "body": "In sharait ke bare mein sawalat? WhatsApp +966 50 068 9196 ya email info@alsaleemtransport.com par rabta karein." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "Maqam",
+      "cityLabel": "Shehar",
+      "pdfCoordinates": "Coordinates",
+      "scanForDirections": "Raaste ke liye scan karein",
+      "distanceLabel": "Faasla",
+      "driveLabel": "Safar ka waqt",
+      "directions": "Raasta dekhein",
+      "appleMaps": "Apple Maps",
+      "book": "Yeh Ziyarat book karein",
+      "fromHaram": "Masjid al-Haram se",
+      "fromNabawi": "Masjid an-Nabawi se",
+      "approx": "taqreeban",
+      "km": "km",
+      "min": "min",
+      "bestTimeLabel": "Behtareen waqt",
+      "waMessage": "Assalamu Alaikum, main {place} ki Ziyarat ka safar book karna chahta hoon.",
+      "bestTime": {
+        "earlyMorning": "Subah saweray",
+        "morning": "Subah",
+        "afterFajr": "Fajr ke baad"
+      },
+      "city": {
+        "makkah": "Makkah",
+        "madinah": "Madinah",
+        "taif": "Taif",
+        "jeddah": "Jeddah"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "Tamam Ziyarat ke Maqamat",
+      "subtitle": "Is guide ke tamam maqamat, shehar ke aitbaar se. Raasta dekhne ke liye Directions dabayein.",
+      "fullRoute": "Mukammal route Google Maps mein kholein"
+    }
 }

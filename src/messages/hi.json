@@ -338,5 +338,39 @@
         { "heading": "संपर्क", "body": "इन शर्तों के बारे में प्रश्न? व्हाट्सएप +966 50 068 9196 या ईमेल info@alsaleemtransport.com पर संपर्क करें।" }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "स्थान",
+      "cityLabel": "शहर",
+      "pdfCoordinates": "निर्देशांक",
+      "scanForDirections": "रास्ते के लिए स्कैन करें",
+      "distanceLabel": "दूरी",
+      "driveLabel": "यात्रा समय",
+      "directions": "रास्ता देखें",
+      "appleMaps": "एप्पल मैप्स",
+      "book": "यह ज़ियारत बुक करें",
+      "fromHaram": "मस्जिद अल-हरम से",
+      "fromNabawi": "मस्जिद अन-नबवी से",
+      "approx": "लगभग",
+      "km": "किमी",
+      "min": "मिनट",
+      "bestTimeLabel": "सबसे अच्छा समय",
+      "waMessage": "अस्सलामु अलैकुम, मैं {place} की ज़ियारत यात्रा बुक करना चाहता हूँ।",
+      "bestTime": {
+        "earlyMorning": "सुबह जल्दी",
+        "morning": "सुबह",
+        "afterFajr": "फ़ज्र के बाद"
+      },
+      "city": {
+        "makkah": "मक्का",
+        "madinah": "मदीना",
+        "taif": "ताइफ़",
+        "jeddah": "जेद्दा"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "सभी ज़ियारत स्थान",
+      "subtitle": "इस गाइड के सभी स्थान, शहर के अनुसार। रास्ता देखने के लिए Directions दबाएँ।",
+      "fullRoute": "पूरा रूट Google Maps में खोलें"
+    }
 }

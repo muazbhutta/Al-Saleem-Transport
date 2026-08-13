@@ -338,5 +338,39 @@
         { "heading": "যোগাযোগ", "body": "এই শর্তাবলি সম্পর্কে প্রশ্ন? হোয়াটসঅ্যাপ +966 50 068 9196 অথবা ইমেইল info@alsaleemtransport.com-এ যোগাযোগ করুন।" }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "অবস্থান",
+      "cityLabel": "শহর",
+      "pdfCoordinates": "স্থানাঙ্ক",
+      "scanForDirections": "দিকনির্দেশের জন্য স্ক্যান করুন",
+      "distanceLabel": "দূরত্ব",
+      "driveLabel": "যাত্রার সময়",
+      "directions": "দিকনির্দেশ নিন",
+      "appleMaps": "অ্যাপল ম্যাপস",
+      "book": "এই যিয়ারত বুক করুন",
+      "fromHaram": "মসজিদুল হারাম থেকে",
+      "fromNabawi": "মসজিদে নববী থেকে",
+      "approx": "প্রায়",
+      "km": "কিমি",
+      "min": "মিন",
+      "bestTimeLabel": "সেরা সময়",
+      "waMessage": "আসসালামু আলাইকুম, আমি {place}-এ একটি যিয়ারত ভ্রমণ বুক করতে চাই।",
+      "bestTime": {
+        "earlyMorning": "ভোরবেলা",
+        "morning": "সকাল",
+        "afterFajr": "ফজরের পর"
+      },
+      "city": {
+        "makkah": "মক্কা",
+        "madinah": "মদিনা",
+        "taif": "তায়েফ",
+        "jeddah": "জেদ্দা"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "সব যিয়ারত স্থান",
+      "subtitle": "এই গাইডের সব স্থান, শহর অনুযায়ী সাজানো। মানচিত্র অ্যাপে খুলতে দিকনির্দেশ চাপুন।",
+      "fullRoute": "সম্পূর্ণ রুট Google Maps-এ খুলুন"
+    }
 }

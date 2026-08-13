@@ -31,6 +31,9 @@ next-env.d.ts
 # vercel
 .vercel
 
+# scratch output from `npm run gen:qr` (the generated qr-codes.ts IS committed)
+/.qr-tmp
+
 # `npm run gen:og` output — regenerable, and not the asset the site serves
 # (og-default.jpg is the shipped card).
 /public/og/og-generated.jpg

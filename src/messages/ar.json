@@ -338,5 +338,39 @@
         { "heading": "التواصل", "body": "أسئلة حول هذه الشروط؟ تواصل معنا عبر واتساب على +966 50 068 9196 أو بالبريد info@alsaleemtransport.com." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "الموقع",
+      "cityLabel": "المدينة",
+      "pdfCoordinates": "الإحداثيات",
+      "scanForDirections": "امسح للاتجاهات",
+      "distanceLabel": "المسافة",
+      "driveLabel": "زمن الرحلة",
+      "directions": "احصل على الاتجاهات",
+      "appleMaps": "خرائط آبل",
+      "book": "احجز هذه الزيارة",
+      "fromHaram": "من المسجد الحرام",
+      "fromNabawi": "من المسجد النبوي",
+      "approx": "تقريبًا",
+      "km": "كم",
+      "min": "دقيقة",
+      "bestTimeLabel": "أفضل وقت",
+      "waMessage": "السلام عليكم، أريد حجز رحلة زيارة إلى {place}.",
+      "bestTime": {
+        "earlyMorning": "الصباح الباكر",
+        "morning": "الصباح",
+        "afterFajr": "بعد الفجر"
+      },
+      "city": {
+        "makkah": "مكة",
+        "madinah": "المدينة",
+        "taif": "الطائف",
+        "jeddah": "جدة"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "جميع مواقع الزيارات",
+      "subtitle": "كل موقع في هذا الدليل، مرتّبًا حسب المدينة. اضغط على الاتجاهات لفتحه في تطبيق الخرائط.",
+      "fullRoute": "افتح المسار الكامل في خرائط جوجل"
+    }
 }

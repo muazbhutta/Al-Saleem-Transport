@@ -338,5 +338,39 @@
         { "heading": "تماس", "body": "پرسشی درباره این شرایط دارید؟ در واتساپ +966 50 068 9196 یا ایمیل info@alsaleemtransport.com با ما تماس بگیرید." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "موقعیت",
+      "cityLabel": "شهر",
+      "pdfCoordinates": "مختصات",
+      "scanForDirections": "برای مسیر اسکن کنید",
+      "distanceLabel": "فاصله",
+      "driveLabel": "زمان سفر",
+      "directions": "دریافت مسیر",
+      "appleMaps": "نقشه اپل",
+      "book": "رزرو این زیارت",
+      "fromHaram": "از مسجدالحرام",
+      "fromNabawi": "از مسجدالنبی",
+      "approx": "حدوداً",
+      "km": "کیلومتر",
+      "min": "دقیقه",
+      "bestTimeLabel": "بهترین زمان",
+      "waMessage": "السلام علیکم، می‌خواهم یک سفر زیارتی به {place} رزرو کنم.",
+      "bestTime": {
+        "earlyMorning": "صبح زود",
+        "morning": "صبح",
+        "afterFajr": "بعد از نماز صبح"
+      },
+      "city": {
+        "makkah": "مکه",
+        "madinah": "مدینه",
+        "taif": "طائف",
+        "jeddah": "جده"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "همه مکان‌های زیارتی",
+      "subtitle": "همه مکان‌های این راهنما، بر اساس شهر. برای باز کردن در نقشه، مسیر را بزنید.",
+      "fullRoute": "مسیر کامل را در گوگل مپ باز کنید"
+    }
 }
