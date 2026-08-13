@@ -6,13 +6,17 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Info } from 'lucide-react';
 import { buildMetadata } from '@/lib/seo';
 import { guideCoverBlur, masjidBlur, makkahSkylineBlur } from '@/lib/images';
-import { articleSchema, breadcrumbSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema, ziyaratPlacesSchema } from '@/lib/schema';
 import { site, getDir } from '@/lib/site';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
 import TableOfContents from '@/components/guide/TableOfContents';
 import GuideToolbar from '@/components/guide/GuideToolbar';
+import { Fragment } from 'react';
 import { Block } from '@/components/guide/GuideBlocks';
+import { locationSlotsForBlocks, extractPlaceEntries } from '@/content/ziyarat/places';
+import ZiyaratLocationCard from '@/components/ziyarat/ZiyaratLocationCard';
+import ZiyaratLocationsIndex from '@/components/ziyarat/ZiyaratLocationsIndex';
 import { getGuide, hasNativeGuide, isMachineDraft } from '@/content/ziyarat';
 
 /**
@@ -60,8 +64,11 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
   const tc = await getTranslations('common');
   const tf = await getTranslations('footer');
   const tmeta = await getTranslations('meta.ziyaratGuide');
+  const tloc = await getTranslations('ziyaratLocation');
 
   const guide = getGuide(locale);
+  // One pass over the guide, shared by the JSON-LD and the locations index.
+  const placeEntries = extractPlaceEntries(guide.chapters);
   const native = hasNativeGuide(locale);
 
   // Metadata for the downloadable PDF document.
@@ -96,6 +103,7 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
     <>
       <JsonLd
         data={[
+          ...ziyaratPlacesSchema(locale, placeEntries),
           articleSchema({
             locale,
             title: tmeta('title'),
@@ -133,7 +141,26 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
               <p className="font-semibold text-navy">{t('intro')}</p>
               <p className="mt-1 text-sm text-navy-400">{t('verifyNote')}</p>
             </div>
-            <GuideToolbar guide={guide} meta={docMeta} downloadLabel={t('download')} />
+            <GuideToolbar
+              guide={guide}
+              meta={docMeta}
+              downloadLabel={t('download')}
+              locationLabels={{
+                title: tloc('title'),
+                city: tloc('cityLabel'),
+                distance: tloc('distanceLabel'),
+                coordinates: tloc('pdfCoordinates'),
+                scan: tloc('scanForDirections'),
+                approx: tloc('approx'),
+                km: tloc('km'),
+                cityNames: {
+                  makkah: tloc('city.makkah'),
+                  madinah: tloc('city.madinah'),
+                  taif: tloc('city.taif'),
+                  jeddah: tloc('city.jeddah'),
+                },
+              }}
+            />
           </div>
 
           {/* Machine-assisted draft notice (shown for machine-translated locales) */}
@@ -184,12 +211,27 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
                     <p className="mt-3 text-lg leading-relaxed text-navy-500">{chapter.intro}</p>
                   )}
                   <div className="mt-6 flex flex-col gap-5">
-                    {chapter.blocks.map((block, i) => (
-                      <Block key={i} block={block} labels={labels} />
-                    ))}
+                    {(() => {
+                      const slots = locationSlotsForBlocks(chapter.blocks);
+                      return chapter.blocks.map((block, i) => {
+                        const place = slots.get(i);
+                        return (
+                          <Fragment key={i}>
+                            <Block block={block} labels={labels} />
+                            {place && (
+                              <ZiyaratLocationCard
+                                placeId={place.id}
+                                placeName={place.name}
+                              />
+                            )}
+                          </Fragment>
+                        );
+                      });
+                    })()}
                   </div>
                 </section>
               ))}
+              <ZiyaratLocationsIndex entries={placeEntries} />
             </article>
           </div>
         </div>

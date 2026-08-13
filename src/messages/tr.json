@@ -338,5 +338,39 @@
         { "heading": "İletişim", "body": "Bu Şartlar hakkında sorularınız mı var? WhatsApp +966 50 068 9196 veya info@alsaleemtransport.com e-postasından bize ulaşın." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "Konum",
+      "cityLabel": "Şehir",
+      "pdfCoordinates": "Koordinatlar",
+      "scanForDirections": "Yol tarifi için tarayın",
+      "distanceLabel": "Mesafe",
+      "driveLabel": "Yolculuk süresi",
+      "directions": "Yol Tarifi Al",
+      "appleMaps": "Apple Haritalar",
+      "book": "Bu Ziyareti ayırt",
+      "fromHaram": "Mescid-i Haram'dan",
+      "fromNabawi": "Mescid-i Nebevi'den",
+      "approx": "yaklaşık",
+      "km": "km",
+      "min": "dk",
+      "bestTimeLabel": "En iyi zaman",
+      "waMessage": "Esselamu aleyküm, {place} için bir Ziyaret gezisi ayırtmak istiyorum.",
+      "bestTime": {
+        "earlyMorning": "Sabah erken",
+        "morning": "Sabah",
+        "afterFajr": "Sabah namazından sonra"
+      },
+      "city": {
+        "makkah": "Mekke",
+        "madinah": "Medine",
+        "taif": "Taif",
+        "jeddah": "Cidde"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "Tüm Ziyaret Noktaları",
+      "subtitle": "Bu rehberdeki tüm yerler, şehirlere göre gruplanmış. Harita uygulamanızda açmak için Yol Tarifi'ne dokunun.",
+      "fullRoute": "Tüm rotayı Google Haritalar'da aç"
+    }
 }

@@ -338,5 +338,39 @@
         { "heading": "رابطہ", "body": "ان شرائط کے بارے میں سوالات؟ واٹس ایپ +966 50 068 9196 یا ای میل info@alsaleemtransport.com پر رابطہ کریں۔" }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "مقام",
+      "cityLabel": "شہر",
+      "pdfCoordinates": "کوآرڈینیٹس",
+      "scanForDirections": "راستے کے لیے اسکین کریں",
+      "distanceLabel": "فاصلہ",
+      "driveLabel": "سفر کا وقت",
+      "directions": "راستہ دیکھیں",
+      "appleMaps": "ایپل میپس",
+      "book": "یہ زیارت بک کریں",
+      "fromHaram": "مسجد الحرام سے",
+      "fromNabawi": "مسجد نبوی سے",
+      "approx": "تقریباً",
+      "km": "کلومیٹر",
+      "min": "منٹ",
+      "bestTimeLabel": "بہترین وقت",
+      "waMessage": "السلام علیکم، میں {place} کی زیارت کا سفر بک کرنا چاہتا ہوں۔",
+      "bestTime": {
+        "earlyMorning": "صبح سویرے",
+        "morning": "صبح",
+        "afterFajr": "فجر کے بعد"
+      },
+      "city": {
+        "makkah": "مکہ",
+        "madinah": "مدینہ",
+        "taif": "طائف",
+        "jeddah": "جدہ"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "تمام زیارات کے مقامات",
+      "subtitle": "اس گائیڈ کے تمام مقامات، شہر کے اعتبار سے۔ راستہ دیکھنے کے لیے دبائیں۔",
+      "fullRoute": "مکمل روٹ گوگل میپس میں کھولیں"
+    }
 }

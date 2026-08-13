@@ -338,5 +338,39 @@
         { "heading": "Hubungi", "body": "Soalan tentang Terma ini? Hubungi kami di WhatsApp +966 50 068 9196 atau e-mel info@alsaleemtransport.com." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "Lokasi",
+      "cityLabel": "Bandar",
+      "pdfCoordinates": "Koordinat",
+      "scanForDirections": "Imbas untuk arah",
+      "distanceLabel": "Jarak",
+      "driveLabel": "Masa perjalanan",
+      "directions": "Dapatkan Arah",
+      "appleMaps": "Apple Maps",
+      "book": "Tempah Ziarah ini",
+      "fromHaram": "dari Masjidil Haram",
+      "fromNabawi": "dari Masjid Nabawi",
+      "approx": "kira-kira",
+      "km": "km",
+      "min": "min",
+      "bestTimeLabel": "Masa terbaik",
+      "waMessage": "Assalamu Alaikum, saya ingin menempah perjalanan Ziarah ke {place}.",
+      "bestTime": {
+        "earlyMorning": "Awal pagi",
+        "morning": "Pagi",
+        "afterFajr": "Selepas Subuh"
+      },
+      "city": {
+        "makkah": "Makkah",
+        "madinah": "Madinah",
+        "taif": "Taif",
+        "jeddah": "Jeddah"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "Semua Lokasi Ziarah",
+      "subtitle": "Semua tempat dalam panduan ini, dikumpulkan mengikut bandar. Ketik Dapatkan Arah untuk membukanya dalam apl peta.",
+      "fullRoute": "Buka laluan penuh dalam Google Maps"
+    }
 }

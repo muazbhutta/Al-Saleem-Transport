@@ -118,21 +118,105 @@ const CSS = `
   tr:nth-child(even) td { background:#f6f4ee; }
   .infocard { border:1px solid #e5e5e5; border-radius:12px; padding:16px 18px; margin:16px 0; background:#fff; }
   .ic-title { font-weight:700; color: var(--green); margin-bottom:8px; }
+  .loc { display:flex; gap:16px; align-items:center; justify-content:space-between; border:1px solid #e0dbcd; border-radius:12px; background:#faf7f0; padding:12px 16px; margin:14px 0; }
+  .loc-title { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--green2); margin:0 0 6px; }
+  .loc dl { display:flex; flex-wrap:wrap; gap:4px 20px; margin:0; font-size:13px; }
+  .loc dl div { display:flex; gap:6px; }
+  .loc dt { color:#777; }
+  .loc dd { margin:0; font-weight:600; color:var(--green); }
+  .loc-qr { margin:0; text-align:center; flex-shrink:0; }
+  .loc-qr svg { width:76px; height:76px; display:block; }
+  .loc-qr figcaption { font-size:10px; color:#777; margin-top:4px; }
   footer { text-align:center; color:#777; font-size:12px; padding:24px; border-top:1px solid #eee; }
   @media print {
     .cover { padding: 48px 32px; }
     h2 { page-break-after: avoid; }
-    .verse, .hadith, .infocard, table, figure, h3 { page-break-inside: avoid; }
+    .verse, .hadith, .infocard, table, figure, h3, .loc { page-break-inside: avoid; }
   }
 `;
 
-export function buildGuideHtml(guide: Guide, o: GuideDocOpts): string {
+/** Location payload for the PDF, resolved by the caller and passed in. */
+export type GuideDocPlace = {
+  id: string;
+  city: string;
+  distanceKm: number | null;
+  coords: { lat: number; lng: number } | null;
+  googleMapsUrl: string;
+  /** Inline SVG QR, pre-generated at build time by `npm run gen:qr`. */
+  qrSvg?: string;
+};
+
+export type GuideDocLocations = {
+  /** Keyed by place id (= the guide's h3 id). */
+  places: Record<string, GuideDocPlace>;
+  labels: {
+    title: string;
+    city: string;
+    distance: string;
+    coordinates: string;
+    scan: string;
+    approx: string;
+    km: string;
+    cityNames: Record<string, string>;
+  };
+};
+
+/**
+ * Location block appended to a place's section in the PDF. Mirrors the on-site
+ * card, plus a QR code — the one thing print can offer that a screen cannot.
+ */
+function locationHtml(place: GuideDocPlace, L: GuideDocLocations['labels']): string {
+  const rows: string[] = [
+    `<div><dt>${esc(L.city)}</dt><dd>${esc(L.cityNames[place.city] ?? place.city)}</dd></div>`,
+  ];
+  if (place.distanceKm !== null) {
+    rows.push(
+      `<div><dt>${esc(L.distance)}</dt><dd dir="ltr">${esc(L.approx)} ${place.distanceKm} ${esc(L.km)}</dd></div>`,
+    );
+  }
+  if (place.coords) {
+    rows.push(
+      `<div><dt>${esc(L.coordinates)}</dt><dd dir="ltr">${place.coords.lat},${place.coords.lng}</dd></div>`,
+    );
+  }
+  return (
+    `<aside class="loc">` +
+    `<div class="loc-body"><p class="loc-title">${esc(L.title)}</p><dl>${rows.join('')}</dl></div>` +
+    (place.qrSvg ? `<figure class="loc-qr">${place.qrSvg}<figcaption>${esc(L.scan)}</figcaption></figure>` : '') +
+    `</aside>`
+  );
+}
+
+export function buildGuideHtml(
+  guide: Guide,
+  o: GuideDocOpts,
+  locations?: GuideDocLocations,
+): string {
   const chapters = guide.chapters
     .map(
       (ch) =>
         `<section class="chapter"><h2>${esc(ch.title)}</h2>${
           ch.intro ? `<p class="intro">${esc(ch.intro)}</p>` : ''
-        }${ch.blocks.map((b) => blockHtml(b, o.labels)).join('')}</section>`,
+        }${(() => {
+          let currentId: string | null = null;
+          return ch.blocks
+            .map((b, i) => {
+              if (b.type === 'h3') {
+                currentId = locations?.places[b.id] ? b.id : null;
+                return blockHtml(b, o.labels);
+              }
+              const next = ch.blocks[i + 1];
+              const closes = !next || next.type === 'h3';
+              const html = blockHtml(b, o.labels);
+              if (currentId && closes && locations) {
+                const block = locationHtml(locations.places[currentId], locations.labels);
+                currentId = null;
+                return html + block;
+              }
+              return html;
+            })
+            .join('');
+        })()}</section>`,
     )
     .join('');
 

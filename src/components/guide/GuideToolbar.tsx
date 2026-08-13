@@ -1,7 +1,11 @@
 'use client';
 
 import { Download } from 'lucide-react';
-import { buildGuideHtml, type GuideDocOpts } from '@/lib/guideHtml';
+import {
+  buildGuideHtml,
+  type GuideDocOpts,
+  type GuideDocLocations,
+} from '@/lib/guideHtml';
 import type { Guide } from '@/content/ziyarat/types';
 
 /**
@@ -16,15 +20,39 @@ export default function GuideToolbar({
   guide,
   meta,
   downloadLabel,
+  locationLabels,
 }: {
   guide: Guide;
   meta: GuideDocOpts;
   downloadLabel: string;
+  /** Localised labels for the PDF's location blocks. */
+  locationLabels: GuideDocLocations['labels'];
   /** Kept for API compatibility. */
   printLabel?: string;
 }) {
-  function handleDownload() {
-    const html = buildGuideHtml(guide, meta);
+  async function handleDownload() {
+    // The QR data is ~134 KB and only ever needed by this click, so both it and
+    // the place data are code-split out of the initial bundle.
+    const [{ ziyaratPlaces }, { qrFor }] = await Promise.all([
+      import('@/content/ziyarat/places'),
+      import('@/content/ziyarat/qr-codes'),
+    ]);
+
+    const places = Object.fromEntries(
+      ziyaratPlaces.map((p) => [
+        p.id,
+        {
+          id: p.id,
+          city: p.city,
+          distanceKm: p.distanceFromHaramKm,
+          coords: p.coords,
+          googleMapsUrl: p.googleMapsUrl,
+          qrSvg: qrFor(p.id),
+        },
+      ]),
+    );
+
+    const html = buildGuideHtml(guide, meta, { places, labels: locationLabels });
     const win = window.open('', '_blank');
 
     if (win) {

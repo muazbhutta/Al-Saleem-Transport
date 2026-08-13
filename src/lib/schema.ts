@@ -128,6 +128,62 @@ export function serviceSchema({
   };
 }
 
+/**
+ * TouristAttraction entries for the Ziyarat places, emitted once per locale
+ * page as a single array rather than a block per place — duplicate
+ * `<script type="application/ld+json">` tags for the same entity type are a
+ * common cause of Rich Results warnings.
+ *
+ * `geo` is emitted ONLY where real coordinates exist. A GeoCoordinates node
+ * built from a guessed pin would be worse than omitting it: search engines
+ * would surface a wrong location as fact.
+ */
+export function ziyaratPlacesSchema(
+  locale: string,
+  entries: {
+    place: {
+      id: string;
+      city: string;
+      coords: { lat: number; lng: number } | null;
+      googleMapsUrl: string;
+    };
+    name: string;
+    description?: string;
+  }[],
+) {
+  const locality: Record<string, string> = {
+    makkah: 'Makkah',
+    madinah: 'Madinah',
+    taif: 'Taif',
+    jeddah: 'Jeddah',
+  };
+
+  return entries.map((entry) => ({
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    '@id': `${siteUrl}/${locale}/ziyarat-guide#${entry.place.id}`,
+    name: entry.name,
+    ...(entry.description ? { description: entry.description } : {}),
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: locality[entry.place.city] ?? entry.place.city,
+      addressCountry: 'SA',
+    },
+    ...(entry.place.coords
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: entry.place.coords.lat,
+            longitude: entry.place.coords.lng,
+          },
+        }
+      : {}),
+    hasMap: entry.place.googleMapsUrl,
+    url: `${siteUrl}/${locale}/ziyarat-guide#${entry.place.id}`,
+    isAccessibleForFree: true,
+  }));
+}
+
 export function faqSchema(items: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',

@@ -444,5 +444,39 @@
         { "heading": "Contact", "body": "Questions about these Terms? Contact us on WhatsApp at +966 50 068 9196 or by email at info@alsaleemtransport.com." }
       ]
     }
-  }
+  },
+  "ziyaratLocation": {
+      "title": "Location",
+      "cityLabel": "City",
+      "pdfCoordinates": "Coordinates",
+      "scanForDirections": "Scan for directions",
+      "distanceLabel": "Distance",
+      "driveLabel": "Drive time",
+      "directions": "Get Directions",
+      "appleMaps": "Apple Maps",
+      "book": "Book this Ziyarat",
+      "fromHaram": "from Masjid al-Haram",
+      "fromNabawi": "from Masjid an-Nabawi",
+      "approx": "approx.",
+      "km": "km",
+      "min": "min",
+      "bestTimeLabel": "Best time",
+      "waMessage": "Assalamu Alaikum, I want to book a Ziyarat trip to {place}.",
+      "bestTime": {
+        "earlyMorning": "Early morning",
+        "morning": "Morning",
+        "afterFajr": "After Fajr"
+      },
+      "city": {
+        "makkah": "Makkah",
+        "madinah": "Madinah",
+        "taif": "Taif",
+        "jeddah": "Jeddah"
+      }
+    },
+  "ziyaratIndex": {
+      "title": "All Ziyarat Locations",
+      "subtitle": "Every place in this guide, grouped by city. Tap Directions to open it in your map app.",
+      "fullRoute": "Open full route in Google Maps"
+    }
 }
