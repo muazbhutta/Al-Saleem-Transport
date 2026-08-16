@@ -1,3 +1,5 @@
+import { serviceSlugs } from './services';
+
 /**
  * Central navigation map. `path` is locale-agnostic (no /en prefix);
  * the locale-aware <Link> adds the prefix. `key` maps to messages `nav.*`.
@@ -28,4 +30,5 @@ export const allRoutes: string[] = [
   '/faq',
   '/privacy-policy',
   '/terms',
+  ...serviceSlugs.map((slug) => `/services/${slug}`),
 ];

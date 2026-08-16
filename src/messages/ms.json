@@ -83,12 +83,30 @@
     "title": "Perkhidmatan yang Boleh Anda Harapkan",
     "subtitle": "Setiap butiran perjalanan anda direka agar tenang, selamat dan boleh dipercayai - dari saat menempah hingga saat tiba.",
     "items": {
-      "licensed": { "title": "Berlesen Kerajaan", "desc": "Pengendali pengangkutan Saudi berlesen penuh - No. Lesen 35/00008116." },
-      "drivers": { "title": "Pemandu Profesional", "desc": "Pemandu dipercayai, berpengalaman dan sopan yang mengenali laluan serta tapak suci." },
-      "vehicles": { "title": "Kenderaan Berhawa Dingin Bersih", "desc": "Kereta, SUV dan van moden yang terselenggara dan sentiasa bersih." },
-      "onTime": { "title": "Jaminan Tepat Masa", "desc": "Ambilan tepat pada masanya supaya anda tidak terlepas penerbangan, daftar masuk hotel atau solat." },
-      "pricing": { "title": "Harga Tetap & Telus", "desc": "Tambang dipersetujui sebelum perjalanan - tiada meter, tiada kejutan, tiada caj tersembunyi." },
-      "support": { "title": "Sokongan 24/7", "desc": "Hubungi orang sebenar di WhatsApp pada bila-bila masa, siang atau malam." }
+      "licensed": {
+        "title": "Berlesen Kerajaan",
+        "desc": "Pengendali pengangkutan Saudi berlesen penuh - No. Lesen 35/00008116."
+      },
+      "drivers": {
+        "title": "Pemandu Profesional",
+        "desc": "Pemandu dipercayai, berpengalaman dan sopan yang mengenali laluan serta tapak suci."
+      },
+      "vehicles": {
+        "title": "Kenderaan Berhawa Dingin Bersih",
+        "desc": "Kereta, SUV dan van moden yang terselenggara dan sentiasa bersih."
+      },
+      "onTime": {
+        "title": "Jaminan Tepat Masa",
+        "desc": "Ambilan tepat pada masanya supaya anda tidak terlepas penerbangan, daftar masuk hotel atau solat."
+      },
+      "pricing": {
+        "title": "Harga Tetap & Telus",
+        "desc": "Tambang dipersetujui sebelum perjalanan - tiada meter, tiada kejutan, tiada caj tersembunyi."
+      },
+      "support": {
+        "title": "Sokongan 24/7",
+        "desc": "Hubungi orang sebenar di WhatsApp pada bila-bila masa, siang atau malam."
+      }
     }
   },
   "services": {
@@ -97,13 +115,65 @@
     "subtitle": "Dari lapangan terbang ke Haram, antara bandar suci, dan segala di antaranya - biar kami uruskan jalan supaya anda fokus beribadah.",
     "learnMore": "Tempah ini",
     "items": {
-      "airport": { "title": "Pemindahan Lapangan Terbang", "desc": "Ambilan dan penghantaran lancar di lapangan terbang Jeddah dan Madinah, dengan sambutan dan penjejakan penerbangan." },
-      "hotel": { "title": "Pemindahan Hotel", "desc": "Pemindahan pintu ke pintu antara hotel anda dan Haram, atau antara hotel di bandar suci." },
-      "ziyarat": { "title": "Pelancongan Ziarah", "desc": "Lawatan berpandu ke tapak mulia di Makkah, Madinah dan Taif pada kadar yang selesa tanpa tergesa-gesa." },
-      "umrah": { "title": "Pengangkutan Umrah & Haji", "desc": "Pengangkutan khusus untuk perjalanan Umrah atau Haji anda, diselaraskan dengan ibadah dan jadual anda." },
-      "intercity": { "title": "Perjalanan Antara Bandar", "desc": "Perjalanan terus bandar ke bandar - Jeddah, Makkah, Madinah dan Taif - dengan selesa dan selamat." },
-      "custom": { "title": "Perjalanan Tersuai", "desc": "Beritahu kami rancangan anda dan kami akan aturkan kenderaan serta laluan ideal untuk kumpulan anda." }
-    }
+      "airport": {
+        "title": "Pemindahan Lapangan Terbang",
+        "desc": "Ambilan dan penghantaran lancar di lapangan terbang Jeddah dan Madinah, dengan sambutan dan penjejakan penerbangan.",
+        "points": [
+          "Sambutan di dalam dewan ketibaan",
+          "Kami menjejak penerbangan, kelewatan dilindungi",
+          "Bantuan bagasi dari pintu ke pintu"
+        ]
+      },
+      "hotel": {
+        "title": "Pemindahan Hotel",
+        "desc": "Pemindahan pintu ke pintu antara hotel anda dan Haram, atau antara hotel di bandar suci.",
+        "points": [
+          "Pintu ke pintu antara mana-mana dua hotel",
+          "Tersedia pada bila-bila masa, siang atau malam",
+          "Ruang untuk semua bagasi"
+        ]
+      },
+      "ziyarat": {
+        "title": "Pelancongan Ziarah",
+        "desc": "Lawatan berpandu ke tapak mulia di Makkah, Madinah dan Taif pada kadar yang selesa tanpa tergesa-gesa.",
+        "points": [
+          "Masa yang cukup di setiap tempat",
+          "Pemandu yang tahu laluan dan susunannya",
+          "Rancang hentian anda, atau ikut laluan cadangan kami"
+        ]
+      },
+      "umrah": {
+        "title": "Pengangkutan Umrah & Haji",
+        "desc": "Pengangkutan khusus untuk perjalanan Umrah atau Haji anda, diselaraskan dengan ibadah dan jadual anda.",
+        "points": [
+          "Kenderaan sesuai untuk keluarga dan rombongan",
+          "Berhenti di Miqat atas permintaan",
+          "Pemandu berpengalaman dengan rombongan jemaah"
+        ]
+      },
+      "intercity": {
+        "title": "Perjalanan Antara Bandar",
+        "desc": "Perjalanan terus bandar ke bandar - Jeddah, Makkah, Madinah dan Taif - dengan selesa dan selamat.",
+        "points": [
+          "Terus antara Makkah, Madinah, Jeddah dan Taif",
+          "Hentian rehat dan solat pada perjalanan jauh",
+          "Kereta persendirian — bukan tempat duduk dikongsi"
+        ]
+      },
+      "custom": {
+        "title": "Perjalanan Tersuai",
+        "desc": "Beritahu kami rancangan anda dan kami akan aturkan kenderaan serta laluan ideal untuk kumpulan anda.",
+        "points": [
+          "Beritahu kami rancangan anda, kami uruskan",
+          "Kereta dan pemandu separuh atau sehari penuh",
+          "Masa fleksibel, berubah mengikut hari anda"
+        ]
+      }
+    },
+    "metaTitleTpl": "{service} | Makkah, Madinah, Jeddah & Taif",
+    "metaDescTpl": "{service} bersama Al-Saleem Transport. Pemandu berlesen, kenderaan berhawa dingin, tempahan 24/7 di WhatsApp. Tambang disahkan sebelum perjalanan.",
+    "pointsTitle": "Apa yang disertakan",
+    "fareNote": "Kenderaan dipilih mengikut bilangan penumpang dan bagasi. Tambang disahkan di WhatsApp sebelum perjalanan."
   },
   "fleet": {
     "eyebrow": "Armada Kami",
@@ -111,10 +181,26 @@
     "subtitle": "Pilih kenderaan yang sesuai dengan kumpulan anda - setiap satu bersih, berhawa dingin dan diservis secara berkala.",
     "capacityLabel": "Kapasiti",
     "items": {
-      "sedan": { "name": "Sedan", "capacity": "1-3 penumpang", "desc": "Sesuai untuk individu, pasangan dan keluarga kecil dengan bagasi ringan." },
-      "suv": { "name": "SUV", "capacity": "1-5 penumpang", "desc": "Ruang dan keselesaan tambahan untuk keluarga yang membawa lebih banyak bagasi." },
-      "van": { "name": "Van (Hiace)", "capacity": "6-11 penumpang", "desc": "Pengangkutan lapang untuk keluarga besar dan kumpulan pelancongan Ziarah." },
-      "bus": { "name": "Coaster / Bas", "capacity": "12+ penumpang", "desc": "Pengangkutan berkumpulan untuk keluarga besar, delegasi dan kumpulan Umrah." }
+      "sedan": {
+        "name": "Sedan",
+        "capacity": "1-3 penumpang",
+        "desc": "Sesuai untuk individu, pasangan dan keluarga kecil dengan bagasi ringan."
+      },
+      "suv": {
+        "name": "SUV",
+        "capacity": "1-5 penumpang",
+        "desc": "Ruang dan keselesaan tambahan untuk keluarga yang membawa lebih banyak bagasi."
+      },
+      "van": {
+        "name": "Van (Hiace)",
+        "capacity": "6-11 penumpang",
+        "desc": "Pengangkutan lapang untuk keluarga besar dan kumpulan pelancongan Ziarah."
+      },
+      "bus": {
+        "name": "Coaster / Bas",
+        "capacity": "12+ penumpang",
+        "desc": "Pengangkutan berkumpulan untuk keluarga besar, delegasi dan kumpulan Umrah."
+      }
     }
   },
   "coverage": {
@@ -122,20 +208,49 @@
     "title": "Melayani Bandar Suci dan Sekitarnya",
     "subtitle": "Kami beroperasi di wilayah barat Kerajaan dan seluruh Arab Saudi atas permintaan.",
     "items": {
-      "makkah": { "name": "Makkah", "desc": "Pemindahan dari dan ke Haram, hotel serta semua tapak suci." },
-      "madinah": { "name": "Madinah", "desc": "Lapangan terbang, Masjid Nabawi dan Ziarah tapak mulia." },
-      "jeddah": { "name": "Jeddah", "desc": "Pemindahan Lapangan Terbang Antarabangsa King Abdulaziz dan perjalanan bandar." },
-      "taif": { "name": "Taif", "desc": "Perjalanan Ziarah pergunungan yang nyaman dan pemindahan antara bandar." }
+      "makkah": {
+        "name": "Makkah",
+        "desc": "Pemindahan dari dan ke Haram, hotel serta semua tapak suci."
+      },
+      "madinah": {
+        "name": "Madinah",
+        "desc": "Lapangan terbang, Masjid Nabawi dan Ziarah tapak mulia."
+      },
+      "jeddah": {
+        "name": "Jeddah",
+        "desc": "Pemindahan Lapangan Terbang Antarabangsa King Abdulaziz dan perjalanan bandar."
+      },
+      "taif": {
+        "name": "Taif",
+        "desc": "Perjalanan Ziarah pergunungan yang nyaman dan pemindahan antara bandar."
+      },
+      "badr": {
+        "name": "Badar",
+        "desc": "Ziarah medan perang dan perjalanan sehari dari Madinah."
+      }
     }
   },
   "testimonials": {
     "eyebrow": "Testimoni",
+    "readOnGoogle": "Baca ulasan kami di Google",
     "title": "Dipercayai Jemaah Seluruh Dunia",
     "subtitle": "Kata-kata baik daripada tetamu yang kami berbesar hati melayani.",
     "items": [
-      { "name": "Abdullah R.", "location": "United Kingdom", "text": "Dari lapangan terbang Jeddah terus ke hotel kami di Makkah - kereta bersih, pemandu baik hati, dan tepat masa. Menjadikan permulaan Umrah kami bebas tekanan." },
-      { "name": "Fatima S.", "location": "Indonesia", "text": "Pelancongan Ziarah Madinah diatur dengan indah. Pemandu sabar dan membenarkan kami mengambil masa di setiap tapak. Amat disyorkan." },
-      { "name": "Bilal K.", "location": "Pakistan", "text": "Harga tetap dipersetujui di WhatsApp, betul-betul seperti dijanjikan. Tiada tawar-menawar, tiada kejutan. Kami gunakannya untuk seluruh keluarga selama seminggu." }
+      {
+        "name": "Abdullah R.",
+        "location": "United Kingdom",
+        "text": "Dari lapangan terbang Jeddah terus ke hotel kami di Makkah - kereta bersih, pemandu baik hati, dan tepat masa. Menjadikan permulaan Umrah kami bebas tekanan."
+      },
+      {
+        "name": "Fatima S.",
+        "location": "Indonesia",
+        "text": "Pelancongan Ziarah Madinah diatur dengan indah. Pemandu sabar dan membenarkan kami mengambil masa di setiap tapak. Amat disyorkan."
+      },
+      {
+        "name": "Bilal K.",
+        "location": "Pakistan",
+        "text": "Harga tetap dipersetujui di WhatsApp, betul-betul seperti dijanjikan. Tiada tawar-menawar, tiada kejutan. Kami gunakannya untuk seluruh keluarga selama seminggu."
+      }
     ]
   },
   "faqTeaser": {
@@ -223,10 +338,22 @@
     "mission": "Memberi setiap jemaah perjalanan yang tenang, selamat dan bermaruah - supaya pengangkutan menjadi satu perkara yang tidak perlu difikirkan, dan ibadah kekal menjadi tumpuan.",
     "valuesTitle": "Nilai Kami",
     "values": {
-      "trust": { "title": "Kepercayaan", "desc": "Pengendali berlesen dengan harga telus yang dipersetujui dan tiada kejutan." },
-      "care": { "title": "Penjagaan", "desc": "Kami melayan setiap tetamu sebagai pelawat mulia ke Rumah Allah." },
-      "excellence": { "title": "Kecemerlangan", "desc": "Kenderaan bersih, perkhidmatan tepat masa dan perhatian pada setiap butiran." },
-      "faith": { "title": "Hormat", "desc": "Pemandu yang memahami dan menghormati kesucian perjalanan anda." }
+      "trust": {
+        "title": "Kepercayaan",
+        "desc": "Pengendali berlesen dengan harga telus yang dipersetujui dan tiada kejutan."
+      },
+      "care": {
+        "title": "Penjagaan",
+        "desc": "Kami melayan setiap tetamu sebagai pelawat mulia ke Rumah Allah."
+      },
+      "excellence": {
+        "title": "Kecemerlangan",
+        "desc": "Kenderaan bersih, perkhidmatan tepat masa dan perhatian pada setiap butiran."
+      },
+      "faith": {
+        "title": "Hormat",
+        "desc": "Pemandu yang memahami dan menghormati kesucian perjalanan anda."
+      }
     },
     "licenseTitle": "Lesen & Pendaftaran",
     "licenseIntro": "Al-Saleem Integrated Transport Company beroperasi berlesen penuh di bawah peraturan Kerajaan Arab Saudi.",
@@ -256,16 +383,46 @@
     "title": "Soalan Lazim",
     "subtitle": "Jawapan jelas tentang tempahan, harga, liputan dan perjalanan Ziarah anda.",
     "items": [
-      { "q": "Bagaimana saya menempah perjalanan?", "a": "Cara terpantas ialah WhatsApp. Gunakan borang tempahan di halaman Tempah Sekarang atau hantar mesej terus ke +966 50 068 9196 dengan lokasi ambilan, destinasi, tarikh, masa dan bilangan penumpang. Kami sahkan tambang dan kenderaan dalam beberapa minit." },
-      { "q": "Berapa kosnya?", "a": "Kami menggunakan tambang tetap dan telus yang dipersetujui sebelum perjalanan - tiada meter dan tiada caj tersembunyi. Harga bergantung pada laluan, jenis kenderaan dan bilangan penumpang. Hantar butiran perjalanan anda di WhatsApp untuk sebut harga tepat." },
-      { "q": "Kawasan mana yang anda liputi?", "a": "Kami melayani Makkah, Madinah, Jeddah dan Taif, termasuk pemindahan lapangan terbang dan hotel, serta perjalanan ke seluruh Arab Saudi atas permintaan." },
-      { "q": "Jenis kenderaan apa yang anda ada?", "a": "Sedan (1-3 penumpang), SUV (1-5), van seperti Toyota Hiace (6-11) dan coaster/bas (12+). Semua kenderaan bersih, berhawa dingin dan terselenggara. Beritahu saiz kumpulan dan bagasi anda, kami akan cadangkan yang sesuai." },
-      { "q": "Adakah anda menawarkan ambilan lapangan terbang dari Jeddah dan Madinah?", "a": "Ya. Kami menyediakan pemindahan sambutan dari lapangan terbang Jeddah (King Abdulaziz International) dan Madinah terus ke hotel anda di Makkah atau Madinah, dengan penjejakan penerbangan supaya kami hadir apabila anda mendarat." },
-      { "q": "Bolehkah anda mengatur pelancongan Ziarah lengkap?", "a": "Sudah tentu. Kami mengatur pelancongan Ziarah berpandu ke tapak mulia di Makkah, Madinah dan Taif pada kadar yang selesa, dengan pemandu yang mengenali tapak dan menghormati masa anda untuk solat dan renungan." },
-      { "q": "Adakah pemandu anda profesional dan berlesen?", "a": "Ya. Pemandu kami dipercayai, berpengalaman dan sopan, dan kami beroperasi sebagai syarikat pengangkutan Saudi berlesen penuh (No. Lesen 35/00008116)." },
-      { "q": "Bagaimana saya membayar?", "a": "Susunan pembayaran disahkan bersama anda di WhatsApp semasa menempah. Kami menjaga semuanya telus dan dipersetujui terlebih dahulu." },
-      { "q": "Apakah dasar pembatalan anda?", "a": "Rancangan berubah, terutamanya semasa Umrah dan Haji. Sila beritahu kami seawal mungkin di WhatsApp dan kami akan berusaha sedaya upaya menampung sebarang perubahan atau pembatalan." },
-      { "q": "Adakah sokongan benar-benar tersedia 24/7?", "a": "Ya. Penerbangan dan ibadah berlaku pada bila-bila masa, jadi anda boleh menghubungi orang sebenar di WhatsApp pada bila-bila masa, siang atau malam." }
+      {
+        "q": "Bagaimana saya menempah perjalanan?",
+        "a": "Cara terpantas ialah WhatsApp. Gunakan borang tempahan di halaman Tempah Sekarang atau hantar mesej terus ke +966 50 068 9196 dengan lokasi ambilan, destinasi, tarikh, masa dan bilangan penumpang. Kami sahkan tambang dan kenderaan dalam beberapa minit."
+      },
+      {
+        "q": "Berapa kosnya?",
+        "a": "Kami menggunakan tambang tetap dan telus yang dipersetujui sebelum perjalanan - tiada meter dan tiada caj tersembunyi. Harga bergantung pada laluan, jenis kenderaan dan bilangan penumpang. Hantar butiran perjalanan anda di WhatsApp untuk sebut harga tepat."
+      },
+      {
+        "q": "Kawasan mana yang anda liputi?",
+        "a": "Kami melayani Makkah, Madinah, Jeddah dan Taif, termasuk pemindahan lapangan terbang dan hotel, serta perjalanan ke seluruh Arab Saudi atas permintaan."
+      },
+      {
+        "q": "Jenis kenderaan apa yang anda ada?",
+        "a": "Sedan (1-3 penumpang), SUV (1-5), van seperti Toyota Hiace (6-11) dan coaster/bas (12+). Semua kenderaan bersih, berhawa dingin dan terselenggara. Beritahu saiz kumpulan dan bagasi anda, kami akan cadangkan yang sesuai."
+      },
+      {
+        "q": "Adakah anda menawarkan ambilan lapangan terbang dari Jeddah dan Madinah?",
+        "a": "Ya. Kami menyediakan pemindahan sambutan dari lapangan terbang Jeddah (King Abdulaziz International) dan Madinah terus ke hotel anda di Makkah atau Madinah, dengan penjejakan penerbangan supaya kami hadir apabila anda mendarat."
+      },
+      {
+        "q": "Bolehkah anda mengatur pelancongan Ziarah lengkap?",
+        "a": "Sudah tentu. Kami mengatur pelancongan Ziarah berpandu ke tapak mulia di Makkah, Madinah dan Taif pada kadar yang selesa, dengan pemandu yang mengenali tapak dan menghormati masa anda untuk solat dan renungan."
+      },
+      {
+        "q": "Adakah pemandu anda profesional dan berlesen?",
+        "a": "Ya. Pemandu kami dipercayai, berpengalaman dan sopan, dan kami beroperasi sebagai syarikat pengangkutan Saudi berlesen penuh (No. Lesen 35/00008116)."
+      },
+      {
+        "q": "Bagaimana saya membayar?",
+        "a": "Susunan pembayaran disahkan bersama anda di WhatsApp semasa menempah. Kami menjaga semuanya telus dan dipersetujui terlebih dahulu."
+      },
+      {
+        "q": "Apakah dasar pembatalan anda?",
+        "a": "Rancangan berubah, terutamanya semasa Umrah dan Haji. Sila beritahu kami seawal mungkin di WhatsApp dan kami akan berusaha sedaya upaya menampung sebarang perubahan atau pembatalan."
+      },
+      {
+        "q": "Adakah sokongan benar-benar tersedia 24/7?",
+        "a": "Ya. Penerbangan dan ibadah berlaku pada bila-bila masa, jadi anda boleh menghubungi orang sebenar di WhatsApp pada bila-bila masa, siang atau malam."
+      }
     ]
   },
   "guide": {
@@ -281,14 +438,38 @@
     "onThisPage": "Pada halaman ini",
     "chaptersTitle": "Kandungan",
     "chapters": {
-      "makkah": { "title": "Makkah", "desc": "Pengenalan kepada bandar suci, Kaabah dan Masjidil Haram." },
-      "umrah": { "title": "Umrah, Langkah demi Langkah", "desc": "Rukun Umrah dijelaskan dengan jelas dan berurutan." },
-      "hajj": { "title": "Haji, Langkah demi Langkah", "desc": "Panduan Haji hari demi hari." },
-      "sacredSites": { "title": "Tapak Suci Makkah", "desc": "Tempat mulia dan tapak bersejarah untuk dikunjungi." },
-      "taif": { "title": "Taif", "desc": "Bandar pergunungan dan kedudukannya dalam kehidupan Nabi ﷺ." },
-      "madinah": { "title": "Madinah", "desc": "Bandar Nabi ﷺ, Masjid Nabawi dan Ziarahnya." },
-      "badr": { "title": "Badar", "desc": "Lokasi pertempuran besar pertama dan para syuhadanya." },
-      "family": { "title": "Keluarga Nabi ﷺ", "desc": "Lampiran tentang isteri dan anak-anak Nabi ﷺ." }
+      "makkah": {
+        "title": "Makkah",
+        "desc": "Pengenalan kepada bandar suci, Kaabah dan Masjidil Haram."
+      },
+      "umrah": {
+        "title": "Umrah, Langkah demi Langkah",
+        "desc": "Rukun Umrah dijelaskan dengan jelas dan berurutan."
+      },
+      "hajj": {
+        "title": "Haji, Langkah demi Langkah",
+        "desc": "Panduan Haji hari demi hari."
+      },
+      "sacredSites": {
+        "title": "Tapak Suci Makkah",
+        "desc": "Tempat mulia dan tapak bersejarah untuk dikunjungi."
+      },
+      "taif": {
+        "title": "Taif",
+        "desc": "Bandar pergunungan dan kedudukannya dalam kehidupan Nabi ﷺ."
+      },
+      "madinah": {
+        "title": "Madinah",
+        "desc": "Bandar Nabi ﷺ, Masjid Nabawi dan Ziarahnya."
+      },
+      "badr": {
+        "title": "Badar",
+        "desc": "Lokasi pertempuran besar pertama dan para syuhadanya."
+      },
+      "family": {
+        "title": "Keluarga Nabi ﷺ",
+        "desc": "Lampiran tentang isteri dan anak-anak Nabi ﷺ."
+      }
     },
     "verseLabel": "Al-Quran",
     "hadithLabel": "Hadis",
@@ -316,61 +497,128 @@
       "title": "Dasar Privasi",
       "intro": "Dasar Privasi ini menerangkan bagaimana Al-Saleem Integrated Transport Company (\"kami\") mengendalikan maklumat apabila anda menggunakan laman web atau menempah perkhidmatan kami.",
       "sections": [
-        { "heading": "Maklumat yang kami kumpul", "body": "Apabila anda menempah perjalanan, kami mengumpul butiran yang anda berikan - seperti nama, nombor telefon, lokasi ambilan dan destinasi, tarikh perjalanan dan sebarang nota. Jika anda menghubungi kami melalui WhatsApp atau e-mel, kami menerima maklumat dalam mesej tersebut." },
-        { "heading": "Bagaimana kami menggunakan maklumat anda", "body": "Kami menggunakan butiran anda hanya untuk mengatur, mengesahkan dan menyediakan pengangkutan, berkomunikasi tentang tempahan anda, dan menambah baik perkhidmatan kami. Kami tidak menjual maklumat peribadi anda." },
-        { "heading": "WhatsApp dan pemesejan", "body": "Tempahan biasanya diselesaikan melalui WhatsApp. Mesej yang anda hantar juga tertakluk pada dasar privasi WhatsApp sendiri. Kami menggunakan butiran dalam mesej anda semata-mata untuk melayani tempahan anda." },
-        { "heading": "Kuki", "body": "Laman web kami menggunakan kuki minimum untuk mengingati bahasa pilihan anda. Kami tidak menggunakannya untuk menjejaki anda merentas laman web lain." },
-        { "heading": "Pengekalan data", "body": "Kami menyimpan butiran tempahan hanya selama diperlukan untuk menyediakan perkhidmatan dan memenuhi keperluan undang-undang atau perakaunan, selepas itu ia dialih keluar." },
-        { "heading": "Hak anda", "body": "Anda boleh bertanya maklumat apa yang kami simpan tentang anda dan meminta ia diperbetulkan atau dipadam. Hubungi kami menggunakan butiran di bawah." },
-        { "heading": "Hubungi", "body": "Untuk sebarang soalan privasi, hubungi kami di WhatsApp +966 50 068 9196 atau e-mel info@alsaleemtransport.com." }
+        {
+          "heading": "Maklumat yang kami kumpul",
+          "body": "Apabila anda menempah perjalanan, kami mengumpul butiran yang anda berikan - seperti nama, nombor telefon, lokasi ambilan dan destinasi, tarikh perjalanan dan sebarang nota. Jika anda menghubungi kami melalui WhatsApp atau e-mel, kami menerima maklumat dalam mesej tersebut."
+        },
+        {
+          "heading": "Bagaimana kami menggunakan maklumat anda",
+          "body": "Kami menggunakan butiran anda hanya untuk mengatur, mengesahkan dan menyediakan pengangkutan, berkomunikasi tentang tempahan anda, dan menambah baik perkhidmatan kami. Kami tidak menjual maklumat peribadi anda."
+        },
+        {
+          "heading": "WhatsApp dan pemesejan",
+          "body": "Tempahan biasanya diselesaikan melalui WhatsApp. Mesej yang anda hantar juga tertakluk pada dasar privasi WhatsApp sendiri. Kami menggunakan butiran dalam mesej anda semata-mata untuk melayani tempahan anda."
+        },
+        {
+          "heading": "Kuki",
+          "body": "Laman web kami menggunakan kuki minimum untuk mengingati bahasa pilihan anda. Kami tidak menggunakannya untuk menjejaki anda merentas laman web lain."
+        },
+        {
+          "heading": "Pengekalan data",
+          "body": "Kami menyimpan butiran tempahan hanya selama diperlukan untuk menyediakan perkhidmatan dan memenuhi keperluan undang-undang atau perakaunan, selepas itu ia dialih keluar."
+        },
+        {
+          "heading": "Hak anda",
+          "body": "Anda boleh bertanya maklumat apa yang kami simpan tentang anda dan meminta ia diperbetulkan atau dipadam. Hubungi kami menggunakan butiran di bawah."
+        },
+        {
+          "heading": "Hubungi",
+          "body": "Untuk sebarang soalan privasi, hubungi kami di WhatsApp +966 50 068 9196 atau e-mel info@alsaleemtransport.com."
+        }
       ]
     },
     "terms": {
       "title": "Terma Perkhidmatan",
       "intro": "Terma ini mengawal penggunaan laman web dan perkhidmatan Al-Saleem Integrated Transport Company. Dengan menempah bersama kami, anda bersetuju dengan Terma ini.",
       "sections": [
-        { "heading": "Perkhidmatan kami", "body": "Kami menyediakan pengangkutan penumpang berlesen - pemindahan lapangan terbang, pemindahan hotel, pelancongan Ziarah, pengangkutan Umrah dan Haji serta perjalanan antara bandar - di Makkah, Madinah, Jeddah, Taif dan seluruh Arab Saudi." },
-        { "heading": "Tempahan dan tambang", "body": "Tambang adalah tetap dan dipersetujui bersama anda sebelum perjalanan. Tempahan disahkan apabila kami mengakui permintaan anda. Sila berikan butiran ambilan, masa dan bilangan penumpang yang tepat supaya kami dapat melayani anda dengan baik." },
-        { "heading": "Pembatalan dan perubahan", "body": "Jika anda perlu menukar atau membatalkan tempahan, sila beritahu kami seawal mungkin di WhatsApp. Kami sentiasa berusaha menampung perubahan, terutamanya semasa Umrah dan Haji." },
-        { "heading": "Tanggungjawab anda", "body": "Sila bersedia pada masa dan tempat ambilan yang dipersetujui, ikut arahan keselamatan pemandu yang munasabah, dan layan kenderaan serta pemandu dengan hormat." },
-        { "heading": "Liabiliti", "body": "Kami amat berhati-hati menyediakan pengangkutan yang selamat dan tepat masa, tetapi kami tidak bertanggungjawab atas kelewatan disebabkan keadaan di luar kawalan kami seperti trafik, cuaca, penutupan jalan atau kesesakan pada musim puncak." },
-        { "heading": "Undang-undang mentadbir", "body": "Terma ini ditadbir oleh undang-undang Kerajaan Arab Saudi." },
-        { "heading": "Hubungi", "body": "Soalan tentang Terma ini? Hubungi kami di WhatsApp +966 50 068 9196 atau e-mel info@alsaleemtransport.com." }
+        {
+          "heading": "Perkhidmatan kami",
+          "body": "Kami menyediakan pengangkutan penumpang berlesen - pemindahan lapangan terbang, pemindahan hotel, pelancongan Ziarah, pengangkutan Umrah dan Haji serta perjalanan antara bandar - di Makkah, Madinah, Jeddah, Taif dan seluruh Arab Saudi."
+        },
+        {
+          "heading": "Tempahan dan tambang",
+          "body": "Tambang adalah tetap dan dipersetujui bersama anda sebelum perjalanan. Tempahan disahkan apabila kami mengakui permintaan anda. Sila berikan butiran ambilan, masa dan bilangan penumpang yang tepat supaya kami dapat melayani anda dengan baik."
+        },
+        {
+          "heading": "Pembatalan dan perubahan",
+          "body": "Jika anda perlu menukar atau membatalkan tempahan, sila beritahu kami seawal mungkin di WhatsApp. Kami sentiasa berusaha menampung perubahan, terutamanya semasa Umrah dan Haji."
+        },
+        {
+          "heading": "Tanggungjawab anda",
+          "body": "Sila bersedia pada masa dan tempat ambilan yang dipersetujui, ikut arahan keselamatan pemandu yang munasabah, dan layan kenderaan serta pemandu dengan hormat."
+        },
+        {
+          "heading": "Liabiliti",
+          "body": "Kami amat berhati-hati menyediakan pengangkutan yang selamat dan tepat masa, tetapi kami tidak bertanggungjawab atas kelewatan disebabkan keadaan di luar kawalan kami seperti trafik, cuaca, penutupan jalan atau kesesakan pada musim puncak."
+        },
+        {
+          "heading": "Undang-undang mentadbir",
+          "body": "Terma ini ditadbir oleh undang-undang Kerajaan Arab Saudi."
+        },
+        {
+          "heading": "Hubungi",
+          "body": "Soalan tentang Terma ini? Hubungi kami di WhatsApp +966 50 068 9196 atau e-mel info@alsaleemtransport.com."
+        }
       ]
     }
   },
   "ziyaratLocation": {
-      "title": "Lokasi",
-      "cityLabel": "Bandar",
-      "pdfCoordinates": "Koordinat",
-      "scanForDirections": "Imbas untuk arah",
-      "distanceLabel": "Jarak",
-      "driveLabel": "Masa perjalanan",
-      "directions": "Dapatkan Arah",
-      "appleMaps": "Apple Maps",
-      "book": "Tempah Ziarah ini",
-      "fromHaram": "dari Masjidil Haram",
-      "fromNabawi": "dari Masjid Nabawi",
-      "approx": "kira-kira",
-      "km": "km",
-      "min": "min",
-      "bestTimeLabel": "Masa terbaik",
-      "waMessage": "Assalamu Alaikum, saya ingin menempah perjalanan Ziarah ke {place}.",
-      "bestTime": {
-        "earlyMorning": "Awal pagi",
-        "morning": "Pagi",
-        "afterFajr": "Selepas Subuh"
-      },
-      "city": {
-        "makkah": "Makkah",
-        "madinah": "Madinah",
-        "taif": "Taif",
-        "jeddah": "Jeddah"
-      }
+    "title": "Lokasi",
+    "cityLabel": "Bandar",
+    "pdfCoordinates": "Koordinat",
+    "scanForDirections": "Imbas untuk arah",
+    "distanceLabel": "Jarak",
+    "driveLabel": "Masa perjalanan",
+    "directions": "Dapatkan Arah",
+    "appleMaps": "Apple Maps",
+    "book": "Tempah Ziarah ini",
+    "fromHaram": "dari Masjidil Haram",
+    "fromNabawi": "dari Masjid Nabawi",
+    "approx": "kira-kira",
+    "km": "km",
+    "min": "min",
+    "bestTimeLabel": "Masa terbaik",
+    "waMessage": "Assalamu Alaikum, saya ingin menempah perjalanan Ziarah ke {place}.",
+    "bestTime": {
+      "earlyMorning": "Awal pagi",
+      "morning": "Pagi",
+      "afterFajr": "Selepas Subuh"
     },
-  "ziyaratIndex": {
-      "title": "Semua Lokasi Ziarah",
-      "subtitle": "Semua tempat dalam panduan ini, dikumpulkan mengikut bandar. Ketik Dapatkan Arah untuk membukanya dalam apl peta.",
-      "fullRoute": "Buka laluan penuh dalam Google Maps"
+    "city": {
+      "makkah": "Makkah",
+      "madinah": "Madinah",
+      "taif": "Taif",
+      "jeddah": "Jeddah"
     }
+  },
+  "ziyaratIndex": {
+    "title": "Semua Lokasi Ziarah",
+    "subtitle": "Semua tempat dalam panduan ini, dikumpulkan mengikut bandar. Ketik Dapatkan Arah untuk membukanya dalam apl peta.",
+    "fullRoute": "Buka laluan penuh dalam Google Maps"
+  },
+  "trustBar": {
+    "support": "Sokongan & tempahan",
+    "cities": "Bandar dilayani",
+    "languages": "Bahasa",
+    "vehicles": "Kelas kenderaan"
+  },
+  "howItWorks": {
+    "eyebrow": "Cara ia berfungsi",
+    "title": "Tempahan cuma satu mesej",
+    "subtitle": "Tiada akaun, tiada borang panjang. Hantar mesej dan perjalanan diuruskan.",
+    "steps": {
+      "message": {
+        "title": "Hantar mesej di WhatsApp",
+        "desc": "Hantar laluan, tarikh dan bilangan penumpang. Satu ketikan dari mana-mana halaman."
+      },
+      "confirm": {
+        "title": "Kami sahkan kenderaan & pemandu",
+        "desc": "Pasukan kami membalas dengan kenderaan yang sesuai dan menyepakati tambang terus dengan anda."
+      },
+      "arrive": {
+        "title": "Pemandu tiba tepat pada masa",
+        "desc": "Pemandu menemui anda di tempat yang dipersetujui, menjejak penerbangan dan membantu bagasi."
+      }
+    }
+  }
 }

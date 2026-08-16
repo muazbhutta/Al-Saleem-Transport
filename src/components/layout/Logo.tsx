@@ -27,7 +27,7 @@ export default function Logo({
   const [failed, setFailed] = useState(false);
   const text = variant === 'light' ? 'text-cream-100' : 'text-navy';
   const sub = variant === 'light' ? 'text-gold-light' : 'text-maroon';
-  const mark = variant === 'light' ? '#E0C078' : '#0E5C4A';
+  const mark = variant === 'light' ? 'rgb(var(--brass-300))' : 'rgb(var(--emerald-600))';
 
   return (
     <Link

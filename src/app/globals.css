@@ -3,9 +3,96 @@
 @tailwind utilities;
 
 @layer base {
+  /* Slow ken-burns on hero imagery. Transform only, so it never triggers
+     layout or paint work, and it is opt-in via motion-safe: at the call site. */
+  /* Marquee: the track holds two copies, so shifting by exactly -50% loops
+     seamlessly. Transform only. */
+  @keyframes marquee {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+
+  @keyframes ken-burns {
+    from { transform: scale(1) translate3d(0, 0, 0); }
+    to   { transform: scale(1.08) translate3d(0, -1.5%, 0); }
+  }
+
   :root {
     --font-sans: 'Poppins', system-ui, sans-serif;
     --font-arabic: 'Noto Naskh Arabic', serif;
+
+    /* ================================================================
+       DESIGN TOKENS — "Dawn at the Haram"
+       Single source of truth. Components must never hard-code a colour.
+
+       Values are space-separated RGB channels, not hex, so Tailwind's
+       opacity modifiers keep working: bg-emerald-800/10, text-ink/70 …
+       ================================================================ */
+
+    /* Emerald — primary. 800 is the established brand colour. */
+    --emerald-50:  238 245 242;
+    --emerald-100: 213 231 224;
+    --emerald-200: 173 207 195;
+    --emerald-300: 127 179 162;
+    --emerald-400:  78 146 128;
+    --emerald-500:  42 115  98;
+    --emerald-600:  23  90  75;
+    --emerald-700:  15  70  58;
+    --emerald-800:  11  46  39;
+    --emerald-900:   6  35  29;
+    --emerald-950:   4  23  19;
+
+    /* Brass — accent ONLY: eyebrows, hairlines, icon strokes, hover.
+       Never a large fill. */
+    --brass-300: 224 192 120;
+    --brass-400: 212 175  98;
+    --brass-500: 201 162  75;
+    --brass-600: 184 135  63;
+    --brass-700: 150 108  49;
+
+    /* Warm neutrals — sand/ivory, deliberately not grey. */
+    --sand-50:  251 248 241;
+    --sand-100: 246 240 229;
+    --sand-200: 242 235 221;
+    --sand-300: 230 220 199;
+    --ink:        26  36  32;
+    --ink-soft:   74  85  81;
+    --ink-faint: 123 135 131;
+
+    /* Third-party brand colours (fixed by the vendor, not ours to theme). */
+    --brand-whatsapp:      37 211 102;
+    --brand-whatsapp-dark: 18 140 126;
+
+    /* --- Surfaces + their guaranteed-AA text pairs ------------------
+       base and muted differ by ~9% luminance so the alternation is
+       actually visible — the old cream/white pair differed by ~2%. */
+    --surface-base:    var(--sand-50);
+    --on-surface-base: var(--ink);
+
+    --surface-raised:    255 255 255;
+    --on-surface-raised: var(--ink);
+
+    --surface-muted:    var(--sand-200);
+    --on-surface-muted: var(--ink);
+
+    --surface-inverse:    var(--emerald-900);
+    --on-surface-inverse: var(--sand-50);
+
+    /* --- Accents / lines / elevation --- */
+    --accent:        var(--brass-500);
+    --accent-strong: var(--brass-600);
+    --border-hairline: 11 46 39;      /* used at low alpha */
+    --shadow-card: 0 1px 2px rgb(4 23 19 / 0.04), 0 8px 24px -12px rgb(4 23 19 / 0.18);
+    --shadow-card-hover: 0 2px 4px rgb(4 23 19 / 0.06), 0 16px 32px -14px rgb(4 23 19 / 0.24);
+
+    /* --- Geometry --- */
+    --radius-card: 1rem;
+    --radius-pill: 999px;
+    --section-y: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    :root { --section-y: 7rem; }
   }
 
   html {
@@ -75,17 +162,58 @@
 }
 
 @layer components {
+  /* --- Scroll reveal -------------------------------------------------
+     Paired with components/ui/Reveal.tsx. Transform + opacity only, so it
+     stays on the compositor and never triggers layout.
+
+     The reduced-motion override is repeated here on purpose: the JS also
+     checks, but if that ever regresses the CSS still protects the reader. */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition:
+      opacity 500ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal[data-shown='true'] {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+  /* Failsafe path: shows the content WITHOUT relying on a transition running.
+     If transitions are frozen or unsupported, a transitioned reveal would sit
+     at opacity 0 forever — so this bypasses the transition entirely. */
+  .reveal[data-failsafe='true'] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal[data-shown='false'] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
   .container-wide {
     @apply container mx-auto;
   }
 
+  /* Section rhythm comes from one token so the redesigned <Section>
+     component and the pages still using this class stay in step. Previously
+     .section was py-16/20/24 while <Section> was py-20/28, which made the
+     spacing visibly jump between old and new sections on the same page. */
   .section {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-20 md:py-28;
   }
 
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3
-      text-sm font-semibold transition-all duration-200 focus-visible:ring-2
+      text-sm font-semibold transition-all duration-200 active:scale-[0.97] motion-reduce:active:scale-100 focus-visible:ring-2
       focus-visible:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none;
   }
 
