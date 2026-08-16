@@ -83,12 +83,30 @@
     "title": "Un service sur lequel vous pouvez compter",
     "subtitle": "Chaque détail de votre trajet est conçu pour être serein, sûr et fiable - du moment de la réservation à celui de l'arrivée.",
     "items": {
-      "licensed": { "title": "Sous licence gouvernementale", "desc": "Opérateur de transport saoudien entièrement licencié - N° de licence 35/00008116." },
-      "drivers": { "title": "Chauffeurs professionnels", "desc": "Des chauffeurs de confiance, expérimentés et courtois qui connaissent les itinéraires et les lieux saints." },
-      "vehicles": { "title": "Véhicules climatisés propres", "desc": "Des voitures, SUV et vans modernes, bien entretenus et impeccables." },
-      "onTime": { "title": "Garantie de ponctualité", "desc": "Une prise en charge à l'heure pour ne jamais manquer un vol, un enregistrement ou une prière." },
-      "pricing": { "title": "Tarifs fixes et transparents", "desc": "Des tarifs convenus avant le voyage - sans compteur, sans surprise, sans frais cachés." },
-      "support": { "title": "Assistance 24h/24", "desc": "Joignez une vraie personne sur WhatsApp à toute heure, jour et nuit." }
+      "licensed": {
+        "title": "Sous licence gouvernementale",
+        "desc": "Opérateur de transport saoudien entièrement licencié - N° de licence 35/00008116."
+      },
+      "drivers": {
+        "title": "Chauffeurs professionnels",
+        "desc": "Des chauffeurs de confiance, expérimentés et courtois qui connaissent les itinéraires et les lieux saints."
+      },
+      "vehicles": {
+        "title": "Véhicules climatisés propres",
+        "desc": "Des voitures, SUV et vans modernes, bien entretenus et impeccables."
+      },
+      "onTime": {
+        "title": "Garantie de ponctualité",
+        "desc": "Une prise en charge à l'heure pour ne jamais manquer un vol, un enregistrement ou une prière."
+      },
+      "pricing": {
+        "title": "Tarifs fixes et transparents",
+        "desc": "Des tarifs convenus avant le voyage - sans compteur, sans surprise, sans frais cachés."
+      },
+      "support": {
+        "title": "Assistance 24h/24",
+        "desc": "Joignez une vraie personne sur WhatsApp à toute heure, jour et nuit."
+      }
     }
   },
   "services": {
@@ -97,13 +115,65 @@
     "subtitle": "De l'aéroport au Haram, entre les villes saintes et partout entre les deux - laissez-nous la route pour que vous puissiez vous consacrer à l'adoration.",
     "learnMore": "Réserver ceci",
     "items": {
-      "airport": { "title": "Transfert aéroport", "desc": "Prise en charge et dépose fluides aux aéroports de Djeddah et Médine, avec accueil et suivi des vols." },
-      "hotel": { "title": "Transfert d'hôtel", "desc": "Transferts porte-à-porte entre votre hôtel et le Haram, ou entre hôtels des villes saintes." },
-      "ziyarat": { "title": "Circuits Ziyarat", "desc": "Visites guidées des lieux bénis de La Mecque, Médine et Taïf à un rythme confortable et sans hâte." },
-      "umrah": { "title": "Transport Omra et Hajj", "desc": "Un transport dédié à votre voyage d'Omra ou de Hajj, coordonné avec vos rites et votre programme." },
-      "intercity": { "title": "Trajets interurbains", "desc": "Voyages directs de ville à ville - Djeddah, La Mecque, Médine et Taïf - en confort et en sécurité." },
-      "custom": { "title": "Trajets personnalisés", "desc": "Dites-nous votre plan et nous organiserons le véhicule et l'itinéraire idéals pour votre groupe." }
-    }
+      "airport": {
+        "title": "Transfert aéroport",
+        "desc": "Prise en charge et dépose fluides aux aéroports de Djeddah et Médine, avec accueil et suivi des vols.",
+        "points": [
+          "Accueil à l'intérieur du hall d'arrivée",
+          "Nous suivons votre vol, les retards sont couverts",
+          "Aide pour les bagages de porte à porte"
+        ]
+      },
+      "hotel": {
+        "title": "Transfert d'hôtel",
+        "desc": "Transferts porte-à-porte entre votre hôtel et le Haram, ou entre hôtels des villes saintes.",
+        "points": [
+          "De porte à porte entre deux hôtels",
+          "Disponible à toute heure, jour et nuit",
+          "De la place pour tous les bagages"
+        ]
+      },
+      "ziyarat": {
+        "title": "Circuits Ziyarat",
+        "desc": "Visites guidées des lieux bénis de La Mecque, Médine et Taïf à un rythme confortable et sans hâte.",
+        "points": [
+          "Du temps à chaque site, sans se presser",
+          "Des chauffeurs qui connaissent les trajets et l'ordre des visites",
+          "Composez vos étapes ou suivez notre itinéraire"
+        ]
+      },
+      "umrah": {
+        "title": "Transport Omra et Hajj",
+        "desc": "Un transport dédié à votre voyage d'Omra ou de Hajj, coordonné avec vos rites et votre programme.",
+        "points": [
+          "Véhicules adaptés aux familles et aux groupes",
+          "Arrêt au Miqat sur demande",
+          "Chauffeurs habitués aux groupes de pèlerins"
+        ]
+      },
+      "intercity": {
+        "title": "Trajets interurbains",
+        "desc": "Voyages directs de ville à ville - Djeddah, La Mecque, Médine et Taïf - en confort et en sécurité.",
+        "points": [
+          "Direct entre La Mecque, Médine, Djeddah et Taïf",
+          "Arrêts repos et prière sur les longs trajets",
+          "Voiture privée — jamais de place partagée"
+        ]
+      },
+      "custom": {
+        "title": "Trajets personnalisés",
+        "desc": "Dites-nous votre plan et nous organiserons le véhicule et l'itinéraire idéals pour votre groupe.",
+        "points": [
+          "Dites-nous votre plan, nous organisons",
+          "Voiture et chauffeur pour une demi-journée ou une journée",
+          "Horaires souples, ajustés à votre journée"
+        ]
+      }
+    },
+    "metaTitleTpl": "{service} | La Mecque, Médine, Djeddah et Taïf",
+    "metaDescTpl": "{service} avec Al-Saleem Transport. Chauffeurs agréés, véhicules climatisés, réservation 24h/24 sur WhatsApp. Le tarif est confirmé avant le départ.",
+    "pointsTitle": "Ce qui est inclus",
+    "fareNote": "Le véhicule est choisi selon le nombre de passagers et les bagages. Le tarif est confirmé sur WhatsApp avant le trajet."
   },
   "fleet": {
     "eyebrow": "Notre flotte",
@@ -111,10 +181,26 @@
     "subtitle": "Choisissez le véhicule adapté à votre groupe - chacun est propre, climatisé et entretenu régulièrement.",
     "capacityLabel": "Capacité",
     "items": {
-      "sedan": { "name": "Berline", "capacity": "1-3 passagers", "desc": "Idéale pour les personnes seules, les couples et les petites familles avec bagages légers." },
-      "suv": { "name": "SUV", "capacity": "1-5 passagers", "desc": "Espace et confort supplémentaires pour les familles voyageant avec plus de bagages." },
-      "van": { "name": "Van (Hiace)", "capacity": "6-11 passagers", "desc": "Un transport spacieux pour les grandes familles et les groupes de circuits Ziyarat." },
-      "bus": { "name": "Coaster / Bus", "capacity": "12+ passagers", "desc": "Transport de groupe pour les grandes familles, délégations et groupes d'Omra." }
+      "sedan": {
+        "name": "Berline",
+        "capacity": "1-3 passagers",
+        "desc": "Idéale pour les personnes seules, les couples et les petites familles avec bagages légers."
+      },
+      "suv": {
+        "name": "SUV",
+        "capacity": "1-5 passagers",
+        "desc": "Espace et confort supplémentaires pour les familles voyageant avec plus de bagages."
+      },
+      "van": {
+        "name": "Van (Hiace)",
+        "capacity": "6-11 passagers",
+        "desc": "Un transport spacieux pour les grandes familles et les groupes de circuits Ziyarat."
+      },
+      "bus": {
+        "name": "Coaster / Bus",
+        "capacity": "12+ passagers",
+        "desc": "Transport de groupe pour les grandes familles, délégations et groupes d'Omra."
+      }
     }
   },
   "coverage": {
@@ -122,20 +208,49 @@
     "title": "Au service des villes saintes et au-delà",
     "subtitle": "Nous opérons dans la région ouest du Royaume et dans toute l'Arabie Saoudite sur demande.",
     "items": {
-      "makkah": { "name": "La Mecque", "desc": "Transferts depuis et vers le Haram, les hôtels et tous les lieux saints." },
-      "madinah": { "name": "Médine", "desc": "Aéroport, Masjid an-Nabawi et Ziyarat des lieux bénis." },
-      "jeddah": { "name": "Djeddah", "desc": "Transferts de l'aéroport international King Abdulaziz et trajets en ville." },
-      "taif": { "name": "Taïf", "desc": "Circuits Ziyarat de montagne au frais et transferts interurbains." }
+      "makkah": {
+        "name": "La Mecque",
+        "desc": "Transferts depuis et vers le Haram, les hôtels et tous les lieux saints."
+      },
+      "madinah": {
+        "name": "Médine",
+        "desc": "Aéroport, Masjid an-Nabawi et Ziyarat des lieux bénis."
+      },
+      "jeddah": {
+        "name": "Djeddah",
+        "desc": "Transferts de l'aéroport international King Abdulaziz et trajets en ville."
+      },
+      "taif": {
+        "name": "Taïf",
+        "desc": "Circuits Ziyarat de montagne au frais et transferts interurbains."
+      },
+      "badr": {
+        "name": "Badr",
+        "desc": "Ziyarat du champ de bataille et excursions depuis Médine."
+      }
     }
   },
   "testimonials": {
     "eyebrow": "Témoignages",
+    "readOnGoogle": "Lire nos avis sur Google",
     "title": "La confiance des pèlerins du monde entier",
     "subtitle": "Les mots aimables des hôtes que nous avons eu l'honneur de servir.",
     "items": [
-      { "name": "Abdullah R.", "location": "Royaume-Uni", "text": "De l'aéroport de Djeddah directement à notre hôtel à La Mecque - voiture propre, chauffeur aimable et à l'heure. Un début d'Omra sans stress." },
-      { "name": "Fatima S.", "location": "Indonésie", "text": "Le circuit Ziyarat de Médine était magnifiquement organisé. Le chauffeur était patient et nous a laissé prendre notre temps à chaque site. Vivement recommandé." },
-      { "name": "Bilal K.", "location": "Pakistan", "text": "Prix fixe convenu sur WhatsApp, exactement comme promis. Sans marchandage, sans surprise. Nous l'avons utilisé pour toute la famille pendant une semaine." }
+      {
+        "name": "Abdullah R.",
+        "location": "Royaume-Uni",
+        "text": "De l'aéroport de Djeddah directement à notre hôtel à La Mecque - voiture propre, chauffeur aimable et à l'heure. Un début d'Omra sans stress."
+      },
+      {
+        "name": "Fatima S.",
+        "location": "Indonésie",
+        "text": "Le circuit Ziyarat de Médine était magnifiquement organisé. Le chauffeur était patient et nous a laissé prendre notre temps à chaque site. Vivement recommandé."
+      },
+      {
+        "name": "Bilal K.",
+        "location": "Pakistan",
+        "text": "Prix fixe convenu sur WhatsApp, exactement comme promis. Sans marchandage, sans surprise. Nous l'avons utilisé pour toute la famille pendant une semaine."
+      }
     ]
   },
   "faqTeaser": {
@@ -223,10 +338,22 @@
     "mission": "Offrir à chaque pèlerin un voyage serein, sûr et digne - pour que le transport soit une préoccupation de moins et que l'adoration reste au centre.",
     "valuesTitle": "Nos valeurs",
     "values": {
-      "trust": { "title": "Confiance", "desc": "Un opérateur sous licence avec des tarifs transparents et convenus, sans surprise." },
-      "care": { "title": "Attention", "desc": "Nous traitons chaque hôte comme un visiteur honoré de la Maison d'Allah." },
-      "excellence": { "title": "Excellence", "desc": "Des véhicules propres, un service ponctuel et le souci du détail." },
-      "faith": { "title": "Respect", "desc": "Des chauffeurs qui comprennent et respectent le caractère sacré de votre voyage." }
+      "trust": {
+        "title": "Confiance",
+        "desc": "Un opérateur sous licence avec des tarifs transparents et convenus, sans surprise."
+      },
+      "care": {
+        "title": "Attention",
+        "desc": "Nous traitons chaque hôte comme un visiteur honoré de la Maison d'Allah."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "Des véhicules propres, un service ponctuel et le souci du détail."
+      },
+      "faith": {
+        "title": "Respect",
+        "desc": "Des chauffeurs qui comprennent et respectent le caractère sacré de votre voyage."
+      }
     },
     "licenseTitle": "Licence et enregistrement",
     "licenseIntro": "Al-Saleem Integrated Transport Company opère sous licence complète conformément à la réglementation du Royaume d'Arabie Saoudite.",
@@ -256,16 +383,46 @@
     "title": "Questions fréquentes",
     "subtitle": "Des réponses claires sur la réservation, les tarifs, la couverture et votre voyage Ziyarat.",
     "items": [
-      { "q": "Comment réserver un trajet ?", "a": "Le plus rapide est WhatsApp. Utilisez le formulaire de réservation sur notre page Réserver ou écrivez directement au +966 50 068 9196 avec votre lieu de prise en charge, destination, date, heure et nombre de passagers. Nous confirmons votre tarif et votre véhicule en quelques minutes." },
-      { "q": "Combien ça coûte ?", "a": "Nous appliquons des tarifs fixes et transparents convenus avant votre trajet - sans compteur ni frais cachés. Le prix dépend de l'itinéraire, du type de véhicule et du nombre de passagers. Envoyez-nous les détails de votre trajet sur WhatsApp pour un devis exact." },
-      { "q": "Quelles zones couvrez-vous ?", "a": "Nous desservons La Mecque, Médine, Djeddah et Taïf, y compris les transferts aéroport et hôtel, et voyageons dans tout le Royaume d'Arabie Saoudite sur demande." },
-      { "q": "Quels types de véhicules avez-vous ?", "a": "Berlines (1-3 passagers), SUV (1-5), vans comme le Toyota Hiace (6-11) et coasters/bus (12+). Tous les véhicules sont propres, climatisés et bien entretenus. Indiquez la taille de votre groupe et vos bagages, nous vous recommanderons le bon." },
-      { "q": "Proposez-vous une prise en charge à l'aéroport de Djeddah et Médine ?", "a": "Oui. Nous proposons des transferts avec accueil depuis les aéroports de Djeddah (King Abdulaziz International) et Médine directement vers votre hôtel à La Mecque ou Médine, avec suivi des vols pour être là à votre arrivée." },
-      { "q": "Pouvez-vous organiser un circuit Ziyarat complet ?", "a": "Absolument. Nous organisons des circuits Ziyarat guidés vers les lieux bénis de La Mecque, Médine et Taïf à un rythme tranquille, avec un chauffeur qui connaît les sites et respecte votre temps de prière et de recueillement." },
-      { "q": "Vos chauffeurs sont-ils professionnels et sous licence ?", "a": "Oui. Nos chauffeurs sont de confiance, expérimentés et courtois, et nous opérons comme une société de transport saoudienne entièrement licenciée (N° de licence 35/00008116)." },
-      { "q": "Comment payer ?", "a": "Les modalités de paiement sont confirmées avec vous sur WhatsApp lors de la réservation. Nous gardons tout transparent et convenu à l'avance." },
-      { "q": "Quelle est votre politique d'annulation ?", "a": "Les plans changent, surtout pendant l'Omra et le Hajj. Prévenez-nous le plus tôt possible sur WhatsApp et nous ferons de notre mieux pour accommoder tout changement ou annulation." },
-      { "q": "L'assistance est-elle vraiment disponible 24h/24 ?", "a": "Oui. Les vols et les rites se produisent à toute heure, vous pouvez donc joindre une vraie personne sur WhatsApp à tout moment, jour et nuit." }
+      {
+        "q": "Comment réserver un trajet ?",
+        "a": "Le plus rapide est WhatsApp. Utilisez le formulaire de réservation sur notre page Réserver ou écrivez directement au +966 50 068 9196 avec votre lieu de prise en charge, destination, date, heure et nombre de passagers. Nous confirmons votre tarif et votre véhicule en quelques minutes."
+      },
+      {
+        "q": "Combien ça coûte ?",
+        "a": "Nous appliquons des tarifs fixes et transparents convenus avant votre trajet - sans compteur ni frais cachés. Le prix dépend de l'itinéraire, du type de véhicule et du nombre de passagers. Envoyez-nous les détails de votre trajet sur WhatsApp pour un devis exact."
+      },
+      {
+        "q": "Quelles zones couvrez-vous ?",
+        "a": "Nous desservons La Mecque, Médine, Djeddah et Taïf, y compris les transferts aéroport et hôtel, et voyageons dans tout le Royaume d'Arabie Saoudite sur demande."
+      },
+      {
+        "q": "Quels types de véhicules avez-vous ?",
+        "a": "Berlines (1-3 passagers), SUV (1-5), vans comme le Toyota Hiace (6-11) et coasters/bus (12+). Tous les véhicules sont propres, climatisés et bien entretenus. Indiquez la taille de votre groupe et vos bagages, nous vous recommanderons le bon."
+      },
+      {
+        "q": "Proposez-vous une prise en charge à l'aéroport de Djeddah et Médine ?",
+        "a": "Oui. Nous proposons des transferts avec accueil depuis les aéroports de Djeddah (King Abdulaziz International) et Médine directement vers votre hôtel à La Mecque ou Médine, avec suivi des vols pour être là à votre arrivée."
+      },
+      {
+        "q": "Pouvez-vous organiser un circuit Ziyarat complet ?",
+        "a": "Absolument. Nous organisons des circuits Ziyarat guidés vers les lieux bénis de La Mecque, Médine et Taïf à un rythme tranquille, avec un chauffeur qui connaît les sites et respecte votre temps de prière et de recueillement."
+      },
+      {
+        "q": "Vos chauffeurs sont-ils professionnels et sous licence ?",
+        "a": "Oui. Nos chauffeurs sont de confiance, expérimentés et courtois, et nous opérons comme une société de transport saoudienne entièrement licenciée (N° de licence 35/00008116)."
+      },
+      {
+        "q": "Comment payer ?",
+        "a": "Les modalités de paiement sont confirmées avec vous sur WhatsApp lors de la réservation. Nous gardons tout transparent et convenu à l'avance."
+      },
+      {
+        "q": "Quelle est votre politique d'annulation ?",
+        "a": "Les plans changent, surtout pendant l'Omra et le Hajj. Prévenez-nous le plus tôt possible sur WhatsApp et nous ferons de notre mieux pour accommoder tout changement ou annulation."
+      },
+      {
+        "q": "L'assistance est-elle vraiment disponible 24h/24 ?",
+        "a": "Oui. Les vols et les rites se produisent à toute heure, vous pouvez donc joindre une vraie personne sur WhatsApp à tout moment, jour et nuit."
+      }
     ]
   },
   "guide": {
@@ -281,14 +438,38 @@
     "onThisPage": "Sur cette page",
     "chaptersTitle": "Au sommaire",
     "chapters": {
-      "makkah": { "title": "La Mecque", "desc": "Introduction à la ville sainte, la Kaaba et la Mosquée sacrée." },
-      "umrah": { "title": "L'Omra, étape par étape", "desc": "Les rites de l'Omra expliqués clairement, dans l'ordre." },
-      "hajj": { "title": "Le Hajj, étape par étape", "desc": "Un parcours jour par jour du pèlerinage." },
-      "sacredSites": { "title": "Les lieux saints de La Mecque", "desc": "Les lieux bénis et sites historiques à visiter." },
-      "taif": { "title": "Taïf", "desc": "La ville de montagne et sa place dans la vie du Prophète ﷺ." },
-      "madinah": { "title": "Médine", "desc": "La ville du Prophète ﷺ, Masjid an-Nabawi et sa Ziyarat." },
-      "badr": { "title": "Badr", "desc": "Le lieu de la première grande bataille et ses martyrs." },
-      "family": { "title": "La famille du Prophète ﷺ", "desc": "Une annexe sur les épouses et les enfants du Prophète ﷺ." }
+      "makkah": {
+        "title": "La Mecque",
+        "desc": "Introduction à la ville sainte, la Kaaba et la Mosquée sacrée."
+      },
+      "umrah": {
+        "title": "L'Omra, étape par étape",
+        "desc": "Les rites de l'Omra expliqués clairement, dans l'ordre."
+      },
+      "hajj": {
+        "title": "Le Hajj, étape par étape",
+        "desc": "Un parcours jour par jour du pèlerinage."
+      },
+      "sacredSites": {
+        "title": "Les lieux saints de La Mecque",
+        "desc": "Les lieux bénis et sites historiques à visiter."
+      },
+      "taif": {
+        "title": "Taïf",
+        "desc": "La ville de montagne et sa place dans la vie du Prophète ﷺ."
+      },
+      "madinah": {
+        "title": "Médine",
+        "desc": "La ville du Prophète ﷺ, Masjid an-Nabawi et sa Ziyarat."
+      },
+      "badr": {
+        "title": "Badr",
+        "desc": "Le lieu de la première grande bataille et ses martyrs."
+      },
+      "family": {
+        "title": "La famille du Prophète ﷺ",
+        "desc": "Une annexe sur les épouses et les enfants du Prophète ﷺ."
+      }
     },
     "verseLabel": "Coran",
     "hadithLabel": "Hadith",
@@ -316,61 +497,128 @@
       "title": "Politique de confidentialité",
       "intro": "Cette politique de confidentialité explique comment Al-Saleem Integrated Transport Company (« nous ») traite les informations lorsque vous utilisez notre site web ou réservez nos services.",
       "sections": [
-        { "heading": "Informations que nous collectons", "body": "Lorsque vous réservez un trajet, nous collectons les détails que vous fournissez - comme votre nom, numéro de téléphone, lieux de prise en charge et de dépose, date de voyage et toute note. Si vous nous contactez via WhatsApp ou e-mail, nous recevons les informations de ces messages." },
-        { "heading": "Comment nous utilisons vos informations", "body": "Nous utilisons vos détails uniquement pour organiser, confirmer et fournir votre transport, communiquer au sujet de votre réservation et améliorer notre service. Nous ne vendons pas vos informations personnelles." },
-        { "heading": "WhatsApp et messagerie", "body": "Les réservations se font généralement via WhatsApp. Les messages que vous envoyez sont également soumis à la politique de confidentialité de WhatsApp. Nous utilisons les détails de votre message uniquement pour traiter votre réservation." },
-        { "heading": "Cookies", "body": "Notre site web utilise un cookie minimal pour mémoriser la langue que vous avez choisie. Nous ne l'utilisons pas pour vous suivre sur d'autres sites web." },
-        { "heading": "Conservation des données", "body": "Nous conservons les détails de réservation uniquement le temps nécessaire pour fournir le service et respecter les obligations légales ou comptables, après quoi ils sont supprimés." },
-        { "heading": "Vos droits", "body": "Vous pouvez nous demander quelles informations nous détenons à votre sujet et demander leur rectification ou suppression. Contactez-nous aux coordonnées ci-dessous." },
-        { "heading": "Contact", "body": "Pour toute question de confidentialité, contactez-nous sur WhatsApp au +966 50 068 9196 ou par e-mail à info@alsaleemtransport.com." }
+        {
+          "heading": "Informations que nous collectons",
+          "body": "Lorsque vous réservez un trajet, nous collectons les détails que vous fournissez - comme votre nom, numéro de téléphone, lieux de prise en charge et de dépose, date de voyage et toute note. Si vous nous contactez via WhatsApp ou e-mail, nous recevons les informations de ces messages."
+        },
+        {
+          "heading": "Comment nous utilisons vos informations",
+          "body": "Nous utilisons vos détails uniquement pour organiser, confirmer et fournir votre transport, communiquer au sujet de votre réservation et améliorer notre service. Nous ne vendons pas vos informations personnelles."
+        },
+        {
+          "heading": "WhatsApp et messagerie",
+          "body": "Les réservations se font généralement via WhatsApp. Les messages que vous envoyez sont également soumis à la politique de confidentialité de WhatsApp. Nous utilisons les détails de votre message uniquement pour traiter votre réservation."
+        },
+        {
+          "heading": "Cookies",
+          "body": "Notre site web utilise un cookie minimal pour mémoriser la langue que vous avez choisie. Nous ne l'utilisons pas pour vous suivre sur d'autres sites web."
+        },
+        {
+          "heading": "Conservation des données",
+          "body": "Nous conservons les détails de réservation uniquement le temps nécessaire pour fournir le service et respecter les obligations légales ou comptables, après quoi ils sont supprimés."
+        },
+        {
+          "heading": "Vos droits",
+          "body": "Vous pouvez nous demander quelles informations nous détenons à votre sujet et demander leur rectification ou suppression. Contactez-nous aux coordonnées ci-dessous."
+        },
+        {
+          "heading": "Contact",
+          "body": "Pour toute question de confidentialité, contactez-nous sur WhatsApp au +966 50 068 9196 ou par e-mail à info@alsaleemtransport.com."
+        }
       ]
     },
     "terms": {
       "title": "Conditions d'utilisation",
       "intro": "Ces conditions régissent votre utilisation du site web et des services d'Al-Saleem Integrated Transport Company. En réservant avec nous, vous acceptez ces conditions.",
       "sections": [
-        { "heading": "Nos services", "body": "Nous fournissons un transport de passagers sous licence - transferts aéroport, transferts d'hôtel, circuits Ziyarat, transport Omra et Hajj et trajets interurbains - à La Mecque, Médine, Djeddah, Taïf et dans tout le Royaume d'Arabie Saoudite." },
-        { "heading": "Réservations et tarifs", "body": "Les tarifs sont fixes et convenus avec vous avant le voyage. Une réservation est confirmée lorsque nous accusons réception de votre demande. Veuillez fournir des détails de prise en charge, horaires et nombre de passagers exacts pour un service optimal." },
-        { "heading": "Annulations et modifications", "body": "Si vous devez modifier ou annuler une réservation, prévenez-nous le plus tôt possible sur WhatsApp. Nous nous efforçons toujours d'accommoder les changements, surtout pendant l'Omra et le Hajj." },
-        { "heading": "Vos responsabilités", "body": "Veuillez être prêt à l'heure et au lieu de prise en charge convenus, suivre les consignes de sécurité raisonnables du chauffeur, et traiter le véhicule et le chauffeur avec respect." },
-        { "heading": "Responsabilité", "body": "Nous veillons scrupuleusement à fournir un transport sûr et ponctuel, mais nous ne sommes pas responsables des retards dus à des circonstances indépendantes de notre volonté telles que le trafic, la météo, les fermetures de routes ou l'affluence en haute saison." },
-        { "heading": "Droit applicable", "body": "Ces conditions sont régies par les lois du Royaume d'Arabie Saoudite." },
-        { "heading": "Contact", "body": "Des questions sur ces conditions ? Contactez-nous sur WhatsApp au +966 50 068 9196 ou par e-mail à info@alsaleemtransport.com." }
+        {
+          "heading": "Nos services",
+          "body": "Nous fournissons un transport de passagers sous licence - transferts aéroport, transferts d'hôtel, circuits Ziyarat, transport Omra et Hajj et trajets interurbains - à La Mecque, Médine, Djeddah, Taïf et dans tout le Royaume d'Arabie Saoudite."
+        },
+        {
+          "heading": "Réservations et tarifs",
+          "body": "Les tarifs sont fixes et convenus avec vous avant le voyage. Une réservation est confirmée lorsque nous accusons réception de votre demande. Veuillez fournir des détails de prise en charge, horaires et nombre de passagers exacts pour un service optimal."
+        },
+        {
+          "heading": "Annulations et modifications",
+          "body": "Si vous devez modifier ou annuler une réservation, prévenez-nous le plus tôt possible sur WhatsApp. Nous nous efforçons toujours d'accommoder les changements, surtout pendant l'Omra et le Hajj."
+        },
+        {
+          "heading": "Vos responsabilités",
+          "body": "Veuillez être prêt à l'heure et au lieu de prise en charge convenus, suivre les consignes de sécurité raisonnables du chauffeur, et traiter le véhicule et le chauffeur avec respect."
+        },
+        {
+          "heading": "Responsabilité",
+          "body": "Nous veillons scrupuleusement à fournir un transport sûr et ponctuel, mais nous ne sommes pas responsables des retards dus à des circonstances indépendantes de notre volonté telles que le trafic, la météo, les fermetures de routes ou l'affluence en haute saison."
+        },
+        {
+          "heading": "Droit applicable",
+          "body": "Ces conditions sont régies par les lois du Royaume d'Arabie Saoudite."
+        },
+        {
+          "heading": "Contact",
+          "body": "Des questions sur ces conditions ? Contactez-nous sur WhatsApp au +966 50 068 9196 ou par e-mail à info@alsaleemtransport.com."
+        }
       ]
     }
   },
   "ziyaratLocation": {
-      "title": "Emplacement",
-      "cityLabel": "Ville",
-      "pdfCoordinates": "Coordonnées",
-      "scanForDirections": "Scannez pour l'itinéraire",
-      "distanceLabel": "Distance",
-      "driveLabel": "Temps de trajet",
-      "directions": "Itinéraire",
-      "appleMaps": "Apple Plans",
-      "book": "Réserver cette Ziyarat",
-      "fromHaram": "depuis la Masjid al-Haram",
-      "fromNabawi": "depuis la Masjid an-Nabawi",
-      "approx": "env.",
-      "km": "km",
-      "min": "min",
-      "bestTimeLabel": "Meilleur moment",
-      "waMessage": "Assalamu Alaikum, je souhaite réserver un trajet Ziyarat vers {place}.",
-      "bestTime": {
-        "earlyMorning": "Tôt le matin",
-        "morning": "Matin",
-        "afterFajr": "Après le Fajr"
-      },
-      "city": {
-        "makkah": "La Mecque",
-        "madinah": "Médine",
-        "taif": "Taïf",
-        "jeddah": "Djeddah"
-      }
+    "title": "Emplacement",
+    "cityLabel": "Ville",
+    "pdfCoordinates": "Coordonnées",
+    "scanForDirections": "Scannez pour l'itinéraire",
+    "distanceLabel": "Distance",
+    "driveLabel": "Temps de trajet",
+    "directions": "Itinéraire",
+    "appleMaps": "Apple Plans",
+    "book": "Réserver cette Ziyarat",
+    "fromHaram": "depuis la Masjid al-Haram",
+    "fromNabawi": "depuis la Masjid an-Nabawi",
+    "approx": "env.",
+    "km": "km",
+    "min": "min",
+    "bestTimeLabel": "Meilleur moment",
+    "waMessage": "Assalamu Alaikum, je souhaite réserver un trajet Ziyarat vers {place}.",
+    "bestTime": {
+      "earlyMorning": "Tôt le matin",
+      "morning": "Matin",
+      "afterFajr": "Après le Fajr"
     },
-  "ziyaratIndex": {
-      "title": "Tous les lieux de Ziyarat",
-      "subtitle": "Tous les lieux de ce guide, regroupés par ville. Touchez Itinéraire pour l'ouvrir dans votre application de cartes.",
-      "fullRoute": "Ouvrir l'itinéraire complet dans Google Maps"
+    "city": {
+      "makkah": "La Mecque",
+      "madinah": "Médine",
+      "taif": "Taïf",
+      "jeddah": "Djeddah"
     }
+  },
+  "ziyaratIndex": {
+    "title": "Tous les lieux de Ziyarat",
+    "subtitle": "Tous les lieux de ce guide, regroupés par ville. Touchez Itinéraire pour l'ouvrir dans votre application de cartes.",
+    "fullRoute": "Ouvrir l'itinéraire complet dans Google Maps"
+  },
+  "trustBar": {
+    "support": "Assistance et réservation",
+    "cities": "Villes desservies",
+    "languages": "Langues parlées",
+    "vehicles": "Catégories de véhicules"
+  },
+  "howItWorks": {
+    "eyebrow": "Comment ça marche",
+    "title": "Réserver tient en un message",
+    "subtitle": "Sans compte ni formulaire interminable. Écrivez-nous et le trajet est organisé.",
+    "steps": {
+      "message": {
+        "title": "Écrivez-nous sur WhatsApp",
+        "desc": "Envoyez votre trajet, la date et le nombre de passagers. Un geste depuis chaque page."
+      },
+      "confirm": {
+        "title": "Nous confirmons véhicule et chauffeur",
+        "desc": "Notre équipe propose le véhicule adapté à votre groupe et convient du tarif directement avec vous."
+      },
+      "arrive": {
+        "title": "Le chauffeur arrive à l'heure",
+        "desc": "Votre chauffeur vous retrouve au point convenu, suit votre vol et aide avec les bagages."
+      }
+    }
+  }
 }

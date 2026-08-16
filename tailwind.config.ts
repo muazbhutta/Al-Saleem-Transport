@@ -20,52 +20,102 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Deep greens — dark surfaces (header/footer/hero), headings, body text
+        /* ---------------------------------------------------------------
+           Every colour resolves to a CSS variable in globals.css.
+           `<alpha-value>` keeps Tailwind's opacity modifiers working
+           (bg-navy/10, text-cream-100/80 …).
+
+           The legacy semantic names (navy / maroon / gold / teal / cream)
+           are retained so existing components keep rendering while the
+           redesign migrates section by section. New work should prefer the
+           surface / emerald / brass / ink names below.
+           --------------------------------------------------------------- */
+        emerald: {
+          50: 'rgb(var(--emerald-50) / <alpha-value>)',
+          100: 'rgb(var(--emerald-100) / <alpha-value>)',
+          200: 'rgb(var(--emerald-200) / <alpha-value>)',
+          300: 'rgb(var(--emerald-300) / <alpha-value>)',
+          400: 'rgb(var(--emerald-400) / <alpha-value>)',
+          500: 'rgb(var(--emerald-500) / <alpha-value>)',
+          600: 'rgb(var(--emerald-600) / <alpha-value>)',
+          700: 'rgb(var(--emerald-700) / <alpha-value>)',
+          800: 'rgb(var(--emerald-800) / <alpha-value>)',
+          900: 'rgb(var(--emerald-900) / <alpha-value>)',
+          950: 'rgb(var(--emerald-950) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--emerald-800) / <alpha-value>)',
+        },
+        brass: {
+          300: 'rgb(var(--brass-300) / <alpha-value>)',
+          400: 'rgb(var(--brass-400) / <alpha-value>)',
+          500: 'rgb(var(--brass-500) / <alpha-value>)',
+          600: 'rgb(var(--brass-600) / <alpha-value>)',
+          700: 'rgb(var(--brass-700) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--brass-500) / <alpha-value>)',
+        },
+        ink: {
+          DEFAULT: 'rgb(var(--ink) / <alpha-value>)',
+          soft: 'rgb(var(--ink-soft) / <alpha-value>)',
+          faint: 'rgb(var(--ink-faint) / <alpha-value>)',
+        },
+        surface: {
+          base: 'rgb(var(--surface-base) / <alpha-value>)',
+          raised: 'rgb(var(--surface-raised) / <alpha-value>)',
+          muted: 'rgb(var(--surface-muted) / <alpha-value>)',
+          inverse: 'rgb(var(--surface-inverse) / <alpha-value>)',
+        },
+        'on-surface': {
+          base: 'rgb(var(--on-surface-base) / <alpha-value>)',
+          raised: 'rgb(var(--on-surface-raised) / <alpha-value>)',
+          muted: 'rgb(var(--on-surface-muted) / <alpha-value>)',
+          inverse: 'rgb(var(--on-surface-inverse) / <alpha-value>)',
+        },
+        whatsapp: {
+          DEFAULT: 'rgb(var(--brand-whatsapp) / <alpha-value>)',
+          dark: 'rgb(var(--brand-whatsapp-dark) / <alpha-value>)',
+        },
+
+        /* --- legacy aliases, mapped onto the token scale --- */
         navy: {
-          DEFAULT: '#0B2E27',
-          50: '#EEF4F1',
-          100: '#D6E6DF',
-          200: '#AECEC1',
-          300: '#7DAE9C',
-          400: '#4A8874',
-          500: '#1C6E58',
-          600: '#0E5C4A',
-          700: '#0B473A',
-          800: '#0B2E27',
-          900: '#071E19',
+          DEFAULT: 'rgb(var(--emerald-800) / <alpha-value>)',
+          50: 'rgb(var(--emerald-50) / <alpha-value>)',
+          100: 'rgb(var(--emerald-100) / <alpha-value>)',
+          200: 'rgb(var(--emerald-200) / <alpha-value>)',
+          300: 'rgb(var(--emerald-300) / <alpha-value>)',
+          400: 'rgb(var(--emerald-400) / <alpha-value>)',
+          500: 'rgb(var(--emerald-500) / <alpha-value>)',
+          600: 'rgb(var(--emerald-600) / <alpha-value>)',
+          700: 'rgb(var(--emerald-700) / <alpha-value>)',
+          800: 'rgb(var(--emerald-800) / <alpha-value>)',
+          900: 'rgb(var(--emerald-900) / <alpha-value>)',
         },
-        // Emerald — primary buttons & accents
         maroon: {
-          DEFAULT: '#0E5C4A',
-          50: '#E9F3EE',
-          100: '#CDE7DB',
-          200: '#9FD0BD',
-          300: '#6BB49B',
-          400: '#2F8E72',
-          500: '#0E5C4A',
-          600: '#0B4A3C',
-          700: '#093A2F',
-          800: '#07261F',
+          DEFAULT: 'rgb(var(--emerald-600) / <alpha-value>)',
+          50: 'rgb(var(--emerald-50) / <alpha-value>)',
+          100: 'rgb(var(--emerald-100) / <alpha-value>)',
+          200: 'rgb(var(--emerald-200) / <alpha-value>)',
+          300: 'rgb(var(--emerald-300) / <alpha-value>)',
+          400: 'rgb(var(--emerald-400) / <alpha-value>)',
+          500: 'rgb(var(--emerald-600) / <alpha-value>)',
+          600: 'rgb(var(--emerald-700) / <alpha-value>)',
+          700: 'rgb(var(--emerald-800) / <alpha-value>)',
+          800: 'rgb(var(--emerald-900) / <alpha-value>)',
         },
-        // Warm gold — highlights, dividers, premium touch
         gold: {
-          DEFAULT: '#C9A24B',
-          light: '#E0C078',
-          dark: '#A9863A',
+          DEFAULT: 'rgb(var(--brass-500) / <alpha-value>)',
+          light: 'rgb(var(--brass-300) / <alpha-value>)',
+          dark: 'rgb(var(--brass-600) / <alpha-value>)',
         },
-        // Muted emerald — eyebrows / secondary accents
         teal: {
-          DEFAULT: '#166E58',
-          light: '#4A8874',
-          dark: '#0B473A',
+          DEFAULT: 'rgb(var(--emerald-500) / <alpha-value>)',
+          light: 'rgb(var(--emerald-400) / <alpha-value>)',
+          dark: 'rgb(var(--emerald-700) / <alpha-value>)',
         },
-        // Soft ivory — background & card surfaces
         cream: {
-          DEFAULT: '#FAF7F0',
-          100: '#FFFFFF',
-          200: '#FAF7F0',
-          300: '#F1EBDD',
-          400: '#E6DCC7',
+          DEFAULT: 'rgb(var(--sand-50) / <alpha-value>)',
+          100: 'rgb(var(--surface-raised) / <alpha-value>)',
+          200: 'rgb(var(--sand-50) / <alpha-value>)',
+          300: 'rgb(var(--sand-100) / <alpha-value>)',
+          400: 'rgb(var(--sand-300) / <alpha-value>)',
         },
       },
       fontFamily: {
@@ -78,12 +128,14 @@ const config: Config = {
         '3xl': '1.5rem',
       },
       boxShadow: {
-        soft: '0 4px 20px -8px rgba(7, 30, 25, 0.12)',
-        card: '0 14px 44px -18px rgba(7, 30, 25, 0.20)',
-        glow: '0 0 0 1px rgba(201, 162, 75, 0.4)',
+        soft: '0 4px 20px -8px rgb(var(--emerald-950) / 0.12)',
+        card: 'var(--shadow-card)',
+        'card-hover': 'var(--shadow-card-hover)',
+        glow: '0 0 0 1px rgb(var(--brass-500) / 0.4)',
       },
       backgroundImage: {
-        'hero-fade': 'linear-gradient(180deg, rgba(7,30,25,0.15) 0%, rgba(7,30,25,0.72) 100%)',
+        'hero-fade':
+          'linear-gradient(180deg, rgb(var(--emerald-950) / 0.15) 0%, rgb(var(--emerald-950) / 0.72) 100%)',
       },
       keyframes: {
         'fade-up': {
@@ -93,6 +145,8 @@ const config: Config = {
       },
       animation: {
         'fade-up': 'fade-up 0.5s ease-out both',
+        'ken-burns': 'ken-burns 20s ease-out both',
+        marquee: 'marquee 46s linear infinite',
       },
     },
   },

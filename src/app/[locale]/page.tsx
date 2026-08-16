@@ -4,7 +4,9 @@ import { buildMetadata } from '@/lib/seo';
 import { serviceSchema } from '@/lib/schema';
 import JsonLd from '@/components/seo/JsonLd';
 import Hero from '@/components/home/Hero';
-import TrustBadges from '@/components/home/TrustBadges';
+import TrustBar from '@/components/home/TrustBar';
+import WhyTrustUs from '@/components/home/WhyTrustUs';
+import HowItWorks from '@/components/home/HowItWorks';
 import Services from '@/components/home/Services';
 import Fleet from '@/components/home/Fleet';
 import Coverage from '@/components/home/Coverage';
@@ -47,8 +49,10 @@ export default async function HomePage({ params }: { params: { locale: string } 
     <>
       <JsonLd data={services} />
       <Hero />
-      <TrustBadges />
+      <TrustBar />
+      <WhyTrustUs />
       <Services />
+      <HowItWorks />
       <Fleet />
       <Coverage />
       <ZiyaratTimings content={getTimings(params.locale)} />

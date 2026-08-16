@@ -1,10 +1,20 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Car, Truck, Bus, Users } from 'lucide-react';
-import SectionHeading from '@/components/ui/SectionHeading';
+import { Section, SectionHeader } from '@/components/ui/Section';
 import Reveal from '@/components/ui/Reveal';
 import { fleetBlur } from '@/lib/images';
 
+/**
+ * Fleet — horizontal snap-scroll carousel on the `base` surface.
+ *
+ * Was a 4-card grid directly below another grid. As a scroller it reads as a
+ * different kind of section and suits the content better: vehicles are a set
+ * you browse, not a checklist.
+ *
+ * Capacity and comfort only — never a fare. Scrolling is native CSS
+ * (overflow-x + scroll-snap), so this adds no JavaScript.
+ */
 const items = [
   { key: 'sedan', icon: Car },
   { key: 'suv', icon: Car },
@@ -16,14 +26,14 @@ export default async function Fleet() {
   const t = await getTranslations('fleet');
 
   return (
-    <section className="section bg-cream">
-      <div className="container flex flex-col gap-12">
-        <SectionHeading eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+    <Section surface="base">
+      <div className="flex flex-col gap-12">
+        <div className="container">
+          <SectionHeader eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        </div>
 
-        {/* Full-width fleet showcase. Fixed 16:9 box keeps ALL three vehicles
-            visible at every width (no side-cropping on mobile). Lazy-loaded. */}
-        <Reveal>
-          <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-card ring-1 ring-navy-100/60">
+        <Reveal className="container">
+          <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-card ring-1 ring-emerald-800/10">
             <Image
               src="/images/fleet-vehicles.jpg"
               alt="Al-Saleem Transport fleet - sedan, SUV and Hiace van for Ziyarat and airport transfers in Saudi Arabia"
@@ -37,30 +47,35 @@ export default async function Fleet() {
           </div>
         </Reveal>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Snap scroller. Bleeds to the viewport edge on mobile so the next card
+            peeks and the row is obviously scrollable; re-inset from lg up. */}
+        <div
+          className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-5 pb-4 lg:mx-auto lg:max-w-[1200px] lg:px-8"
+          style={{ scrollbarWidth: 'thin' }}
+        >
           {items.map((item, i) => (
-            <Reveal key={item.key} delay={i * 0.05}>
-              <div className="card flex h-full flex-col items-center gap-4 text-center">
-                {/* Vehicle photo slot - drop /public/images/fleet-{key}.jpg and
-                    swap this icon block for <Image>. See README. */}
-                <div className="flex h-28 w-full items-center justify-center rounded-2xl bg-gradient-to-br from-navy-50 to-cream-300">
-                  <item.icon className="h-14 w-14 text-navy-400" aria-hidden />
+            <Reveal
+              key={item.key}
+              delay={i * 0.06}
+              className="w-[264px] shrink-0 snap-start sm:w-[300px]"
+            >
+              <article className="flex h-full flex-col rounded-2xl border border-emerald-800/10 bg-surface-raised p-6 text-start shadow-card">
+                <div className="mb-5 flex h-28 w-full items-center justify-center rounded-xl bg-gradient-to-br from-emerald-50 to-surface-muted">
+                  <item.icon className="h-14 w-14 text-emerald-400" strokeWidth={1.5} aria-hidden />
                 </div>
-                <div>
-                  <h3 className="text-lg">{t(`items.${item.key}.name`)}</h3>
-                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-teal-dark">
-                    <Users className="h-4 w-4" aria-hidden />
-                    {t(`items.${item.key}.capacity`)}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-navy-500">
-                    {t(`items.${item.key}.desc`)}
-                  </p>
-                </div>
-              </div>
+                <h3 className="text-lg font-semibold text-ink">{t(`items.${item.key}.name`)}</h3>
+                <p className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600">
+                  <Users className="h-4 w-4" aria-hidden />
+                  {t(`items.${item.key}.capacity`)}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                  {t(`items.${item.key}.desc`)}
+                </p>
+              </article>
             </Reveal>
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

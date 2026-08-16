@@ -291,7 +291,7 @@ export default function ChatWidget() {
                 href={bookingHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 border-t border-navy-100 bg-[#25D366] px-4 py-3 text-sm font-semibold text-white hover:brightness-95"
+                className="flex items-center justify-center gap-2 border-t border-navy-100 bg-whatsapp px-4 py-3 text-sm font-semibold text-white hover:brightness-95"
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 {L.confirmBooking}
@@ -304,7 +304,7 @@ export default function ChatWidget() {
               href={waHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 border-t border-navy-100 bg-white px-4 py-2.5 text-sm font-semibold text-[#128C7E] hover:bg-cream/60"
+              className="flex items-center justify-center gap-2 border-t border-navy-100 bg-white px-4 py-2.5 text-sm font-semibold text-whatsapp-dark hover:bg-cream/60"
             >
               <Phone className="h-4 w-4" aria-hidden />
               {tc('chatWhatsapp')}

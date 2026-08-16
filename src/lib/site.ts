@@ -22,6 +22,13 @@ export const site = {
     facebook: '',
     instagram: '',
     tiktok: '',
+    /**
+     * Google Business Profile reviews URL. TODO: paste the real link.
+     * While empty, the "read on Google" link is hidden rather than rendered
+     * pointing nowhere — and the on-page testimonials remain unverifiable
+     * placeholders until it is filled in.
+     */
+    googleReviews: '',
   },
 } as const;
 

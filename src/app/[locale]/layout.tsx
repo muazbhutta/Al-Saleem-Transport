@@ -72,6 +72,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={dir} className={`${poppins.variable} ${notoNaskh.variable}`}>
+      <head>
+        {/* Without JS the IntersectionObserver never fires, so every reveal
+            would stay at opacity 0. Content visibility must never depend on
+            scripting — this forces them all visible. */}
+        <noscript>
+          <style>{`.reveal{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           <JsonLd data={organizationSchema()} />

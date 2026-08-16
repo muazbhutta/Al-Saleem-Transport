@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t('chooseLanguage')}
-        className="inline-flex items-center gap-1.5 rounded-full border border-navy-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-navy-700 transition hover:border-gold hover:text-navy focus-visible:ring-2 focus-visible:ring-gold"
+        className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-navy-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-navy-700 transition hover:border-gold hover:text-navy focus-visible:ring-2 focus-visible:ring-gold"
       >
         <Globe className="h-4 w-4 shrink-0" aria-hidden />
         {!compact && <span className="max-w-[7rem] truncate">{current.label}</span>}

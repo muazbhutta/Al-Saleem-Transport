@@ -61,7 +61,7 @@ export default async function PageHeader({
         className="absolute inset-0 opacity-[0.12]"
         aria-hidden
         style={{
-          backgroundImage: 'radial-gradient(55% 55% at 88% 25%, #C9A24B 0, transparent 60%)',
+          backgroundImage: 'radial-gradient(55% 55% at 88% 25%, rgb(var(--brass-500)) 0, transparent 60%)',
         }}
       />
       <div className="container relative w-full py-14 sm:py-16">

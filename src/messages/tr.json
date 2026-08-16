@@ -83,12 +83,30 @@
     "title": "Güvenebileceğiniz Bir Hizmet",
     "subtitle": "Yolculuğunuzun her ayrıntısı sakin, güvenli ve güvenilir olacak şekilde tasarlandı - rezervasyon anından varış anına kadar.",
     "items": {
-      "licensed": { "title": "Devlet Lisanslı", "desc": "Tamamen lisanslı Suudi ulaşım operatörü - Lisans No. 35/00008116." },
-      "drivers": { "title": "Profesyonel Şoförler", "desc": "Güzergâhları ve kutsal mekânları bilen güvenilir, deneyimli ve nazik şoförler." },
-      "vehicles": { "title": "Temiz Klimalı Araçlar", "desc": "Modern, bakımlı, klimalı ve tertemiz tutulan otomobiller, SUV'lar ve minibüsler." },
-      "onTime": { "title": "Zamanında Garantisi", "desc": "Uçağı, otel girişini veya namazı kaçırmamanız için dakik alım." },
-      "pricing": { "title": "Sabit Şeffaf Fiyat", "desc": "Yolculuktan önce anlaşılan ücretler - taksimetre yok, sürpriz yok, gizli ücret yok." },
-      "support": { "title": "7/24 Destek", "desc": "Gece gündüz her saat WhatsApp'tan gerçek bir kişiye ulaşın." }
+      "licensed": {
+        "title": "Devlet Lisanslı",
+        "desc": "Tamamen lisanslı Suudi ulaşım operatörü - Lisans No. 35/00008116."
+      },
+      "drivers": {
+        "title": "Profesyonel Şoförler",
+        "desc": "Güzergâhları ve kutsal mekânları bilen güvenilir, deneyimli ve nazik şoförler."
+      },
+      "vehicles": {
+        "title": "Temiz Klimalı Araçlar",
+        "desc": "Modern, bakımlı, klimalı ve tertemiz tutulan otomobiller, SUV'lar ve minibüsler."
+      },
+      "onTime": {
+        "title": "Zamanında Garantisi",
+        "desc": "Uçağı, otel girişini veya namazı kaçırmamanız için dakik alım."
+      },
+      "pricing": {
+        "title": "Sabit Şeffaf Fiyat",
+        "desc": "Yolculuktan önce anlaşılan ücretler - taksimetre yok, sürpriz yok, gizli ücret yok."
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "desc": "Gece gündüz her saat WhatsApp'tan gerçek bir kişiye ulaşın."
+      }
     }
   },
   "services": {
@@ -97,13 +115,65 @@
     "subtitle": "Havalimanından Harem'e, kutsal şehirler arasında ve aradaki her yerde - yolu bize bırakın ki siz ibadete odaklanın.",
     "learnMore": "Bunu rezerve et",
     "items": {
-      "airport": { "title": "Havalimanı Transferi", "desc": "Cidde ve Medine havalimanlarında karşılama ve uçuş takibiyle sorunsuz alım ve bırakma." },
-      "hotel": { "title": "Otel Transferi", "desc": "Oteliniz ile Harem arasında veya kutsal şehirlerdeki oteller arasında kapıdan kapıya transfer." },
-      "ziyarat": { "title": "Ziyaret Turları", "desc": "Mekke, Medine ve Taif'teki mübarek mekânlara rahat, acelesiz rehberli ziyaretler." },
-      "umrah": { "title": "Umre ve Hac Ulaşımı", "desc": "Umre veya Hac yolculuğunuz için ibadetlerinize ve programınıza göre düzenlenen özel ulaşım." },
-      "intercity": { "title": "Şehirlerarası Yolculuk", "desc": "Doğrudan şehirden şehre seyahat - Cidde, Mekke, Medine ve Taif - konfor ve güvenlik içinde." },
-      "custom": { "title": "Özel Geziler", "desc": "Planınızı bize söyleyin, grubunuz için ideal aracı ve güzergâhı düzenleyelim." }
-    }
+      "airport": {
+        "title": "Havalimanı Transferi",
+        "desc": "Cidde ve Medine havalimanlarında karşılama ve uçuş takibiyle sorunsuz alım ve bırakma.",
+        "points": [
+          "Geliş salonunun içinde karşılama",
+          "Uçuşunuzu takip ederiz, gecikmeler kapsanır",
+          "Kapıdan kapıya bagaj yardımı"
+        ]
+      },
+      "hotel": {
+        "title": "Otel Transferi",
+        "desc": "Oteliniz ile Harem arasında veya kutsal şehirlerdeki oteller arasında kapıdan kapıya transfer.",
+        "points": [
+          "Herhangi iki otel arasında kapıdan kapıya",
+          "Gece gündüz her saat",
+          "Tüm bagaj için yer"
+        ]
+      },
+      "ziyarat": {
+        "title": "Ziyaret Turları",
+        "desc": "Mekke, Medine ve Taif'teki mübarek mekânlara rahat, acelesiz rehberli ziyaretler.",
+        "points": [
+          "Her noktada acele etmeden zaman",
+          "Güzergâhı ve sırasını bilen sürücüler",
+          "Duraklarınızı siz planlayın ya da önerdiğimiz rotayı izleyin"
+        ]
+      },
+      "umrah": {
+        "title": "Umre ve Hac Ulaşımı",
+        "desc": "Umre veya Hac yolculuğunuz için ibadetlerinize ve programınıza göre düzenlenen özel ulaşım.",
+        "points": [
+          "Aile ve grup yolculuğuna uygun araçlar",
+          "Talep üzerine Mikat durağı",
+          "Hac gruplarıyla deneyimli sürücüler"
+        ]
+      },
+      "intercity": {
+        "title": "Şehirlerarası Yolculuk",
+        "desc": "Doğrudan şehirden şehre seyahat - Cidde, Mekke, Medine ve Taif - konfor ve güvenlik içinde.",
+        "points": [
+          "Mekke, Medine, Cidde ve Taif arasında doğrudan",
+          "Uzun yolculuklarda mola ve namaz durakları",
+          "Özel araç — asla paylaşımlı koltuk değil"
+        ]
+      },
+      "custom": {
+        "title": "Özel Geziler",
+        "desc": "Planınızı bize söyleyin, grubunuz için ideal aracı ve güzergâhı düzenleyelim.",
+        "points": [
+          "Planınızı söyleyin, biz ayarlayalım",
+          "Yarım ya da tam gün araç ve sürücü",
+          "Esnek saatler, gününüze göre değişir"
+        ]
+      }
+    },
+    "metaTitleTpl": "{service} | Mekke, Medine, Cidde ve Taif",
+    "metaDescTpl": "{service} Al-Saleem Transport ile. Lisanslı sürücüler, klimalı araçlar, WhatsApp üzerinden 7/24 rezervasyon. Ücret yolculuktan önce netleşir.",
+    "pointsTitle": "Neler dâhil",
+    "fareNote": "Araç, kişi sayısına ve bagaja göre seçilir. Ücret yolculuktan önce WhatsApp üzerinden netleştirilir."
   },
   "fleet": {
     "eyebrow": "Filomuz",
@@ -111,10 +181,26 @@
     "subtitle": "Grubunuza uygun aracı seçin - her biri temiz, klimalı ve düzenli olarak bakımı yapılıyor.",
     "capacityLabel": "Kapasite",
     "items": {
-      "sedan": { "name": "Sedan", "capacity": "1-3 yolcu", "desc": "Hafif bagajlı bireyler, çiftler ve küçük aileler için ideal." },
-      "suv": { "name": "SUV", "capacity": "1-5 yolcu", "desc": "Daha fazla bagajla seyahat eden aileler için ekstra alan ve konfor." },
-      "van": { "name": "Van (Hiace)", "capacity": "6-11 yolcu", "desc": "Büyük aileler ve ziyaret turu grupları için ferah ulaşım." },
-      "bus": { "name": "Coaster / Otobüs", "capacity": "12+ yolcu", "desc": "Geniş aileler, heyetler ve Umre grupları için grup ulaşımı." }
+      "sedan": {
+        "name": "Sedan",
+        "capacity": "1-3 yolcu",
+        "desc": "Hafif bagajlı bireyler, çiftler ve küçük aileler için ideal."
+      },
+      "suv": {
+        "name": "SUV",
+        "capacity": "1-5 yolcu",
+        "desc": "Daha fazla bagajla seyahat eden aileler için ekstra alan ve konfor."
+      },
+      "van": {
+        "name": "Van (Hiace)",
+        "capacity": "6-11 yolcu",
+        "desc": "Büyük aileler ve ziyaret turu grupları için ferah ulaşım."
+      },
+      "bus": {
+        "name": "Coaster / Otobüs",
+        "capacity": "12+ yolcu",
+        "desc": "Geniş aileler, heyetler ve Umre grupları için grup ulaşımı."
+      }
     }
   },
   "coverage": {
@@ -122,20 +208,49 @@
     "title": "Kutsal Şehirlere ve Ötesine Hizmet",
     "subtitle": "Krallığın batı bölgesinde ve talep üzerine tüm Suudi Arabistan'da faaliyet gösteriyoruz.",
     "items": {
-      "makkah": { "name": "Mekke", "desc": "Harem, oteller ve tüm kutsal mekânlara gidiş-dönüş transferi." },
-      "madinah": { "name": "Medine", "desc": "Havalimanı, Mescid-i Nebevi ve mübarek mekânların ziyareti." },
-      "jeddah": { "name": "Cidde", "desc": "King Abdulaziz Uluslararası Havalimanı transferi ve şehir içi yolculuklar." },
-      "taif": { "name": "Taif", "desc": "Serin dağ ziyaret gezileri ve şehirlerarası transferler." }
+      "makkah": {
+        "name": "Mekke",
+        "desc": "Harem, oteller ve tüm kutsal mekânlara gidiş-dönüş transferi."
+      },
+      "madinah": {
+        "name": "Medine",
+        "desc": "Havalimanı, Mescid-i Nebevi ve mübarek mekânların ziyareti."
+      },
+      "jeddah": {
+        "name": "Cidde",
+        "desc": "King Abdulaziz Uluslararası Havalimanı transferi ve şehir içi yolculuklar."
+      },
+      "taif": {
+        "name": "Taif",
+        "desc": "Serin dağ ziyaret gezileri ve şehirlerarası transferler."
+      },
+      "badr": {
+        "name": "Bedir",
+        "desc": "Savaş alanı ziyareti ve Medine’den günübirlik geziler."
+      }
     }
   },
   "testimonials": {
     "eyebrow": "Görüşler",
+    "readOnGoogle": "Google'daki yorumlarımızı okuyun",
     "title": "Dünya Genelinde Hacıların Güvendiği",
     "subtitle": "Hizmet etme onurunu yaşadığımız misafirlerin güzel sözleri.",
     "items": [
-      { "name": "Abdullah R.", "location": "Birleşik Krallık", "text": "Cidde havalimanından doğrudan Mekke'deki otelimize - temiz araç, nazik şoför ve zamanında. Umremizin başlangıcını stressiz kıldı." },
-      { "name": "Fatima S.", "location": "Endonezya", "text": "Medine ziyaret turu güzelce düzenlenmişti. Şoför sabırlıydı ve her mekânda vakit ayırmamıza izin verdi. Şiddetle tavsiye ederim." },
-      { "name": "Bilal K.", "location": "Pakistan", "text": "WhatsApp'ta anlaşılan sabit fiyat, tam söz verildiği gibi. Pazarlık yok, sürpriz yok. Tüm aile için bir hafta boyunca kullandık." }
+      {
+        "name": "Abdullah R.",
+        "location": "Birleşik Krallık",
+        "text": "Cidde havalimanından doğrudan Mekke'deki otelimize - temiz araç, nazik şoför ve zamanında. Umremizin başlangıcını stressiz kıldı."
+      },
+      {
+        "name": "Fatima S.",
+        "location": "Endonezya",
+        "text": "Medine ziyaret turu güzelce düzenlenmişti. Şoför sabırlıydı ve her mekânda vakit ayırmamıza izin verdi. Şiddetle tavsiye ederim."
+      },
+      {
+        "name": "Bilal K.",
+        "location": "Pakistan",
+        "text": "WhatsApp'ta anlaşılan sabit fiyat, tam söz verildiği gibi. Pazarlık yok, sürpriz yok. Tüm aile için bir hafta boyunca kullandık."
+      }
     ]
   },
   "faqTeaser": {
@@ -223,10 +338,22 @@
     "mission": "Her hacıya sakin, güvenli ve saygın bir yolculuk sunmak - böylece ulaşım düşünülecek bir konu daha olmaktan çıksın ve ibadet odakta kalsın.",
     "valuesTitle": "Değerlerimiz",
     "values": {
-      "trust": { "title": "Güven", "desc": "Şeffaf, anlaşılan fiyatlarla lisanslı operatör ve hiçbir sürpriz yok." },
-      "care": { "title": "Özen", "desc": "Her misafire Allah'ın evinin onurlu bir ziyaretçisi gibi davranırız." },
-      "excellence": { "title": "Mükemmellik", "desc": "Temiz araçlar, dakik hizmet ve her ayrıntıya özen." },
-      "faith": { "title": "Saygı", "desc": "Yolculuğunuzun kutsallığını anlayan ve ona saygı gösteren şoförler." }
+      "trust": {
+        "title": "Güven",
+        "desc": "Şeffaf, anlaşılan fiyatlarla lisanslı operatör ve hiçbir sürpriz yok."
+      },
+      "care": {
+        "title": "Özen",
+        "desc": "Her misafire Allah'ın evinin onurlu bir ziyaretçisi gibi davranırız."
+      },
+      "excellence": {
+        "title": "Mükemmellik",
+        "desc": "Temiz araçlar, dakik hizmet ve her ayrıntıya özen."
+      },
+      "faith": {
+        "title": "Saygı",
+        "desc": "Yolculuğunuzun kutsallığını anlayan ve ona saygı gösteren şoförler."
+      }
     },
     "licenseTitle": "Lisans ve Kayıt",
     "licenseIntro": "Al-Saleem Integrated Transport Company, Suudi Arabistan Krallığı düzenlemeleri kapsamında tamamen lisanslı olarak faaliyet gösterir.",
@@ -256,16 +383,46 @@
     "title": "Sıkça Sorulan Sorular",
     "subtitle": "Rezervasyon, fiyat, kapsam ve ziyaret yolculuğunuz hakkında açık yanıtlar.",
     "items": [
-      { "q": "Nasıl rezervasyon yaparım?", "a": "En hızlı yol WhatsApp. Rezervasyon sayfamızdaki formu kullanın veya alım, bırakma, tarih, saat ve yolcu sayınızla doğrudan +966 50 068 9196'ya yazın. Ücretinizi ve aracınızı dakikalar içinde onaylarız." },
-      { "q": "Fiyatı ne kadar?", "a": "Yolculuktan önce anlaşılan sabit, şeffaf ücretler kullanırız - taksimetre veya gizli ücret yok. Fiyat güzergâha, araç türüne ve yolcu sayısına bağlıdır. Kesin teklif için yolculuk bilgilerinizi WhatsApp'tan gönderin." },
-      { "q": "Hangi bölgelere hizmet veriyorsunuz?", "a": "Mekke, Medine, Cidde ve Taif'e hizmet veriyoruz; havalimanı ve otel transferleri dâhil, ayrıca talep üzerine tüm Suudi Arabistan'a seyahat ediyoruz." },
-      { "q": "Ne tür araçlarınız var?", "a": "Sedan (1-3 yolcu), SUV (1-5), Toyota Hiace gibi vanlar (6-11) ve coaster/otobüsler (12+). Tüm araçlar temiz, klimalı ve bakımlıdır. Grup büyüklüğünüzü ve bagajınızı bildirin, doğru olanı önerelim." },
-      { "q": "Cidde ve Medine'den havalimanı alımı sunuyor musunuz?", "a": "Evet. Cidde (King Abdulaziz Uluslararası) ve Medine havalimanlarından, indiğinizde orada olmamız için uçuş takibiyle doğrudan Mekke veya Medine'deki otelinize karşılamalı transfer sağlıyoruz." },
-      { "q": "Tam bir ziyaret turu ayarlayabilir misiniz?", "a": "Kesinlikle. Mekke, Medine ve Taif'teki mübarek mekânlara rahat bir tempoda, mekânları bilen ve namaz ile tefekkür için vaktinize saygı gösteren bir şoförle rehberli ziyaret turları düzenliyoruz." },
-      { "q": "Şoförleriniz profesyonel ve lisanslı mı?", "a": "Evet. Şoförlerimiz güvenilir, deneyimli ve nazik; tamamen lisanslı bir Suudi ulaşım şirketi (Lisans No. 35/00008116) olarak faaliyet gösteriyoruz." },
-      { "q": "Nasıl ödeme yaparım?", "a": "Ödeme düzenlemeleri rezervasyon sırasında WhatsApp'ta sizinle onaylanır. Her şeyi şeffaf ve önceden anlaşılmış tutarız." },
-      { "q": "İptal politikanız nedir?", "a": "Planlar değişir, özellikle Umre ve Hac sırasında. Lütfen mümkün olan en kısa sürede WhatsApp'tan bildirin; herhangi bir değişikliği veya iptali karşılamak için elimizden geleni yaparız." },
-      { "q": "Destek gerçekten 7/24 mü?", "a": "Evet. Uçuşlar ve ibadetler her saat gerçekleşir, bu yüzden gece gündüz her an WhatsApp'tan gerçek bir kişiye ulaşabilirsiniz." }
+      {
+        "q": "Nasıl rezervasyon yaparım?",
+        "a": "En hızlı yol WhatsApp. Rezervasyon sayfamızdaki formu kullanın veya alım, bırakma, tarih, saat ve yolcu sayınızla doğrudan +966 50 068 9196'ya yazın. Ücretinizi ve aracınızı dakikalar içinde onaylarız."
+      },
+      {
+        "q": "Fiyatı ne kadar?",
+        "a": "Yolculuktan önce anlaşılan sabit, şeffaf ücretler kullanırız - taksimetre veya gizli ücret yok. Fiyat güzergâha, araç türüne ve yolcu sayısına bağlıdır. Kesin teklif için yolculuk bilgilerinizi WhatsApp'tan gönderin."
+      },
+      {
+        "q": "Hangi bölgelere hizmet veriyorsunuz?",
+        "a": "Mekke, Medine, Cidde ve Taif'e hizmet veriyoruz; havalimanı ve otel transferleri dâhil, ayrıca talep üzerine tüm Suudi Arabistan'a seyahat ediyoruz."
+      },
+      {
+        "q": "Ne tür araçlarınız var?",
+        "a": "Sedan (1-3 yolcu), SUV (1-5), Toyota Hiace gibi vanlar (6-11) ve coaster/otobüsler (12+). Tüm araçlar temiz, klimalı ve bakımlıdır. Grup büyüklüğünüzü ve bagajınızı bildirin, doğru olanı önerelim."
+      },
+      {
+        "q": "Cidde ve Medine'den havalimanı alımı sunuyor musunuz?",
+        "a": "Evet. Cidde (King Abdulaziz Uluslararası) ve Medine havalimanlarından, indiğinizde orada olmamız için uçuş takibiyle doğrudan Mekke veya Medine'deki otelinize karşılamalı transfer sağlıyoruz."
+      },
+      {
+        "q": "Tam bir ziyaret turu ayarlayabilir misiniz?",
+        "a": "Kesinlikle. Mekke, Medine ve Taif'teki mübarek mekânlara rahat bir tempoda, mekânları bilen ve namaz ile tefekkür için vaktinize saygı gösteren bir şoförle rehberli ziyaret turları düzenliyoruz."
+      },
+      {
+        "q": "Şoförleriniz profesyonel ve lisanslı mı?",
+        "a": "Evet. Şoförlerimiz güvenilir, deneyimli ve nazik; tamamen lisanslı bir Suudi ulaşım şirketi (Lisans No. 35/00008116) olarak faaliyet gösteriyoruz."
+      },
+      {
+        "q": "Nasıl ödeme yaparım?",
+        "a": "Ödeme düzenlemeleri rezervasyon sırasında WhatsApp'ta sizinle onaylanır. Her şeyi şeffaf ve önceden anlaşılmış tutarız."
+      },
+      {
+        "q": "İptal politikanız nedir?",
+        "a": "Planlar değişir, özellikle Umre ve Hac sırasında. Lütfen mümkün olan en kısa sürede WhatsApp'tan bildirin; herhangi bir değişikliği veya iptali karşılamak için elimizden geleni yaparız."
+      },
+      {
+        "q": "Destek gerçekten 7/24 mü?",
+        "a": "Evet. Uçuşlar ve ibadetler her saat gerçekleşir, bu yüzden gece gündüz her an WhatsApp'tan gerçek bir kişiye ulaşabilirsiniz."
+      }
     ]
   },
   "guide": {
@@ -281,14 +438,38 @@
     "onThisPage": "Bu sayfada",
     "chaptersTitle": "İçindekiler",
     "chapters": {
-      "makkah": { "title": "Mekke", "desc": "Kutsal şehre, Kâbe'ye ve Mescid-i Haram'a giriş." },
-      "umrah": { "title": "Umre, Adım Adım", "desc": "Umre menasiki açıkça, sırasıyla açıklanmış." },
-      "hajj": { "title": "Hac, Adım Adım", "desc": "Haccın gün gün anlatımı." },
-      "sacredSites": { "title": "Mekke'nin Kutsal Mekânları", "desc": "Ziyaret edilecek mübarek ve tarihi yerler." },
-      "taif": { "title": "Taif", "desc": "Dağ şehri ve Peygamber ﷺ'in hayatındaki yeri." },
-      "madinah": { "title": "Medine", "desc": "Peygamber ﷺ'in şehri, Mescid-i Nebevi ve ziyareti." },
-      "badr": { "title": "Bedir", "desc": "İlk büyük savaşın yeri ve şehitleri." },
-      "family": { "title": "Peygamber ﷺ'in Ailesi", "desc": "Peygamber ﷺ'in eşleri ve çocukları hakkında ek." }
+      "makkah": {
+        "title": "Mekke",
+        "desc": "Kutsal şehre, Kâbe'ye ve Mescid-i Haram'a giriş."
+      },
+      "umrah": {
+        "title": "Umre, Adım Adım",
+        "desc": "Umre menasiki açıkça, sırasıyla açıklanmış."
+      },
+      "hajj": {
+        "title": "Hac, Adım Adım",
+        "desc": "Haccın gün gün anlatımı."
+      },
+      "sacredSites": {
+        "title": "Mekke'nin Kutsal Mekânları",
+        "desc": "Ziyaret edilecek mübarek ve tarihi yerler."
+      },
+      "taif": {
+        "title": "Taif",
+        "desc": "Dağ şehri ve Peygamber ﷺ'in hayatındaki yeri."
+      },
+      "madinah": {
+        "title": "Medine",
+        "desc": "Peygamber ﷺ'in şehri, Mescid-i Nebevi ve ziyareti."
+      },
+      "badr": {
+        "title": "Bedir",
+        "desc": "İlk büyük savaşın yeri ve şehitleri."
+      },
+      "family": {
+        "title": "Peygamber ﷺ'in Ailesi",
+        "desc": "Peygamber ﷺ'in eşleri ve çocukları hakkında ek."
+      }
     },
     "verseLabel": "Kur'an",
     "hadithLabel": "Hadis",
@@ -316,61 +497,128 @@
       "title": "Gizlilik Politikası",
       "intro": "Bu Gizlilik Politikası, web sitemizi kullandığınızda veya hizmetlerimizi rezerve ettiğinizde Al-Saleem Integrated Transport Company'nin (\"biz\") bilgileri nasıl ele aldığını açıklar.",
       "sections": [
-        { "heading": "Topladığımız bilgiler", "body": "Bir yolculuk rezerve ettiğinizde, sağladığınız bilgileri - adınız, telefon numaranız, alım ve bırakma yerleriniz, seyahat tarihiniz ve varsa notlarınız gibi - toplarız. WhatsApp veya e-posta ile bize ulaşırsanız, bu mesajlardaki bilgileri alırız." },
-        { "heading": "Bilgilerinizi nasıl kullanırız", "body": "Bilgilerinizi yalnızca ulaşımınızı düzenlemek, onaylamak ve sağlamak, rezervasyonunuz hakkında sizinle iletişim kurmak ve hizmetimizi geliştirmek için kullanırız. Kişisel bilgilerinizi satmayız." },
-        { "heading": "WhatsApp ve mesajlaşma", "body": "Rezervasyonlar genellikle WhatsApp üzerinden tamamlanır. Gönderdiğiniz mesajlar WhatsApp'ın kendi gizlilik politikasına da tabidir. Mesajınızdaki bilgileri yalnızca rezervasyonunuza hizmet etmek için kullanırız." },
-        { "heading": "Çerezler", "body": "Web sitemiz, seçtiğiniz dili hatırlamak için minimal bir çerez kullanır. Bunu diğer web sitelerinde sizi izlemek için kullanmayız." },
-        { "heading": "Veri saklama", "body": "Rezervasyon bilgilerini yalnızca hizmeti sağlamak ve yasal veya muhasebe gerekliliklerini karşılamak için gereken süre boyunca saklarız, sonrasında kaldırılır." },
-        { "heading": "Haklarınız", "body": "Hakkınızda hangi bilgileri tuttuğumuzu sorabilir ve bunların düzeltilmesini veya silinmesini talep edebilirsiniz. Aşağıdaki bilgilerden bize ulaşın." },
-        { "heading": "İletişim", "body": "Herhangi bir gizlilik sorusu için WhatsApp +966 50 068 9196 veya info@alsaleemtransport.com e-postasından bize ulaşın." }
+        {
+          "heading": "Topladığımız bilgiler",
+          "body": "Bir yolculuk rezerve ettiğinizde, sağladığınız bilgileri - adınız, telefon numaranız, alım ve bırakma yerleriniz, seyahat tarihiniz ve varsa notlarınız gibi - toplarız. WhatsApp veya e-posta ile bize ulaşırsanız, bu mesajlardaki bilgileri alırız."
+        },
+        {
+          "heading": "Bilgilerinizi nasıl kullanırız",
+          "body": "Bilgilerinizi yalnızca ulaşımınızı düzenlemek, onaylamak ve sağlamak, rezervasyonunuz hakkında sizinle iletişim kurmak ve hizmetimizi geliştirmek için kullanırız. Kişisel bilgilerinizi satmayız."
+        },
+        {
+          "heading": "WhatsApp ve mesajlaşma",
+          "body": "Rezervasyonlar genellikle WhatsApp üzerinden tamamlanır. Gönderdiğiniz mesajlar WhatsApp'ın kendi gizlilik politikasına da tabidir. Mesajınızdaki bilgileri yalnızca rezervasyonunuza hizmet etmek için kullanırız."
+        },
+        {
+          "heading": "Çerezler",
+          "body": "Web sitemiz, seçtiğiniz dili hatırlamak için minimal bir çerez kullanır. Bunu diğer web sitelerinde sizi izlemek için kullanmayız."
+        },
+        {
+          "heading": "Veri saklama",
+          "body": "Rezervasyon bilgilerini yalnızca hizmeti sağlamak ve yasal veya muhasebe gerekliliklerini karşılamak için gereken süre boyunca saklarız, sonrasında kaldırılır."
+        },
+        {
+          "heading": "Haklarınız",
+          "body": "Hakkınızda hangi bilgileri tuttuğumuzu sorabilir ve bunların düzeltilmesini veya silinmesini talep edebilirsiniz. Aşağıdaki bilgilerden bize ulaşın."
+        },
+        {
+          "heading": "İletişim",
+          "body": "Herhangi bir gizlilik sorusu için WhatsApp +966 50 068 9196 veya info@alsaleemtransport.com e-postasından bize ulaşın."
+        }
       ]
     },
     "terms": {
       "title": "Hizmet Şartları",
       "intro": "Bu Şartlar, Al-Saleem Integrated Transport Company web sitesi ve hizmetlerinin kullanımını düzenler. Bizimle rezervasyon yaparak bu Şartları kabul edersiniz.",
       "sections": [
-        { "heading": "Hizmetlerimiz", "body": "Mekke, Medine, Cidde, Taif ve tüm Suudi Arabistan'da lisanslı yolcu ulaşımı sağlıyoruz - havalimanı transferi, otel transferi, ziyaret turları, Umre ve Hac ulaşımı ve şehirlerarası yolculuklar." },
-        { "heading": "Rezervasyonlar ve ücretler", "body": "Ücretler sabittir ve yolculuktan önce sizinle anlaşılır. Rezervasyon, talebinizi onayladığımızda kesinleşir. Size iyi hizmet verebilmemiz için lütfen doğru alım bilgileri, zamanlama ve yolcu sayısı sağlayın." },
-        { "heading": "İptaller ve değişiklikler", "body": "Bir rezervasyonu değiştirmeniz veya iptal etmeniz gerekiyorsa lütfen mümkün olan en kısa sürede WhatsApp'tan bildirin. Özellikle Umre ve Hac sırasında değişiklikleri karşılamaya her zaman çalışırız." },
-        { "heading": "Sorumluluklarınız", "body": "Lütfen anlaşılan alım saatinde ve yerinde hazır olun, şoförün makul güvenlik talimatlarına uyun ve aracı ile şoföre saygıyla davranın." },
-        { "heading": "Sorumluluk", "body": "Güvenli, dakik ulaşım sağlamaya büyük özen gösteririz, ancak trafik, hava durumu, yol kapanmaları veya yoğun sezonlardaki kalabalık gibi kontrolümüz dışındaki nedenlerden kaynaklanan gecikmelerden sorumlu değiliz." },
-        { "heading": "Geçerli hukuk", "body": "Bu Şartlar, Suudi Arabistan Krallığı yasalarına tabidir." },
-        { "heading": "İletişim", "body": "Bu Şartlar hakkında sorularınız mı var? WhatsApp +966 50 068 9196 veya info@alsaleemtransport.com e-postasından bize ulaşın." }
+        {
+          "heading": "Hizmetlerimiz",
+          "body": "Mekke, Medine, Cidde, Taif ve tüm Suudi Arabistan'da lisanslı yolcu ulaşımı sağlıyoruz - havalimanı transferi, otel transferi, ziyaret turları, Umre ve Hac ulaşımı ve şehirlerarası yolculuklar."
+        },
+        {
+          "heading": "Rezervasyonlar ve ücretler",
+          "body": "Ücretler sabittir ve yolculuktan önce sizinle anlaşılır. Rezervasyon, talebinizi onayladığımızda kesinleşir. Size iyi hizmet verebilmemiz için lütfen doğru alım bilgileri, zamanlama ve yolcu sayısı sağlayın."
+        },
+        {
+          "heading": "İptaller ve değişiklikler",
+          "body": "Bir rezervasyonu değiştirmeniz veya iptal etmeniz gerekiyorsa lütfen mümkün olan en kısa sürede WhatsApp'tan bildirin. Özellikle Umre ve Hac sırasında değişiklikleri karşılamaya her zaman çalışırız."
+        },
+        {
+          "heading": "Sorumluluklarınız",
+          "body": "Lütfen anlaşılan alım saatinde ve yerinde hazır olun, şoförün makul güvenlik talimatlarına uyun ve aracı ile şoföre saygıyla davranın."
+        },
+        {
+          "heading": "Sorumluluk",
+          "body": "Güvenli, dakik ulaşım sağlamaya büyük özen gösteririz, ancak trafik, hava durumu, yol kapanmaları veya yoğun sezonlardaki kalabalık gibi kontrolümüz dışındaki nedenlerden kaynaklanan gecikmelerden sorumlu değiliz."
+        },
+        {
+          "heading": "Geçerli hukuk",
+          "body": "Bu Şartlar, Suudi Arabistan Krallığı yasalarına tabidir."
+        },
+        {
+          "heading": "İletişim",
+          "body": "Bu Şartlar hakkında sorularınız mı var? WhatsApp +966 50 068 9196 veya info@alsaleemtransport.com e-postasından bize ulaşın."
+        }
       ]
     }
   },
   "ziyaratLocation": {
-      "title": "Konum",
-      "cityLabel": "Şehir",
-      "pdfCoordinates": "Koordinatlar",
-      "scanForDirections": "Yol tarifi için tarayın",
-      "distanceLabel": "Mesafe",
-      "driveLabel": "Yolculuk süresi",
-      "directions": "Yol Tarifi Al",
-      "appleMaps": "Apple Haritalar",
-      "book": "Bu Ziyareti ayırt",
-      "fromHaram": "Mescid-i Haram'dan",
-      "fromNabawi": "Mescid-i Nebevi'den",
-      "approx": "yaklaşık",
-      "km": "km",
-      "min": "dk",
-      "bestTimeLabel": "En iyi zaman",
-      "waMessage": "Esselamu aleyküm, {place} için bir Ziyaret gezisi ayırtmak istiyorum.",
-      "bestTime": {
-        "earlyMorning": "Sabah erken",
-        "morning": "Sabah",
-        "afterFajr": "Sabah namazından sonra"
-      },
-      "city": {
-        "makkah": "Mekke",
-        "madinah": "Medine",
-        "taif": "Taif",
-        "jeddah": "Cidde"
-      }
+    "title": "Konum",
+    "cityLabel": "Şehir",
+    "pdfCoordinates": "Koordinatlar",
+    "scanForDirections": "Yol tarifi için tarayın",
+    "distanceLabel": "Mesafe",
+    "driveLabel": "Yolculuk süresi",
+    "directions": "Yol Tarifi Al",
+    "appleMaps": "Apple Haritalar",
+    "book": "Bu Ziyareti ayırt",
+    "fromHaram": "Mescid-i Haram'dan",
+    "fromNabawi": "Mescid-i Nebevi'den",
+    "approx": "yaklaşık",
+    "km": "km",
+    "min": "dk",
+    "bestTimeLabel": "En iyi zaman",
+    "waMessage": "Esselamu aleyküm, {place} için bir Ziyaret gezisi ayırtmak istiyorum.",
+    "bestTime": {
+      "earlyMorning": "Sabah erken",
+      "morning": "Sabah",
+      "afterFajr": "Sabah namazından sonra"
     },
-  "ziyaratIndex": {
-      "title": "Tüm Ziyaret Noktaları",
-      "subtitle": "Bu rehberdeki tüm yerler, şehirlere göre gruplanmış. Harita uygulamanızda açmak için Yol Tarifi'ne dokunun.",
-      "fullRoute": "Tüm rotayı Google Haritalar'da aç"
+    "city": {
+      "makkah": "Mekke",
+      "madinah": "Medine",
+      "taif": "Taif",
+      "jeddah": "Cidde"
     }
+  },
+  "ziyaratIndex": {
+    "title": "Tüm Ziyaret Noktaları",
+    "subtitle": "Bu rehberdeki tüm yerler, şehirlere göre gruplanmış. Harita uygulamanızda açmak için Yol Tarifi'ne dokunun.",
+    "fullRoute": "Tüm rotayı Google Haritalar'da aç"
+  },
+  "trustBar": {
+    "support": "Destek ve rezervasyon",
+    "cities": "Hizmet verilen şehir",
+    "languages": "Konuşulan dil",
+    "vehicles": "Araç sınıfı"
+  },
+  "howItWorks": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Rezervasyon tek mesaj",
+    "subtitle": "Hesap yok, uzun form yok. Mesaj atın, yolculuk ayarlansın.",
+    "steps": {
+      "message": {
+        "title": "WhatsApp'tan mesaj atın",
+        "desc": "Güzergâhınızı, tarihi ve kişi sayısını gönderin. Her sayfadan tek dokunuş."
+      },
+      "confirm": {
+        "title": "Aracı ve sürücüyü onaylıyoruz",
+        "desc": "Ekibimiz grubunuza uygun araçla yanıt verir ve ücreti doğrudan sizinle netleştirir."
+      },
+      "arrive": {
+        "title": "Sürücü zamanında gelir",
+        "desc": "Sürücünüz kararlaştırılan yerde sizi karşılar, uçuşunuzu takip eder ve bagajda yardımcı olur."
+      }
+    }
+  }
 }
