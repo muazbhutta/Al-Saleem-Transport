@@ -324,7 +324,17 @@
     "labelTime": "Waktu",
     "labelPassengers": "Penumpang",
     "labelNotes": "Catatan",
-    "emailSubject": "Permintaan pemesanan baru - Al-Saleem Transport"
+    "emailSubject": "Permintaan pemesanan baru - Al-Saleem Transport",
+    "commonRoutes": "Rute umum",
+    "chooseVehicle": "Pilih kendaraan",
+    "anyVehicle": "Biar kami yang pilih",
+    "fareNote": "Tarif dikonfirmasi via WhatsApp dalam hitungan menit — tanpa pembayaran sekarang.",
+    "required": "Wajib",
+    "successTitle": "Membuka WhatsApp…",
+    "successBody": "Detail Anda sudah terisi. Kirim pesannya dan tim kami akan mengonfirmasi kendaraan serta tarif.",
+    "stepRoute": "Rute",
+    "stepVehicle": "Kendaraan",
+    "stepDetails": "Detail"
   },
   "about": {
     "eyebrow": "Tentang Kami",

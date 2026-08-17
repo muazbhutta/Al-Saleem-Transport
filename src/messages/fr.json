@@ -324,7 +324,17 @@
     "labelTime": "Heure",
     "labelPassengers": "Passagers",
     "labelNotes": "Notes",
-    "emailSubject": "Nouvelle demande de réservation - Al-Saleem Transport"
+    "emailSubject": "Nouvelle demande de réservation - Al-Saleem Transport",
+    "commonRoutes": "Trajets fréquents",
+    "chooseVehicle": "Choisissez un véhicule",
+    "anyVehicle": "Laissez-nous choisir",
+    "fareNote": "Votre tarif est confirmé sur WhatsApp en quelques minutes — aucun paiement maintenant.",
+    "required": "Obligatoire",
+    "successTitle": "Ouverture de WhatsApp…",
+    "successBody": "Vos informations sont pré-remplies. Envoyez le message et notre équipe confirmera le véhicule et le tarif.",
+    "stepRoute": "Trajet",
+    "stepVehicle": "Véhicule",
+    "stepDetails": "Détails"
   },
   "about": {
     "eyebrow": "À propos",

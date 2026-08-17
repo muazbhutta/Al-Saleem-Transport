@@ -324,7 +324,17 @@
     "labelTime": "Masa",
     "labelPassengers": "Penumpang",
     "labelNotes": "Nota",
-    "emailSubject": "Permintaan tempahan baharu - Al-Saleem Transport"
+    "emailSubject": "Permintaan tempahan baharu - Al-Saleem Transport",
+    "commonRoutes": "Laluan biasa",
+    "chooseVehicle": "Pilih kenderaan",
+    "anyVehicle": "Biar kami pilih",
+    "fareNote": "Tambang disahkan di WhatsApp dalam beberapa minit — tiada bayaran sekarang.",
+    "required": "Diperlukan",
+    "successTitle": "Membuka WhatsApp…",
+    "successBody": "Butiran anda telah diisi. Hantar mesej dan pasukan kami akan sahkan kenderaan serta tambang.",
+    "stepRoute": "Laluan",
+    "stepVehicle": "Kenderaan",
+    "stepDetails": "Butiran"
   },
   "about": {
     "eyebrow": "Tentang Kami",

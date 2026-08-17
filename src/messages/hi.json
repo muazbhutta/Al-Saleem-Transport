@@ -324,7 +324,17 @@
     "labelTime": "समय",
     "labelPassengers": "यात्री",
     "labelNotes": "टिप्पणी",
-    "emailSubject": "नई बुकिंग अनुरोध - अल-सलीम ट्रांसपोर्ट"
+    "emailSubject": "नई बुकिंग अनुरोध - अल-सलीम ट्रांसपोर्ट",
+    "commonRoutes": "सामान्य रूट",
+    "chooseVehicle": "वाहन चुनें",
+    "anyVehicle": "हम पर छोड़ दें",
+    "fareNote": "किराया कुछ ही मिनटों में व्हाट्सएप पर तय होता है — अभी भुगतान नहीं।",
+    "required": "आवश्यक",
+    "successTitle": "व्हाट्सएप खुल रहा है…",
+    "successBody": "आपका विवरण भर दिया गया है। संदेश भेजें, हमारी टीम वाहन और किराया पक्का करेगी।",
+    "stepRoute": "रूट",
+    "stepVehicle": "वाहन",
+    "stepDetails": "विवरण"
   },
   "about": {
     "eyebrow": "हमारे बारे में",

@@ -324,7 +324,17 @@
     "labelTime": "Waqt",
     "labelPassengers": "Musafir",
     "labelNotes": "Notes",
-    "emailSubject": "Nayi Booking ki Darkhwast - Al-Saleem Transport"
+    "emailSubject": "Nayi Booking ki Darkhwast - Al-Saleem Transport",
+    "commonRoutes": "Aam routes",
+    "chooseVehicle": "Gaari muntakhab karein",
+    "anyVehicle": "Hum par chhor dein",
+    "fareNote": "Kiraya chand minute mein WhatsApp par tay ho jata hai — abhi adaigi nahi.",
+    "required": "Lazmi",
+    "successTitle": "WhatsApp khul raha hai…",
+    "successBody": "Aap ki tafseelat tayyar hain. Paigham bhejein, hamari team gaari aur kiraya confirm karegi.",
+    "stepRoute": "Route",
+    "stepVehicle": "Gaari",
+    "stepDetails": "Tafseelat"
   },
   "about": {
     "eyebrow": "Hamare Bare Mein",

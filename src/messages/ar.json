@@ -324,7 +324,17 @@
     "labelTime": "الوقت",
     "labelPassengers": "الركّاب",
     "labelNotes": "ملاحظات",
-    "emailSubject": "طلب حجز جديد - السليم للنقل"
+    "emailSubject": "طلب حجز جديد - السليم للنقل",
+    "commonRoutes": "رحلات شائعة",
+    "chooseVehicle": "اختر المركبة",
+    "anyVehicle": "اتركوا الاختيار لنا",
+    "fareNote": "يُؤكَّد السعر عبر واتساب خلال دقائق — لا دفع الآن.",
+    "required": "مطلوب",
+    "successTitle": "جارٍ فتح واتساب…",
+    "successBody": "بياناتك جاهزة. أرسل الرسالة وسيؤكد فريقنا المركبة والسعر.",
+    "stepRoute": "المسار",
+    "stepVehicle": "المركبة",
+    "stepDetails": "التفاصيل"
   },
   "about": {
     "eyebrow": "من نحن",

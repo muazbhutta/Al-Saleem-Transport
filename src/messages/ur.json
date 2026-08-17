@@ -324,7 +324,17 @@
     "labelTime": "وقت",
     "labelPassengers": "مسافر",
     "labelNotes": "نوٹس",
-    "emailSubject": "نئی بکنگ کی درخواست - السلیم ٹرانسپورٹ"
+    "emailSubject": "نئی بکنگ کی درخواست - السلیم ٹرانسپورٹ",
+    "commonRoutes": "عام روٹس",
+    "chooseVehicle": "گاڑی منتخب کریں",
+    "anyVehicle": "ہم پر چھوڑ دیں",
+    "fareNote": "کرایہ چند منٹ میں واٹس ایپ پر طے ہو جاتا ہے — ابھی ادائیگی نہیں۔",
+    "required": "لازمی",
+    "successTitle": "واٹس ایپ کھل رہا ہے…",
+    "successBody": "آپ کی تفصیلات تیار ہیں۔ پیغام بھیجیں، ہماری ٹیم گاڑی اور کرایہ کنفرم کرے گی۔",
+    "stepRoute": "روٹ",
+    "stepVehicle": "گاڑی",
+    "stepDetails": "تفصیلات"
   },
   "about": {
     "eyebrow": "ہمارے بارے میں",
