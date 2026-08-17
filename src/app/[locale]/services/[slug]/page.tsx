@@ -177,7 +177,7 @@ export default async function ServicePage({ params }: { params: Params }) {
           <ContactLink
             method="call"
             href={telLink}
-            className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-inverse/80 hover:text-brass-300"
+            className="inline-flex min-h-11 items-center gap-2 px-2 text-sm font-medium text-on-surface-inverse/80 hover:text-brass-300"
             dir="ltr"
           >
             <Phone className="h-4 w-4" aria-hidden />

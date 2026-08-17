@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t('chooseLanguage')}
-        className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-navy-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-navy-700 transition hover:border-gold hover:text-navy focus-visible:ring-2 focus-visible:ring-gold"
+        className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-emerald-800/15 bg-white/80 px-3 py-2 text-sm font-medium text-ink-soft transition hover:border-brass-500 hover:text-ink focus-visible:ring-2 focus-visible:ring-brass-500"
       >
         <Globe className="h-4 w-4 shrink-0" aria-hidden />
         {!compact && <span className="max-w-[7rem] truncate">{current.label}</span>}
@@ -64,7 +64,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         <ul
           role="listbox"
           aria-label={t('chooseLanguage')}
-          className="absolute end-0 z-50 mt-2 max-h-80 w-56 overflow-auto rounded-2xl border border-navy-100 bg-white p-1.5 shadow-card"
+          className="absolute end-0 z-50 mt-2 max-h-80 w-56 overflow-auto rounded-2xl border border-emerald-800/10 bg-white p-1.5 shadow-card"
         >
           {languages.map((lang) => {
             const active = lang.code === locale;
@@ -75,12 +75,12 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
                   onClick={() => change(lang.code)}
                   dir={lang.dir}
                   className={`flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm transition ${
-                    active ? 'bg-teal/10 text-teal-dark' : 'text-navy-700 hover:bg-navy-50'
+                    active ? 'bg-emerald-500/10 text-emerald-700' : 'text-ink-soft hover:bg-emerald-50'
                   }`}
                 >
                   <span className="flex flex-col text-start">
                     <span className="font-medium">{lang.label}</span>
-                    <span className="text-xs text-navy-400">{lang.english}</span>
+                    <span className="text-xs text-ink-faint">{lang.english}</span>
                   </span>
                   {active && <Check className="h-4 w-4 shrink-0" aria-hidden />}
                 </button>

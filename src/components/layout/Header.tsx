@@ -35,15 +35,18 @@ export default function Header({ locale }: { locale: string }) {
     <header
       className={`no-print sticky top-0 z-40 transition-shadow duration-300 ${
         scrolled
-          ? 'bg-cream/90 shadow-soft backdrop-blur supports-[backdrop-filter]:bg-cream/80'
-          : 'bg-cream'
+          ? 'bg-surface-base/90 shadow-soft backdrop-blur supports-[backdrop-filter]:bg-surface-base/80'
+          : 'bg-surface-base'
       }`}
     >
       {/* Top trust strip */}
-      <div className="hidden bg-navy text-cream-100/90 md:block">
-        <div className="container flex items-center justify-between gap-4 whitespace-nowrap py-1.5 text-xs">
+      <div className="hidden bg-emerald-800 text-on-surface-inverse/90 md:block">
+        {/* min-h-6 on the row, not the link: the strip's own py-1.5 left the
+            phone link a 16px-tall tap target, under the 24px WCAG 2.5.8 floor,
+            without changing the strip's visual height. */}
+        <div className="container flex min-h-6 items-center justify-between gap-4 whitespace-nowrap py-1.5 text-xs">
           <span className="inline-flex items-center gap-1.5">
-            <ShieldCheck className="h-3.5 w-3.5 text-gold" aria-hidden />
+            <ShieldCheck className="h-3.5 w-3.5 text-brass-500" aria-hidden />
             {tc('licensed')} · {tc('licenseNo')} {site.licenseNo}
           </span>
           <span className="inline-flex items-center gap-4">
@@ -51,7 +54,7 @@ export default function Header({ locale }: { locale: string }) {
             <ContactLink
               method="call"
               href={telLink}
-              className="inline-flex items-center gap-1.5 hover:text-gold"
+              className="inline-flex min-h-6 items-center gap-1.5 hover:text-brass-500"
               dir="ltr"
             >
               <Phone className="h-3.5 w-3.5" aria-hidden />
@@ -75,8 +78,8 @@ export default function Header({ locale }: { locale: string }) {
                 href={item.path}
                 className={`whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors ${
                   active
-                    ? 'bg-navy text-cream-100'
-                    : 'text-navy-700 hover:bg-navy-50 hover:text-navy'
+                    ? 'bg-emerald-800 text-on-surface-inverse'
+                    : 'text-ink-soft hover:bg-emerald-50 hover:text-ink'
                 }`}
               >
                 {t(item.key)}
@@ -110,7 +113,7 @@ export default function Header({ locale }: { locale: string }) {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? tc('closeMenu') : tc('openMenu')}
             aria-expanded={open}
-            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-navy-200 text-navy xl:hidden"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-emerald-800/20 text-ink xl:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -119,18 +122,18 @@ export default function Header({ locale }: { locale: string }) {
 
       {/* Mobile / tablet drawer */}
       {open && (
-        <div className="border-t border-navy-100 bg-cream xl:hidden">
+        <div className="border-t border-emerald-800/10 bg-surface-base xl:hidden">
           <nav aria-label="Mobile" className="container flex flex-col gap-1 py-4">
             {mainNav.map((item) => (
               <Link
                 key={item.key}
                 href={item.path}
-                className="rounded-xl px-4 py-3 text-base font-medium text-navy-700 hover:bg-navy-50"
+                className="rounded-xl px-4 py-3 text-base font-medium text-ink-soft hover:bg-emerald-50"
               >
                 {t(item.key)}
               </Link>
             ))}
-            <div className="mt-3 flex flex-col gap-2 border-t border-navy-100 pt-4">
+            <div className="mt-3 flex flex-col gap-2 border-t border-emerald-800/10 pt-4">
               {/* Book Now (WhatsApp) + quick-call live inside the drawer on mobile/tablet. */}
               <ContactLink
                 method="whatsapp"

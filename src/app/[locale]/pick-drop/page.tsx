@@ -7,6 +7,7 @@ import { site, telLink, whatsappLink } from '@/lib/site';
 import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
+import { Section } from '@/components/ui/Section';
 import BookingForm from '@/components/booking/BookingForm';
 
 export async function generateMetadata({
@@ -62,7 +63,7 @@ export default async function PickDropPage({ params }: { params: { locale: strin
         crumbs={[{ name: tn('pickDrop'), path: '/pick-drop' }]}
       />
 
-      <section id="booking-form" className="section scroll-mt-24 bg-cream">
+      <Section id="booking-form" surface="base" className="scroll-mt-24">
         <div className="container grid gap-8 lg:grid-cols-[1.6fr_1fr]">
           <BookingForm />
 
@@ -84,7 +85,7 @@ export default async function PickDropPage({ params }: { params: { locale: strin
                 <Phone className="h-4 w-4" aria-hidden />
                 {site.phoneDisplay}
               </ContactLink>
-              <p className="text-sm text-navy-500">{tc('support247')}</p>
+              <p className="text-sm text-ink-soft">{tc('support247')}</p>
             </div>
 
             <div className="card flex flex-col gap-3">
@@ -92,23 +93,23 @@ export default async function PickDropPage({ params }: { params: { locale: strin
                 {perks.map((p) => (
                   <li
                     key={p.text}
-                    className="flex items-center gap-3 text-sm text-navy-700 max-sm:relative max-sm:min-h-[2.25rem] max-sm:justify-center max-sm:gap-0"
+                    className="flex items-center gap-3 text-sm text-ink-soft max-sm:relative max-sm:min-h-[2.25rem] max-sm:justify-center max-sm:gap-0"
                   >
-                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-teal/10 text-teal-dark max-sm:absolute max-sm:left-0 max-sm:top-1/2 max-sm:-translate-y-1/2">
+                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-700 max-sm:absolute max-sm:start-0 max-sm:top-1/2 max-sm:-translate-y-1/2">
                       <p.icon className="h-5 w-5" aria-hidden />
                     </span>
                     <span className="max-sm:text-center">{p.text}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-navy px-3 py-1.5 text-xs text-cream-100 max-sm:mx-auto">
-                <ShieldCheck className="h-4 w-4 text-gold" aria-hidden />
+              <div className="mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-emerald-800 px-3 py-1.5 text-xs text-on-surface-inverse max-sm:mx-auto">
+                <ShieldCheck className="h-4 w-4 text-brass-500" aria-hidden />
                 {tc('licenseNo')} {site.licenseNo}
               </div>
             </div>
           </aside>
         </div>
-      </section>
+      </Section>
     </>
   );
 }

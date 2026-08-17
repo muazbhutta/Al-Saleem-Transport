@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { HelpCircle, ArrowRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import Reveal from '@/components/ui/Reveal';
+import { Section, SectionHeader } from '@/components/ui/Section';
 
 export default async function FaqTeaser() {
   const t = await getTranslations('faqPage');
@@ -9,12 +10,10 @@ export default async function FaqTeaser() {
   const items = (t.raw('items') as { q: string; a: string }[]).slice(0, 4);
 
   return (
-    <section className="section bg-surface-base text-on-surface-base">
+    <Section surface="base">
       <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-16">
         <Reveal className="flex flex-col gap-4 text-start lg:sticky lg:top-28 lg:self-start">
-          <span className="eyebrow w-fit">{tt('eyebrow')}</span>
-          <h2 className="text-3xl sm:text-4xl">{tt('title')}</h2>
-          <p className="text-navy-500">{tt('subtitle')}</p>
+          <SectionHeader eyebrow={tt('eyebrow')} title={tt('title')} subtitle={tt('subtitle')} />
           <Link href="/faq" className="btn-primary mt-2 w-fit">
             {tt('cta')}
             <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden />
@@ -25,9 +24,9 @@ export default async function FaqTeaser() {
           {items.map((item, i) => (
             <Reveal key={i} delay={i * 0.05}>
               <details className="group rounded-2xl border border-emerald-800/10 bg-surface-raised p-6 text-start shadow-card transition-colors open:border-brass-500/40">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-navy">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-ink">
                   <span className="inline-flex items-center gap-3">
-                    <HelpCircle className="h-5 w-5 shrink-0 text-teal-dark" aria-hidden />
+                    <HelpCircle className="h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
                     {item.q}
                   </span>
                   <span className="text-2xl leading-none text-emerald-600 transition-transform duration-200 group-open:rotate-45">+</span>
@@ -38,6 +37,6 @@ export default async function FaqTeaser() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

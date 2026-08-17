@@ -206,7 +206,7 @@ export default function ChatWidget() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label={L.open}
-          className="no-print fixed bottom-5 end-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-navy text-cream-100 shadow-card ring-1 ring-gold/40 transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-gold"
+          className="no-print fixed bottom-5 end-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-800 text-on-surface-inverse shadow-card ring-1 ring-brass-500/40 transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-brass-500"
         >
           <MessageSquare className="h-6 w-6" aria-hidden />
         </button>
@@ -219,13 +219,13 @@ export default function ChatWidget() {
             type="button"
             onClick={() => setOpen(false)}
             aria-label={L.close}
-            className="no-print fixed inset-0 z-40 bg-navy-900/40 sm:hidden"
+            className="no-print fixed inset-0 z-40 bg-emerald-900/40 sm:hidden"
           />
-          <div className="no-print fixed inset-x-0 bottom-0 z-50 flex h-[85dvh] flex-col overflow-hidden rounded-t-3xl bg-white shadow-card ring-1 ring-navy-100 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:h-[70vh] sm:max-h-[560px] sm:w-[400px] sm:rounded-3xl">
+          <div className="no-print fixed inset-x-0 bottom-0 z-50 flex h-[85dvh] flex-col overflow-hidden rounded-t-3xl bg-white shadow-card ring-1 ring-emerald-800/10 sm:inset-x-auto sm:bottom-5 sm:end-5 sm:h-[70vh] sm:max-h-[560px] sm:w-[400px] sm:rounded-3xl">
             {/* Header */}
-            <div className="flex items-center justify-between gap-2 bg-navy px-4 py-3.5 text-cream-100">
+            <div className="flex items-center justify-between gap-2 bg-emerald-800 px-4 py-3.5 text-on-surface-inverse">
               <div className="flex items-center gap-2">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold/20 text-gold-light">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brass-500/20 text-brass-300">
                   <MessageSquare className="h-5 w-5" aria-hidden />
                 </span>
                 <span className="font-semibold">{L.title}</span>
@@ -234,7 +234,7 @@ export default function ChatWidget() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label={L.close}
-                className="-me-1 rounded-full p-2 text-cream-100/80 hover:bg-white/10 hover:text-cream-100 focus-visible:ring-2 focus-visible:ring-gold"
+                className="-me-1 rounded-full p-2 text-on-surface-inverse/80 hover:bg-white/10 hover:text-on-surface-inverse focus-visible:ring-2 focus-visible:ring-brass-500"
               >
                 <X className="h-5 w-5" aria-hidden />
               </button>
@@ -243,7 +243,7 @@ export default function ChatWidget() {
             {/* Messages */}
             <div
               ref={scrollRef}
-              className="flex-1 space-y-3 overflow-y-auto overscroll-contain bg-cream/40 p-4 text-sm"
+              className="flex-1 space-y-3 overflow-y-auto overscroll-contain bg-surface-base/40 p-4 text-sm"
             >
               <Bubble role="model">{L.welcome}</Bubble>
 
@@ -255,7 +255,7 @@ export default function ChatWidget() {
                       key={c}
                       type="button"
                       onClick={() => send(c)}
-                      className="rounded-full border border-navy-200 bg-white px-3 py-1.5 text-xs font-medium text-navy-700 transition hover:border-gold hover:bg-cream/60"
+                      className="rounded-full border border-emerald-800/20 bg-white px-3 py-1.5 text-xs font-medium text-ink-soft transition hover:border-brass-500 hover:bg-surface-base/60"
                     >
                       {c}
                     </button>
@@ -276,7 +276,7 @@ export default function ChatWidget() {
                 </Bubble>
               )}
               {error && (
-                <p role="alert" className="rounded-xl bg-maroon-50 px-3 py-2 text-xs text-maroon-600">
+                <p role="alert" className="rounded-xl bg-emerald-50 px-3 py-2 text-xs text-emerald-700">
                   {error}
                 </p>
               )}
@@ -291,7 +291,7 @@ export default function ChatWidget() {
                 href={bookingHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 border-t border-navy-100 bg-whatsapp px-4 py-3 text-sm font-semibold text-white hover:brightness-95"
+                className="flex items-center justify-center gap-2 border-t border-emerald-800/10 bg-whatsapp px-4 py-3 text-sm font-semibold text-white hover:brightness-95"
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 {L.confirmBooking}
@@ -304,7 +304,7 @@ export default function ChatWidget() {
               href={waHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 border-t border-navy-100 bg-white px-4 py-2.5 text-sm font-semibold text-whatsapp-dark hover:bg-cream/60"
+              className="flex items-center justify-center gap-2 border-t border-emerald-800/10 bg-white px-4 py-2.5 text-sm font-semibold text-whatsapp-dark hover:bg-surface-base/60"
             >
               <Phone className="h-4 w-4" aria-hidden />
               {tc('chatWhatsapp')}
@@ -316,7 +316,7 @@ export default function ChatWidget() {
                 e.preventDefault();
                 send();
               }}
-              className="flex items-center gap-2 border-t border-navy-100 bg-white p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
+              className="flex items-center gap-2 border-t border-emerald-800/10 bg-white p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
             >
               <input
                 ref={inputRef}
@@ -324,13 +324,13 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={L.placeholder}
                 enterKeyHint="send"
-                className="min-w-0 flex-1 rounded-full border border-navy-200 bg-cream/40 px-4 py-3 text-base text-navy-800 placeholder:text-navy-300 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/40 sm:py-2.5 sm:text-sm"
+                className="min-w-0 flex-1 rounded-full border border-emerald-800/20 bg-surface-base/40 px-4 py-3 text-base text-ink placeholder:text-ink-faint focus:border-brass-500 focus:outline-none focus:ring-2 focus:ring-brass-500/40 sm:py-2.5 sm:text-sm"
               />
               <button
                 type="submit"
                 disabled={loading || !input.trim()}
                 aria-label={L.send}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-navy text-cream-100 transition hover:bg-navy-800 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-gold sm:h-10 sm:w-10"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-on-surface-inverse transition hover:bg-emerald-800 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-brass-500 sm:h-10 sm:w-10"
               >
                 <Send className="h-5 w-5 rtl:-scale-x-100" aria-hidden />
               </button>
@@ -348,7 +348,7 @@ function Bubble({ role, children }: { role: 'user' | 'model'; children: React.Re
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
       <div
         className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2 leading-relaxed ${
-          isUser ? 'bg-navy text-cream-100' : 'bg-white text-navy-700 ring-1 ring-navy-100'
+          isUser ? 'bg-emerald-800 text-on-surface-inverse' : 'bg-white text-ink-soft ring-1 ring-emerald-800/10'
         }`}
       >
         {children}
@@ -358,5 +358,5 @@ function Bubble({ role, children }: { role: 'user' | 'model'; children: React.Re
 }
 
 function Dot() {
-  return <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-navy-400" />;
+  return <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-emerald-400" />;
 }

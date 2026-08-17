@@ -8,6 +8,7 @@ import type { ContactMethod } from '@/lib/gtag';
 import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
+import { Section } from '@/components/ui/Section';
 import ContactForm from '@/components/contact/ContactForm';
 
 export async function generateMetadata({
@@ -61,7 +62,7 @@ export default async function ContactPage({ params }: { params: { locale: string
         crumbs={[{ name: tn('contact'), path: '/contact-us' }]}
       />
 
-      <section className="section bg-cream">
+      <Section surface="base">
         <div className="container">
           <div className="grid items-stretch gap-8 lg:grid-cols-2">
             {/* Contact details */}
@@ -69,13 +70,16 @@ export default async function ContactPage({ params }: { params: { locale: string
               {cards.map((c) => {
                 const inner = (
                   <>
-                    <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-teal/10 text-teal-dark">
+                    <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-700">
                       <c.icon className="h-5 w-5" aria-hidden />
                     </span>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-navy-400">
+                    {/* A contact-method label, not a document section — as an
+                        h3 under the page h1 it created a heading-level jump for
+                        screen readers with no h2 in between. */}
+                    <p className="text-sm font-semibold uppercase tracking-wider text-ink-faint">
                       {c.title}
-                    </h3>
-                    <p className="mt-1 font-medium text-navy-800" dir={c.ltr ? 'ltr' : undefined}>
+                    </p>
+                    <p className="mt-1 font-medium text-ink" dir={c.ltr ? 'ltr' : undefined}>
                       {c.value}
                     </p>
                   </>
@@ -85,7 +89,7 @@ export default async function ContactPage({ params }: { params: { locale: string
                     key={c.title}
                     method={c.method}
                     href={c.href}
-                    className="card h-full transition hover:ring-gold/50"
+                    className="card h-full transition hover:ring-brass-500/50"
                   >
                     {inner}
                   </ContactLink>
@@ -102,7 +106,7 @@ export default async function ContactPage({ params }: { params: { locale: string
           </div>
 
           {/* Map: full-width location embed below both boxes. */}
-          <div className="mt-8 overflow-hidden rounded-2xl shadow-soft ring-1 ring-navy-100">
+          <div className="mt-8 overflow-hidden rounded-2xl shadow-soft ring-1 ring-emerald-800/10">
             <iframe
               title="Al-Saleem Transport location - Google Maps"
               src="https://www.google.com/maps?q=21.4466920,39.8542180&z=15&output=embed"
@@ -112,7 +116,7 @@ export default async function ContactPage({ params }: { params: { locale: string
             />
           </div>
         </div>
-      </section>
+      </Section>
     </>
   );
 }

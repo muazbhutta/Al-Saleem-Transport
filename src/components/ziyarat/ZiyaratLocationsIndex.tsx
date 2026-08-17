@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Navigation, Route } from 'lucide-react';
+import { SectionHeader } from '@/components/ui/Section';
 import type { PlaceEntry, ZiyaratCity } from '@/content/ziyarat/places';
 
 const CITY_ORDER: ZiyaratCity[] = ['makkah', 'madinah', 'taif', 'jeddah'];
@@ -54,9 +55,10 @@ export default async function ZiyaratLocationsIndex({
   if (!byCity.length) return null;
 
   return (
-    <section className="mt-14 border-t border-navy-100 pt-10" id="all-locations">
-      <h2 className="text-2xl text-navy sm:text-3xl">{ti('title')}</h2>
-      <p className="mt-2 text-navy-500">{ti('subtitle')}</p>
+    /* No top rule or margin any more: this now sits in its own surface band on
+       the guide page, so the band edge is the separation. */
+    <section id="all-locations" className="guide-anchor">
+      <SectionHeader title={ti('title')} subtitle={ti('subtitle')} />
 
       <div className="mt-8 flex flex-col gap-8">
         {byCity.map(({ city, items }) => {
@@ -64,16 +66,16 @@ export default async function ZiyaratLocationsIndex({
           return (
             <div key={city}>
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <h3 className="text-lg font-semibold text-navy">
+                <h3 className="text-lg font-semibold text-ink">
                   {t(`city.${city}`)}{' '}
-                  <span className="font-normal text-navy-400">({items.length})</span>
+                  <span className="font-normal text-ink-faint">({items.length})</span>
                 </h3>
                 {routeUrl && (
                   <a
                     href={routeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-teal-dark hover:text-gold-dark"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:text-brass-700"
                   >
                     <Route className="h-4 w-4" aria-hidden />
                     {ti('fullRoute')}
@@ -81,29 +83,37 @@ export default async function ZiyaratLocationsIndex({
                 )}
               </div>
 
-              <ul className="mt-3 divide-y divide-navy-100 rounded-2xl border border-navy-100 bg-white">
+              {/* Grid, not flex-wrap: wrapping let the actions drop onto their
+                  own line whenever a place name was long, so no two rows lined
+                  up. The name column absorbs the wrapping instead, and the
+                  distance sits in a fixed slot that is rendered even when empty
+                  — that is what keeps every "Get Directions" on one x. */}
+              <ul className="mt-3 divide-y divide-emerald-800/10 rounded-2xl border border-emerald-800/10 bg-surface-raised">
                 {items.map((entry) => (
                   <li
                     key={entry.place.id}
-                    className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-3"
+                    className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 px-4 py-3"
                   >
                     <a
                       href={`#${entry.place.id}`}
-                      className="min-w-0 text-sm font-medium text-navy-800 hover:text-gold-dark"
+                      className="min-w-0 text-start text-sm font-medium text-ink hover:text-brass-700"
                     >
                       {entry.name}
                     </a>
-                    <span className="flex items-center gap-4">
-                      {entry.place.distanceFromHaramKm !== null && (
-                        <span className="text-xs text-navy-400" dir="ltr">
-                          {entry.place.distanceFromHaramKm} {t('km')}
-                        </span>
-                      )}
+                    <span className="flex shrink-0 items-center justify-end gap-3">
+                      <span
+                        className="w-14 text-end text-xs tabular-nums text-ink-faint"
+                        dir="ltr"
+                      >
+                        {entry.place.distanceFromHaramKm !== null
+                          ? `${entry.place.distanceFromHaramKm} ${t('km')}`
+                          : ''}
+                      </span>
                       <a
                         href={entry.place.googleMapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-teal-dark hover:text-gold-dark"
+                        className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-emerald-700 hover:text-brass-700"
                       >
                         <Navigation className="h-3.5 w-3.5 rtl:-scale-x-100" aria-hidden />
                         {t('directions')}

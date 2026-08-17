@@ -25,8 +25,8 @@ export default function Logo({
   compactOnMobile?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
-  const text = variant === 'light' ? 'text-cream-100' : 'text-navy';
-  const sub = variant === 'light' ? 'text-gold-light' : 'text-maroon';
+  const text = variant === 'light' ? 'text-on-surface-inverse' : 'text-ink';
+  const sub = variant === 'light' ? 'text-brass-300' : 'text-emerald-600';
   const mark = variant === 'light' ? 'rgb(var(--brass-300))' : 'rgb(var(--emerald-600))';
 
   return (
@@ -60,7 +60,7 @@ export default function Logo({
             priority={priority}
             onError={() => setFailed(true)}
             className={`h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105 ${
-              variant === 'light' ? '[filter:drop-shadow(0_0_2px_rgba(224,192,120,0.45))]' : ''
+              variant === 'light' ? '[filter:drop-shadow(0_0_2px_rgb(var(--brass-300)/0.45))]' : ''
             }`}
           />
         )}

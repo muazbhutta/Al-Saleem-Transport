@@ -32,7 +32,7 @@ export default async function PageHeader({
 
   return (
     <section
-      className={`page-header relative overflow-hidden bg-navy text-cream-100 ${
+      className={`page-header relative overflow-hidden bg-emerald-800 text-on-surface-inverse ${
         image ? 'flex items-end min-h-[320px] sm:min-h-[380px] lg:min-h-[440px]' : ''
       }`}
     >
@@ -52,7 +52,7 @@ export default async function PageHeader({
           {/* Vertical scrim only - the FULL WIDTH of the photo stays visible;
               just the bottom darkens so the title/CTA stay readable. */}
           <div
-            className="absolute inset-0 bg-gradient-to-t from-navy-900/92 via-navy-900/35 to-navy-900/12"
+            className="absolute inset-0 bg-gradient-to-t from-emerald-900/92 via-emerald-900/35 to-emerald-900/12"
             aria-hidden
           />
         </>
@@ -66,9 +66,14 @@ export default async function PageHeader({
       />
       <div className="container relative w-full py-14 sm:py-16">
         <nav aria-label="Breadcrumb" className="mb-5">
-          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-cream-100/70">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-on-surface-inverse/70">
             <li>
-              <Link href="/" className="inline-flex items-center gap-1 hover:text-gold">
+              {/* Icon-only link: without a min size its tap target is just the
+                  16px glyph, well under the 24px WCAG 2.5.8 floor. */}
+              <Link
+                href="/"
+                className="inline-flex min-h-6 min-w-6 items-center justify-center gap-1 hover:text-brass-500"
+              >
                 <Home className="h-4 w-4" aria-hidden />
                 <span className="sr-only">{tc('home')}</span>
               </Link>
@@ -79,11 +84,11 @@ export default async function PageHeader({
                 <li key={c.path} className="inline-flex items-center gap-1.5">
                   <ChevronRight className="h-4 w-4 opacity-50 rtl:rotate-180" aria-hidden />
                   {last ? (
-                    <span className="text-gold-light" aria-current="page">
+                    <span className="text-brass-300" aria-current="page">
                       {c.name}
                     </span>
                   ) : (
-                    <Link href={c.path} className="hover:text-gold">
+                    <Link href={c.path} className="hover:text-brass-500">
                       {c.name}
                     </Link>
                   )}
@@ -94,21 +99,21 @@ export default async function PageHeader({
         </nav>
 
         {eyebrow && (
-          <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold-light ring-1 ring-gold/30">
+          <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brass-300 ring-1 ring-brass-500/30">
             {eyebrow}
           </span>
         )}
         <h1
-          className={`mt-4 text-3xl font-bold text-cream-100 sm:text-4xl lg:text-5xl ${
-            image ? '[text-shadow:0_2px_14px_rgba(7,30,25,0.7)]' : ''
+          className={`mt-4 text-3xl font-bold text-on-surface-inverse sm:text-4xl lg:text-5xl ${
+            image ? '[text-shadow:0_2px_14px_rgb(var(--emerald-950)/0.7)]' : ''
           }`}
         >
           {title}
         </h1>
         {subtitle && (
           <p
-            className={`mt-4 max-w-2xl text-cream-100/80 ${
-              image ? '[text-shadow:0_1px_10px_rgba(7,30,25,0.7)]' : ''
+            className={`mt-4 max-w-2xl text-on-surface-inverse/80 ${
+              image ? '[text-shadow:0_1px_10px_rgb(var(--emerald-950)/0.7)]' : ''
             }`}
           >
             {subtitle}

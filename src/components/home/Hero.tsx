@@ -16,7 +16,7 @@ export default async function Hero() {
 
 
   return (
-    <section className="relative flex min-h-[620px] items-center overflow-hidden bg-navy-900 text-cream-100 lg:min-h-[86vh]">
+    <section className="relative flex min-h-[620px] items-center overflow-hidden bg-emerald-900 text-on-surface-inverse lg:min-h-[86vh]">
       {/* Background photo (optimized, priority LCP, blur LQIP - no layout shift) */}
       <Image
         src="/images/makkah-skyline.jpg"
@@ -30,9 +30,9 @@ export default async function Hero() {
       />
 
       {/* Readability overlays - emerald-tinted, darker toward the bottom */}
-      <div className="absolute inset-0 bg-navy-900/50" aria-hidden />
+      <div className="absolute inset-0 bg-emerald-900/50" aria-hidden />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/55 to-navy-900/30"
+        className="absolute inset-0 bg-gradient-to-t from-emerald-900/95 via-emerald-900/55 to-emerald-900/30"
         aria-hidden
       />
       <div
@@ -44,25 +44,25 @@ export default async function Hero() {
         }}
       />
       {/* Gold hairline at the very top */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" aria-hidden />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brass-500/60 to-transparent" aria-hidden />
 
       <div className="container relative z-10 py-20 sm:py-24">
         <div className="max-w-3xl">
           <Reveal immediate>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-gold-light ring-1 ring-gold/40 backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-brass-300 ring-1 ring-brass-500/40 backdrop-blur">
               <ShieldCheck className="h-4 w-4" aria-hidden />
               {t('badge')}
             </span>
           </Reveal>
 
           <Reveal immediate delay={0.05}>
-            <h1 className="mt-6 text-4xl font-bold leading-[1.1] text-cream-100 [text-shadow:0_2px_16px_rgba(7,30,25,0.55)] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-4xl font-bold leading-[1.1] text-on-surface-inverse [text-shadow:0_2px_16px_rgb(var(--emerald-950)/0.55)] sm:text-5xl lg:text-6xl">
               {t('title')}
             </h1>
           </Reveal>
 
           <Reveal immediate delay={0.1}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream-100/85 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-on-surface-inverse/85 sm:text-lg">
               {t('subtitle')}
             </p>
           </Reveal>

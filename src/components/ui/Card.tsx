@@ -63,7 +63,7 @@ export default function Card({
   const inner = (
     <>
       {eyebrow && (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brass-600">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brass-800">
           {eyebrow}
         </p>
       )}
@@ -88,7 +88,7 @@ export default function Card({
       {children}
 
       {actionLabel && (
-        <span className="mt-auto pt-5 text-sm font-semibold text-emerald-700 transition-colors group-hover:text-brass-600">
+        <span className="mt-auto pt-5 text-sm font-semibold text-emerald-700 transition-colors group-hover:text-brass-800">
           {actionLabel}
           <span className="ms-1.5 inline-block transition-transform duration-200 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5">
             →
