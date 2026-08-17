@@ -5,6 +5,9 @@
 
 # next.js
 /.next/
+# Alternate build dirs from NEXT_DIST_DIR (see next.config.mjs) — used to build
+# without corrupting a running dev server's cache.
+/.next-*/
 /out/
 
 # production
