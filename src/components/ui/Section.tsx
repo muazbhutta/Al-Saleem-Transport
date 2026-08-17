@@ -77,7 +77,7 @@ export function SectionHeader({
       {eyebrow && (
         <p
           className={`text-xs font-semibold uppercase tracking-[0.16em] ${
-            inverse ? 'text-brass-300' : 'text-brass-600'
+            inverse ? 'text-brass-300' : 'text-brass-800'
           }`}
         >
           {eyebrow}

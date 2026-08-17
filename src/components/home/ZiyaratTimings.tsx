@@ -13,6 +13,7 @@ import {
   MapPin,
 } from 'lucide-react';
 import type { TimingContent, TimingIcon } from '@/content/timings';
+import { Section, SectionHeader } from '@/components/ui/Section';
 
 const ICONS: Record<TimingIcon, typeof Landmark> = {
   haram: Landmark,
@@ -37,21 +38,21 @@ export default function ZiyaratTimings({ content }: { content: TimingContent }) 
   };
 
   return (
-    <section className="section bg-surface-base text-on-surface-base">
+    <Section surface="base">
       <div className="container flex flex-col gap-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <div className="flex max-w-2xl flex-col gap-3 text-start">
-            <span className="eyebrow w-fit">{content.eyebrow}</span>
-            <h2 className="text-3xl sm:text-4xl">{content.title}</h2>
-            <p className="text-navy-500">{content.subtitle}</p>
-          </div>
+          <SectionHeader
+            eyebrow={content.eyebrow}
+            title={content.title}
+            subtitle={content.subtitle}
+          />
           {/* Arrow controls (desktop) */}
           <div className="hidden gap-2 sm:flex">
             <button
               type="button"
               onClick={() => go(-1)}
               aria-label="Scroll left"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy-200 text-navy transition-colors hover:bg-navy hover:text-cream-100"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-emerald-800/20 text-ink transition-colors hover:bg-emerald-800 hover:text-on-surface-inverse"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden />
             </button>
@@ -59,7 +60,7 @@ export default function ZiyaratTimings({ content }: { content: TimingContent }) 
               type="button"
               onClick={() => go(1)}
               aria-label="Scroll right"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-navy-200 text-navy transition-colors hover:bg-navy hover:text-cream-100"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-emerald-800/20 text-ink transition-colors hover:bg-emerald-800 hover:text-on-surface-inverse"
             >
               <ChevronRight className="h-5 w-5" aria-hidden />
             </button>
@@ -75,20 +76,20 @@ export default function ZiyaratTimings({ content }: { content: TimingContent }) 
             return (
               <article
                 key={i}
-                className="flex w-[16rem] shrink-0 snap-start flex-col gap-4 rounded-2xl bg-white p-5 shadow-soft ring-1 ring-navy-100/60"
+                className="flex w-[16rem] shrink-0 snap-start flex-col gap-4 rounded-2xl bg-white p-5 shadow-soft ring-1 ring-emerald-800/10"
               >
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-navy to-navy-700 text-gold-light">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-800 to-emerald-700 text-brass-300">
                     <Icon className="h-6 w-6" aria-hidden />
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-teal/10 px-2.5 py-1 text-xs font-medium text-teal-dark">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-700">
                     <MapPin className="h-3.5 w-3.5" aria-hidden />
                     {item.city}
                   </span>
                 </div>
                 <h3 className="text-lg leading-snug">{item.place}</h3>
-                <p className="mt-auto inline-flex items-start gap-2 text-sm text-navy-600">
-                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-gold-dark" aria-hidden />
+                <p className="mt-auto inline-flex items-start gap-2 text-sm text-ink-soft">
+                  <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brass-600" aria-hidden />
                   {item.note}
                 </p>
               </article>
@@ -96,6 +97,6 @@ export default function ZiyaratTimings({ content }: { content: TimingContent }) 
           })}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

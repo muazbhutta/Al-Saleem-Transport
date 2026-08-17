@@ -138,13 +138,13 @@ export default function BookingForm() {
       />
       {/* Contact details */}
       <fieldset className="flex flex-col gap-4">
-        <legend className="mb-1 text-sm font-semibold uppercase tracking-wider text-teal-dark">
+        <legend className="mb-1 text-sm font-semibold uppercase tracking-[0.16em] text-brass-800">
           {t('sectionContact')}
         </legend>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div>
+          <div className="min-w-0">
             <label htmlFor="name" className={labelClass}>
-              <User className="h-4 w-4 text-navy-400" aria-hidden /> {t('name')} *
+              <User className="h-4 w-4 text-emerald-600" aria-hidden /> {t('name')} *
             </label>
             <input
               id="name"
@@ -155,9 +155,9 @@ export default function BookingForm() {
               required
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <label htmlFor="phone" className={labelClass}>
-              <Phone className="h-4 w-4 text-navy-400" aria-hidden /> {t('phone')} *
+              <Phone className="h-4 w-4 text-emerald-600" aria-hidden /> {t('phone')} *
             </label>
             <input
               id="phone"
@@ -175,16 +175,16 @@ export default function BookingForm() {
 
       {/* Trip details */}
       <fieldset className="flex flex-col gap-4">
-        <legend className="mb-1 text-sm font-semibold uppercase tracking-wider text-teal-dark">
+        <legend className="mb-1 text-sm font-semibold uppercase tracking-[0.16em] text-brass-800">
           {t('sectionTrip')}
         </legend>
 
         <VehiclePicker value={form.vehicle} onChange={(v) => update('vehicle', v)} />
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <div>
+          <div className="min-w-0">
             <label htmlFor="pickup" className={labelClass}>
-              <MapPin className="h-4 w-4 text-navy-400" aria-hidden /> {t('pickup')} *
+              <MapPin className="h-4 w-4 text-emerald-600" aria-hidden /> {t('pickup')} *
             </label>
             <input
               id="pickup"
@@ -195,9 +195,9 @@ export default function BookingForm() {
               required
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <label htmlFor="dropoff" className={labelClass}>
-              <MapPin className="h-4 w-4 text-navy-400" aria-hidden /> {t('dropoff')} *
+              <MapPin className="h-4 w-4 text-emerald-600" aria-hidden /> {t('dropoff')} *
             </label>
             <input
               id="dropoff"
@@ -211,9 +211,9 @@ export default function BookingForm() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          <div>
+          <div className="min-w-0">
             <label htmlFor="date" className={labelClass}>
-              <Calendar className="h-4 w-4 text-navy-400" aria-hidden /> {t('date')} *
+              <Calendar className="h-4 w-4 text-emerald-600" aria-hidden /> {t('date')} *
             </label>
             <input
               id="date"
@@ -224,9 +224,9 @@ export default function BookingForm() {
               required
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <label htmlFor="time" className={labelClass}>
-              <Clock className="h-4 w-4 text-navy-400" aria-hidden /> {t('time')}
+              <Clock className="h-4 w-4 text-emerald-600" aria-hidden /> {t('time')}
             </label>
             <TimeField
               id="time"
@@ -235,9 +235,9 @@ export default function BookingForm() {
               onChange={(v) => update('time', v)}
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <label htmlFor="passengers" className={labelClass}>
-              <Users className="h-4 w-4 text-navy-400" aria-hidden /> {t('passengers')}
+              <Users className="h-4 w-4 text-emerald-600" aria-hidden /> {t('passengers')}
             </label>
             <input
               id="passengers"
@@ -267,7 +267,7 @@ export default function BookingForm() {
       </fieldset>
 
       {error && (
-        <p role="alert" className="rounded-xl bg-maroon-50 px-4 py-3 text-sm text-maroon-600">
+        <p role="alert" className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-700">
           {t('errorRequired')}
         </p>
       )}

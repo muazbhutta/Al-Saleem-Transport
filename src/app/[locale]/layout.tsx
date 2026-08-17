@@ -46,6 +46,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
+  // Must stay in sync with --emerald-800 in globals.css. A meta tag cannot read
+  // a CSS variable, so this is the one place the brand colour is duplicated.
   themeColor: '#0B2E27',
   width: 'device-width',
   initialScale: 1,

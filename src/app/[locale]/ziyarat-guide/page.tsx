@@ -10,6 +10,7 @@ import { articleSchema, breadcrumbSchema, ziyaratPlacesSchema } from '@/lib/sche
 import { site, getDir } from '@/lib/site';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
+import { Section, SectionHeader, SurfaceDivider } from '@/components/ui/Section';
 import TableOfContents from '@/components/guide/TableOfContents';
 import GuideToolbar from '@/components/guide/GuideToolbar';
 import { Fragment } from 'react';
@@ -36,6 +37,50 @@ function chapterImage(id: string) {
   if (!cfg) return null;
   const abs = path.join(process.cwd(), 'public', cfg.src.replace(/^\//, ''));
   return fs.existsSync(abs) ? cfg : null;
+}
+
+/**
+ * Surface cycle for the chapter bands.
+ *
+ * The guide used to be a single `bg-surface-base` slab twenty screens tall, which read
+ * as one undifferentiated wall. Each chapter is now its own full-width band and
+ * the cycle guarantees no two adjacent bands share a surface, so the seam
+ * between chapters is visible without any decoration.
+ */
+const CHAPTER_SURFACES = ['base', 'raised', 'muted'] as const;
+
+/**
+ * Chapter titles are authored as "Chapter 1 · Makkah Mukarramah - Introduction"
+ * in all eleven locales, with the final chapter ("Conclusion") carrying no
+ * separator. Splitting on the interpunct fills the design system's eyebrow +
+ * title slots without inventing a translated string, and stops every rail chip
+ * from opening with the same "Chapter N ·" prefix.
+ *
+ * Presentation only: the authored text is re-laid-out, never rewritten. A title
+ * with no separator falls through as the heading with no eyebrow.
+ */
+const CHAPTER_SEPARATOR = '·';
+
+function splitChapterTitle(title: string): { label?: string; name: string } {
+  const at = title.indexOf(CHAPTER_SEPARATOR);
+  if (at === -1) return { name: title };
+  return {
+    label: title.slice(0, at).trim(),
+    name: title.slice(at + CHAPTER_SEPARATOR.length).trim(),
+  };
+}
+
+/**
+ * Rail chips get the bare subject: on top of the "Chapter N ·" prefix, the
+ * trailing qualifier ("- Introduction", "- Sacred Sites", and its equivalent in
+ * every locale) is dropped too. Repeated on ten chips it is pure noise and
+ * pushes the actual place names off the end of the rail. The chapter heading
+ * still carries the authored title in full.
+ */
+const QUALIFIER = /\s[-–—]\s.*$/;
+
+function chapterNavLabel(title: string): string {
+  return splitChapterTitle(title).name.replace(QUALIFIER, '').trim();
 }
 
 export async function generateMetadata({
@@ -97,7 +142,7 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
     pending: t('contentPending'),
   };
 
-  const toc = guide.chapters.map((c) => ({ id: c.id, title: c.title }));
+  const toc = guide.chapters.map((c) => ({ id: c.id, title: chapterNavLabel(c.title) }));
 
   return (
     <>
@@ -124,118 +169,131 @@ export default async function ZiyaratGuidePage({ params }: { params: { locale: s
         crumbs={[{ name: tn('ziyaratGuide'), path: '/ziyarat-guide' }]}
       />
 
-      <section className="section bg-cream">
-        <div className="container">
-          {/* Toolbar + language availability note */}
-          <div className="no-print mb-8 flex flex-col gap-5 rounded-2xl bg-white p-5 shadow-soft ring-1 ring-navy-100/60 sm:flex-row sm:items-center">
+      {/* Opening band: what the guide is, the caveat, and the download. */}
+      <Section surface="raised">
+        <div className="container flex flex-col gap-8">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10">
             <Image
               src="/images/guide-cover.jpg"
               alt={t('title')}
-              width={132}
-              height={185}
+              width={264}
+              height={370}
               placeholder="blur"
               blurDataURL={guideCoverBlur}
-              className="mx-auto h-auto w-28 shrink-0 rounded-xl shadow-soft ring-1 ring-navy-100 sm:mx-0"
+              className="h-auto w-36 shrink-0 rounded-2xl shadow-card ring-1 ring-emerald-800/10 sm:w-44"
             />
-            <div className="flex-1">
-              <p className="font-semibold text-navy">{t('intro')}</p>
-              <p className="mt-1 text-sm text-navy-400">{t('verifyNote')}</p>
+            <div className="flex min-w-0 flex-col gap-4 text-start">
+              <p className="text-lg font-medium leading-relaxed text-ink sm:text-xl">
+                {t('intro')}
+              </p>
+              <p className="text-sm leading-relaxed text-ink-soft">{t('verifyNote')}</p>
+              <GuideToolbar
+                guide={guide}
+                meta={docMeta}
+                downloadLabel={t('download')}
+                locationLabels={{
+                  title: tloc('title'),
+                  city: tloc('cityLabel'),
+                  distance: tloc('distanceLabel'),
+                  coordinates: tloc('pdfCoordinates'),
+                  scan: tloc('scanForDirections'),
+                  approx: tloc('approx'),
+                  km: tloc('km'),
+                  cityNames: {
+                    makkah: tloc('city.makkah'),
+                    madinah: tloc('city.madinah'),
+                    taif: tloc('city.taif'),
+                    jeddah: tloc('city.jeddah'),
+                  },
+                }}
+              />
             </div>
-            <GuideToolbar
-              guide={guide}
-              meta={docMeta}
-              downloadLabel={t('download')}
-              locationLabels={{
-                title: tloc('title'),
-                city: tloc('cityLabel'),
-                distance: tloc('distanceLabel'),
-                coordinates: tloc('pdfCoordinates'),
-                scan: tloc('scanForDirections'),
-                approx: tloc('approx'),
-                km: tloc('km'),
-                cityNames: {
-                  makkah: tloc('city.makkah'),
-                  madinah: tloc('city.madinah'),
-                  taif: tloc('city.taif'),
-                  jeddah: tloc('city.jeddah'),
-                },
-              }}
-            />
           </div>
 
           {/* Machine-assisted draft notice (shown for machine-translated locales) */}
           {isMachineDraft(locale) && (
-            <div className="no-print mb-8 flex gap-3 rounded-2xl border border-gold/50 bg-gold/10 p-4 text-sm text-navy-700">
-              <Info className="h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
+            <div className="no-print mx-auto flex w-full max-w-4xl gap-3 rounded-2xl border border-brass-500/45 bg-brass-500/10 p-4 text-start text-sm leading-relaxed text-ink">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-brass-700" aria-hidden />
               <p>{t('machineNotice')}</p>
             </div>
           )}
 
           {!native && (
-            <div className="no-print mb-8 flex gap-3 rounded-2xl border border-gold/40 bg-gold/5 p-4 text-sm text-navy-600">
-              <Info className="h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
+            <div className="no-print mx-auto flex w-full max-w-4xl gap-3 rounded-2xl border border-emerald-800/10 bg-emerald-50 p-4 text-start text-sm leading-relaxed text-ink-soft">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" aria-hidden />
               <p>
                 {tc('chooseLanguage')} - {t('availableIn')}. {t('contentPending')}
               </p>
             </div>
           )}
+        </div>
+      </Section>
 
-          {/* TOC + content */}
-          <div className="grid gap-10 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-14">
-            <aside className="min-w-0 lg:sticky lg:top-28 lg:self-start">
-              <TableOfContents items={toc} label={t('onThisPage')} />
-            </aside>
+      <TableOfContents items={toc} label={t('onThisPage')} />
 
-            <article className="prose-guide flex min-w-0 flex-col gap-14">
-              {guide.chapters.map((chapter) => (
-                <section key={chapter.id} id={chapter.id} className="scroll-mt-28">
-                  {(() => {
-                    const img = chapterImage(chapter.id);
-                    return img ? (
-                      <div className="relative mb-6 aspect-[16/7] w-full overflow-hidden rounded-2xl shadow-soft">
-                        <Image
-                          src={img.src}
-                          alt={chapter.title}
-                          fill
-                          loading="lazy"
-                          sizes="(max-width: 1024px) 100vw, 760px"
-                          placeholder={img.blur ? 'blur' : 'empty'}
-                          blurDataURL={img.blur}
-                          className={img.className}
-                        />
-                      </div>
-                    ) : null;
-                  })()}
-                  <h2 className="text-2xl text-navy sm:text-3xl">{chapter.title}</h2>
-                  {chapter.intro && (
-                    <p className="mt-3 text-lg leading-relaxed text-navy-500">{chapter.intro}</p>
+      {/* One full-width band per chapter, surfaces cycling so no two adjacent
+          bands match. The reading column is capped at max-w-3xl — the bands go
+          edge to edge, the prose does not. */}
+      {guide.chapters.map((chapter, ci) => {
+        const img = chapterImage(chapter.id);
+        const slots = locationSlotsForBlocks(chapter.blocks);
+        const { label, name } = splitChapterTitle(chapter.title);
+        return (
+          <Fragment key={chapter.id}>
+            <SurfaceDivider />
+            <Section
+              id={chapter.id}
+              surface={CHAPTER_SURFACES[ci % CHAPTER_SURFACES.length]}
+              className="guide-anchor"
+            >
+              <div className="container">
+                {/* text-start at every width on purpose: the site centres body
+                    copy under 640px, which is fine for short marketing cards but
+                    unreadable for a guide this long. */}
+                <div className="prose-guide mx-auto flex max-w-3xl flex-col gap-8 text-start">
+                  {img && (
+                    <div className="relative aspect-[16/7] w-full overflow-hidden rounded-3xl shadow-card">
+                      <Image
+                        src={img.src}
+                        alt={chapter.title}
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 1024px) 100vw, 760px"
+                        placeholder={img.blur ? 'blur' : 'empty'}
+                        blurDataURL={img.blur}
+                        className={img.className}
+                      />
+                    </div>
                   )}
-                  <div className="mt-6 flex flex-col gap-5">
-                    {(() => {
-                      const slots = locationSlotsForBlocks(chapter.blocks);
-                      return chapter.blocks.map((block, i) => {
-                        const place = slots.get(i);
-                        return (
-                          <Fragment key={i}>
-                            <Block block={block} labels={labels} />
-                            {place && (
-                              <ZiyaratLocationCard
-                                placeId={place.id}
-                                placeName={place.name}
-                              />
-                            )}
-                          </Fragment>
-                        );
-                      });
-                    })()}
+
+                  <SectionHeader eyebrow={label} title={name} subtitle={chapter.intro} />
+
+                  <div className="flex flex-col gap-6">
+                    {chapter.blocks.map((block, i) => {
+                      const place = slots.get(i);
+                      return (
+                        <Fragment key={i}>
+                          <Block block={block} labels={labels} />
+                          {place && <ZiyaratLocationCard placeId={place.id} />}
+                        </Fragment>
+                      );
+                    })}
                   </div>
-                </section>
-              ))}
-              <ZiyaratLocationsIndex entries={placeEntries} />
-            </article>
+                </div>
+              </div>
+            </Section>
+          </Fragment>
+        );
+      })}
+
+      <SurfaceDivider />
+      <Section surface="raised">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-start">
+            <ZiyaratLocationsIndex entries={placeEntries} />
           </div>
         </div>
-      </section>
+      </Section>
     </>
   );
 }

@@ -7,6 +7,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // A build and a running dev server share .next by default and corrupt each
+  // other's webpack cache. Set NEXT_DIST_DIR to build into a separate folder
+  // while a dev server is up: NEXT_DIST_DIR=.next-build npm run build
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   // Modern image formats for better Core Web Vitals (LCP/CLS).
   images: {
     formats: ['image/avif', 'image/webp'],

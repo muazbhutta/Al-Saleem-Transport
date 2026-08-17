@@ -50,12 +50,23 @@ const config: Config = {
           500: 'rgb(var(--brass-500) / <alpha-value>)',
           600: 'rgb(var(--brass-600) / <alpha-value>)',
           700: 'rgb(var(--brass-700) / <alpha-value>)',
+          /* Text-safe step — see the note in globals.css. */
+          800: 'rgb(var(--brass-800) / <alpha-value>)',
           DEFAULT: 'rgb(var(--brass-500) / <alpha-value>)',
         },
         ink: {
           DEFAULT: 'rgb(var(--ink) / <alpha-value>)',
           soft: 'rgb(var(--ink-soft) / <alpha-value>)',
           faint: 'rgb(var(--ink-faint) / <alpha-value>)',
+        },
+        /* Warm neutrals. These vars already backed the surface tokens; they are
+           exposed directly so the `cream-*` aliases have a real token to
+           migrate onto instead of resolving through a legacy name. */
+        sand: {
+          50: 'rgb(var(--sand-50) / <alpha-value>)',
+          100: 'rgb(var(--sand-100) / <alpha-value>)',
+          200: 'rgb(var(--sand-200) / <alpha-value>)',
+          300: 'rgb(var(--sand-300) / <alpha-value>)',
         },
         surface: {
           base: 'rgb(var(--surface-base) / <alpha-value>)',

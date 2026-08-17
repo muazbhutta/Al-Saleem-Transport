@@ -44,7 +44,7 @@ export default async function Testimonials() {
               href={reviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-brass-600"
+              className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-emerald-700 hover:text-brass-800"
             >
               {t('readOnGoogle')}
               <ExternalLink className="h-4 w-4" aria-hidden />

@@ -59,7 +59,7 @@ export default function TimeField({
 
   const cell = (selected: boolean) =>
     `w-full shrink-0 rounded-lg px-2 py-2 text-center text-sm transition ${
-      selected ? 'bg-maroon font-semibold text-cream-100' : 'text-navy-700 hover:bg-navy-50'
+      selected ? 'bg-emerald-600 font-semibold text-on-surface-inverse' : 'text-ink-soft hover:bg-emerald-50'
     }`;
   const colCls = 'flex max-h-52 flex-1 flex-col gap-0.5 overflow-y-auto no-scrollbar';
 
@@ -73,17 +73,17 @@ export default function TimeField({
         aria-expanded={open}
         className={`${className} flex items-center justify-between text-start`}
       >
-        <span className={has ? 'text-navy-800' : 'text-navy-300'} dir="ltr">
+        <span className={has ? 'text-ink' : 'text-ink-faint'} dir="ltr">
           {display}
         </span>
-        <Clock className="h-4 w-4 shrink-0 text-navy-400" aria-hidden />
+        <Clock className="h-4 w-4 shrink-0 text-ink-faint" aria-hidden />
       </button>
 
       {open && (
         <div
           role="dialog"
           aria-label="Choose time"
-          className="absolute z-30 mt-2 w-full min-w-[16rem] rounded-2xl border border-navy-100 bg-white p-2 shadow-card"
+          className="absolute z-30 mt-2 w-full min-w-[16rem] rounded-2xl border border-emerald-800/10 bg-white p-2 shadow-card"
         >
           <div className="flex gap-1" dir="ltr">
             {/* Hours 1-12 */}
@@ -129,7 +129,7 @@ export default function TimeField({
           <button
             type="button"
             onClick={() => setOpen(false)}
-            className="mt-2 w-full rounded-xl bg-navy py-2 text-sm font-medium text-cream-100 hover:bg-navy-700"
+            className="mt-2 w-full rounded-xl bg-emerald-800 py-2 text-sm font-medium text-on-surface-inverse hover:bg-emerald-700"
           >
             Done
           </button>

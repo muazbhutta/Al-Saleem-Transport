@@ -3,6 +3,7 @@ import { Phone } from 'lucide-react';
 import { whatsappLink, site, telLink } from '@/lib/site';
 import ContactLink from '@/components/analytics/ContactLink';
 import Reveal from '@/components/ui/Reveal';
+import { Section, SectionHeader } from '@/components/ui/Section';
 
 export default async function CtaBanner() {
   const t = await getTranslations('ctaBanner');
@@ -11,10 +12,10 @@ export default async function CtaBanner() {
   );
 
   return (
-    <section className="section bg-surface-inverse text-on-surface-inverse">
+    <Section surface="inverse">
       <div className="container">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-700 to-emerald-900 px-6 py-14 text-center text-cream-100 shadow-card sm:px-12">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-700 to-emerald-900 px-6 py-14 text-center text-on-surface-inverse shadow-card sm:px-12">
             <div
               className="absolute inset-0 opacity-10"
               aria-hidden
@@ -24,8 +25,7 @@ export default async function CtaBanner() {
               }}
             />
             <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-5">
-              <h2 className="text-3xl text-cream-100 sm:text-4xl">{t('title')}</h2>
-              <p className="text-cream-100/85">{t('subtitle')}</p>
+              <SectionHeader title={t('title')} subtitle={t('subtitle')} align="center" inverse />
               <div className="flex flex-col items-center gap-3 sm:flex-row">
                 <ContactLink
                   method="whatsapp"
@@ -39,7 +39,7 @@ export default async function CtaBanner() {
                 <ContactLink
                   method="call"
                   href={telLink}
-                  className="inline-flex min-h-[44px] items-center gap-2 px-2 text-sm font-medium text-cream-100 hover:text-gold-light"
+                  className="inline-flex min-h-[44px] items-center gap-2 px-2 text-sm font-medium text-on-surface-inverse hover:text-brass-300"
                   dir="ltr"
                 >
                   <Phone className="h-4 w-4" aria-hidden />
@@ -50,6 +50,6 @@ export default async function CtaBanner() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }

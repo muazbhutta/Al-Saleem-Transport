@@ -6,6 +6,7 @@ import { whatsappLink } from '@/lib/site';
 import ContactLink from '@/components/analytics/ContactLink';
 import JsonLd from '@/components/seo/JsonLd';
 import PageHeader from '@/components/ui/PageHeader';
+import { Section } from '@/components/ui/Section';
 import Reveal from '@/components/ui/Reveal';
 
 export async function generateMetadata({
@@ -50,25 +51,25 @@ export default async function FaqPage({ params }: { params: { locale: string } }
         crumbs={[{ name: tn('faq'), path: '/faq' }]}
       />
 
-      <section className="section bg-cream">
+      <Section surface="base">
         <div className="container mx-auto max-w-3xl flex flex-col gap-4">
           {items.map((item, i) => (
             <Reveal key={i} delay={Math.min(i * 0.03, 0.2)}>
-              <details className="group card open:ring-gold/40">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-navy">
+              <details className="group card open:ring-brass-500/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-ink">
                   {item.q}
-                  <span className="shrink-0 text-2xl leading-none text-maroon transition-transform group-open:rotate-45">
+                  <span className="shrink-0 text-2xl leading-none text-emerald-600 transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <p className="mt-4 leading-relaxed text-navy-600">{item.a}</p>
+                <p className="mt-4 leading-relaxed text-ink-soft">{item.a}</p>
               </details>
             </Reveal>
           ))}
 
           <Reveal>
-            <div className="mt-6 rounded-2xl bg-navy px-6 py-8 text-center text-cream-100">
-              <h2 className="text-xl text-cream-100">{tcta('title')}</h2>
+            <div className="mt-6 rounded-2xl bg-emerald-800 px-6 py-8 text-center text-on-surface-inverse">
+              <h2 className="text-xl text-on-surface-inverse">{tcta('title')}</h2>
               <ContactLink
                 method="whatsapp"
                 href={waHref}
@@ -81,7 +82,7 @@ export default async function FaqPage({ params }: { params: { locale: string } }
             </div>
           </Reveal>
         </div>
-      </section>
+      </Section>
     </>
   );
 }

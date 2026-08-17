@@ -50,7 +50,7 @@ export default function RouteChips({
               aria-pressed={selected}
               className={`inline-flex min-h-[44px] items-center justify-center gap-1 rounded-full border px-2.5 py-2 text-xs font-medium transition-colors sm:gap-1.5 sm:px-4 sm:text-sm ${
                 selected
-                  ? 'border-emerald-600 bg-emerald-600 text-white'
+                  ? 'border-emerald-600 bg-emerald-600 text-on-surface-inverse'
                   : 'border-emerald-800/15 bg-surface-raised text-ink-soft hover:border-brass-500 hover:text-ink'
               }`}
             >

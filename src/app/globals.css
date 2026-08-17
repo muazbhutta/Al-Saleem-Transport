@@ -49,6 +49,12 @@
     --brass-500: 201 162  75;
     --brass-600: 184 135  63;
     --brass-700: 150 108  49;
+    /* Text-safe brass. Eyebrows are 12px uppercase, so they need 4.5:1, and
+       brass-600 only reaches 2.7-3.2:1 on the sand surfaces — it was failing AA
+       on every section header on the site. This darkened step clears 4.5:1 on
+       all three light surfaces (5.6 on base, 5.0 on muted, 6.0 on raised).
+       Use it for brass TEXT; keep brass-500/600 for rules, icons and fills. */
+    --brass-800: 130  92  38;
 
     /* Warm neutrals — sand/ivory, deliberately not grey. */
     --sand-50:  251 248 241;
@@ -57,7 +63,11 @@
     --sand-300: 230 220 199;
     --ink:        26  36  32;
     --ink-soft:   74  85  81;
-    --ink-faint: 123 135 131;
+    /* Was 123 135 131, which measured 3.5-3.7:1 — under AA for the 14px
+       metadata it is used for. This step clears 4.5:1 on all three light
+       surfaces (5.6 raised, 5.3 base, 4.8 muted) and still reads a clear
+       step lighter than ink-soft. */
+    --ink-faint:  96 105 101;
 
     /* Third-party brand colours (fixed by the vendor, not ours to theme). */
     --brand-whatsapp:      37 211 102;
@@ -82,17 +92,27 @@
     --accent:        var(--brass-500);
     --accent-strong: var(--brass-600);
     --border-hairline: 11 46 39;      /* used at low alpha */
-    --shadow-card: 0 1px 2px rgb(4 23 19 / 0.04), 0 8px 24px -12px rgb(4 23 19 / 0.18);
-    --shadow-card-hover: 0 2px 4px rgb(4 23 19 / 0.06), 0 16px 32px -14px rgb(4 23 19 / 0.24);
+    --shadow-card: 0 1px 2px rgb(var(--emerald-950) / 0.04), 0 8px 24px -12px rgb(var(--emerald-950) / 0.18);
+    --shadow-card-hover: 0 2px 4px rgb(var(--emerald-950) / 0.06), 0 16px 32px -14px rgb(var(--emerald-950) / 0.24);
 
     /* --- Geometry --- */
     --radius-card: 1rem;
     --radius-pill: 999px;
     --section-y: 5rem;
+
+    /* Height of the sticky site header. The guide's chapter rail parks itself
+       directly underneath it, and anchor targets clear both — so both need the
+       same number and it lives here rather than being guessed at each site.
+       Mobile drops the trust strip, hence the smaller value. */
+    --header-h: 4.25rem;
+    --rail-h: 3.5rem;
   }
 
   @media (min-width: 768px) {
-    :root { --section-y: 7rem; }
+    :root {
+      --section-y: 7rem;
+      --header-h: 6rem;
+    }
   }
 
   html {
@@ -102,7 +122,7 @@
     scrollbar-gutter: stable;
     /* Slim, themed scrollbar (Firefox). */
     scrollbar-width: thin;
-    scrollbar-color: rgba(201, 162, 75, 0.55) transparent;
+    scrollbar-color: rgb(var(--brass-500) / 0.55) transparent;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -112,7 +132,7 @@
   }
 
   body {
-    @apply bg-cream text-navy-800 antialiased;
+    @apply bg-surface-base text-ink antialiased;
     font-feature-settings: 'kern', 'liga';
     /* Guard against any stray horizontal scroll without breaking sticky. */
     overflow-x: clip;
@@ -127,13 +147,13 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(201, 162, 75, 0.5);
+    background: rgb(var(--brass-500) / 0.5);
     border-radius: 9999px;
     border: 2px solid transparent;
     background-clip: padding-box;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(201, 162, 75, 0.85);
+    background: rgb(var(--brass-500) / 0.85);
   }
 
   /* Arabic / Urdu / Persian get the naskh face and a taller line-height so
@@ -147,17 +167,58 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-display font-semibold text-navy tracking-tight;
+    @apply font-display font-semibold text-ink tracking-tight;
     text-wrap: balance;
   }
 
+  /* --- Date / time inputs on iOS Safari -----------------------------------
+     Two defects, both only visible on a real iPhone:
+
+     1. WebKit gives these inputs an intrinsic width derived from the locale's
+        date format. That beats `w-full`, and because a grid item defaults to
+        `min-width:auto` the cell stretches with it — which is why the Date row
+        was wider than every other field and pushed past the card edge.
+     2. The value is painted by a shadow-DOM pseudo-element that does NOT
+        inherit text-align, so it stayed centred while every other field read
+        from the start edge.
+
+     appearance:none kills the intrinsic sizing; the pseudo-element rule fixes
+     the alignment. Both need the explicit width/min-width to actually shrink. */
+  input[type='date'],
+  input[type='time'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='week'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    min-width: 0;
+    text-align: start;
+  }
+
+  input[type='date']::-webkit-date-and-time-value,
+  input[type='time']::-webkit-date-and-time-value,
+  input[type='datetime-local']::-webkit-date-and-time-value {
+    text-align: start;
+    /* WebKit also vertically centres this box oddly once appearance is reset. */
+    margin: 0;
+  }
+
+  /* The picker button is an inline image; keep it on the end edge in both
+     directions rather than wherever the default text flow drops it. */
+  input[type='date']::-webkit-calendar-picker-indicator,
+  input[type='time']::-webkit-calendar-picker-indicator {
+    margin-inline-start: auto;
+    cursor: pointer;
+  }
+
   ::selection {
-    @apply bg-gold/30 text-navy-900;
+    @apply bg-brass-500/30 text-ink;
   }
 
   /* Visible keyboard focus for accessibility (WCAG AA). */
   :focus-visible {
-    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-cream;
+    @apply outline-none ring-2 ring-brass-500 ring-offset-2 ring-offset-surface-base;
   }
 }
 
@@ -203,14 +264,6 @@
     @apply container mx-auto;
   }
 
-  /* Section rhythm comes from one token so the redesigned <Section>
-     component and the pages still using this class stay in step. Previously
-     .section was py-16/20/24 while <Section> was py-20/28, which made the
-     spacing visibly jump between old and new sections on the same page. */
-  .section {
-    @apply py-20 md:py-28;
-  }
-
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3
       text-sm font-semibold transition-all duration-200 active:scale-[0.97] motion-reduce:active:scale-100 focus-visible:ring-2
@@ -218,35 +271,51 @@
   }
 
   .btn-primary {
-    @apply btn bg-maroon text-cream-100 shadow-soft hover:bg-maroon-600
+    @apply btn bg-emerald-700 text-on-surface-inverse shadow-card hover:bg-emerald-800
       hover:shadow-card hover:-translate-y-0.5;
   }
 
+  /* WhatsApp green is the vendor's, so the fill stays recognisable — but white
+     on it is only 1.98:1, well under AA for 14px button text. Dark ink on the
+     same green is 7.9:1 and is how WhatsApp renders its own message bubbles,
+     so it reads correctly and is legible. The hex also moves onto the token
+     that already existed for it. */
   .btn-whatsapp {
-    @apply btn bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe5a]
+    @apply btn bg-whatsapp text-ink shadow-card hover:bg-whatsapp/90
       hover:-translate-y-0.5;
   }
 
   .btn-outline {
-    @apply btn border border-navy-200 bg-transparent text-navy hover:bg-navy-50;
+    @apply btn border border-emerald-800/20 bg-transparent text-ink hover:bg-emerald-50;
   }
 
   .btn-gold {
-    @apply btn bg-gold text-navy-900 shadow-soft hover:bg-gold-dark hover:-translate-y-0.5;
+    @apply btn bg-brass-500 text-ink shadow-card hover:bg-brass-600 hover:-translate-y-0.5;
   }
 
   .card {
-    @apply rounded-2xl bg-white p-6 shadow-soft ring-1 ring-navy-100/60
-      transition-shadow hover:shadow-card;
+    @apply rounded-2xl bg-surface-raised p-6 shadow-card ring-1 ring-emerald-800/10
+      transition-shadow hover:shadow-card-hover;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full bg-teal/10 px-4 py-1.5
-      text-xs font-semibold uppercase tracking-wider text-teal-dark;
+    @apply inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5
+      text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700;
   }
 
   .prose-guide {
-    @apply max-w-none leading-relaxed text-navy-700;
+    @apply max-w-none leading-relaxed text-ink-soft;
+  }
+
+  /* --- Ziyarat guide: sticky chapter rail ---------------------------------
+     The rail sits flush under the site header, and every chapter band is an
+     anchor target that must clear header + rail. Both offsets derive from the
+     same --header-h token so they can never drift apart. */
+  .guide-rail {
+    top: var(--header-h);
+  }
+  .guide-anchor {
+    scroll-margin-top: calc(var(--header-h) + var(--rail-h));
   }
 
   /* Functional-but-hidden scrollbar for horizontal scrollers. */
@@ -259,20 +328,18 @@
   }
 }
 
-/* --- Mobile: center-align page text. Form controls keep their natural start
-   alignment so inputs stay readable, and list markers move inline so bullets
-   sit with the centered text. --- */
-@media (max-width: 639.98px) {
-  main {
-    text-align: center;
-  }
-  main :is(input, textarea, select) {
-    text-align: start;
-  }
-  main :is(ul, ol) {
-    list-style-position: inside;
-  }
-}
+/* The blanket `main { text-align: center }` that used to live here (under
+   640px) predates the design system and had come to fight it. Card,
+   SectionHeader, BookingForm and eighteen other components already opted out
+   with `text-start`, so mobile was a patchwork: half the page start-aligned,
+   half centred, with no rule a reader could infer.
+
+   Every block that is genuinely a centred design — the CTA banners, the
+   HowItWorks steps, the about-us values and mission, the 404 — carries its own
+   `text-center`, so alignment is now stated at the component, once, and reads
+   the same at every width. Its two escape hatches went with it: inputs no
+   longer need re-aligning, and lists keep hanging markers so wrapped lines stay
+   flush with the text above them. */
 
 /* --- Print styles: the Ziyarat guide prints/saves-to-PDF cleanly. --- */
 @media print {
@@ -295,6 +362,12 @@
   }
   .card {
     break-inside: avoid;
+  }
+  /* Chapter bands carry section rhythm on screen; in print that is two blank
+     inches between every chapter. Collapse it — the surface change and the
+     heading are enough separation on paper. */
+  .guide-anchor {
+    padding-block: 0.75rem !important;
   }
   h2,
   h3,
