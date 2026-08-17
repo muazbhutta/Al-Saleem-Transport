@@ -324,7 +324,17 @@
     "labelTime": "Saat",
     "labelPassengers": "Yolcu",
     "labelNotes": "Notlar",
-    "emailSubject": "Yeni rezervasyon talebi - Al-Saleem Transport"
+    "emailSubject": "Yeni rezervasyon talebi - Al-Saleem Transport",
+    "commonRoutes": "Sık kullanılan güzergâhlar",
+    "chooseVehicle": "Araç seçin",
+    "anyVehicle": "Seçimi bize bırakın",
+    "fareNote": "Ücret dakikalar içinde WhatsApp üzerinden netleşir — şimdi ödeme yok.",
+    "required": "Zorunlu",
+    "successTitle": "WhatsApp açılıyor…",
+    "successBody": "Bilgileriniz hazır. Mesajı gönderin, ekibimiz aracı ve ücreti onaylasın.",
+    "stepRoute": "Güzergâh",
+    "stepVehicle": "Araç",
+    "stepDetails": "Bilgiler"
   },
   "about": {
     "eyebrow": "Hakkımızda",
